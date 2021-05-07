@@ -8,10 +8,18 @@
   background-color: #a4cf3e;
 }
 
+.export-btn {
+  background-color: #64c5bc;
+}
+
 .wheat-btn {
  background-color: #dd8444;
 }
 
 .merun-btn {
  background-color: rgb(156, 57, 39);
+}
+
+.nav-btn .nav-link {
+  padding: 0rem!important;
 }
