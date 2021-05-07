@@ -531,22 +531,6 @@
     }
 }
 @media only screen and (max-width: 768px) {
-    .contact-num { display: none; }
-
-    .contact-mail { display: none; }
-
-    .search-bar { display: none; }
-
-    .header-social-icons { display: none; }
-
-    .title {
-        color: red;
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    .reg-no { font-size: 12px; }
-
     /* carousel section */
     .carousel-inner { height: 250px; }
 

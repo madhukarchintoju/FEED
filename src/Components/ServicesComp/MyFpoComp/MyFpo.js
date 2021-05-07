@@ -40,8 +40,8 @@ export default function MyFpo() {
                         </div>
                     </div>
                     <div className="col-lg-8 fpo-cards-wrap">
-                        <div className="row m-auto">
-                            <div className="col-lg-4">
+                        <div className="row">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                                 <div class="fpo-cards">
                                     {/* <img src="images/thumbnail.svg" class="card-img-top" alt="..."/> */}
                                     <div class="card-body text-center">
@@ -50,7 +50,7 @@ export default function MyFpo() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4">
+                            <div className="col-lg-4 col-sm-6 col-xs-6">
                                 <div class="fpo-cards">
                                     <div class="card-body text-center">
                                         <img src="assets/fpo-icon.jpg" width="70" alt=""/>
@@ -58,7 +58,7 @@ export default function MyFpo() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4">
+                            <div className="col-lg-4 col-sm-6 col-xs-6">
                                 <div class="fpo-cards">
                                     <div class="card-body text-center">
                                         <img src="assets/fpo-icon.jpg" width="70" alt=""/>
@@ -66,7 +66,7 @@ export default function MyFpo() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                                 <div class="fpo-cards">
                                     <div class="card-body text-center">
                                         <img src="assets/fpo-icon.jpg" width="70" alt=""/>
@@ -74,7 +74,7 @@ export default function MyFpo() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                                 <div class="fpo-cards">
                                     <div class="card-body text-center">
                                         <img src="assets/fpo-icon.jpg" width="70" alt=""/>
@@ -82,7 +82,7 @@ export default function MyFpo() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-6">
                                 <div class="fpo-cards">
                                     <div class="card-body text-center">
                                         <img src="assets/fpo-icon.jpg" width="70" alt=""/>

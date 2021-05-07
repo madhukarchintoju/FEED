@@ -199,6 +199,31 @@ text-decoration: none;
         border-top-left-radius: 0rem!important;
     }
 
+    .contact-num {
+        display: none;
+    }
+   
+    .contact-mail {
+        display: none;
+    }
+   
+    .search-bar {
+        display: none;
+    }
+
+    .header-social-icons a {
+        margin: 1px;
+    }
+
+    .header-social-icons a img {
+        width: 19px;
+        border-radius: 50px 50px;
+        /* border: 1px solid white; */
+        box-shadow: 0px 0px 8px 0px rgba(255,255,255,0.75);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+    }
+
     .title {
         color: red;
         font-size: 18px!important;
@@ -258,19 +283,5 @@ text-decoration: none;
        
     .green-stripe {
         border-top-left-radius: 0rem!important;
-    }
-    .contact-num {
-        display: none;
-    }
-   
-    .contact-mail {
-        display: none;
-    }
-   
-    .search-bar {
-        display: none;
-    }
-    .header-social-icons {
-        display: none;
     }
 }

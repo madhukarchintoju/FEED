@@ -8,19 +8,19 @@ export default function Header () {
                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div className="row">
                             <div className="col-lg-2 col-md-4 col-sm-12 col-xs-4 feed-logo">
-                                <img src="assets/feed.png" className="feed-logo-img"/>
+                                <img src="assets/feed.png" className="feed-logo-img" alt="feed-logo"/>
                             </div>
                             <div className="col-lg-10 col-md-8 col-sm-12 col-xs-8">
                                 <div className="row orange-stripe" style={{backgroundImage:`URL("/assets/orange-stripe.png")`}}>
                                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div className="row nav-orange p-2" style={{borderBottomLeftRadius:"50px"}}>
                                             <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 my-auto text-white contact-num">
-                                                <img src="assets/phone.svg" width="25"/> <span>+91 9293858689</span>
+                                                <img src="assets/phone.svg" width="25" alt="phone-icon"/> <span>+91 9293858689</span>
                                             </div>
                                             <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 my-auto text-white contact-mail">
-                                                <img src="assets/email.svg" width="25"/> <span>info@feedorg.com</span>
+                                                <img src="assets/email.svg" width="25" alt="email-icon"/> <span>info@feedorg.com</span>
                                             </div>
-                                            <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 col">
+                                            <div className="col-lg-2 col-md-6 col-sm-6 col-xs-3 col">
                                                 <form>
                                                     <select className="lng-select form-control">
                                                     <option value="">Language</option>
@@ -32,7 +32,7 @@ export default function Header () {
                                                     </select>
                                                 </form>
                                             </div>
-                                            <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 col">
+                                            <div className="col-lg-2 col-md-6 col-sm-6 col-xs-3 col">
                                                 <button className="btn btn-primary download-btn form-control"><i className="fa fa-download" aria-hidden="true"></i> Downloads</button>
                                             </div>
                                             <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 search-bar">
@@ -43,20 +43,25 @@ export default function Header () {
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6 my-auto header-social-icons">
-                                                <a href=""><img src="assets/facebook.svg" width="30"/></a>
-                                                <a href=""><img src="assets/instagram.svg" width="30"/></a>
-                                                <a href=""><img src="assets/twitter.svg" width="30"/></a>
-                                                <a href=""><img src="assets/linkedin.svg" width="30"/></a>
-                                                <a href=""><img src="assets/youtube.svg" width="30"/></a>
+                                            <div className="col-lg-2 col-md-6 col-sm-6 col-xs-3 col my-auto header-social-icons">
+                                                <a href=""><img src="assets/facebook.svg" width="30" alt="facebook-icon"/></a>
+                                                <a href=""><img src="assets/instagram.svg" width="30" alt="instagram-icon"/></a>
+                                                <a href=""><img src="assets/twitter.svg" width="30" alt="twitter-icon"/></a>
+                                                <a href=""><img src="assets/linkedin.svg" width="30" alt="linkedin-icon"/></a>
+                                                <a href=""><img src="assets/youtube.svg" width="30" alt="youtube-icon"/></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <h3 className="m-2 title text-center">FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT MULTI STATE COOPERATIVE SOCIETY LTD.</h3>
-                                        <h6 className="reg-no text-right m-0">REG.No: MSCS/CR/1295/2020</h6>
+                                        <div>
+                                            {/* <img src="assets/feed.png" className="feed-logo-img" alt="feed-logo" width="30%"/> */}
+                                        </div>
+                                        <div>
+                                            <h3 className="m-2 title text-center">FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT MULTI STATE COOPERATIVE SOCIETY LTD.</h3>
+                                            <h6 className="reg-no text-right m-0">REG.No: MSCS/CR/1295/2020</h6> 
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="row green-stripe" style={{backgroundImage:`URL("/assets/green-stripe.png")`}}>
