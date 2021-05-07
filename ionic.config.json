@@ -1,0 +1,7 @@
+{
+    "name": "FEED",
+    "integrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+  }

@@ -1,25 +1,25 @@
 .brd {
- border: 1px solid red;
+    border: 1px solid red;
 }
 .violet-btn {
- background-color: #8761aa;
+    background-color: #8761aa;
 }
 .farm-btn {
-  background-color: #a4cf3e;
+    background-color: #a4cf3e;
 }
 
 .export-btn {
-  background-color: #64c5bc;
+    background-color: #64c5bc;
 }
 
 .wheat-btn {
- background-color: #dd8444;
+    background-color: #dd8444;
 }
 
 .merun-btn {
- background-color: rgb(156, 57, 39);
+    background-color: rgb(156, 57, 39);
 }
 
 .nav-btn .nav-link {
-  padding: 0rem!important;
+    padding: 0rem !important;
 }

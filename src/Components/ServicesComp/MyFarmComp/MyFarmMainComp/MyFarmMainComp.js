@@ -1,6 +1,6 @@
-import React from 'react';
-import './MyFarmMainComp.css';
-import MyFarmNavComp from '../MyFarmNavComp/MyFarmNavComp';
+import React from 'react'
+import './MyFarmMainComp.css'
+import MyFarmNavComp from '../MyFarmNavComp/MyFarmNavComp'
 import ServicesNavbar from '../../ServicesNavbar/ServicesNavbar.js'
 
 export default function MyFarmMainComp() {
@@ -9,6 +9,5 @@ export default function MyFarmMainComp() {
             <ServicesNavbar> </ServicesNavbar>
             <MyFarmNavComp></MyFarmNavComp>
         </div>
-        
     )
 }

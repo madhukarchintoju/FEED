@@ -1,4 +1,3 @@
-
 .brd {
     border: 1px solid red;
 }
@@ -156,7 +155,7 @@
     color: #fff;
     text-decoration: none;
 } */
- 
+
 /* carousel section */
 .carousel-section {
     /* position: relative; */
@@ -168,16 +167,16 @@
 }
 
 .carousel-section .carousel-inner img {
-    height: 100%!important;
+    height: 100% !important;
     animation: thing 20s;
 }
 
 @keyframes thing {
-    from{
-        transform: scale(1,1);
+    from {
+        transform: scale(1, 1);
     }
-    to{
-        transform: scale(1.5,1.5);
+    to {
+        transform: scale(1.5, 1.5);
     }
 }
 
@@ -198,11 +197,11 @@
 }
 
 .vision-title {
-    font-size: 32px!important;
+    font-size: 32px !important;
     font-weight: bold;
 }
 .mission-title {
-    font-size: 32px!important;
+    font-size: 32px !important;
     font-weight: bold;
 }
 
@@ -213,25 +212,25 @@
 }
 
 .feed-services-section .nav-link {
-    padding: 0rem!important;
+    padding: 0rem !important;
 }
 .card-img img {
     position: relative;
-    z-index:10;
+    z-index: 10;
     top: -80px;
     padding: 10px;
     border-radius: 50% 50%;
     background-color: white;
-    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
 }
 
 .services-card {
-    border-radius: 10px 10px 10px 10px!important;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px 10px 10px 10px !important;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .services-card .services-card-header {
@@ -257,12 +256,12 @@
 }
 
 .gov-update-card .card-body {
-    padding: 10px!important;
+    padding: 10px !important;
 }
 
-.gov-update-card .card-title{
-    margin-top: 0rem!important;
-    margin-bottom: 0rem!important;
+.gov-update-card .card-title {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
     font-size: 16px;
 }
 
@@ -299,12 +298,12 @@
 }
 
 .feed-update-card .card-body {
-    padding: 10px!important;
+    padding: 10px !important;
 }
 
-.feed-update-card .card-title{
-    margin-top: 0rem!important;
-    margin-bottom: 0rem!important;
+.feed-update-card .card-title {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
     font-size: 16px;
 }
 
@@ -312,32 +311,33 @@
     font-size: 12px;
 }
 
-.gov-updates{
-    width:100%;
-    line-height:50px;
-    position:relative;
+.gov-updates {
+    width: 100%;
+    line-height: 50px;
+    position: relative;
     /* background:red; */
     background-color: orange;
     /* border: 1px solid black; */
-    text-align:center;
+    text-align: center;
     /* margin:50px auto; */
 }
 
-.gov-updates:after, .gov-updates:before{
-    content:"";
-    position:absolute;
-    width:20px;
-    height:50%;
-    left:100%;
+.gov-updates:after,
+.gov-updates:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 50%;
+    left: 100%;
 }
 
-.gov-updates:after{
-    bottom:0;
+.gov-updates:after {
+    bottom: 0;
     background: linear-gradient(to right bottom, orange 50%, transparent 50%);
 }
 
-.gov-updates:before{
-    top:0;
+.gov-updates:before {
+    top: 0;
     background: linear-gradient(to right top, orange 50%, transparent 50%);
 }
 
@@ -378,18 +378,16 @@
     padding: 10px;
     border-radius: 10px 10px;
     background-color: blanchedalmond;
-
 }
 
 .testimonialBox {
     padding: 10px;
     border-radius: 10px 10px;
-    box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 1px 6px 0px rgba(0,0,0,0.75);
-    
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
 }
- 
+
 /* .swiper-wrapper {
     filter: blur(3px);
 } */
@@ -440,14 +438,14 @@
 /* partners section */
 .Partners-section {
     width: 98%;
-    margin: auto!important;
+    margin: auto !important;
     background-color: white;
     border-radius: 15px 15px 15px 15px;
     border-left: 5px solid orange;
     border-right: 5px solid green;
-    box-shadow: 0px 0px 8px 0px rgba(242,107,110,0.75);
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(242,107,110,0.75);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(242,107,110,0.75);
+    box-shadow: 0px 0px 8px 0px rgba(242, 107, 110, 0.75);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(242, 107, 110, 0.75);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(242, 107, 110, 0.75);
 }
 
 .Partners-section marquee {
@@ -464,9 +462,9 @@
     color: black;
     border-radius: 15px 15px;
     /* height: 200px; */
-    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
 }
 
 /* Footer Section */
@@ -478,7 +476,6 @@
     color: white;
     height: 300px;
 } */
-
 
 /* 
 .footer-section-links ul {
@@ -506,16 +503,16 @@
         font-size: 10px;
     }
     .download-btn {
-        padding: 0rem!important;
+        padding: 0rem !important;
     }
     /* carousel section */
     .carousel-inner {
-        height: 150px!important;
+        height: 150px !important;
         /* border: 1px solid red; */
     }
 
     .carousel-section .carousel-inner img {
-        height: 100%!important;
+        height: 100% !important;
         animation: thing 20s;
     }
 }
@@ -531,13 +528,21 @@
     }
 }
 @media only screen and (max-width: 768px) {
-    .contact-num { display: none; }
+    .contact-num {
+        display: none;
+    }
 
-    .contact-mail { display: none; }
+    .contact-mail {
+        display: none;
+    }
 
-    .search-bar { display: none; }
+    .search-bar {
+        display: none;
+    }
 
-    .header-social-icons { display: none; }
+    .header-social-icons {
+        display: none;
+    }
 
     .title {
         color: red;
@@ -545,13 +550,17 @@
         font-weight: 600;
     }
 
-    .reg-no { font-size: 12px; }
+    .reg-no {
+        font-size: 12px;
+    }
 
     /* carousel section */
-    .carousel-inner { height: 250px; }
+    .carousel-inner {
+        height: 250px;
+    }
 
     .carousel-section .carousel-inner img {
-        height: 100%!important;
+        height: 100% !important;
         animation: thing 20s;
     }
 
@@ -560,26 +569,26 @@
         font-size: 24px;
     }
     .aboutus-content {
-        font-size: 14px!important;
+        font-size: 14px !important;
         font-weight: 500;
     }
     .objective-title {
         font-size: 24px;
     }
     .objective-content {
-        font-size: 14px!important;
+        font-size: 14px !important;
         font-weight: 500;
     }
     .vision-title {
-        font-size: 22px!important;
+        font-size: 22px !important;
         font-weight: bold;
     }
     .vision-content {
-        padding: 0rem!important;
+        padding: 0rem !important;
         font-size: 14px;
     }
     .vision-card .card-header {
-        padding: 0rem!important;
+        padding: 0rem !important;
     }
     .vision-card img {
         width: 100px;
@@ -588,14 +597,14 @@
         width: 100px;
     }
     .mission-card .card-header {
-        padding: 0rem!important;
+        padding: 0rem !important;
     }
     .mission-title {
-        font-size: 22px!important;
+        font-size: 22px !important;
         font-weight: bold;
     }
     .mission-content {
-        padding: 0rem!important;
+        padding: 0rem !important;
         font-size: 14px;
     }
     /* feed services section */
