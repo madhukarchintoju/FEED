@@ -212,7 +212,7 @@ function Home () {
                                 </div>
                                 <div className="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                                     <div className="row">
-                                        <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                                             <Link className="nav-link" to="/myfpo">
                                                 <div class="text-center services-card m-2">
                                                     <div className="services-card-header" style={{backgroundColor:"#fbba14"}}>
@@ -225,7 +225,7 @@ function Home () {
                                                 </div>
                                             </Link>
                                         </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                                             <Link className="nav-link" to="/myfarm">
                                                 <div class="text-center services-card m-2">
                                                     <div className="services-card-header" style={{backgroundColor:"#79b247"}}>
@@ -238,71 +238,83 @@ function Home () {
                                                 </div>
                                             </Link>
                                         </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                            <div class="text-center services-card m-2">
-                                                <div className="services-card-header" style={{backgroundColor:"#2f79e4"}}>
+                                        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                                            <Link className="nav-link" to="/mybusiness">
+                                                <div class="text-center services-card m-2">
+                                                    <div className="services-card-header" style={{backgroundColor:"#2f79e4"}}>
 
+                                                    </div>
+                                                    <div class="card-body card-img">
+                                                        <img src="assets/my-business-icon.jpg" width="100" alt=""/>
+                                                        <h4 class="card-title P-5 my-auto"  style={{position:"relative",height:"10px",top:"-50px",fontWeight:"bold",color:"#2f79e4"}}>MY BUSINESS</h4>
+                                                    </div>
                                                 </div>
-                                                <div class="card-body card-img">
-                                                    <img src="assets/my-business-icon.jpg" width="100" alt=""/>
-                                                    <h4 class="card-title P-5 my-auto"  style={{position:"relative",height:"10px",top:"-50px",fontWeight:"bold",color:"#2f79e4"}}>MY BUSINESS</h4>
-                                                </div>
-                                            </div>
+                                            </Link>
                                         </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                            <div class="text-center services-card m-2">
-                                                <div className="services-card-header" style={{backgroundColor:"#f54900"}}>
+                                        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                                            <Link className="nav-link" to="/mymarket">
+                                                <div class="text-center services-card m-2">
+                                                    <div className="services-card-header" style={{backgroundColor:"#f54900"}}>
 
+                                                    </div>
+                                                    <div class="card-body card-img">
+                                                        <img src="assets/cart-icon.jpg" width="100" alt=""/>
+                                                        <h4 class="card-title P-5 my-auto"  style={{color:"#f54900"}}>MY MARKET</h4>
+                                                    </div>
                                                 </div>
-                                                <div class="card-body card-img">
-                                                    <img src="assets/cart-icon.jpg" width="100" alt=""/>
-                                                    <h4 class="card-title P-5 my-auto"  style={{color:"#f54900"}}>MY MARKET</h4>
-                                                </div>
-                                            </div>
+                                            </Link>
                                         </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                            <div class="text-center services-card m-2" style={{borderRadius:"10px 10px 10px 10px"}}>
-                                                <div className="services-card-header" style={{backgroundColor:"#832ad4"}}>
+                                        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                                            <Link className="nav-link" to="/myproducts">
+                                                <div class="text-center services-card m-2" style={{borderRadius:"10px 10px 10px 10px"}}>
+                                                    <div className="services-card-header" style={{backgroundColor:"#832ad4"}}>
 
+                                                    </div>
+                                                    <div class="card-body card-img">
+                                                        <img src="assets/product-icon.jpg" width="100" alt=""/>
+                                                        <h4 class="card-title P-5 my-auto"  style={{color:"#832ad4"}}>MY PRODUCTS</h4>
+                                                    </div>
                                                 </div>
-                                                <div class="card-body card-img">
-                                                    <img src="assets/product-icon.jpg" width="100" alt=""/>
-                                                    <h4 class="card-title P-5 my-auto"  style={{color:"#832ad4"}}>MY PRODUCTS</h4>
-                                                </div>
-                                            </div>
+                                            </Link>
                                         </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                            <div class="text-center services-card m-2">
-                                                <div className="services-card-header" style={{backgroundColor:"#006a94"}}>
+                                        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                                            <Link className="nav-link" to="/myexport">
+                                                <div class="text-center services-card m-2">
+                                                    <div className="services-card-header" style={{backgroundColor:"#006a94"}}>
 
+                                                    </div>
+                                                    <div class="card-body card-img">
+                                                        <img src="assets/52474.jpg" width="100" alt=""/>
+                                                        <h4 class="card-title P-5 my-auto"  style={{color:"#006a94"}}>MY EXPORTS</h4>
+                                                    </div>
                                                 </div>
-                                                <div class="card-body card-img">
-                                                    <img src="assets/52474.jpg" width="100" alt=""/>
-                                                    <h4 class="card-title P-5 my-auto"  style={{color:"#006a94"}}>MY EXPORTS</h4>
-                                                </div>
-                                            </div>
+                                            </Link>
                                         </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                            <div class="text-center services-card m-2">
-                                                <div className="services-card-header" style={{backgroundColor:"#f11c18"}}>
+                                        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                                            <Link className="nav-link" to="/myeducation">
+                                                <div class="text-center services-card m-2">
+                                                    <div className="services-card-header" style={{backgroundColor:"#f11c18"}}>
 
+                                                    </div>
+                                                    <div class="card-body card-img">
+                                                        <img src="assets/my-edu-icon.jpg" width="100" alt=""/>
+                                                        <h4 class="card-title P-5 my-auto"  style={{color:"#f11c18"}}>MY EDUCATION</h4>
+                                                    </div>
                                                 </div>
-                                                <div class="card-body card-img">
-                                                    <img src="assets/my-edu-icon.jpg" width="100" alt=""/>
-                                                    <h4 class="card-title P-5 my-auto"  style={{color:"#f11c18"}}>MY EDUCATION</h4>
-                                                </div>
-                                            </div>
+                                            </Link>
                                         </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                                            <div class="text-center services-card m-2">
-                                                <div className="services-card-header" style={{backgroundColor:"#312401"}}>
+                                        <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                                            <Link className="nav-link" to="/mytools">
+                                                <div class="text-center services-card m-2">
+                                                    <div className="services-card-header" style={{backgroundColor:"#312401"}}>
 
+                                                    </div>
+                                                    <div class="card-body card-img">
+                                                        <img src="assets/tools-icon.jpg" width="100" alt=""/>
+                                                        <h4 class="card-title P-5 my-auto"  style={{color:"#312401"}}>MY TOOLS</h4>
+                                                    </div>
                                                 </div>
-                                                <div class="card-body card-img">
-                                                    <img src="assets/tools-icon.jpg" width="100" alt=""/>
-                                                    <h4 class="card-title P-5 my-auto"  style={{color:"#312401"}}>MY TOOLS</h4>
-                                                </div>
-                                            </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
