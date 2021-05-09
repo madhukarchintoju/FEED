@@ -1,13 +1,13 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './Components/HeaderComp/Header';
-import Home from './Components/HomeComp/home';
-import Register from './Components/RegisterComp/Register';
-import Login from './Components/LoginComp/Login';
-import './App.css';
-import React from 'react';
-import Footer from './Components/FooterComp/Footer';
-import MyFpo from './Components/ServicesComp/MyFpoComp/MyFpo';
-import MyFarmMainComp from './Components/ServicesComp/MyFarmComp/MyFarmMainComp/MyFarmMainComp'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Header from './Components/HeaderComp/Header'
+import Home from './Components/HomeComp/home'
+import Register from './Components/RegisterComp/Register'
+import Login from './Components/LoginComp/Login'
+import './App.css'
+import React from 'react'
+import Footer from './Components/FooterComp/Footer'
+import MyFpo from './Components/ServicesComp/MyFpoComp/MyFpo'
+import MyFarmMainComp from './Components/ServicesComp/MyFarmComp/myFarmMainComp/myFarmMainComp'
 import MyProductsMainComp from './Components/ServicesComp/myProductsComp/myProductsMainComp/myProductsMainComp'
 import MyBusiness from './Components/ServicesComp/MyBusinessComp/MyBusiness'
 import MyExportMainComp from './Components/ServicesComp/myExportComp/myExportMainComp/myExportMainComp'

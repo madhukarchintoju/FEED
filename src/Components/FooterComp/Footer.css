@@ -41,11 +41,11 @@
 }
 
 /* Media Queries */
-@media only screen and (max-width:426px) {
- .links-row {
-    display: none;
- }
- .conditions-row {
-    border: none;
- }
+@media only screen and (max-width: 426px) {
+    .links-row {
+        display: none;
+    }
+    .conditions-row {
+        border: none;
+    }
 }

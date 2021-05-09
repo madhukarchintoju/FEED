@@ -1,6 +1,6 @@
-import React from 'react';
-import './Footer.css';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import './Footer.css'
+import { Link } from 'react-router-dom'
 export default function Footer() {
     return (
         <>
@@ -19,25 +19,37 @@ export default function Footer() {
                                                         <Link to="/">Home</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">About Us</Link>
+                                                        <Link to="/">
+                                                            About Us
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Services</Link>
+                                                        <Link to="/">
+                                                            Services
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Events</Link>
+                                                        <Link to="/">
+                                                            Events
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">How FEED Works</Link>
+                                                        <Link to="/">
+                                                            How FEED Works
+                                                        </Link>
                                                     </li>
                                                     <li>
                                                         <Link to="/">FPO</Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Exports</Link>
+                                                        <Link to="/">
+                                                            Exports
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Contact Us</Link>
+                                                        <Link to="/">
+                                                            Contact Us
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -45,24 +57,34 @@ export default function Footer() {
                                                 <h6>ABOUT US</h6>
                                                 <ul>
                                                     <li>
-                                                        <Link to="/">Our Story</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/">Mission & Vission</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="/">Our Team</Link>
+                                                        <Link to="/">
+                                                            Our Story
+                                                        </Link>
                                                     </li>
                                                     <li>
                                                         <Link to="/">
-                                                            Founder Message</Link>
+                                                            Mission & Vission
+                                                        </Link>
                                                     </li>
                                                     <li>
                                                         <Link to="/">
-                                                            Press & Media</Link>
+                                                            Our Team
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">FAQ's</Link>
+                                                        <Link to="/">
+                                                            Founder Message
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/">
+                                                            Press & Media
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link to="/">
+                                                            FAQ's
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -70,25 +92,39 @@ export default function Footer() {
                                                 <h6>SERVICES</h6>
                                                 <ul>
                                                     <li>
-                                                        <Link to="/">Buying</Link>
+                                                        <Link to="/">
+                                                            Buying
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Selling</Link>
+                                                        <Link to="/">
+                                                            Selling
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/"a href="">Financing</Link>
+                                                        <Link to="/" a href="">
+                                                            Financing
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Crop Advisory</Link>
+                                                        <Link to="/">
+                                                            Crop Advisory
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Input Sales</Link>
+                                                        <Link to="/">
+                                                            Input Sales
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Quality Testing</Link>
+                                                        <Link to="/">
+                                                            Quality Testing
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Goods & Settlement</Link>
+                                                        <Link to="/">
+                                                            Goods & Settlement
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -96,16 +132,24 @@ export default function Footer() {
                                                 <h6>CAREERS</h6>
                                                 <ul>
                                                     <li>
-                                                        <Link to="/">Why Feed</Link>
+                                                        <Link to="/">
+                                                            Why Feed
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">people philosophy</Link>
+                                                        <Link to="/">
+                                                            people philosophy
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Career Opportunities</Link>
+                                                        <Link to="/">
+                                                            Career Opportunities
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Join Us</Link>
+                                                        <Link to="/">
+                                                            Join Us
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -113,22 +157,34 @@ export default function Footer() {
                                                 <h6>NEED HELP?</h6>
                                                 <ul>
                                                     <li>
-                                                        <Link to="/">Suggestions</Link>
+                                                        <Link to="/">
+                                                            Suggestions
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Sample Works</Link>
+                                                        <Link to="/">
+                                                            Sample Works
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Works</Link>
+                                                        <Link to="/">
+                                                            Works
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Queries</Link>
+                                                        <Link to="/">
+                                                            Queries
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Complaints</Link>
+                                                        <Link to="/">
+                                                            Complaints
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">FAQ's</Link>
+                                                        <Link to="/">
+                                                            FAQ's
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -136,22 +192,34 @@ export default function Footer() {
                                                 <h6>FEED INSIGHTS</h6>
                                                 <ul>
                                                     <li>
-                                                        <Link to="/">Suggestions</Link>
+                                                        <Link to="/">
+                                                            Suggestions
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Sample Works</Link>
+                                                        <Link to="/">
+                                                            Sample Works
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Works</Link>
+                                                        <Link to="/">
+                                                            Works
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Queries</Link>
+                                                        <Link to="/">
+                                                            Queries
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">Complaints</Link>
+                                                        <Link to="/">
+                                                            Complaints
+                                                        </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/">FAQ's</Link>
+                                                        <Link to="/">
+                                                            FAQ's
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>

@@ -30,40 +30,76 @@ export default function MyExportMainComp() {
                                             </h5>
                                         </div>
                                     </div> */}
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                                 <div className="col-lg-2">
-                                    <img src="assets/my-exports/PRODUCT-SELECTION.png" alt="Why Exports card"/>
+                                    <img
+                                        src="assets/my-exports/PRODUCT-SELECTION.png"
+                                        alt="Why Exports card"
+                                    />
                                 </div>
                             </div>
                             <div className="row m-0">

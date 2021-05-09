@@ -163,7 +163,12 @@
 }
 
 .register-btn {
-    background-image: linear-gradient(to right,#e44d26 0%,#f16529 51%,#e44d26 100%);
+    background-image: linear-gradient(
+        to right,
+        #e44d26 0%,
+        #f16529 51%,
+        #e44d26 100%
+    );
 }
 .register-btn {
     margin: 2px;
@@ -193,7 +198,7 @@
 /* Media Queries */
 @media only screen and (max-width: 525px) {
     .sticky-header {
-        position: relative!important;
+        position: relative !important;
     }
     .feed-logo {
         display: none;
@@ -219,11 +224,11 @@
     .contact-num {
         display: none;
     }
-   
+
     .contact-mail {
         display: none;
     }
-   
+
     .search-bar {
         display: none;
     }
@@ -235,9 +240,9 @@
     .header-social-icons a img {
         width: 19px;
         border-radius: 50px 50px;
-        box-shadow: 0px 0px 8px 0px rgba(255,255,255,0.75);
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+        box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.75);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
     }
 
     .nav-list ul li {
@@ -255,7 +260,7 @@
         font-size: 10px;
     }
     select option {
-        font-size: 12px!important;
+        font-size: 12px !important;
     }
 
     .download-btn {
@@ -270,7 +275,7 @@
         height: 40px;
     } */
 }
-@media only screen and (min-width:526px) and (max-width: 768px) {
+@media only screen and (min-width: 526px) and (max-width: 768px) {
     .sticky-header {
         position: relative !important;
     }
@@ -320,9 +325,9 @@
     .header-social-icons a img {
         width: 18px;
         border-radius: 50px 50px;
-        box-shadow: 0px 0px 8px 0px rgba(255,255,255,0.75);
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+        box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.75);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
     }
     .download-btn-text {
         display: none;

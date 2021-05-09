@@ -474,16 +474,15 @@
 
 /* Media Queries */
 
-
-@media only screen and (max-width:426px) {
+@media only screen and (max-width: 426px) {
     .carousel-section {
-        display: none!important;
+        display: none !important;
     }
     .about-content-wrap {
-        display: none!important;
+        display: none !important;
     }
     .objective-content-wrap {
-        background-color: #b6bbfc!important;
+        background-color: #b6bbfc !important;
         color: black;
     }
     .objective-title {
@@ -494,10 +493,10 @@
     }
 
     .feed-service-img {
-        display: none!important;
+        display: none !important;
     }
     .vision-mission-wrap {
-        display: none!important;
+        display: none !important;
     }
 
     /* FEED Services */
@@ -513,7 +512,7 @@
         position: relative;
         z-index: 10;
         top: -55px;
-        width: 50!important;
+        width: 50 !important;
         padding: 5px;
         border-radius: 50% 50%;
         background-color: white;
@@ -567,8 +566,7 @@
         display: none;
     }
 }
-@media only screen and (min-width:427px) and (max-width: 768px) {
-
+@media only screen and (min-width: 427px) and (max-width: 768px) {
     /* carousel section */
     .carousel-inner {
         height: 250px;

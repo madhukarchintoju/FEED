@@ -1,11 +1,17 @@
-import React, { useState } from 'react';
-import './home.css';
-import { Link } from 'react-router-dom';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-import {Swiper, SwiperSlide} from 'swiper/react';
-import 'swiper/swiper.min.css';
-import 'swiper/components/navigation/navigation.min.css';
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+import React, { useState } from 'react'
+import './home.css'
+import { Link } from 'react-router-dom'
+import SwiperCore, {
+    Navigation,
+    Pagination,
+    Scrollbar,
+    A11y,
+    Autoplay,
+} from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/swiper.min.css'
+import 'swiper/components/navigation/navigation.min.css'
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay])
 
 function Home() {
     const Images = [
@@ -265,23 +271,63 @@ function Home() {
                                 <div className="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                                     <div className="row">
                                         <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col p-0">
-                                            <Link className="nav-link" to="/myfpo">
+                                            <Link
+                                                className="nav-link"
+                                                to="/myfpo"
+                                            >
                                                 <div class="text-center services-card m-2">
-                                                    <div className="services-card-header" style={{backgroundColor:'#fbba14'}}></div>
+                                                    <div
+                                                        className="services-card-header"
+                                                        style={{
+                                                            backgroundColor:
+                                                                '#fbba14',
+                                                        }}
+                                                    ></div>
                                                     <div class="card-body card-img">
-                                                        <img src="assets/fpo-icon.jpg" alt=""/>
-                                                        <h4 class="card-title my-auto" style={{color:'#fbba14'}}>MY FPO</h4>
+                                                        <img
+                                                            src="assets/fpo-icon.jpg"
+                                                            alt=""
+                                                        />
+                                                        <h4
+                                                            class="card-title my-auto"
+                                                            style={{
+                                                                color:
+                                                                    '#fbba14',
+                                                            }}
+                                                        >
+                                                            MY FPO
+                                                        </h4>
                                                     </div>
                                                 </div>
                                             </Link>
                                         </div>
                                         <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col p-0">
-                                            <Link className="nav-link" to="/myfarm">
+                                            <Link
+                                                className="nav-link"
+                                                to="/myfarm"
+                                            >
                                                 <div class="text-center services-card m-2">
-                                                    <div className="services-card-header" style={{backgroundColor:'#79b247'}}></div>
+                                                    <div
+                                                        className="services-card-header"
+                                                        style={{
+                                                            backgroundColor:
+                                                                '#79b247',
+                                                        }}
+                                                    ></div>
                                                     <div class="card-body card-img">
-                                                        <img src="assets/farm-icon.jpg" alt=""/>
-                                                        <h4 class="card-title P-5 my-auto" style={{position:'relative',color:'#79b247'}}>
+                                                        <img
+                                                            src="assets/farm-icon.jpg"
+                                                            alt=""
+                                                        />
+                                                        <h4
+                                                            class="card-title P-5 my-auto"
+                                                            style={{
+                                                                position:
+                                                                    'relative',
+                                                                color:
+                                                                    '#79b247',
+                                                            }}
+                                                        >
                                                             MY FARM
                                                         </h4>
                                                     </div>
@@ -289,7 +335,10 @@ function Home() {
                                             </Link>
                                         </div>
                                         <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col p-0">
-                                            <Link className="nav-link" to="/mybusiness">
+                                            <Link
+                                                className="nav-link"
+                                                to="/mybusiness"
+                                            >
                                                 <div class="text-center services-card m-2">
                                                     <div
                                                         className="services-card-header"
@@ -732,7 +781,12 @@ function Home() {
                             </div>
                             <div className="row">
                                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto p-0">
-                                    <video width="100%" height="565" controls className="feed-video">
+                                    <video
+                                        width="100%"
+                                        height="565"
+                                        controls
+                                        className="feed-video"
+                                    >
                                         <source
                                             src="assets/feed-video.mp4"
                                             type="video/mp4"
@@ -747,115 +801,208 @@ function Home() {
                 </section>
 
                 {/* Testimonials */}
-                 
+
                 <section>
                     <div className="row m-0">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div className="row">
                                 <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12 m-auto">
-                                    <h3 className="section-heading text-center">Testimonials</h3>
+                                    <h3 className="section-heading text-center">
+                                        Testimonials
+                                    </h3>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-lg-10 col-md-12 col-sm-12 col-xs-12 m-auto">
-                                <Swiper spaceBetween={50}
-                                loop={true}
-                                Autoplay
-                                navigation 
-                                breakpoints= {
-                                    {320 : {
-                                      slidesPerView: 1,
-                                      spaceBetween: 20
-                                    }},
-                                    {480 : {
-                                      slidesPerView: 1,
-                                      spaceBetween: 30
-                                    }},
-                                    {768 : {
-                                      slidesPerView: 2,
-                                      spaceBetween: 40
-                                    }},
-                                    {868 : {
-                                        slidesPerView: 3,
-                                        spaceBetween: 40
-                                      }}
-                                  }
-                                onSlideChange={()=> console.log('slide change')} onSwiper={swiper=> console.log(swiper)}>
-                                    <div className="row">
-                                        <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <div class="custom-swiper-slide">
-                                                    <div class="testimonialBox">
-                                                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                                        <div class="content">
-                                                            <p>loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum</p>
-                                                            <div class="details">
-                                                                <div class="imgBx">
-                                                                    <img src="/assets/man-icon.png" alt="user-icon"/>
-                                                                    <span>Narayana</span>
+                                    <Swiper
+                                        spaceBetween={50}
+                                        loop={true}
+                                        Autoplay
+                                        navigation
+                                        breakpoints={
+                                            ({
+                                                320: {
+                                                    slidesPerView: 1,
+                                                    spaceBetween: 20,
+                                                },
+                                            },
+                                            {
+                                                480: {
+                                                    slidesPerView: 1,
+                                                    spaceBetween: 30,
+                                                },
+                                            },
+                                            {
+                                                768: {
+                                                    slidesPerView: 2,
+                                                    spaceBetween: 40,
+                                                },
+                                            },
+                                            {
+                                                868: {
+                                                    slidesPerView: 3,
+                                                    spaceBetween: 40,
+                                                },
+                                            })
+                                        }
+                                        onSlideChange={() =>
+                                            console.log('slide change')
+                                        }
+                                        onSwiper={(swiper) =>
+                                            console.log(swiper)
+                                        }
+                                    >
+                                        <div className="row">
+                                            <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <div class="custom-swiper-slide">
+                                                        <div class="testimonialBox">
+                                                            <i
+                                                                class="fa fa-quote-left"
+                                                                aria-hidden="true"
+                                                            ></i>
+                                                            <div class="content">
+                                                                <p>
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                </p>
+                                                                <div class="details">
+                                                                    <div class="imgBx">
+                                                                        <img
+                                                                            src="/assets/man-icon.png"
+                                                                            alt="user-icon"
+                                                                        />
+                                                                        <span>
+                                                                            Narayana
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </SwiperSlide>
-                                        </div>
-                                        <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <div class="custom-swiper-slide">
-                                                    <div class="testimonialBox">
-                                                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                                        <div class="content">
-                                                            <p>loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum</p>
-                                                            <div class="details">
-                                                                <div class="imgBx">
-                                                                    <img src="/assets/female-icon.png" alt="user-icon"/>
-                                                                    <span>Kumari</span>
+                                                </SwiperSlide>
+                                            </div>
+                                            <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <div class="custom-swiper-slide">
+                                                        <div class="testimonialBox">
+                                                            <i
+                                                                class="fa fa-quote-left"
+                                                                aria-hidden="true"
+                                                            ></i>
+                                                            <div class="content">
+                                                                <p>
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                </p>
+                                                                <div class="details">
+                                                                    <div class="imgBx">
+                                                                        <img
+                                                                            src="/assets/female-icon.png"
+                                                                            alt="user-icon"
+                                                                        />
+                                                                        <span>
+                                                                            Kumari
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </SwiperSlide>
-                                        </div>
-                                        <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <div class="custom-swiper-slide">
-                                                    <div class="testimonialBox">
-                                                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                                        <div class="content">
-                                                            <p>loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum</p>
-                                                            <div class="details">
-                                                                <div class="imgBx">
-                                                                    <img src="/assets/man-icon.png" alt="user-icon"/>
-                                                                    <span>Venkatesh</span>
+                                                </SwiperSlide>
+                                            </div>
+                                            <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <div class="custom-swiper-slide">
+                                                        <div class="testimonialBox">
+                                                            <i
+                                                                class="fa fa-quote-left"
+                                                                aria-hidden="true"
+                                                            ></i>
+                                                            <div class="content">
+                                                                <p>
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                </p>
+                                                                <div class="details">
+                                                                    <div class="imgBx">
+                                                                        <img
+                                                                            src="/assets/man-icon.png"
+                                                                            alt="user-icon"
+                                                                        />
+                                                                        <span>
+                                                                            Venkatesh
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </SwiperSlide>
-                                        </div>
-                                        <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <div class="custom-swiper-slide">
-                                                    <div class="testimonialBox">
-                                                        <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                                        <div class="content">
-                                                            <p>loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum loremipsum lorem ipsum</p>
-                                                            <div class="details">
-                                                                <div class="imgBx">
-                                                                    <img src="/assets/man-icon.png" alt="user-icon"/>
-                                                                    <span>Narayana</span>
+                                                </SwiperSlide>
+                                            </div>
+                                            <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <div class="custom-swiper-slide">
+                                                        <div class="testimonialBox">
+                                                            <i
+                                                                class="fa fa-quote-left"
+                                                                aria-hidden="true"
+                                                            ></i>
+                                                            <div class="content">
+                                                                <p>
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                    loremipsum
+                                                                    lorem ipsum
+                                                                </p>
+                                                                <div class="details">
+                                                                    <div class="imgBx">
+                                                                        <img
+                                                                            src="/assets/man-icon.png"
+                                                                            alt="user-icon"
+                                                                        />
+                                                                        <span>
+                                                                            Narayana
+                                                                        </span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </SwiperSlide>
+                                                </SwiperSlide>
+                                            </div>
                                         </div>
-                                    </div> 
-                                </Swiper>
+                                    </Swiper>
                                 </div>
                             </div>
                         </div>
@@ -875,95 +1022,104 @@ function Home() {
                             </div>
                             <div className="row text-center">
                                 <div className="col-lg-10 col-md-12 col-sm-12 col-xs-12 m-auto">
-                                <Swiper spaceBetween={50}
-                                    loop={true}
-                                    Autoplay={100}
-                                    navigation 
-                                    breakpoints= {
-                                        {320 : {
-                                        slidesPerView: 1,
-                                        spaceBetween: 20
-                                        }},
-                                        {480 : {
-                                        slidesPerView: 3,
-                                        spaceBetween: 30
-                                        }},
-                                        {768 : {
-                                        slidesPerView: 2,
-                                        spaceBetween: 40
-                                        }},
-                                        {868 : {
-                                            slidesPerView: 5,
-                                            spaceBetween: 40
-                                        }}
-                                    }
-                                >
-                                    <div className="row">
-                                        <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <img
+                                    <Swiper
+                                        spaceBetween={50}
+                                        loop={true}
+                                        Autoplay={100}
+                                        navigation
+                                        breakpoints={
+                                            ({
+                                                320: {
+                                                    slidesPerView: 1,
+                                                    spaceBetween: 20,
+                                                },
+                                            },
+                                            {
+                                                480: {
+                                                    slidesPerView: 3,
+                                                    spaceBetween: 30,
+                                                },
+                                            },
+                                            {
+                                                768: {
+                                                    slidesPerView: 2,
+                                                    spaceBetween: 40,
+                                                },
+                                            },
+                                            {
+                                                868: {
+                                                    slidesPerView: 5,
+                                                    spaceBetween: 40,
+                                                },
+                                            })
+                                        }
+                                    >
+                                        <div className="row">
+                                            <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <img
                                                         src="assets/feed.png"
                                                         width="100"
                                                         alt="partner-logo"
-                                                />
-                                            </SwiperSlide>
-                                        </div>
-                                        <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <img
+                                                    />
+                                                </SwiperSlide>
+                                            </div>
+                                            <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <img
                                                         src="assets/nabard-logo.png"
                                                         width="100"
                                                         alt="partner-logo"
-                                                />
-                                            </SwiperSlide>
-                                        </div>
-                                        <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <img
+                                                    />
+                                                </SwiperSlide>
+                                            </div>
+                                            <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <img
                                                         src="assets/feed.png"
                                                         width="100"
                                                         alt="partner-logo"
-                                                />
-                                            </SwiperSlide>
-                                        </div>
-                                        <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <img
+                                                    />
+                                                </SwiperSlide>
+                                            </div>
+                                            <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <img
                                                         src="assets/nabard-logo.png"
                                                         width="100"
                                                         alt="partner-logo"
-                                                />
-                                            </SwiperSlide>
-                                        </div>
-                                        <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <img
+                                                    />
+                                                </SwiperSlide>
+                                            </div>
+                                            <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <img
                                                         src="assets/feed.png"
                                                         width="100"
                                                         alt="partner-logo"
-                                                />
-                                            </SwiperSlide>
-                                        </div>
-                                        <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <img
+                                                    />
+                                                </SwiperSlide>
+                                            </div>
+                                            <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <img
                                                         src="assets/nabard-logo.png"
                                                         width="100"
                                                         alt="partner-logo"
-                                                />
-                                            </SwiperSlide>
-                                        </div>
-                                        <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                                            <SwiperSlide>
-                                                <img
+                                                    />
+                                                </SwiperSlide>
+                                            </div>
+                                            <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                                <SwiperSlide>
+                                                    <img
                                                         src="assets/feed.png"
                                                         width="100"
                                                         alt="partner-logo"
-                                                />
-                                            </SwiperSlide>
+                                                    />
+                                                </SwiperSlide>
+                                            </div>
                                         </div>
-                                    </div>
-                                  </Swiper>
+                                    </Swiper>
                                 </div>
                             </div>
                         </div>
