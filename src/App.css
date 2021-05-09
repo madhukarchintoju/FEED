@@ -38,10 +38,10 @@
 } */
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .fixit {
-  /* position: relative;
+    /* position: relative;
   height: 50px; */
 }

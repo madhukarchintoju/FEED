@@ -1,0 +1,8 @@
+{
+    "appId": "io.ionic.FEED",
+    "appName": "FEED",
+    "bundledWebRuntime": false,
+    "npmClient": "npm",
+    "webDir": "build",
+    "cordova": {}
+  }
