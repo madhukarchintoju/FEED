@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import i18n from 'i18next'
+
 export default function Header() {
+    const { t } = useTranslation()
+    const languageChange = (event) => {
+        i18n.changeLanguage(event.target.value)
+    }
+
     return (
-        <React.Fragment>
+        <>
             <div className="row container-fluid sticky-header header-top">
                 <div className="feed-logo">
                     <img
@@ -44,13 +52,16 @@ export default function Header() {
                                 </div>
                                 <div className="col-lg-2 col-md-4 col-sm-3 col-xs-3 col">
                                     <form>
-                                        <select className="lng-select form-control">
-                                            <option value="">Language</option>
-                                            <option value="">English</option>
-                                            <option value="">Telugu</option>
-                                            <option value="">Tamil</option>
-                                            <option value="">Hindi</option>
-                                            <option value="">Marati</option>
+                                        <select
+                                            className="lng-select form-control"
+                                            onChange={languageChange}
+                                        >
+                                            <option value="default">
+                                                Language
+                                            </option>
+                                            <option value="en">English</option>
+                                            <option value="te">Telugu</option>
+                                            <option value="hin">Hindi</option>
                                         </select>
                                     </form>
                                 </div>
@@ -169,7 +180,7 @@ export default function Header() {
                                         <li className="nav-item active">
                                             {/* <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a> */}
                                             <Link className="nav-link" to="/">
-                                                Home{' '}
+                                                {t('home')}{' '}
                                                 <span className="sr-only">
                                                     (current)
                                                 </span>
@@ -180,7 +191,7 @@ export default function Header() {
                                                 className="nav-link"
                                                 href="#aboutSection"
                                             >
-                                                About Us
+                                                {t('about_us')}
                                             </a>
                                         </li>
                                         <li className="nav-item">
@@ -188,7 +199,7 @@ export default function Header() {
                                                 className="nav-link"
                                                 href="#feedServices"
                                             >
-                                                Services
+                                                {t('services')}
                                             </a>
                                         </li>
                                         <li className="nav-item">
@@ -196,7 +207,7 @@ export default function Header() {
                                                 className="nav-link"
                                                 href="#eventsUpdates"
                                             >
-                                                Events
+                                                {t('events')}
                                             </a>
                                         </li>
                                         <li className="nav-item">
@@ -204,33 +215,33 @@ export default function Header() {
                                                 className="nav-link"
                                                 href="#howFeedWorks"
                                             >
-                                                How Feed Works
+                                                {t('how_feed_works')}
                                             </a>
                                         </li>
                                         <li className="nav-item">
                                             <a className="nav-link" href="#">
-                                                FPO
+                                                {t('fpo')}
                                             </a>
                                         </li>
                                         <li className="nav-item">
                                             <a className="nav-link" href="#">
-                                                Exports
+                                                {t('exports')}
                                             </a>
                                         </li>
                                         <li className="nav-item">
                                             <a className="nav-link" href="#">
-                                                Contact Us
+                                                {t('contact_us')}
                                             </a>
                                         </li>
                                     </ul>
                                     <Link to="/login">
                                         <button className="login-btn">
-                                            LOGIN
+                                            {t('login_caps')}
                                         </button>
                                     </Link>
                                     <Link to="/register">
                                         <button className="register-btn">
-                                            REGISTER
+                                            {t('register_caps')}
                                         </button>
                                     </Link>
                                 </div>
@@ -239,6 +250,6 @@ export default function Header() {
                     </div>
                 </div>
             </div>
-        </React.Fragment>
+        </>
     )
 }

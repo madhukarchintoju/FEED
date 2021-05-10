@@ -291,8 +291,7 @@ function Home() {
                                                         <h4
                                                             class="card-title my-auto"
                                                             style={{
-                                                                color:
-                                                                    '#fbba14',
+                                                                color: '#fbba14',
                                                             }}
                                                         >
                                                             MY FPO
@@ -324,8 +323,7 @@ function Home() {
                                                             style={{
                                                                 position:
                                                                     'relative',
-                                                                color:
-                                                                    '#79b247',
+                                                                color: '#79b247',
                                                             }}
                                                         >
                                                             MY FARM
@@ -355,8 +353,7 @@ function Home() {
                                                         <h4
                                                             class="card-title P-5 my-auto"
                                                             style={{
-                                                                color:
-                                                                    '#2f79e4',
+                                                                color: '#2f79e4',
                                                             }}
                                                         >
                                                             MY BUSINESS
@@ -386,8 +383,7 @@ function Home() {
                                                         <h4
                                                             class="card-title P-5 my-auto"
                                                             style={{
-                                                                color:
-                                                                    '#f54900',
+                                                                color: '#f54900',
                                                             }}
                                                         >
                                                             MY MARKET
@@ -423,8 +419,7 @@ function Home() {
                                                         <h4
                                                             class="card-title P-5 my-auto"
                                                             style={{
-                                                                color:
-                                                                    '#832ad4',
+                                                                color: '#832ad4',
                                                             }}
                                                         >
                                                             MY PRODUCTS
@@ -454,8 +449,7 @@ function Home() {
                                                         <h4
                                                             class="card-title P-5 my-auto"
                                                             style={{
-                                                                color:
-                                                                    '#006a94',
+                                                                color: '#006a94',
                                                             }}
                                                         >
                                                             MY EXPORTS
@@ -485,8 +479,7 @@ function Home() {
                                                         <h4
                                                             class="card-title P-5 my-auto"
                                                             style={{
-                                                                color:
-                                                                    '#f11c18',
+                                                                color: '#f11c18',
                                                             }}
                                                         >
                                                             MY EDUCATION
@@ -516,8 +509,7 @@ function Home() {
                                                         <h4
                                                             class="card-title P-5 my-auto"
                                                             style={{
-                                                                color:
-                                                                    '#312401',
+                                                                color: '#312401',
                                                             }}
                                                         >
                                                             MY TOOLS

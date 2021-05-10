@@ -1,10 +1,15 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    useLocation,
+} from 'react-router-dom'
 import Header from './Components/HeaderComp/Header'
 import Home from './Components/HomeComp/home'
 import Register from './Components/RegisterComp/Register'
 import Login from './Components/LoginComp/Login'
 import './App.css'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from './Components/FooterComp/Footer'
 import MyFpo from './Components/ServicesComp/MyFpoComp/MyFpo'
 import MyFarmMainComp from './Components/ServicesComp/MyFarmComp/myFarmMainComp/myFarmMainComp'
@@ -16,9 +21,19 @@ import MyMarketMainComp from './Components/ServicesComp/myMarketComp/myMarketMai
 import MyToolsMainComp from './Components/ServicesComp/myToolsComp/myToolsMainComp/myToolsMainComp'
 
 function App() {
+    const ScrollToTop = () => {
+        const { pathname } = useLocation()
+
+        useEffect(() => {
+            window.scrollTo(0, 0)
+        }, [pathname])
+
+        return null
+    }
     return (
         <React.Fragment>
             <Router>
+                <ScrollToTop />
                 <Header />
                 <Switch>
                     <Route path="/" exact component={Home} />
