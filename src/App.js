@@ -7,7 +7,8 @@ import './App.css'
 import React from 'react'
 import Footer from './Components/FooterComp/Footer'
 import MyFpo from './Components/ServicesComp/MyFpoComp/MyFpo'
-import MyFarmMainComp from './Components/ServicesComp/MyFarmComp/myFarmMainComp/myFarmMainComp'
+import MyFarmMainComp from './Components/ServicesComp/MyFarmComp/MyFarmMainComp/myFarmMainComp'
+import MyFarmNavComp from './Components/ServicesComp/MyFarmComp/MyFarmNavComp/myFarmNavComp'
 import MyProductsMainComp from './Components/ServicesComp/myProductsComp/myProductsMainComp/myProductsMainComp'
 import MyBusiness from './Components/ServicesComp/MyBusinessComp/MyBusiness'
 import MyExportMainComp from './Components/ServicesComp/myExportComp/myExportMainComp/myExportMainComp'
@@ -26,6 +27,7 @@ function App() {
                     <Route path="/login" component={Login} />
                     <Route path="/myfpo" component={MyFpo} />
                     <Route path="/myfarm" component={MyFarmMainComp} />
+                    <Route path="/myfarmnav" component={MyFarmNavComp} />
                     <Route path="/myproducts" component={MyProductsMainComp} />
                     <Route path="/mybusiness" component={MyBusiness} />
                     <Route path="/myexport" component={MyExportMainComp} />

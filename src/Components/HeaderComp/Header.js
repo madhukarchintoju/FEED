@@ -91,7 +91,7 @@ export default function Header() {
                                                 </div>
                                             </form>
                                         </div>
-                                        <div className="col-lg-2 col-md-4 col-sm-4 col-xs-4 col my-auto header-social-icons">
+                                        <div className="col-lg-2 col-md-4 col-sm-5 col-xs-5 col my-auto header-social-icons">
                                             <a href="">
                                                 <img
                                                     src={`${process.env.PUBLIC_URL}/assets/facebook.svg`}
