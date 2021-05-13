@@ -7,13 +7,9 @@ export default function MyFpo() {
     return (
         <>
             <ServicesNavbar />
-            {/* <h1>Welcome To My Fpo</h1> */}
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-2">
-                        {/* <div>
-                    <i class="fa fa-bars" aria-hidden="true" style={{fontSize:"26px"}}></i>
-                </div> */}
                         <div className="row">
                             <div className="side-menu active">
                                 <div className="">

@@ -1,11 +1,11 @@
-import React from 'react';
-import './myFarmNavComp.css';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import './myFarmNav.css'
+import { Link } from 'react-router-dom'
 
 export default function MyFarmNavComp() {
     return (
         <div className="myfarm-nav row m-0 mt-2">
-            <div className="side-menu active">
+            <div className="myfarm-side-menu active">
                 <ul className="nav">
                     <li className="nav-item">
                         <Link className="nav-link" to="/myfarm/fruits">

@@ -23,3 +23,9 @@
 .nav-btn .nav-link {
     padding: 0rem !important;
 }
+
+@media only screen and (max-width: 425px) {
+    .resp-ServiceNav {
+        display: none;
+    }
+}

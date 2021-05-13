@@ -1,0 +1,116 @@
+.feed-services-section {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.feed-services-section .nav-link {
+    padding: 0rem !important;
+}
+.card-img img {
+    position: relative;
+    z-index: 10;
+    top: -80px;
+    padding: 10px;
+    border-radius: 50% 50%;
+    background-color: white;
+    box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+.services-card {
+    margin: 2 auto !important;
+    border-radius: 10px 10px 10px 10px !important;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.services-card img {
+    width: 80;
+    height: 80px;
+}
+
+.services-card .services-card-header {
+    height: 50px;
+    border-radius: 10px 10px 50% 50%;
+}
+
+.services-card .card-body h4 {
+    position: relative;
+    height: 10px;
+    top: -50px;
+    font-weight: bold;
+}
+
+.wrapper {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+
+.item-flx {
+    width: 100%;
+}
+
+@media only screen and (max-width: 426px) {
+    .feed-services-section {
+        margin-top: 2px;
+        margin-bottom: 40px;
+    }
+
+    .feed-services-section .nav-link {
+        padding: 0rem !important;
+    }
+    .card-img img {
+        position: relative;
+        z-index: 10;
+        top: -55px;
+        width: 50 !important;
+        padding: 5px;
+        border-radius: 50% 50%;
+        background-color: white;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .services-card {
+        border-radius: 10px 10px 10px 10px !important;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .item-flx {
+        width: 90px;
+        height: 90px;
+    }
+
+    .services-card img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .services-card .services-card-header {
+        height: 30px;
+        border-radius: 10px 10px 50% 50%;
+    }
+    .services-card .card-body {
+        padding: 15px;
+    }
+
+    .services-card .card-body h4 {
+        position: relative;
+        height: 10px;
+        top: -40px;
+        font-size: 10px;
+        /* font-weight: bold; */
+    }
+
+    @media only screen and (max-width: 992px) {
+        .rocket-ant {
+            display: none;
+        }
+    }
+}

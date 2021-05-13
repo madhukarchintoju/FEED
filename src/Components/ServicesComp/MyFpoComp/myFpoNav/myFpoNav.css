@@ -1,0 +1,38 @@
+.brd {
+    border: 1px solid red;
+}
+
+.fpo-side-menu {
+    position: relative;
+    width: 220px;
+    padding: 5px;
+    /* height: 100%; */
+    left: -100%;
+    background-color: #ffc107;
+    border-radius: 0px 20px 20px 0px;
+    transition: all 1s;
+    padding-bottom: 10px;
+}
+
+.fpo-side-menu.active {
+    left: 0px;
+}
+
+.fpo-side-menu ul li {
+    width: 100%;
+    padding: 5px;
+    margin: 2px;
+    border-bottom: 1px solid white;
+}
+
+.fpo-side-menu ul li:hover {
+    background-color: cornsilk;
+    border-radius: 20px 20px;
+    transition: all 0.6s;
+}
+
+.fpo-side-menu ul li a {
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+}

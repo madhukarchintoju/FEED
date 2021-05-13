@@ -1,0 +1,23 @@
+.aboutus-section {
+    /* margin-top: 5px; */
+}
+
+.about-content-wrap {
+    background-color: #d2774b;
+    color: white;
+    font-weight: bold;
+}
+
+.objective-content-wrap {
+    background-color: #4a9c42;
+    color: white;
+}
+
+.vision-title {
+    font-size: 32px !important;
+    font-weight: bold;
+}
+.mission-title {
+    font-size: 32px !important;
+    font-weight: bold;
+}
