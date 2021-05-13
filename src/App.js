@@ -27,6 +27,7 @@ import MyEduMainComp from './Components/ServicesComp/myEduComp/myEduMainComp/myE
 import MyMarketMainComp from './Components/ServicesComp/myMarketComp/myMarketMainComp/myMarketMainComp'
 import MyToolsMainComp from './Components/ServicesComp/myToolsComp/myToolsMainComp/myToolsMainComp'
 import MyFpoMain from './Components/ServicesComp/MyFpoComp/myFpoMain/myFpoMain'
+import AnalyticsMain from './Components/analytics/analyticsMain/analyticsMain'
 
 function App() {
     const ScrollToTop = () => {
@@ -50,6 +51,7 @@ function App() {
                         exact
                         component={AboutSection}
                     />
+                    <Route path="/analytics" exact component={AnalyticsMain} />
                     <Route
                         path="/serviceSection"
                         exact

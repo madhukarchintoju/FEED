@@ -1,16 +1,16 @@
-import React from 'react';
-import './myFpoMain.css';
-import MyFpoNav from '../myFpoNav/myFpoNav';
-import ServicesNavbar from '../../ServicesNavbar/ServicesNavbar.js';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import AboutFpo from '../myFpoList/aboutFpo/aboutFpo';
-import MyFpoHome from '../myFpoHome/myFpoHome';
-import FpoAccount from '../myFpoList/fpoAccount/fpoAccount';
-import FpoAgmBoard from '../myFpoList/fpoAgmBoard/fpoAgmBoard';
-import FpoBusinessPlan from '../myFpoList/fpoBusinessPlan/fpoBusinessPlan';
-import FpoComplainces from '../myFpoList/fpoComplainces/fpoComplainces';
-import FpoConnect from '../myFpoList/fpoConnect/fpoConnect';
-import FpoLoanSchemes from '../myFpoList/fpoLoanSchemes/fpoLoanSchemes';
+import React from 'react'
+import './myFpoMain.css'
+import MyFpoNav from '../myFpoNav/myFpoNav'
+import ServicesNavbar from '../../ServicesNavbar/ServicesNavbar.js'
+import { Route, Switch, Redirect } from 'react-router-dom'
+import AboutFpo from '../myFpoList/aboutFpo/aboutFpo'
+import MyFpoHome from '../myFpoHome/myFpoHome'
+import FpoAccount from '../myFpoList/fpoAccount/fpoAccount'
+import FpoAgmBoard from '../myFpoList/fpoAgmBoard/fpoAgmBoard'
+import FpoBusinessPlan from '../myFpoList/fpoBusinessPlan/fpoBusinessPlan'
+import FpoComplainces from '../myFpoList/fpoComplainces/fpoComplainces'
+import FpoConnect from '../myFpoList/fpoConnect/fpoConnect'
+import FpoLoanSchemes from '../myFpoList/fpoLoanSchemes/fpoLoanSchemes'
 export default function MyFpoMain() {
     return (
         <>

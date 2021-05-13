@@ -1,10 +1,10 @@
-import React from 'react';
-import './eximTarrifBenefits.css';
+import React from 'react'
+import './eximTarrifBenefits.css'
 
 export default function EximTarrifbenefits() {
-  return (
-    <>
-      <h1>Exim Tarrif benefits</h1>
-    </>
-  )
+    return (
+        <>
+            <h1>Exim Tarrif benefits</h1>
+        </>
+    )
 }

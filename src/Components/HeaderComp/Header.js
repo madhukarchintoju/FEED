@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -184,6 +184,14 @@ export default function Header() {
                                         <li className="nav-item">
                                             <Link
                                                 className="nav-link"
+                                                to="/analytics"
+                                            >
+                                                {t('analytics')}{' '}
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <Link
+                                                className="nav-link"
                                                 to="/aboutSection"
                                             >
                                                 {t('about_us')}{' '}
@@ -235,7 +243,10 @@ export default function Header() {
                                             </Link>
                                         </li>
                                     </ul>
-                                    <Link to="/login" className="nav-link my-auto">
+                                    <Link
+                                        to="/login"
+                                        className="nav-link my-auto"
+                                    >
                                         <button className="login-btn">
                                             {t('login_caps')}
                                         </button>

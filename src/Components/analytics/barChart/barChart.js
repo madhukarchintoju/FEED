@@ -5,45 +5,46 @@ import HighchartsReact from 'highcharts-react-official'
 function BarChart() {
     const options = {
         chart: {
-            type: 'bar'
+            type: 'bar',
         },
         title: {
-            text: 'Stacked bar chart'
+            text: 'Stacked bar chart',
         },
         xAxis: {
-            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas'],
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'Total fruit consumption'
-            }
+                text: 'Total fruit consumption',
+            },
         },
         legend: {
-            reversed: true
+            reversed: true,
         },
         plotOptions: {
             series: {
-                stacking: 'normal'
-            }
+                stacking: 'normal',
+            },
         },
-        series: [{
-            name: 'John',
-            data: [5, 3, 4, 7, 2]
-        }, {
-            name: 'Jane',
-            data: [2, 2, 3, 2, 1]
-        }, {
-            name: 'Joe',
-            data: [3, 4, 4, 2, 5]
-        }]
+        series: [
+            {
+                name: 'John',
+                data: [5, 3, 4, 7, 2],
+            },
+            {
+                name: 'Jane',
+                data: [2, 2, 3, 2, 1],
+            },
+            {
+                name: 'Joe',
+                data: [3, 4, 4, 2, 5],
+            },
+        ],
     }
     return (
         <>
-             <HighchartsReact
-                highcharts={Highcharts}
-                options={options}
-            />
+            <HighchartsReact highcharts={Highcharts} options={options} />
         </>
     )
 }

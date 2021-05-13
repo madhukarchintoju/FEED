@@ -15,6 +15,7 @@ i18n.use(LanguageDetector).init({
                 contact_us: 'Contact Us',
                 login_caps: 'LOGIN',
                 register_caps: 'REGISTER',
+                analytics: 'Analytics',
             },
         },
         te: {
@@ -29,6 +30,7 @@ i18n.use(LanguageDetector).init({
                 contact_us: 'మమ్మల్ని సంప్రదించండి',
                 login_caps: 'ప్రవేశించండి',
                 register_caps: 'రిజిస్టర్',
+                analytics: 'విశ్లేషణలు',
             },
         },
 
@@ -44,6 +46,7 @@ i18n.use(LanguageDetector).init({
                 contact_us: 'संपर्क करे',
                 login_caps: 'लॉग इन करें',
                 register_caps: 'रजिस्टर करें',
+                analytics: 'एनालिटिक्स',
             },
         },
     },

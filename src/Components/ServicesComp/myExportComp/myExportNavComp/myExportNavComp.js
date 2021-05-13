@@ -14,57 +14,90 @@ export default function MyExportNavComp() {
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/startexport">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/startexport"
+                            >
                                 HOW TO START EXPORT
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/exportproductselection">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/exportproductselection"
+                            >
                                 PRODUCT SELECTION
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/exportbuyersconnection">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/exportbuyersconnection"
+                            >
                                 BUYERS CONNECTIONS
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/eximpolicyregulation">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/eximpolicyregulation"
+                            >
                                 EXPORT-IMPORT FINANCE & INSURANCE
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/eximfinanceinsurance">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/eximfinanceinsurance"
+                            >
                                 EXPORT-IMPORT POLICIES & REGULATIONS
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/processexportorder">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/processexportorder"
+                            >
                                 PROCESS AND EXPORT ORDER
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/eximdocumentation">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/eximdocumentation"
+                            >
                                 EXPORT-IMPORT DOCUMENTATION
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/globaltradeupdates">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/globaltradeupdates"
+                            >
                                 GLOBAL TRADE UPDATES
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/exportevents">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/exportevents"
+                            >
                                 EVENTS
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/exporttoolservices">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/exporttoolservices"
+                            >
                                 TOOLS & SERVICES
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/myexport/eximtarrifbenefits">
+                            <Link
+                                className="nav-link"
+                                to="/myexport/eximtarrifbenefits"
+                            >
                                 EXPORT-IMPORT TARIFF & BENIFITS
                             </Link>
                         </li>

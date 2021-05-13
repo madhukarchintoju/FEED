@@ -1,5 +1,5 @@
-import React from 'react';
-import './myBusinessHome.css';
+import React from 'react'
+import './myBusinessHome.css'
 
 export default function MyBusinessHome() {
     return (

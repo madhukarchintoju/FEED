@@ -1,10 +1,10 @@
-import React from 'react';
-import './eximFinanceInsurance.css';
+import React from 'react'
+import './eximFinanceInsurance.css'
 
 export default function EximFinanceInsurance() {
-  return (
-    <>
-      <h1>Exim FinanceInsurance</h1>
-    </>
-  )
+    return (
+        <>
+            <h1>Exim FinanceInsurance</h1>
+        </>
+    )
 }
