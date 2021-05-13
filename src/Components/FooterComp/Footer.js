@@ -102,7 +102,7 @@ export default function Footer() {
                                                         </Link>
                                                     </li>
                                                     <li>
-                                                        <Link to="/" a href="">
+                                                        <Link to="/">
                                                             Financing
                                                         </Link>
                                                     </li>
@@ -225,23 +225,12 @@ export default function Footer() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                                        <div className="row">
-                                            <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                                <img
-                                                    src="assets/iphone.png"
-                                                    width="100%"
-                                                    alt=""
-                                                />
-                                            </div>
-                                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                                                <img
-                                                    src="assets/btn-playstore.png"
-                                                    width="100%"
-                                                    alt=""
-                                                />
-                                            </div>
-                                        </div>
+                                    <div className="col-lg-2 col-md-4 col-sm-4 col-xs-3">
+                                        <img
+                                            src={`${process.env.PUBLIC_URL}/assets/btn-playstore.png`}
+                                            width="100%"
+                                            alt=""
+                                        />
                                     </div>
                                 </div>
                             </div>

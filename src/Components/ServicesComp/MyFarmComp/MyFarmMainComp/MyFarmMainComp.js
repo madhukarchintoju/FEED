@@ -20,7 +20,7 @@ export default function MyFarmMainComp() {
     return (
         <div>
             <ServicesNavbar></ServicesNavbar>
-            <div className="row">
+            <div className="row m-0">
                 <MyFarmNavComp className="col"></MyFarmNavComp>
                 <Switch>
                     <Route path="/myfarm/fruits" component={MyFarmFruits} />

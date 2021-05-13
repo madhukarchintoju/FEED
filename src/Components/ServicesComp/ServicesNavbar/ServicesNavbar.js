@@ -6,13 +6,13 @@ import { Avatar } from '@material-ui/core'
 export default function ServicesNavbar() {
     return (
         <>
-            <div className="container-fluid">
+            <div className="container-fluid resp-ServiceNav">
                 <div className="row m-0 mt-3 p-1 bg-light">
                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-lg-flex justify-content-around nav-btn">
                         <Link className="nav-link" to="/myfpo">
                             <button className="btn btn-warning">
                                 <img
-                                    src="assets/fpo-icon.jpg"
+                                    src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
                                     width="30"
                                     style={{ borderRadius: '50px 50px' }}
                                     alt=""
@@ -23,7 +23,7 @@ export default function ServicesNavbar() {
                         <Link className="nav-link" to="/myfarm">
                             <button className="btn farm-btn">
                                 <img
-                                    src="assets/farm-icon.jpg"
+                                    src={`${process.env.PUBLIC_URL}/assets/farm-icon.jpg`}
                                     width="30"
                                     style={{ borderRadius: '50px 50px' }}
                                     alt=""
@@ -34,7 +34,7 @@ export default function ServicesNavbar() {
                         <Link className="nav-link" to="/myproducts">
                             <button className="btn btn-primary">
                                 <img
-                                    src="assets/product-icon.jpg"
+                                    src={`${process.env.PUBLIC_URL}/assets/product-icon.jpg`}
                                     width="30"
                                     style={{ borderRadius: '50px 50px' }}
                                     alt=""
@@ -45,7 +45,7 @@ export default function ServicesNavbar() {
                         <Link className="nav-link" to="/mybusiness">
                             <button className="btn violet-btn">
                                 <img
-                                    src="assets/my-business-icon.jpg"
+                                    src={`${process.env.PUBLIC_URL}/assets/my-business-icon.jpg`}
                                     width="30"
                                     style={{ borderRadius: '50px 50px' }}
                                     alt=""
@@ -56,7 +56,7 @@ export default function ServicesNavbar() {
                         <Link className="nav-link" to="/myexport">
                             <button className="btn export-btn">
                                 <img
-                                    src="assets/52474.jpg"
+                                    src={`${process.env.PUBLIC_URL}/assets/52474.jpg`}
                                     width="30"
                                     style={{ borderRadius: '50px 50px' }}
                                     alt=""
@@ -67,7 +67,7 @@ export default function ServicesNavbar() {
                         <Link className="nav-link" to="/mymarket">
                             <button className="btn wheat-btn">
                                 <img
-                                    src="assets/cart-icon.jpg"
+                                    src={`${process.env.PUBLIC_URL}/assets/cart-icon.jpg`}
                                     width="30"
                                     style={{ borderRadius: '50px 50px' }}
                                     alt=""
@@ -78,7 +78,7 @@ export default function ServicesNavbar() {
                         <Link className="nav-link" to="/myeducation">
                             <button className="btn btn-danger">
                                 <img
-                                    src="assets/my-edu-icon.jpg"
+                                    src={`${process.env.PUBLIC_URL}/assets/my-edu-icon.jpg`}
                                     width="30"
                                     style={{ borderRadius: '50px 50px' }}
                                     alt=""
@@ -89,7 +89,7 @@ export default function ServicesNavbar() {
                         <Link className="nav-link" to="/mytools">
                             <button className="btn btn-dark">
                                 <img
-                                    src="assets/tools-icon.jpg"
+                                    src={`${process.env.PUBLIC_URL}/assets/tools-icon.jpg`}
                                     width="30"
                                     style={{ borderRadius: '50px 50px' }}
                                     alt=""
