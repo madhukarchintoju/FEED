@@ -1,5 +1,5 @@
 import React from 'react'
-import './myFarmNavComp.css'
+import './myFarmNav.css'
 import { Link } from 'react-router-dom'
 
 export default function MyFarmNavComp() {

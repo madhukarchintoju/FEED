@@ -1,6 +1,6 @@
 import React from 'react'
-import './myFarmMainComp.css'
-import MyFarmNavComp from '../myFarmNavComp/myFarmNavComp'
+import './myFarmMain.css'
+import MyFarmNavComp from '../myFarmNavComp/myFarmNav'
 import ServicesNavbar from '../../ServicesNavbar/ServicesNavbar.js'
 import MyFarmFruits from '../myFarmProducts/fruits/fruits'
 import Vegetables from '../myFarmProducts/vegetables/vegetables'
