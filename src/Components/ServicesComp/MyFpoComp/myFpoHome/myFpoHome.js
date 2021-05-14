@@ -23,91 +23,99 @@ export default function MyFpoHome() {
                     />
                 </div>
             </div>
-            <div className="col-lg-8 fpo-cards-wrap">
+            <div className="col-lg-8 fpo-cards-wrap text-center">
                 <div className="row">
-                    <div className="col-lg-4">
-                        <div className="fpo-cards">
-                            <div className="card-body text-center">
-                                <img
-                                    src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
-                                    width="70"
-                                    alt=""
-                                />
-                                <h5 className="card-title my-auto">
-                                    ABOUT FPO
-                                </h5>
+                    <div className="col-lg-12">
+                        <div className="row">
+                            <div className="col-lg-4">
+                                <div className="fpo-cards">
+                                    <div className="card-body text-center">
+                                        <img
+                                            src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
+                                            width="70"
+                                            alt=""
+                                        />
+                                        <h5 className="card-title my-auto">
+                                            ABOUT FPO
+                                        </h5>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="fpo-cards">
-                            <div className="card-body text-center">
-                                <img
-                                    src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
-                                    width="70"
-                                    alt=""
-                                />
-                                <h5 className="card-title">FPO ACCOUNT</h5>
+                            <div className="col-lg-4">
+                                <div className="fpo-cards">
+                                    <div className="card-body text-center">
+                                        <img
+                                            src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
+                                            width="70"
+                                            alt=""
+                                        />
+                                        <h5 className="card-title">
+                                            FPO ACCOUNT
+                                        </h5>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="fpo-cards">
-                            <div className="card-body text-center">
-                                <img
-                                    src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
-                                    width="70"
-                                    alt=""
-                                />
-                                <h5 className="card-title">
-                                    FPO BUSINESS PLAN
-                                </h5>
+                            <div className="col-lg-4">
+                                <div className="fpo-cards">
+                                    <div className="card-body text-center">
+                                        <img
+                                            src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
+                                            width="70"
+                                            alt=""
+                                        />
+                                        <h5 className="card-title">
+                                            FPO BUSINESS PLAN
+                                        </h5>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="fpo-cards">
-                            <div className="card-body text-center">
-                                <img
-                                    src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
-                                    width="70"
-                                    alt=""
-                                />
-                                <h5 className="card-title">FPO COMPLAINCES</h5>
+                            <div className="col-lg-4">
+                                <div className="fpo-cards">
+                                    <div className="card-body text-center">
+                                        <img
+                                            src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
+                                            width="70"
+                                            alt=""
+                                        />
+                                        <h5 className="card-title">
+                                            FPO COMPLAINCES
+                                        </h5>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="fpo-cards">
-                            <div className="card-body text-center">
-                                <img
-                                    src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
-                                    width="70"
-                                    alt=""
-                                />
-                                <h5 className="card-title">
-                                    FPO AGM & BOARD MEETING
-                                </h5>
+                            <div className="col-lg-4">
+                                <div className="fpo-cards">
+                                    <div className="card-body text-center">
+                                        <img
+                                            src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
+                                            width="70"
+                                            alt=""
+                                        />
+                                        <h5 className="card-title">
+                                            FPO AGM & BOARD MEETING
+                                        </h5>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
-                        <div className="fpo-cards">
-                            <div className="card-body text-center">
-                                <img
-                                    src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
-                                    width="70"
-                                    alt=""
-                                />
-                                <h5 className="card-title">
-                                    FPO LOANS & SCHEMES
-                                </h5>
+                            <div className="col-lg-4">
+                                <div className="fpo-cards">
+                                    <div className="card-body text-center">
+                                        <img
+                                            src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
+                                            width="70"
+                                            alt=""
+                                        />
+                                        <h5 className="card-title">
+                                            FPO LOANS & SCHEMES
+                                        </h5>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col text-center">
+                <div className="row m-0">
+                    <div className="col-lg-12">
                         <button className="btn btn-warning">
                             FPO CONNECT BROADCAST
                         </button>

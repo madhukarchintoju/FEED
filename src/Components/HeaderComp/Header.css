@@ -39,7 +39,7 @@
 }
 .orange-stripe {
     height: 33.3%;
-    border-bottom-left-radius: 50px;
+    border-bottom-left-radius: 30px;
 }
 
 .white-bg {
@@ -48,7 +48,7 @@
 
 .green-stripe {
     height: 33.3%;
-    border-top-left-radius: 50px;
+    border-top-left-radius: 30px;
 }
 
 .topnav .search-container {
@@ -142,7 +142,7 @@
 }
 .login-btn {
     margin: 2px;
-    padding: 10px 30px;
+    padding: 5px 20px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
@@ -170,7 +170,7 @@
 }
 .register-btn {
     margin: 2px;
-    padding: 10px 30px;
+    padding: 5px 20px;
     text-align: center;
     text-transform: uppercase;
     transition: 0.5s;
