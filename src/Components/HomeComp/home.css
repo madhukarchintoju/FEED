@@ -122,91 +122,8 @@
     .carousel-section {
         display: none !important;
     }
-    .about-content-wrap {
-        display: none !important;
-    }
-    .objective-content-wrap {
-        background-color: #b6bbfc !important;
-        color: black;
-    }
-    .objective-title {
-        font-size: 16px;
-    }
-    .objective-content {
-        font-size: 12px;
-    }
 
-    .feed-service-img {
-        display: none !important;
-    }
-    .vision-mission-wrap {
-        display: none !important;
-    }
-
-    /* FEED Services */
-    .feed-services-section {
-        margin-top: 2px;
-        margin-bottom: 40px;
-    }
-
-    .feed-services-section .nav-link {
-        padding: 0rem !important;
-    }
-    .card-img img {
-        position: relative;
-        z-index: 10;
-        top: -55px;
-        width: 50 !important;
-        padding: 5px;
-        border-radius: 50% 50%;
-        background-color: white;
-        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
-    }
-
-    .services-card {
-        width: 80px;
-        height: 80px;
-        border-radius: 10px 10px 10px 10px !important;
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    }
-
-    .services-card img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .services-card .services-card-header {
-        height: 30px;
-        border-radius: 10px 10px 50% 50%;
-    }
-    .services-card .card-body {
-        padding: 15px;
-    }
-
-    .services-card .card-body h4 {
-        position: relative;
-        height: 10px;
-        top: -40px;
-        font-size: 10px;
-        /* font-weight: bold; */
-    }
-
-    .events-section {
-        display: none;
-    }
-
-    /* .howFeedWorks video {
-        width: 50px!important;
-        height: 200px!important;
-    } */
-    .feed-video {
-        height: 200px;
-    }
-    .newsletter-section-wrap {
+    .resp-events-view {
         display: none;
     }
 }
@@ -219,53 +136,5 @@
     .carousel-section .carousel-inner img {
         height: 100% !important;
         animation: thing 20s;
-    }
-
-    /* About us section */
-    .aboutus-title {
-        font-size: 24px;
-    }
-    .aboutus-content {
-        font-size: 14px !important;
-        font-weight: 500;
-    }
-    .objective-title {
-        font-size: 24px;
-    }
-    .objective-content {
-        font-size: 14px !important;
-        font-weight: 500;
-    }
-    .vision-title {
-        font-size: 22px !important;
-        font-weight: bold;
-    }
-    .vision-content {
-        padding: 0rem !important;
-        font-size: 14px;
-    }
-    .vision-card .card-header {
-        padding: 0rem !important;
-    }
-    .vision-card img {
-        width: 100px;
-    }
-    .mission-card img {
-        width: 100px;
-    }
-    .mission-card .card-header {
-        padding: 0rem !important;
-    }
-    .mission-title {
-        font-size: 22px !important;
-        font-weight: bold;
-    }
-    .mission-content {
-        padding: 0rem !important;
-        font-size: 14px;
-    }
-    /* feed services section */
-    .feed-service-img {
-        /* right: 0px!important; */
     }
 }

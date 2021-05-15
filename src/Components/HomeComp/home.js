@@ -68,7 +68,9 @@ function Home() {
                 </section>
                 <AboutSection />
                 <ServicesSection />
-                <EventsSection />
+                <div className="resp-events-view">
+                    <EventsSection></EventsSection>
+                </div>
                 <FeedWorkingSection />
                 <TestimonialSection />
                 <PartnerSection />

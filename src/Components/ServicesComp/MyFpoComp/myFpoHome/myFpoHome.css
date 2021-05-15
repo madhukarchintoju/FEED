@@ -1,3 +1,24 @@
 .brd {
     border: 1px solid red;
 }
+
+.fpo-cards-wrap .nav-link {
+    color: black!important;
+}
+
+.myfpo-broadcast-btn {
+    width: 550px;
+    margin: 10px;
+    font-size: 26px;
+    font-weight: bolder;
+    border-radius: 50px 50px;
+    background-color: #ffc107;
+    color: black;
+}
+
+@media only screen and (max-width:575px) {
+    .myfpo-broadcast-btn {
+        width: 250px;
+        font-size: 20px;
+    }
+}

@@ -14,7 +14,8 @@ import PlantationCrop from '../myFarmProducts/plantationCrop/plantationCrop'
 import Poultry from '../myFarmProducts/poultry/poultry'
 import Spices from '../myFarmProducts/spices/spices'
 import Plants from '../myFarmProducts/plants/plants'
-import { Route, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch } from 'react-router-dom'
+import MyFarmHome from '../myFarmHome/myFarmHome'
 
 export default function MyFarmMainComp() {
     return (
@@ -23,6 +24,7 @@ export default function MyFarmMainComp() {
             <div className="row m-0">
                 <MyFarmNavComp className="col"></MyFarmNavComp>
                 <Switch>
+                    <Route path="/myfarm/home" component={MyFarmHome}></Route>
                     <Route path="/myfarm/fruits" component={MyFarmFruits} />
                     <Route path="/myfarm/vegetables" component={Vegetables} />
                     <Route path="/myfarm/aqua" component={Aqua} />
@@ -41,6 +43,7 @@ export default function MyFarmMainComp() {
                     <Route path="/myfarm/poultry" component={Poultry} />
                     <Route path="/myfarm/spices" component={Spices} />
                     <Route path="/myfarm/plants" component={Plants} />
+                    <Redirect to="/myfarm/home"></Redirect>
                 </Switch>
             </div>
         </div>

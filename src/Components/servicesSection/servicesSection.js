@@ -16,10 +16,10 @@ export default function ServicesSection() {
                             </div>
                         </div>
                         <div className="row mt-3">
-                            <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12 rocket-ant">
+                            <div className="col-lg-3 col-md-12 rocket-ant">
                                 <img
                                     src="assets/rocket-one.png"
-                                    className="img-fluid feed-service-img"
+                                    className="img-fluid"
                                     alt=""
                                 />
                             </div>

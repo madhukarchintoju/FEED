@@ -11,7 +11,7 @@ export default function MyExportHome() {
                     <div className="col-lg-12">
                         <div className="row">
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="/">
+                                <Link className="nav-link" to="/myexport/whyexport">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/why-exports.png`}
                                         alt="Why Exports card"
@@ -19,7 +19,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link to="">
+                                <Link to="/myexport/startexport">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/start-export.png`}
                                         alt="Why Exports card"
@@ -27,7 +27,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/myexport/exportproductselection">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/PRODUCT-SELECTION.png`}
                                         alt="Why Exports card"
@@ -35,7 +35,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/myexport/exportbuyersconnection">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/BUYERS-CONNECTIONS.png`}
                                         alt="Why Exports card"
@@ -43,7 +43,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/myexport/eximpolicyregulation">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/POLICIES.png`}
                                         alt="Why Exports card"
@@ -51,7 +51,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/myexport/eximfinanceinsurance">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/FINANCE.png`}
                                         alt="Why Exports card"
@@ -61,7 +61,7 @@ export default function MyExportHome() {
                         </div>
                         <div className="row">
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/myexport/processexportorder">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/PROCESS.png`}
                                         alt="Why Exports card"
@@ -69,7 +69,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/myexport/eximdocumentation">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/DOCUMENTATION.png`}
                                         alt="Why Exports card"
@@ -77,7 +77,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/myexport/globaltradeupdates">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/GLOBAL-UPDATE.png`}
                                         alt="Why Exports card"
@@ -85,7 +85,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/myexport/exportevents">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/EVENTS.png`}
                                         alt="Why Exports card"
@@ -93,7 +93,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/myexport/exporttoolservices">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/TOOLS-SERVICES.png`}
                                         alt="Why Exports card"
@@ -101,7 +101,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link className="nav-link" to="">
+                                <Link className="nav-link" to="/myexport/eximtarrifbenefits">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/TARIFF.png`}
                                         alt="Why Exports card"
