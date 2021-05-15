@@ -110,21 +110,25 @@ export default function SideNavBar(props) {
                 <Divider />
                 <List>
                     {props?.data.map((item, index) => (
-                        <ListItem
-                            button
-                            key={index}
-                            component={Link}
-                            to={item.path}
-                            onClick={!screenWidth ? handleDrawerClose : ''}
-                        >
-                            <ListItemIcon>
-                                <Icon
-                                    className={item.icon}
-                                    style={{ color: props.textColor }}
-                                />
-                            </ListItemIcon>
-                            <ListItemText primary={item.name} />
-                        </ListItem>
+                        <div key={index}>
+                            <ListItem
+                                button
+                                component={Link}
+                                to={item.path}
+                                onClick={
+                                    !screenWidth ? handleDrawerClose : () => {}
+                                }
+                            >
+                                <ListItemIcon>
+                                    <Icon
+                                        className={item.icon}
+                                        style={{ color: props.textColor }}
+                                    />
+                                </ListItemIcon>
+                                <ListItemText primary={item.name} />
+                            </ListItem>
+                            <Divider />
+                        </div>
                     ))}
                 </List>
             </Drawer>

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 export default function MyFarmHome() {
     return (
-        <>
-            <div className="col-lg-2">
+        <div className="row">
+            <div className="col myfarm-home-image">
                 <div className="text-center">
                     <img
                         src={`${process.env.PUBLIC_URL}/assets/farm-icon.jpg`}
@@ -24,7 +24,7 @@ export default function MyFarmHome() {
                     />
                 </div>
             </div>
-            <div className="col-lg-8 fpo-cards-wrap text-center">
+            <div className="col fpo-cards-wrap text-center">
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="row">
@@ -120,6 +120,6 @@ export default function MyFarmHome() {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
