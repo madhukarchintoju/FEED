@@ -2,19 +2,23 @@ import React from 'react'
 import './servicesSection.css'
 import { Link } from 'react-router-dom'
 
-export default function ServicesSection() {
+export default function ServicesSection(props) {
     return (
         <>
             <section id="feedServices" className="feed-services-section">
                 <div className="row m-0">
                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div className="row">
-                            <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12 m-auto">
-                                <h3 className="section-heading text-center">
-                                    FEED Services
-                                </h3>
+                        {props?.titleRequired === false ? (
+                            ''
+                        ) : (
+                            <div className="row">
+                                <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12 m-auto">
+                                    <h3 className="section-heading text-center">
+                                        FEED Services
+                                    </h3>
+                                </div>
                             </div>
-                        </div>
+                        )}
                         <div className="row mt-3">
                             <div className="col-lg-3 col-md-12 rocket-ant">
                                 <img

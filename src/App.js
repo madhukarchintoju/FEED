@@ -19,7 +19,6 @@ import Register from './Components/RegisterComp/Register'
 import Login from './Components/LoginComp/Login'
 import Footer from './Components/FooterComp/Footer'
 import MyFarmMainComp from './Components/ServicesComp/myFarmComp/myFarmMainComp/myFarmMain'
-import MyFarmNavComp from './Components/ServicesComp/myFarmComp/myFarmNavComp/myFarmNav'
 import MyProductsMainComp from './Components/ServicesComp/myProductsComp/myProductsMainComp/myProductsMainComp'
 import MyBusinessMain from './Components/ServicesComp/MyBusinessComp/myBusinessMain/myBusinessMain'
 import MyExportMainComp from './Components/ServicesComp/myExportComp/myExportMainComp/myExportMainComp'
@@ -86,7 +85,6 @@ function App() {
                     <Route path="/login" component={Login} />
                     <Route path="/myfpo" component={MyFpoMain} />
                     <Route path="/myfarm" component={MyFarmMainComp} />
-                    <Route path="/myfarmnav" component={MyFarmNavComp} />
                     <Route path="/myproducts" component={MyProductsMainComp} />
                     <Route path="/mybusiness" component={MyBusinessMain} />
                     <Route path="/myexport" component={MyExportMainComp} />
