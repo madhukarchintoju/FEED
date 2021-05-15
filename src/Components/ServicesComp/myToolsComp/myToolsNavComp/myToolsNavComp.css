@@ -1,43 +1,43 @@
 .brd {
-  border: 1px solid red;
+    border: 1px solid red;
 }
 
 .mytools-side-menu {
-  position: relative;
-  width: 220px;
-  padding: 5px;
-  /* height: 100%; */
-  left: -100%;
-  background-color: black;
-  color: white;
-  border-radius: 0px 20px 20px 0px;
-  transition: all 1s;
-  padding-bottom: 10px;
+    position: relative;
+    width: 220px;
+    padding: 5px;
+    /* height: 100%; */
+    left: -100%;
+    background-color: black;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+    transition: all 1s;
+    padding-bottom: 10px;
 }
 
 .mytools-side-menu.active {
-  left: 0px;
+    left: 0px;
 }
 
 .mytools-side-menu ul li {
-  width: 100%;
-  padding: 5px;
-  margin: 2px;
-  border-bottom: 1px solid white;
+    width: 100%;
+    padding: 5px;
+    margin: 2px;
+    border-bottom: 1px solid white;
 }
 
 .mytools-side-menu ul li:hover {
-  background-color: cornsilk;
-  border-radius: 20px 20px;
-  transition: all 0.6s;
+    background-color: cornsilk;
+    border-radius: 20px 20px;
+    transition: all 0.6s;
 }
 
 .mytools-side-menu ul li a {
-  color: white;
-  font-weight: 600;
-  font-size: 14px;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
 }
 
 .mytools-side-menu ul li a:hover {
-  color: black;
+    color: black;
 }

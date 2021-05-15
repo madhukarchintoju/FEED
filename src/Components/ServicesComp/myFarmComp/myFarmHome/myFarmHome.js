@@ -1,6 +1,6 @@
-import React from 'react';
-import './myFarmHome.css';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import './myFarmHome.css'
+import { Link } from 'react-router-dom'
 
 export default function MyFarmHome() {
     return (
@@ -116,7 +116,7 @@ export default function MyFarmHome() {
                     <div className="col-lg-11 text-center">
                         <button className="btn myfpo-broadcast-btn">
                             CONNECT FARM
-                    </button>
+                        </button>
                     </div>
                 </div>
             </div>

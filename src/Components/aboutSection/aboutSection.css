@@ -13,7 +13,6 @@
     color: white;
 }
 
-
 .vision-title {
     font-size: 32px !important;
     font-weight: bold;
@@ -23,7 +22,7 @@
     font-weight: bold;
 }
 
-@media only screen and (max-width:426px) {
+@media only screen and (max-width: 426px) {
     .about-content-wrap {
         display: none !important;
     }

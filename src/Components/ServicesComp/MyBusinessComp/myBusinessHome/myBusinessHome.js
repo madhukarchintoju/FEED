@@ -1,6 +1,6 @@
-import React from 'react';
-import './myBusinessHome.css';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import './myBusinessHome.css'
+import { Link } from 'react-router-dom'
 
 export default function MyBusinessHome() {
     return (
@@ -27,7 +27,10 @@ export default function MyBusinessHome() {
             <div className="col-lg-8 mybusi-cards-wrap">
                 <div className="row m-auto">
                     <div className="col-lg-4">
-                        <Link to="/mybusiness/businessprofile" className="nav-link">
+                        <Link
+                            to="/mybusiness/businessprofile"
+                            className="nav-link"
+                        >
                             <div className="fpo-cards">
                                 <div className="card-body text-center">
                                     <img
@@ -43,7 +46,10 @@ export default function MyBusinessHome() {
                         </Link>
                     </div>
                     <div className="col-lg-4">
-                        <Link to="/mybusiness/businessaccount" className="nav-link">
+                        <Link
+                            to="/mybusiness/businessaccount"
+                            className="nav-link"
+                        >
                             <div className="mybusi-cards">
                                 <div className="card-body text-center">
                                     <img
@@ -51,13 +57,18 @@ export default function MyBusinessHome() {
                                         width="70"
                                         alt=""
                                     />
-                                    <h5 className="card-title">BUSINESS ACCOUNT</h5>
+                                    <h5 className="card-title">
+                                        BUSINESS ACCOUNT
+                                    </h5>
                                 </div>
                             </div>
                         </Link>
                     </div>
                     <div className="col-lg-4">
-                        <Link to="/mybusiness/businesscomplaincereg" className="nav-link">
+                        <Link
+                            to="/mybusiness/businesscomplaincereg"
+                            className="nav-link"
+                        >
                             <div className="mybusi-cards">
                                 <div className="card-body text-center">
                                     <img
@@ -67,13 +78,16 @@ export default function MyBusinessHome() {
                                     />
                                     <h5 className="card-title">
                                         COMPLAINCES & REGISTRATION
-                                </h5>
+                                    </h5>
                                 </div>
                             </div>
                         </Link>
                     </div>
                     <div className="col-lg-4">
-                        <Link to="/mybusiness/businessplan" className="nav-link">
+                        <Link
+                            to="/mybusiness/businessplan"
+                            className="nav-link"
+                        >
                             <div className="mybusi-cards">
                                 <div className="card-body text-center">
                                     <img
@@ -81,7 +95,9 @@ export default function MyBusinessHome() {
                                         width="70"
                                         alt=""
                                     />
-                                    <h5 className="card-title">BUSINESS PLAN</h5>
+                                    <h5 className="card-title">
+                                        BUSINESS PLAN
+                                    </h5>
                                 </div>
                             </div>
                         </Link>
@@ -97,13 +113,16 @@ export default function MyBusinessHome() {
                                     />
                                     <h5 className="card-title">
                                         BUSINESS LOANS & SCHEMES
-                                </h5>
+                                    </h5>
                                 </div>
                             </div>
                         </Link>
                     </div>
                     <div className="col-lg-4">
-                        <Link to="/mybusiness/marketingsupport" className="nav-link">
+                        <Link
+                            to="/mybusiness/marketingsupport"
+                            className="nav-link"
+                        >
                             <div className="mybusi-cards">
                                 <div className="card-body text-center">
                                     <img
