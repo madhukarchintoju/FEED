@@ -39,7 +39,7 @@
 }
 .orange-stripe {
     height: 33.3%;
-    border-bottom-left-radius: 30px;
+    border-bottom-left-radius: 50px;
 }
 
 .white-bg {
@@ -48,7 +48,7 @@
 
 .green-stripe {
     height: 33.3%;
-    border-top-left-radius: 30px;
+    border-top-left-radius: 50px;
 }
 
 .topnav .search-container {
@@ -200,16 +200,6 @@
     .feed-logo {
         display: none;
     }
-    /* .feed-logo-img {
-        padding: 10px;
-        width: 40% !important;
-        margin-bottom: 3px;
-    } */
-
-    /* .resp-mobile-logo {
-        width: 100px!important;
-        height: 100px!important;
-    } */
 
     .white-bg {
         height: auto;
@@ -274,9 +264,6 @@
     .header-top {
         height: auto;
     }
-    /* .download-btn-text {
-        display: none;
-    } */
 }
 @media only screen and (min-width: 525px) and (max-width: 769px) {
     .sticky-header {
@@ -302,16 +289,6 @@
     .header-top {
         height: auto;
     }
-
-    /* .feed-logo img {
-        margin: auto;
-        margin-bottom: 15px;
-    }
-    .feed-logo-img {
-        width: 50%;
-        display: flex;
-        justify-content: center;
-    } */
     .title {
         font-size: 18px;
     }
@@ -381,7 +358,6 @@
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .orange-stripe {
         height: 26.3%;
-        border-bottom-left-radius: 20px;
     }
     .white-bg {
         height: 40.3%;
@@ -390,7 +366,6 @@
     .green-stripe {
         height: 33.3%;
         padding: 2px;
-        border-top-left-radius: 10px;
     }
     .contact-num {
         font-size: 12px;
