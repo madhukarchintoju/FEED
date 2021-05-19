@@ -17,13 +17,14 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
 export default function SideNavBar(props) {
-    const screenWidth = window.innerWidth > 769 ? true : false
+    const screenWidth = window.innerWidth > 769 ? true : false;
 
     const [open, setOpen] = React.useState(screenWidth)
 
     const useStyles = makeStyles((theme) => ({
         root: {
             display: 'flex',
+
         },
         hide: {
             display: 'none',

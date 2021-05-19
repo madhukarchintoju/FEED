@@ -4,3 +4,7 @@
         left: 57px;
     }
 }
+
+.MuiListItemIcon-root{
+    min-width: 40px !important;
+}

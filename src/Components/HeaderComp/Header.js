@@ -1,14 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import i18n from 'i18next'
+import SwipeableNav from '../swipeableNav/swipeableNav';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+
 
 export default function Header() {
     const { t } = useTranslation()
     const languageChange = (event) => {
         i18n.changeLanguage(event.target.value)
     }
+    const isMobile = window.innerWidth > 769 ? false : true;
+    const [open, setOpen] = useState(false);
+    const toggleDrawer = () => {
+        setOpen(true);
+    };
 
     return (
         <>
@@ -151,114 +161,125 @@ export default function Header() {
                             backgroundSize: 'cover',
                         }}
                     >
-                        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
-                            <nav className="navbar navbar-expand-lg nav-list p-0">
-                                <button
-                                    className="navbar-toggler"
-                                    type="button"
-                                    data-toggle="collapse"
-                                    data-target="#navbarNav"
-                                    aria-controls="navbarNav"
-                                    aria-expanded="false"
-                                    aria-label="Toggle navigation"
-                                >
-                                    <i
-                                        className="fa fa-bars"
-                                        aria-hidden="true"
-                                    ></i>
-                                </button>
-                                <div
-                                    className="collapse navbar-collapse"
-                                    id="navbarNav"
-                                >
-                                    <ul className="navbar-nav ml-5">
-                                        <li className="nav-item active">
-                                            {/* <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a> */}
-                                            <Link className="nav-link" to="/">
-                                                {t('home')}{' '}
-                                                <span className="sr-only">
-                                                    (current)
-                                                </span>
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link
-                                                className="nav-link"
-                                                to="/analytics"
-                                            >
-                                                {t('analytics')}{' '}
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link
-                                                className="nav-link"
-                                                to="/aboutSection"
-                                            >
-                                                {t('about_us')}{' '}
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link
-                                                className="nav-link"
-                                                to="/serviceSection"
-                                            >
-                                                {t('services')}
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link
-                                                className="nav-link"
-                                                to="/eventSection"
-                                            >
-                                                {t('events')}{' '}
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link
-                                                className="nav-link"
-                                                to="/feedWorkingSection"
-                                            >
-                                                {t('how_feed_works')}{' '}
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link
-                                                className="nav-link"
-                                                to="/myfpo"
-                                            >
-                                                {t('fpo')}{' '}
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link
-                                                className="nav-link"
-                                                to="/myexport"
-                                            >
-                                                {t('exports')}{' '}
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link className="nav-link" to="">
-                                                {t('contact_us')}{' '}
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                    <Link
-                                        to="/login"
-                                        className="nav-link my-auto"
+                        {isMobile ? (
+                            <>
+                                <Toolbar>
+                                    <IconButton onClick={toggleDrawer}>
+                                        <MenuIcon />
+                                    </IconButton>
+                                </Toolbar>
+                                <SwipeableNav helo={open} />
+                            </>
+                        ) : (
+                            <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
+                                <nav className="navbar navbar-expand-lg nav-list p-0">
+                                    <button
+                                        className="navbar-toggler"
+                                        type="button"
+                                        data-toggle="collapse"
+                                        data-target="#navbarNav"
+                                        aria-controls="navbarNav"
+                                        aria-expanded="false"
+                                        aria-label="Toggle navigation"
                                     >
-                                        <button className="login-btn">
-                                            {t('login_caps')}
-                                        </button>
-                                    </Link>
-                                    <Link to="/register" className="nav-link">
-                                        <button className="register-btn">
-                                            {t('register_caps')}
-                                        </button>
-                                    </Link>
-                                </div>
-                            </nav>
-                        </div>
+                                        <i
+                                            className="fa fa-bars"
+                                            aria-hidden="true"
+                                        ></i>
+                                    </button>
+                                    <div
+                                        className="collapse navbar-collapse"
+                                        id="navbarNav"
+                                    >
+                                        <ul className="navbar-nav ml-5">
+                                            <li className="nav-item active">
+                                                {/* <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a> */}
+                                                <Link className="nav-link" to="/">
+                                                    {t('home')}{' '}
+                                                    <span className="sr-only">
+                                                        (current)
+                                                </span>
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link"
+                                                    to="/analytics"
+                                                >
+                                                    {t('analytics')}{' '}
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link"
+                                                    to="/aboutSection"
+                                                >
+                                                    {t('about_us')}{' '}
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link"
+                                                    to="/serviceSection"
+                                                >
+                                                    {t('services')}
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link"
+                                                    to="/eventSection"
+                                                >
+                                                    {t('events')}{' '}
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link"
+                                                    to="/feedWorkingSection"
+                                                >
+                                                    {t('how_feed_works')}{' '}
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link"
+                                                    to="/myfpo"
+                                                >
+                                                    {t('fpo')}{' '}
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link"
+                                                    to="/myexport"
+                                                >
+                                                    {t('exports')}{' '}
+                                                </Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link" to="">
+                                                    {t('contact_us')}{' '}
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                        <Link
+                                            to="/login"
+                                            className="nav-link my-auto"
+                                        >
+                                            <button className="login-btn">
+                                                {t('login_caps')}
+                                            </button>
+                                        </Link>
+                                        <Link to="/register" className="nav-link">
+                                            <button className="register-btn">
+                                                {t('register_caps')}
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </nav>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
