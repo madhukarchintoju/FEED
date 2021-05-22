@@ -1,24 +1,27 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Header.css'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import i18n from 'i18next'
-import SwipeableNav from '../swipeableNav/swipeableNav';
-import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-
+import SwipeableNav from '../swipeableNav/swipeableNav'
+import Toolbar from '@material-ui/core/Toolbar'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
 
 export default function Header() {
     const { t } = useTranslation()
     const languageChange = (event) => {
         i18n.changeLanguage(event.target.value)
     }
-    const isMobile = window.innerWidth > 769 ? false : true;
-    const [open, setOpen] = useState(false);
+    const isMobile = window.innerWidth > 769 ? false : true
+    const [open, setOpen] = useState(false)
     const toggleDrawer = () => {
-        setOpen(true);
-    };
+        setOpen(true)
+    }
+
+    const navOpened = () => {
+        setOpen(false)
+    }
 
     return (
         <>
@@ -168,7 +171,10 @@ export default function Header() {
                                         <MenuIcon />
                                     </IconButton>
                                 </Toolbar>
-                                <SwipeableNav helo={open} />
+                                <SwipeableNav
+                                    open={open}
+                                    navOpened={navOpened}
+                                />
                             </>
                         ) : (
                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
@@ -194,11 +200,14 @@ export default function Header() {
                                         <ul className="navbar-nav ml-5">
                                             <li className="nav-item active">
                                                 {/* <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a> */}
-                                                <Link className="nav-link" to="/">
+                                                <Link
+                                                    className="nav-link"
+                                                    to="/"
+                                                >
                                                     {t('home')}{' '}
                                                     <span className="sr-only">
                                                         (current)
-                                                </span>
+                                                    </span>
                                                 </Link>
                                             </li>
                                             <li className="nav-item">
@@ -258,7 +267,10 @@ export default function Header() {
                                                 </Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="">
+                                                <Link
+                                                    className="nav-link"
+                                                    to=""
+                                                >
                                                     {t('contact_us')}{' '}
                                                 </Link>
                                             </li>
@@ -271,7 +283,10 @@ export default function Header() {
                                                 {t('login_caps')}
                                             </button>
                                         </Link>
-                                        <Link to="/register" className="nav-link">
+                                        <Link
+                                            to="/register"
+                                            className="nav-link"
+                                        >
                                             <button className="register-btn">
                                                 {t('register_caps')}
                                             </button>
