@@ -8,6 +8,15 @@
     z-index: 1020;
 }
 
+.nav-wrap .MuiSvgIcon-root{
+    font-size: 2rem !important;
+    color: #fff !important;
+}
+
+.green-stripe{
+    background-repeat: 'no-repeat';
+    background-size: 'cover';
+}
 .wrapper {
     display: flex;
     justify-content: space-between;
