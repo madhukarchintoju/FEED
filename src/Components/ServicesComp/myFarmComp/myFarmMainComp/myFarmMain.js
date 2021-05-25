@@ -21,57 +21,57 @@ export default function MyFarmMainComp() {
     const navData = [
         {
             name: 'Fruits',
-            icon: 'fa fa-plus-circle',
+            icon: 'fas fa-apple-alt',
             path: '/myfarm/fruits',
         },
         {
             name: 'Vegetables',
-            icon: 'fa fa-address-card',
+            icon: 'fas fa-leaf',
             path: '/myfarm/vegetables',
         },
         {
             name: 'Spices',
-            icon: 'fa fa-address-card',
+            icon: 'fas fa-pepper-hot',
             path: '/myfarm/spices',
         },
         {
             name: 'Cereals',
-            icon: 'fa fa-address-card',
+            icon: 'fas fa-mortar-pestle',
             path: '/myfarm/cereals',
         },
         {
             name: 'Oil Seeds',
-            icon: 'fa fa-address-card',
+            icon: 'fas fa-seedling',
             path: '/myfarm/oilSeeds',
         },
         {
             name: 'Forest Products',
-            icon: 'fa fa-address-card',
+            icon: 'fas fa-tree',
             path: '/myfarm/forestProducts',
         },
         {
             name: 'Poultry',
-            icon: 'fa fa-address-card',
+            icon: 'fas fa-drumstick-bite',
             path: '/myfarm/poultry',
         },
         {
             name: 'Aqua',
-            icon: 'fa fa-address-card',
+            icon: 'fas fa-fish',
             path: '/myfarm/aqua',
         },
         {
             name: 'Dairy',
-            icon: 'fa fa-address-card',
+            icon: 'fas fa-blender',
             path: '/myfarm/dairy',
         },
         {
             name: 'Plants',
-            icon: 'fa fa-address-card',
+            icon: 'fas fa-tree',
             path: '/myfarm/plants',
         },
         {
             name: 'Flowers',
-            icon: 'fa fa-address-card',
+            icon: 'fas fa-fan',
             path: '/myfarm/flowers',
         },
     ]
@@ -86,7 +86,7 @@ export default function MyFarmMainComp() {
                     bgColor="#a4cf3e"
                     textColor="black"
                 ></SideNavBar>
-                <div className="col farm-content-wrap">
+                <div className="col my-farm-wrap">
                     <Switch>
                         <Route
                             path="/myfarm/home"
