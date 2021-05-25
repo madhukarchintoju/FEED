@@ -63,10 +63,7 @@ export default function MyExportHome() {
                                 </Link>
                             </div>
                             <div className="col-lg-2">
-                                <Link
-                                    className="nav-link"
-                                    to="/myexport/eximfinanceinsurance"
-                                >
+                                <Link className="nav-link" to="">
                                     <img
                                         src={`${process.env.PUBLIC_URL}/assets/my-exports/FINANCE.png`}
                                         alt="Why Exports card"

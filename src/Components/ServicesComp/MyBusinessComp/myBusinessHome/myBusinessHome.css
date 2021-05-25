@@ -1,5 +1,9 @@
+.brd {
+    border: 1px solid red;
+}
 .mybusi-cards-wrap {
     padding: 8px;
+    background-color: #1183dc;
 }
 
 .mybusi-cards {
@@ -21,8 +25,4 @@
     border-radius: 50px 50px;
     background-color: #8660a9;
     color: white;
-}
-
-.mybusi-cards-wrap .nav-link {
-    color: black !important;
 }

@@ -1,6 +1,12 @@
 .brd {
     border: 1px solid red;
 }
+/* .servicenav-wrap {
+    border-radius: 20px 20px;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+} */
 .violet-btn {
     background-color: #8761aa;
 }

@@ -21,8 +21,19 @@
     border-radius: 50px 50px;
 }
 
+.content-wrapper-services {
+    display: flex;
+    justify-content: flex-start;
+}
+
 @media only screen and (max-width: 425px) {
     .resp-ServiceNav {
         display: none !important;
     }
 }
+
+/* @media only screen and (max-width:768px) {
+    .fpo-content-wrap {
+        width: calc(100% - 57px);
+    }
+} */
