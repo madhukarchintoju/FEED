@@ -86,7 +86,7 @@ export default function MyFarmMainComp() {
                     bgColor="#a4cf3e"
                     textColor="black"
                 ></SideNavBar>
-                <div className="col">
+                <div className="col farm-content-wrap">
                     <Switch>
                         <Route
                             path="/myfarm/home"

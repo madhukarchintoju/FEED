@@ -9,8 +9,8 @@ export default function ServicesNavbar() {
     return (
         <>
             {screenWidth ? (
-                <div className="container-fluid resp-ServiceNav">
-                    <div className="row m-0 mt-3 p-1 bg-light">
+                <div className="container-fluid resp-ServiceNav servicenav-wrap">
+                    <div className="row m-0 mt-3 p-1">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-lg-flex justify-content-around nav-btn">
                             <Link className="nav-link" to="/myfpo">
                                 <button className="btn btn-warning">

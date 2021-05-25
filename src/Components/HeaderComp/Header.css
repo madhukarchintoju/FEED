@@ -8,12 +8,12 @@
     z-index: 1020;
 }
 
-.nav-wrap .MuiSvgIcon-root{
+.nav-wrap .MuiSvgIcon-root {
     font-size: 2rem !important;
     color: #fff !important;
 }
 
-.green-stripe{
+.green-stripe {
     background-repeat: 'no-repeat';
     background-size: 'cover';
 }
