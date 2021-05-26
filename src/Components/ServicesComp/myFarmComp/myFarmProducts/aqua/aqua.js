@@ -1,102 +1,174 @@
 import React from 'react'
 import MyFarmList from '../../myFarmList/myFarmList'
+import { Redirect, Route, Switch } from 'react-router-dom'
+import MyFarmGuide from '../../myFarmGuide/myFarmGuide'
 
 export default function Aqua() {
     const dataList = [
         {
-            name: 'Mango',
+            name: 'Fish',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/myfarm/fruits/mango',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Papaya',
+            name: 'Prawns',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/analytics',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Apple',
+            name: 'Fish Type 2',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/aboutSection',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Grapes',
+            name: 'Fish Type 3',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/serviceSection',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Orange',
+            name: 'Fish Type 4',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/eventSection',
+            link: '/myfarm/aqua/fish',
+        },
+    ]
+
+    const dataGuide = [
+        {
+            name: 'Climate',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
+            link: '/myfarm/aqua/fish/climate',
         },
         {
-            name: 'Kiwi',
+            name: 'Soil Preparation',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/feedWorkingSection',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Pomogranate',
+            name: 'Seeds',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/myfpo',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Strawberry',
+            name: 'Cultivation',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/myexport',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Blueberry',
+            name: 'Irrigation',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/analytics',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Rasberry',
+            name: 'Fertilizers',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Liche',
+            name: 'Dieases',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/analytics',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Banana',
+            name: 'Pesticides',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/aboutSection',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Grapes',
+            name: 'Internal Crop',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/serviceSection',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Chikku',
+            name: 'Pre-harvesting',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/eventSection',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Ice Apple',
+            name: 'Harvesting',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/feedWorkingSection',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Green Apple',
+            name: 'Post-Harvesting',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/myfpo',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Guava',
+            name: 'Crop Expenditure Tools',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/myexport',
+            link: '/myfarm/aqua/fish',
         },
         {
-            name: 'Water Melon',
+            name: 'Crop-Advisory',
             icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
-            link: '/myexport',
+            link: '/myfarm/aqua/fish',
+        },
+        {
+            name: 'Agri Equipments',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
+            link: '/myfarm/aqua/fish',
+        },
+        {
+            name: 'Agri Experts',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
+            link: '/myfarm/aqua/fish',
+        },
+        {
+            name: 'Value Addition Unit',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
+            link: '/myfarm/aqua/fish',
+        },
+        {
+            name: 'Marketing',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
+            link: '/myfarm/aqua/fish',
+        },
+        {
+            name: 'FAQ',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
+            link: '/myfarm/aqua/fish',
+        },
+        {
+            name: 'Farmer Connect Social Media',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png',
+            link: '/myfarm/aqua/fish',
         },
     ]
     return (
         <>
-            <MyFarmList dataList={dataList} title="MyFarm - Aqua"></MyFarmList>
+            <Switch>
+                <Route path="/myfarm/aqua/home">
+                    <MyFarmList
+                        dataList={dataList}
+                        title="MyFarm - Aqua"
+                    ></MyFarmList>
+                </Route>
+                <Route path="/myfarm/aqua/fish">
+                    <MyFarmGuide
+                        dataGuide={dataGuide}
+                        title="Aqua - Fish"
+                    ></MyFarmGuide>
+                </Route>
+                <Route path="/myfarm/aqua/fish">
+                    <MyFarmGuide
+                        dataGuide={dataGuide}
+                        title="Aqua - Prawns"
+                    ></MyFarmGuide>
+                </Route>
+                <Route path="/myfarm/aqua/prans">
+                    <MyFarmGuide
+                        dataGuide={dataGuide}
+                        title="Aqua - Fish Type 2"
+                    ></MyFarmGuide>
+                </Route>
+                <Route path="/myfarm/aqua/fish">
+                    <MyFarmGuide
+                        dataGuide={dataGuide}
+                        title="Aqua - Fish Type 3"
+                    ></MyFarmGuide>
+                </Route>
+                <Redirect to="/myfarm/aqua/home" />
+            </Switch>
         </>
     )
 }
