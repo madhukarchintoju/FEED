@@ -22,9 +22,6 @@ export default function SideNavBar(props) {
     const [open, setOpen] = React.useState(screenWidth)
 
     const useStyles = makeStyles((theme) => ({
-        root: {
-            display: 'flex',
-        },
         hide: {
             display: 'none',
         },

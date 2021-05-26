@@ -1,8 +1,13 @@
 @media only screen and (max-width: 769px) {
     .side-navbar ~ div {
-        position: absolute;
+        position: relative;
         left: 57px;
-        /* height: auto; */
+        min-height: 606px;
+        width: calc(100% - 57px);
+    }
+
+    .side-navbar {
+        position: absolute;
     }
 }
 

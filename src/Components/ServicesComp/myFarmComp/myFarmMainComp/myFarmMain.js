@@ -81,12 +81,12 @@ export default function MyFarmMainComp() {
             <ServicesNavbar></ServicesNavbar>
             <div className="row m-0">
                 <SideNavBar
-                    className="col"
+                    className="col-lg"
                     data={navData}
                     bgColor="#a4cf3e"
                     textColor="black"
                 ></SideNavBar>
-                <div className="col my-farm-wrap">
+                <div className="p-0 col-lg my-farm-wrap">
                     <Switch>
                         <Route
                             path="/myfarm/home"

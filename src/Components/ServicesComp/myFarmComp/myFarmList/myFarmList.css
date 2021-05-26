@@ -7,9 +7,17 @@
     height: 6em;
 }
 
+.my-farm-list .farm-title {
+    margin: 2em 0 2em 0;
+}
+
 @media only screen and (max-width: 768px) {
     .my-farm-list .list-avatar {
         width: 4em;
         height: 4em;
+    }
+
+    .my-farm-list .farm-title {
+        margin: 0 0 2em 0;
     }
 }

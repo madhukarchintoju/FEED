@@ -1,95 +1,96 @@
 import React from 'react'
 import MyFarmList from '../../myFarmList/myFarmList'
+
 export default function MyFarmFruits() {
     const dataList = [
         {
             name: 'Mango',
-            icon: 'fa fa-home',
-            link: '/',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
+            link: '/myfarm/fruits/mango',
         },
         {
             name: 'Papaya',
-            icon: 'fa fa-plus-circle',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/analytics',
         },
         {
             name: 'Apple',
-            icon: 'fa fa-address-card',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/aboutSection',
         },
         {
             name: 'Grapes',
-            icon: 'fa fa-check',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/serviceSection',
         },
         {
             name: 'Orange',
-            icon: 'fa fa-calendar',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/eventSection',
         },
         {
             name: 'Kiwi',
-            icon: 'fa fa-sitemap',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/feedWorkingSection',
         },
         {
             name: 'Pomogranate',
-            icon: 'fa fa-building',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/myfpo',
         },
         {
             name: 'Strawberry',
-            icon: 'fa fa-angle-double-up',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/myexport',
         },
         {
             name: 'Blueberry',
-            icon: 'fa fa-address-book',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/analytics',
         },
         {
             name: 'Rasberry',
-            icon: 'fa fa-home',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/',
         },
         {
             name: 'Liche',
-            icon: 'fa fa-plus-circle',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/analytics',
         },
         {
             name: 'Banana',
-            icon: 'fa fa-address-card',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/aboutSection',
         },
         {
             name: 'Grapes',
-            icon: 'fa fa-check',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/serviceSection',
         },
         {
             name: 'Chikku',
-            icon: 'fa fa-calendar',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/eventSection',
         },
         {
             name: 'Ice Apple',
-            icon: 'fa fa-sitemap',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/feedWorkingSection',
         },
         {
             name: 'Green Apple',
-            icon: 'fa fa-building',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/myfpo',
         },
         {
             name: 'Guava',
-            icon: 'fa fa-angle-double-up',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/myexport',
         },
         {
             name: 'Water Melon',
-            icon: 'fa fa-angle-double-up',
+            icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
             link: '/myexport',
         },
     ]

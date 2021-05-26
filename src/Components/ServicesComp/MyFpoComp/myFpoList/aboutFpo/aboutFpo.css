@@ -64,15 +64,3 @@
 /* .about-fpo-imgages-card {
   background-image: url('assets/circle-img.jpg');
 } */
-
-@media only screen and (max-width: 768px) {
-    .side-navbar {
-        position: absolute !important;
-    }
-
-    .fpo-content-wrap {
-        position: relative !important;
-        left: 0px !important;
-        margin-left: 57px;
-    }
-}
