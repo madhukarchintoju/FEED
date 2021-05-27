@@ -1,11 +1,13 @@
-import React from 'react'
-import './fpoComplainces.css'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import './fpoComplainces.css';
+import { Link } from 'react-router-dom';
 
 export default function FpoComplainces() {
     return (
         <>
-            <div className="fpo-compliance-wrap">
+            <div className="fpo-compliance-wrap"
+                style={{backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/fpo-compliances-bg.jpg")`}}
+            >
                 <div className="row m-0">
                     <div className="col-lg-12 text-center">
                         <img

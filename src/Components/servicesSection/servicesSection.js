@@ -29,7 +29,7 @@ export default function ServicesSection(props) {
                             </div>
                             <div className="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                                 <div className="row">
-                                    <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col item-flx p-0">
+                                    <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0">
                                         <Link className="nav-link" to="/myfpo">
                                             <div className="text-center services-card m-2">
                                                 <div
@@ -56,7 +56,7 @@ export default function ServicesSection(props) {
                                             </div>
                                         </Link>
                                     </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col item-flx p-0">
+                                    <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0">
                                         <Link className="nav-link" to="/myfarm">
                                             <div className="text-center services-card m-2">
                                                 <div
@@ -85,7 +85,7 @@ export default function ServicesSection(props) {
                                             </div>
                                         </Link>
                                     </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col item-flx p-0">
+                                    <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0">
                                         <Link
                                             className="nav-link"
                                             to="/mybusiness"
@@ -115,7 +115,7 @@ export default function ServicesSection(props) {
                                             </div>
                                         </Link>
                                     </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col item-flx p-0">
+                                    <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0">
                                         <Link
                                             className="nav-link"
                                             to="/mymarket"
@@ -145,7 +145,7 @@ export default function ServicesSection(props) {
                                             </div>
                                         </Link>
                                     </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col item-flx p-0">
+                                    <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0">
                                         <Link
                                             className="nav-link"
                                             to="/myproducts"
@@ -181,7 +181,7 @@ export default function ServicesSection(props) {
                                             </div>
                                         </Link>
                                     </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col item-flx p-0">
+                                    <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0">
                                         <Link
                                             className="nav-link"
                                             to="/myexport"
@@ -211,7 +211,7 @@ export default function ServicesSection(props) {
                                             </div>
                                         </Link>
                                     </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col item-flx p-0">
+                                    <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0">
                                         <Link
                                             className="nav-link"
                                             to="/myeducation"
@@ -241,7 +241,7 @@ export default function ServicesSection(props) {
                                             </div>
                                         </Link>
                                     </div>
-                                    <div className="col-lg-3 col-md-6 col-sm-3 col-xs-3 col item-flx p-0">
+                                    <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0">
                                         <Link
                                             className="nav-link"
                                             to="/mytools"

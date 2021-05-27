@@ -34,22 +34,22 @@ export default function MyFpoMain() {
         },
         {
             name: 'FPO Compliances',
-            icon: 'fa fa-file-text-o',
+            icon: 'fas fa-book-open',
             path: '/myfpo/fpocomplainces',
         },
         {
             name: 'FPO AGM & Board',
-            icon: 'fa fa-group',
+            icon: 'far fa-comments',
             path: '/myfpo/fpoagmboard',
         },
         {
             name: 'FPO Loans Schemes',
-            icon: 'fa fa-inr',
+            icon: 'fas fa-university',
             path: '/myfpo/fpoloanschemes',
         },
         {
             name: 'FPO Connect',
-            icon: 'fa fa-handshake-o',
+            icon: 'fas fa-handshake',
             path: '/myfpo/fpoconnect',
         },
     ]

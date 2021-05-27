@@ -4,7 +4,13 @@ import './legalCompliances.css'
 export default function LegalCompliances() {
     return (
         <>
-            <div className="legal-compliance-wrap">
+            <div className="legal-compliance-wrap"
+                style={{
+                    backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/legal-compliances-bg.jpg")`,
+                    backgroundSize:"Contain",
+                    backgroundRepeat:"no-repeat"
+                }}
+            >
                 <div className="text-center pt-2">
                     <img
                         src={`${process.env.PUBLIC_URL}/assets/legal-compliance-card.png`}
