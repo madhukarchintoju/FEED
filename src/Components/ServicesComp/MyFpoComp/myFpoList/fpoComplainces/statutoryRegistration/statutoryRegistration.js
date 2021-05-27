@@ -4,7 +4,13 @@ import './statutoryRegistration.css'
 export default function StatutoryRegistration() {
     return (
         <>
-            <div className="statutory-compliance-wrap">
+            <div
+                className="statutory-compliance-wrap"
+                style={{
+                    backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/statutory-compliances-bg.jpg")`,
+                    backgroundSize: 'Cover',
+                }}
+            >
                 <div className="text-center pt-2">
                     <img
                         src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-card.png`}

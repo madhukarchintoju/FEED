@@ -143,7 +143,7 @@ export default function MyExportHome() {
                 </div>
                 <div className="row m-0">
                     <div className="col-lg-12 text-center">
-                        <button className="btn btn-success fpo-broadcast-btn">
+                        <button className="btn btn-success">
                             CONNECT TO FEED
                         </button>
                     </div>

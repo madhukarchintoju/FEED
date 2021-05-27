@@ -1,18 +1,25 @@
 .brd {
     border: 1px solid red;
 }
+.myfpo-home {
+    padding: 5px;
+    background-color: #f8ffbe;
+}
+.fpo-icon-img {
+    border-radius: 50px 50px;
+    border: 1px solid black;
+}
 
 .fpo-cards-wrap .nav-link {
     color: black !important;
 }
 
 .myfpo-broadcast-btn {
-    width: 550px;
-    margin: 10px;
-    font-size: 26px;
+    width: 250px;
     font-weight: bolder;
     border-radius: 50px 50px;
-    background-color: #ffc107;
+    background-color: #ffc107 !important;
+    border-radius: 25px 25px !important;
     color: black;
 }
 
