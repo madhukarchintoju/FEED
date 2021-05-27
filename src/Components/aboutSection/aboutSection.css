@@ -1,87 +1,87 @@
 .aboutus-section {
-    /* margin-top: 5px; */
+  /* margin-top: 5px; */
 }
 
 .about-content-wrap {
-    background-color: #d2774b;
-    color: white;
-    font-weight: bold;
+  background-color: #d2774b;
+  color: white;
+  font-weight: bold;
 }
 
 .objective-content-wrap {
-    background-color: #4a9c42;
-    color: white;
+  background-color: #4a9c42;
+  color: white;
 }
 
 .vision-title {
-    font-size: 32px !important;
-    font-weight: bold;
+  font-size: 32px !important;
+  font-weight: bold;
 }
 .mission-title {
-    font-size: 32px !important;
-    font-weight: bold;
+  font-size: 32px !important;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 426px) {
-    .about-content-wrap {
-        display: none !important;
-    }
-    .vision-mission-wrap {
-        display: none !important;
-    }
-    .objective-content-wrap {
-        background-color: #b6bbfc !important;
-        color: black;
-    }
-    .objective-title {
-        font-size: 16px;
-    }
-    .objective-content {
-        font-size: 12px;
-    }
+  .about-content-wrap {
+    display: none !important;
+  }
+  .vision-mission-wrap {
+    display: none !important;
+  }
+  .objective-content-wrap {
+    background-color: #b6bbfc !important;
+    color: black;
+  }
+  .objective-title {
+    font-size: 16px;
+  }
+  .objective-content {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (min-width: 427px) and (max-width: 768px) {
-    .aboutus-title {
-        font-size: 24px;
-    }
-    .aboutus-content {
-        font-size: 14px !important;
-        font-weight: 500;
-    }
-    .objective-title {
-        font-size: 24px;
-    }
-    .objective-content {
-        font-size: 14px !important;
-        font-weight: 500;
-    }
-    .vision-title {
-        font-size: 22px !important;
-        font-weight: bold;
-    }
-    .vision-content {
-        padding: 0rem !important;
-        font-size: 14px;
-    }
-    .vision-card .card-header {
-        padding: 0rem !important;
-    }
-    .vision-card img {
-        width: 100px;
-    }
-    .mission-card img {
-        width: 100px;
-    }
-    .mission-card .card-header {
-        padding: 0rem !important;
-    }
-    .mission-title {
-        font-size: 22px !important;
-        font-weight: bold;
-    }
-    .mission-content {
-        padding: 0rem !important;
-        font-size: 14px;
-    }
+  .aboutus-title {
+    font-size: 24px;
+  }
+  .aboutus-content {
+    font-size: 14px !important;
+    font-weight: 500;
+  }
+  .objective-title {
+    font-size: 24px;
+  }
+  .objective-content {
+    font-size: 14px !important;
+    font-weight: 500;
+  }
+  .vision-title {
+    font-size: 22px !important;
+    font-weight: bold;
+  }
+  .vision-content {
+    padding: 0rem !important;
+    font-size: 14px;
+  }
+  .vision-card .card-header {
+    padding: 0rem !important;
+  }
+  .vision-card img {
+    width: 100px;
+  }
+  .mission-card img {
+    width: 100px;
+  }
+  .mission-card .card-header {
+    padding: 0rem !important;
+  }
+  .mission-title {
+    font-size: 22px !important;
+    font-weight: bold;
+  }
+  .mission-content {
+    padding: 0rem !important;
+    font-size: 14px;
+  }
 }

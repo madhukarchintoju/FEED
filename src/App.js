@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import './App.css'
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    useLocation,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useLocation,
 } from 'react-router-dom'
 import Header from './Components/HeaderComp/Header'
 import Home from './Components/HomeComp/home'
@@ -29,73 +29,57 @@ import MyFpoMain from './Components/ServicesComp/MyFpoComp/myFpoMain/myFpoMain'
 import AnalyticsMain from './Components/analytics/analyticsMain/analyticsMain'
 
 function App() {
-    const ScrollToTop = () => {
-        const { pathname } = useLocation()
+  const ScrollToTop = () => {
+    const { pathname } = useLocation()
 
-        useEffect(() => {
-            window.scrollTo(0, 0)
-        }, [pathname])
+    useEffect(() => {
+      window.scrollTo(0, 0)
+    }, [pathname])
 
-        return null
-    }
-    return (
-        <React.Fragment>
-            <Router>
-                <ScrollToTop />
-                <Header />
-                <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route
-                        path="/aboutSection"
-                        exact
-                        component={AboutSection}
-                    />
-                    <Route path="/analytics" exact component={AnalyticsMain} />
-                    <Route
-                        path="/serviceSection"
-                        exact
-                        component={ServicesSection}
-                    />
-                    <Route
-                        path="/eventSection"
-                        exact
-                        component={EventsSection}
-                    />
-                    <Route
-                        path="/feedWorkingSection"
-                        exact
-                        component={FeedWorkingSection}
-                    />
-                    <Route
-                        path="/testimonialSection"
-                        exact
-                        component={TestimonialSection}
-                    />
-                    <Route
-                        path="/partnerSection"
-                        exact
-                        component={PartnerSection}
-                    />
-                    <Route
-                        path="/newsletterSection"
-                        exact
-                        component={NewsletterSection}
-                    />
-                    <Route path="/register" component={Register} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/myfpo" component={MyFpoMain} />
-                    <Route path="/myfarm" component={MyFarmMainComp} />
-                    <Route path="/myproducts" component={MyProductsMainComp} />
-                    <Route path="/mybusiness" component={MyBusinessMain} />
-                    <Route path="/myexport" component={MyExportMainComp} />
-                    <Route path="/myeducation" component={MyEduMainComp} />
-                    <Route path="/mymarket" component={MyMarketMainComp} />
-                    <Route path="/mytools" component={MyToolsMainComp} />
-                </Switch>
-                <Footer />
-            </Router>
-        </React.Fragment>
-    )
+    return null
+  }
+  return (
+    <React.Fragment>
+      <Router>
+        <ScrollToTop />
+        <Header />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/aboutSection" exact component={AboutSection} />
+          <Route path="/analytics" exact component={AnalyticsMain} />
+          <Route path="/serviceSection" exact component={ServicesSection} />
+          <Route path="/eventSection" exact component={EventsSection} />
+          <Route
+            path="/feedWorkingSection"
+            exact
+            component={FeedWorkingSection}
+          />
+          <Route
+            path="/testimonialSection"
+            exact
+            component={TestimonialSection}
+          />
+          <Route path="/partnerSection" exact component={PartnerSection} />
+          <Route
+            path="/newsletterSection"
+            exact
+            component={NewsletterSection}
+          />
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
+          <Route path="/myfpo" component={MyFpoMain} />
+          <Route path="/myfarm" component={MyFarmMainComp} />
+          <Route path="/myproducts" component={MyProductsMainComp} />
+          <Route path="/mybusiness" component={MyBusinessMain} />
+          <Route path="/myexport" component={MyExportMainComp} />
+          <Route path="/myeducation" component={MyEduMainComp} />
+          <Route path="/mymarket" component={MyMarketMainComp} />
+          <Route path="/mytools" component={MyToolsMainComp} />
+        </Switch>
+        <Footer />
+      </Router>
+    </React.Fragment>
+  )
 }
 
 export default App

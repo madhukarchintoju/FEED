@@ -1,65 +1,65 @@
 .brd {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 .about-fpo-content {
-    width: 100%;
-    height: 190px;
-    margin: 15px auto 0px;
-    background-color: #fff9af;
-    overflow: auto;
-    border-radius: 15px 15px;
+  width: 100%;
+  height: 190px;
+  margin: 15px auto 0px;
+  background-color: #fff9af;
+  overflow: auto;
+  border-radius: 15px 15px;
 }
 
 .about-fpo-images-wrap {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
 .about-fpo-images {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 .about-fpo-images img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 .about-fpo-info-card {
-    display: flex;
-    justify-content: space-around;
-    height: 50px;
-    margin: 10px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  margin: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .about-fpo-info-card-role {
-    display: flex;
-    justify-content: space-evenly;
-    border-radius: 0px 20px 20px 0px;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 0px 20px 20px 0px;
 }
 .info-card-orange {
-    background-color: orange;
+  background-color: orange;
 }
 
 .info-card-green {
-    background-color: #9fb43b;
+  background-color: #9fb43b;
 }
 .info-card-teal {
-    background-color: #2ba4ad;
+  background-color: #2ba4ad;
 }
 .info-card-musk {
-    background-color: #fdbc62;
+  background-color: #fdbc62;
 }
 .info-card-red {
-    background-color: red;
+  background-color: red;
 }
 
 .about-fpo-info-card-role img {
-    border-radius: 10px 10px;
-    background-color: white;
-    /* padding: 5px; */
+  border-radius: 10px 10px;
+  background-color: white;
+  /* padding: 5px; */
 }
 /* .about-fpo-imgages-card {
   background-image: url('assets/circle-img.jpg');

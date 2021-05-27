@@ -1,82 +1,82 @@
 .brd {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 
 /* carousel section */
 .carousel-section {
-    /* position: relative; */
-    /* top: 240px; */
+  /* position: relative; */
+  /* top: 240px; */
 }
 .carousel-inner {
-    height: 565px;
-    /* border-radius: 0px 0px 20px 20px; */
+  height: 565px;
+  /* border-radius: 0px 0px 20px 20px; */
 }
 
 .carousel-section .carousel-inner img {
-    height: 100% !important;
-    animation: thing 20s;
+  height: 100% !important;
+  animation: thing 20s;
 }
 
 @keyframes thing {
-    from {
-        transform: scale(1, 1);
-    }
-    to {
-        transform: scale(1.5, 1.5);
-    }
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.5, 1.5);
+  }
 }
 
 /* How FEED Works */
 .section-heading {
-    margin: 10px;
-    padding: 2px;
-    background-color: orange;
-    color: white;
-    border-radius: 10px 10px;
+  margin: 10px;
+  padding: 2px;
+  background-color: orange;
+  color: white;
+  border-radius: 10px 10px;
 }
 
 /* Testimonials */
 .testimonial-swiper .swiper-container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .testimonial-swiper .custom-swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 320px;
-    margin-top: 20px;
-    /* height: 320px; */
-    background: #fff;
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  margin-top: 20px;
+  /* height: 320px; */
+  background: #fff;
 }
 
 .testimonial-swiper .testimonialbox {
-    position: relative;
-    width: 100%;
-    padding: 40px;
-    padding-top: 90px;
-    color: #999;
+  position: relative;
+  width: 100%;
+  padding: 40px;
+  padding-top: 90px;
+  color: #999;
 }
 
 .custom-swiper-slide {
-    padding: 10px;
-    border-radius: 10px 10px;
-    background-color: blanchedalmond;
+  padding: 10px;
+  border-radius: 10px 10px;
+  background-color: blanchedalmond;
 }
 
 .testimonialBox {
-    padding: 10px;
-    border-radius: 10px 10px;
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  border-radius: 10px 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 .testimonialbox .quote {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    opacity: 0.2;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  opacity: 0.2;
 }
 
 /* .testimonial-swiper .testimonialbox .details {
@@ -119,22 +119,22 @@
 /* Media Queries */
 
 @media only screen and (max-width: 426px) {
-    .carousel-section {
-        display: none !important;
-    }
+  .carousel-section {
+    display: none !important;
+  }
 
-    .resp-events-view {
-        display: none;
-    }
+  .resp-events-view {
+    display: none;
+  }
 }
 @media only screen and (min-width: 427px) and (max-width: 768px) {
-    /* carousel section */
-    .carousel-inner {
-        height: 250px;
-    }
+  /* carousel section */
+  .carousel-inner {
+    height: 250px;
+  }
 
-    .carousel-section .carousel-inner img {
-        height: 100% !important;
-        animation: thing 20s;
-    }
+  .carousel-section .carousel-inner img {
+    height: 100% !important;
+    animation: thing 20s;
+  }
 }

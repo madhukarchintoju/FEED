@@ -11,30 +11,21 @@ import MyToolsStudent from '../myToolsList/myToolsStudent/myToolsStudent'
 import MyToolsExport from '../myToolsList/myToolsExports/myToolsExports'
 
 export default function MyToolsMainComp() {
-    return (
-        <>
-            <ServicesNavbar></ServicesNavbar>
-            <div className="row m-0">
-                <MyToolsNavComp className="col"></MyToolsNavComp>
-                <Switch>
-                    <Route path="/mytools/home" component={MyToolsHome}></Route>
-                    <Route path="/mytools/fpo" component={MyToolsFpo}></Route>
-                    <Route
-                        path="/mytools/farmer"
-                        component={MyToolsFarmer}
-                    ></Route>
-                    <Route path="/mytools/msme" component={MyToolsMsme}></Route>
-                    <Route
-                        path="/mytools/student"
-                        component={MyToolsStudent}
-                    ></Route>
-                    <Route
-                        path="/mytools/exports"
-                        component={MyToolsExport}
-                    ></Route>
-                    <Redirect to="/mytools/home"></Redirect>
-                </Switch>
-            </div>
-        </>
-    )
+  return (
+    <>
+      <ServicesNavbar></ServicesNavbar>
+      <div className="row m-0">
+        <MyToolsNavComp className="col"></MyToolsNavComp>
+        <Switch>
+          <Route path="/mytools/home" component={MyToolsHome}></Route>
+          <Route path="/mytools/fpo" component={MyToolsFpo}></Route>
+          <Route path="/mytools/farmer" component={MyToolsFarmer}></Route>
+          <Route path="/mytools/msme" component={MyToolsMsme}></Route>
+          <Route path="/mytools/student" component={MyToolsStudent}></Route>
+          <Route path="/mytools/exports" component={MyToolsExport}></Route>
+          <Redirect to="/mytools/home"></Redirect>
+        </Switch>
+      </div>
+    </>
+  )
 }

@@ -1,31 +1,31 @@
 .brd {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 .myfpo-home {
-    padding: 5px;
-    background-color: #f8ffbe;
+  padding: 5px;
+  background-color: #f8ffbe;
 }
 .fpo-icon-img {
-    border-radius: 50px 50px;
-    border: 1px solid black;
+  border-radius: 50px 50px;
+  border: 1px solid black;
 }
 
 .fpo-cards-wrap .nav-link {
-    color: black !important;
+  color: black !important;
 }
 
 .myfpo-broadcast-btn {
-    width: 250px;
-    font-weight: bolder;
-    border-radius: 50px 50px;
-    background-color: #ffc107 !important;
-    border-radius: 25px 25px !important;
-    color: black;
+  width: 250px;
+  font-weight: bolder;
+  border-radius: 50px 50px;
+  background-color: #ffc107 !important;
+  border-radius: 25px 25px !important;
+  color: black;
 }
 
 @media only screen and (max-width: 575px) {
-    .myfpo-broadcast-btn {
-        width: 250px;
-        font-size: 20px;
-    }
+  .myfpo-broadcast-btn {
+    width: 250px;
+    font-size: 20px;
+  }
 }

@@ -1,16 +1,16 @@
 @media only screen and (max-width: 769px) {
-    .side-navbar ~ div {
-        position: relative;
-        left: 57px;
-        min-height: 606px;
-        width: calc(100% - 57px);
-    }
+  .side-navbar ~ div {
+    position: relative;
+    left: 57px;
+    min-height: 606px;
+    width: calc(100% - 57px);
+  }
 
-    .side-navbar {
-        position: absolute;
-    }
+  .side-navbar {
+    position: absolute;
+  }
 }
 
 .MuiListItemIcon-root {
-    min-width: 40px !important;
+  min-width: 40px !important;
 }

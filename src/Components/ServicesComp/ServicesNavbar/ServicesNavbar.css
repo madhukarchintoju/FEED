@@ -1,5 +1,5 @@
 .brd {
-    border: 1px solid red;
+  border: 1px solid red;
 }
 /* .servicenav-wrap {
     border-radius: 20px 20px;
@@ -8,30 +8,30 @@
 -moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
 } */
 .violet-btn {
-    background-color: #8761aa;
+  background-color: #8761aa;
 }
 .farm-btn {
-    background-color: #a4cf3e;
+  background-color: #a4cf3e;
 }
 
 .export-btn {
-    background-color: #64c5bc;
+  background-color: #64c5bc;
 }
 
 .wheat-btn {
-    background-color: #dd8444;
+  background-color: #dd8444;
 }
 
 .merun-btn {
-    background-color: rgb(156, 57, 39);
+  background-color: rgb(156, 57, 39);
 }
 
 .nav-btn .nav-link {
-    padding: 0rem !important;
+  padding: 0rem !important;
 }
 
 @media only screen and (max-width: 425px) {
-    .resp-ServiceNav {
-        display: none;
-    }
+  .resp-ServiceNav {
+    display: none;
+  }
 }

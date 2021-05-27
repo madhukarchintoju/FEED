@@ -1,47 +1,47 @@
 .testimonial-swiper .swiper-container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .testimonial-swiper .custom-swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 320px;
-    margin-top: 20px;
-    /* height: 320px; */
-    background: #fff;
+  background-position: center;
+  background-size: cover;
+  width: 320px;
+  margin-top: 20px;
+  /* height: 320px; */
+  background: #fff;
 }
 
 .testimonial-swiper .testimonialbox {
-    position: relative;
-    width: 100%;
-    padding: 40px;
-    padding-top: 90px;
-    color: #999;
+  position: relative;
+  width: 100%;
+  padding: 40px;
+  padding-top: 90px;
+  color: #999;
 }
 
 .custom-swiper-slide {
-    padding: 10px;
-    border-radius: 10px 10px;
-    background-color: blanchedalmond;
+  padding: 10px;
+  border-radius: 10px 10px;
+  background-color: blanchedalmond;
 }
 
 .testimonialBox {
-    padding: 10px;
-    border-radius: 10px 10px;
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+  padding: 10px;
+  border-radius: 10px 10px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.75);
 }
 
 /* .swiper-wrapper {
   filter: blur(3px);
 } */
 .testimonialbox .quote {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    opacity: 0.2;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  opacity: 0.2;
 }
 
 /* .testimonial-swiper .testimonialbox .details {

@@ -1,94 +1,94 @@
 .events-section {
-    /* height: 565px; */
+  /* height: 565px; */
 }
 
 .gov-update-card {
-    margin: 5px;
-    /* height: 100px; */
+  margin: 5px;
+  /* height: 100px; */
 }
 
 .gov-update-card .card-body {
-    padding: 10px !important;
+  padding: 10px !important;
 }
 
 .gov-update-card .card-title {
-    margin-top: 0rem !important;
-    margin-bottom: 0rem !important;
-    font-size: 16px;
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  font-size: 16px;
 }
 
 .gov-update-card .card-text {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .event-images-wrap .selected-img-wrap {
-    border: 5px solid blanchedalmond;
+  border: 5px solid blanchedalmond;
 }
 
 .event-images-wrap .selected-img-wrap img {
-    width: 100%;
-    height: 350px;
+  width: 100%;
+  height: 350px;
 }
 
 .imgContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 40px 0 0 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 0 0 0;
 }
 
 .imgContainer img {
-    width: 25%;
-    height: 100px;
-    margin: 5px 0;
-    border: 1px solid white;
+  width: 25%;
+  height: 100px;
+  margin: 5px 0;
+  border: 1px solid white;
 }
 .feed-update-card {
-    margin: 5px;
-    /* height: 100px; */
+  margin: 5px;
+  /* height: 100px; */
 }
 
 .feed-update-card .card-body {
-    padding: 10px !important;
+  padding: 10px !important;
 }
 
 .feed-update-card .card-title {
-    margin-top: 0rem !important;
-    margin-bottom: 0rem !important;
-    font-size: 16px;
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  font-size: 16px;
 }
 
 .feed-update-card .card-text {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .gov-updates {
-    width: 100%;
-    line-height: 50px;
-    position: relative;
-    /* background:red; */
-    background-color: orange;
-    /* border: 1px solid black; */
-    text-align: center;
-    /* margin:50px auto; */
+  width: 100%;
+  line-height: 50px;
+  position: relative;
+  /* background:red; */
+  background-color: orange;
+  /* border: 1px solid black; */
+  text-align: center;
+  /* margin:50px auto; */
 }
 
 .gov-updates:after,
 .gov-updates:before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 50%;
-    left: 100%;
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 50%;
+  left: 100%;
 }
 
 .gov-updates:after {
-    bottom: 0;
-    background: linear-gradient(to right bottom, orange 50%, transparent 50%);
+  bottom: 0;
+  background: linear-gradient(to right bottom, orange 50%, transparent 50%);
 }
 
 .gov-updates:before {
-    top: 0;
-    background: linear-gradient(to right top, orange 50%, transparent 50%);
+  top: 0;
+  background: linear-gradient(to right top, orange 50%, transparent 50%);
 }

@@ -1,15 +1,15 @@
 .my-farm-list .list-item {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .my-farm-list .list-avatar {
-    width: 6em;
-    height: 6em;
+  width: 6em;
+  height: 6em;
 }
 
 @media only screen and (max-width: 768px) {
-    .my-farm-list .list-avatar {
-        width: 4em;
-        height: 4em;
-    }
+  .my-farm-list .list-avatar {
+    width: 4em;
+    height: 4em;
+  }
 }
