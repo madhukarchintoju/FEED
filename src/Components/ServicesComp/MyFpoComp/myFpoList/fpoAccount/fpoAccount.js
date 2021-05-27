@@ -5,12 +5,13 @@ import './fpoAccount.css'
 export default function FpoAccount() {
     return (
         <>
-            <div className="fpo-account-wrap"
+            <div
+                className="fpo-account-wrap"
                 style={{
                     backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/fpo-accounts-bg.jpg")`,
-                    backgroundSize:"cover",
-                    backgroundRepeat:"no-repeat",
-                    backgroundPosition:"center"
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
                 }}
             >
                 <div className="row m-0 pt-3">

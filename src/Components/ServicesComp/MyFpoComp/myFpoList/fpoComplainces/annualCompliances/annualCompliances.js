@@ -3,10 +3,11 @@ import React from 'react'
 export default function AnnualCompliances() {
     return (
         <>
-            <div className="statutory-compliance-wrap"
+            <div
+                className="statutory-compliance-wrap"
                 style={{
                     backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/annual-compliances-bg.jpg")`,
-                    backgroundSize:"Cover"
+                    backgroundSize: 'Cover',
                 }}
             >
                 <div className="text-center pt-2">

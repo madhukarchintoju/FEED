@@ -1,17 +1,18 @@
-import React from 'react';
-import './businessAccount.css';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import './businessAccount.css'
+import { Link } from 'react-router-dom'
 
 export default function BusinessAccount() {
     return (
         <>
-            <div className="business-account-wrap" 
-            // style={{
-            //     backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/fpo-accounts-bg.jpg")`,
-            //     backgroundSize: "cover",
-            //     backgroundPosition: "center",
-            //     backgroundRepeat: "no-repeat",
-            // }}
+            <div
+                className="business-account-wrap"
+                // style={{
+                //     backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/fpo-accounts-bg.jpg")`,
+                //     backgroundSize: "cover",
+                //     backgroundPosition: "center",
+                //     backgroundRepeat: "no-repeat",
+                // }}
             >
                 <div className="row m-0 pt-3">
                     {/* <img
@@ -109,7 +110,7 @@ export default function BusinessAccount() {
                     <div className="col-lg-12 text-center">
                         <button className="btn btn-primary">
                             CONNECT TO FEED
-                    </button>
+                        </button>
                     </div>
                 </div>
             </div>

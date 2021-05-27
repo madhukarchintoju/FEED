@@ -1,8 +1,8 @@
-import React from 'react';
-import './eximPolicyRegulation.css';
+import React from 'react'
+import './eximPolicyRegulation.css'
 import { Link } from 'react-router-dom'
 import { Grid, Button, Icon } from '@material-ui/core'
-import { spacing } from '@material-ui/system';
+import { spacing } from '@material-ui/system'
 
 export default function EximPolicyRegulation() {
     return (
@@ -38,47 +38,75 @@ export default function EximPolicyRegulation() {
                 <Grid container item xs={12} lg direction="row">
                     <Grid item xs={6} md={4} lg={3}>
                         <Link to="" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/agri-export-policy.png`} alt="About FPO" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/agri-export-policy.png`}
+                                alt="About FPO"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={3}>
                         <Link to="" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/foreign-trade-policy.png`} alt="FPO Account" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/foreign-trade-policy.png`}
+                                alt="FPO Account"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={3}>
                         <Link to="" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/my-export-export-policy.png`} alt="FPO Business Plan" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/my-export-export-policy.png`}
+                                alt="FPO Business Plan"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={3}>
                         <Link to="" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/my-export-import-policy.png`} alt="FPO Compliances" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/my-export-import-policy.png`}
+                                alt="FPO Compliances"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={3}>
                         <Link to="" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/my-export-state-wise-policy.png`} alt="FPO Agm Board Metting" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/my-export-state-wise-policy.png`}
+                                alt="FPO Agm Board Metting"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={3}>
                         <Link to="" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/my-export-e-commerce-policy.png`} alt="FPO Loan Schemes" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/my-export-e-commerce-policy.png`}
+                                alt="FPO Loan Schemes"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={3}>
                         <Link to="" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/my-export-hs-code-wise-policy.png`} alt="FPO Loan Schemes" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/my-export-hs-code-wise-policy.png`}
+                                alt="FPO Loan Schemes"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={3}>
                         <Link to="" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/my-export-import-regulation.png`} alt="FPO Loan Schemes" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/my-export-import-regulation.png`}
+                                alt="FPO Loan Schemes"
+                            />
                         </Link>
                     </Grid>
                 </Grid>
                 <Grid container justify="center">
-                    <Button className="myexport-broadcast-btn" variant="contained" mt={5}>
+                    <Button
+                        className="myexport-broadcast-btn"
+                        variant="contained"
+                        mt={5}
+                    >
                         <b>CONNECT TO FEED </b>
                     </Button>
                 </Grid>

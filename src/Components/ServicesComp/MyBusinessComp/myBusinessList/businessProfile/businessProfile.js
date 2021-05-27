@@ -1,5 +1,5 @@
-import React from 'react';
-import "./businessProfile.css";
+import React from 'react'
+import './businessProfile.css'
 
 export default function BusinessProfile() {
     return (
@@ -25,7 +25,7 @@ export default function BusinessProfile() {
                             }}
                         >
                             Indian Farm Industry Pvt Ltd
-                    </h4>
+                        </h4>
                     </div>
                     <div className="row m-0">
                         <div className="col-lg-11 p-0 business-profile-content">
@@ -50,7 +50,7 @@ export default function BusinessProfile() {
                                 book. It has survived not only five centuries,
                                 but also the leap into electronic typesetting,
                                 remaining essentially
-                        </p>
+                            </p>
                         </div>
                     </div>
                     <div className="row about-fpo-images-wrap">
@@ -142,12 +142,12 @@ export default function BusinessProfile() {
                                 width: '80%',
                                 fontWeight: 'bold',
                                 borderRadius: '20px 20px',
-                                color:"white",
-                                backgroundColor:"#8660a9"
+                                color: 'white',
+                                backgroundColor: '#8660a9',
                             }}
                         >
                             CONNECT FEED
-                    </button>
+                        </button>
                     </div>
                 </div>
             </div>

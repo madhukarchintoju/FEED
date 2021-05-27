@@ -152,8 +152,6 @@ export default function MyFpoHome() {
                 </div>
             </div> */}
 
-
-
             <Grid
                 container
                 direction="row"
@@ -193,32 +191,50 @@ export default function MyFpoHome() {
                 <Grid container item xs={12} lg direction="row">
                     <Grid item xs={6} md={4} lg={4}>
                         <Link to="/myfpo/aboutfpo" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/about-fpo-card.png`} alt="About FPO" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/about-fpo-card.png`}
+                                alt="About FPO"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={4}>
                         <Link to="/myfpo/fpoaccount" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/fpo-account-card.png`} alt="FPO Account" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/fpo-account-card.png`}
+                                alt="FPO Account"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={4}>
                         <Link to="/myfpo/fpobusinessplan" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/fpo-business-plan-card.png`} alt="FPO Business Plan" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/fpo-business-plan-card.png`}
+                                alt="FPO Business Plan"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={4}>
                         <Link to="/myfpo/fpocomplainces" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/fpo-compliances-card.png`} alt="FPO Compliances" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/fpo-compliances-card.png`}
+                                alt="FPO Compliances"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={4}>
                         <Link to="" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/fpo-agm-board-card.png`} alt="FPO Agm Board Metting" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/fpo-agm-board-card.png`}
+                                alt="FPO Agm Board Metting"
+                            />
                         </Link>
                     </Grid>
                     <Grid item xs={6} md={4} lg={4}>
                         <Link to="" className="nav-link">
-                            <img src={`${process.env.PUBLIC_URL}/assets/fpo-loan-schemes-card.png`} alt="FPO Loan Schemes" />
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/fpo-loan-schemes-card.png`}
+                                alt="FPO Loan Schemes"
+                            />
                         </Link>
                     </Grid>
                 </Grid>
@@ -229,7 +245,6 @@ export default function MyFpoHome() {
                     </Button>
                 </Grid>
             </Grid>
-
         </>
     )
 }
