@@ -67,7 +67,16 @@ export default function MyToolsFpo() {
   ]
   return (
     <>
-      <MyToolsList dataList={dataList} title="fpo-heading.png"></MyToolsList>
+      <div
+        style={{
+          backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-tools/bg/mytoolsmyfpo.jpg")`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <MyToolsList dataList={dataList} title="fpo-heading.png"></MyToolsList>
+      </div>
     </>
   )
 }

@@ -1,3 +1,7 @@
+.side-navbar ~ div {
+  overflow-x: hidden;
+}
+
 @media only screen and (max-width: 769px) {
   .side-navbar ~ div {
     position: relative;
