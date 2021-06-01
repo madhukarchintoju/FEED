@@ -50,7 +50,7 @@ export default function MyFarmList(props) {
                 <Avatar
                   variant={props.variant || 'square'}
                   className="list-avatar"
-                  src={!!item.icon ? item.icon : item.name}
+                  src={`${process.env.PUBLIC_URL}/assets/my-farm/${item.icon}`}
                 >
                   {item.name}
                 </Avatar>
@@ -62,7 +62,7 @@ export default function MyFarmList(props) {
       </Grid>
       <Grid container justify="center" alignItems="flex-end">
         <Button className={classes.feedConnect} variant="contained">
-          <b>Connect FPO </b>
+          <b>Connect FEED </b>
           <Icon className="fas fa-angle-double-right"></Icon>
         </Button>
       </Grid>

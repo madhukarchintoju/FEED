@@ -1,0 +1,15 @@
+.my-tools-list .list-item {
+  margin-bottom: 2em;
+}
+
+.my-tools-list .list-avatar {
+  width: 6em;
+  height: 6em;
+}
+
+@media only screen and (max-width: 768px) {
+  .my-tools-list .list-avatar {
+    width: 4em;
+    height: 4em;
+  }
+}
