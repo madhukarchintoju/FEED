@@ -16,6 +16,9 @@ import Spices from '../myFarmProducts/spices/spices'
 import Plants from '../myFarmProducts/plants/plants'
 import { Redirect, Route, Switch } from 'react-router-dom'
 import MyFarmHome from '../myFarmHome/myFarmHome'
+import Fabric from '../myFarmProducts/fabric/fabric'
+import AnimalHusbandry from '../myFarmProducts/animalhusbandry/animalhusbandry'
+import Others from '../myFarmProducts/others/others'
 
 export default function MyFarmMainComp() {
   const navData = [
@@ -50,6 +53,11 @@ export default function MyFarmMainComp() {
       path: '/myfarm/forestProducts',
     },
     {
+      name: 'Animal Husb',
+      icon: 'fas fa-fan',
+      path: '/myfarm/animalhusbandry',
+    },
+    {
       name: 'Poultry',
       icon: 'fas fa-drumstick-bite',
       path: '/myfarm/poultry',
@@ -73,6 +81,21 @@ export default function MyFarmMainComp() {
       name: 'Flowers',
       icon: 'fas fa-fan',
       path: '/myfarm/flowers',
+    },
+    {
+      name: 'Plantation Crop',
+      icon: 'fas fa-fan',
+      path: '/myfarm/plantationcrop',
+    },
+    {
+      name: 'Fabric',
+      icon: 'fas fa-fan',
+      path: '/myfarm/fabric',
+    },
+    {
+      name: 'Others',
+      icon: 'fas fa-fan',
+      path: '/myfarm/others',
     },
   ]
 
@@ -101,6 +124,10 @@ export default function MyFarmMainComp() {
             <Route path="/myfarm/poultry" component={Poultry} />
             <Route path="/myfarm/spices" component={Spices} />
             <Route path="/myfarm/plants" component={Plants} />
+            <Route path="/myfarm/plantationcrop" component={PlantationCrop} />
+            <Route path="/myfarm/animalhusbandry" component={AnimalHusbandry} />
+            <Route path="/myfarm/fabric" component={Fabric} />
+            <Route path="/myfarm/others" component={Others} />
             <Redirect to="/myfarm/home"></Redirect>
           </Switch>
         </div>

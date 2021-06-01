@@ -4,96 +4,158 @@ import MyFarmList from '../../myFarmList/myFarmList'
 export default function PlantationCrop() {
   const dataList = [
     {
-      name: 'Mango',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
+      name: 'Bamboos',
+      icon: '/plantation-crop/BAMBOOS.png',
       link: '/myfarm/fruits/mango',
     },
     {
-      name: 'Papaya',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
+      name: 'Betel Nuts',
+      icon: '/plantation-crop/betelnuts.png',
       link: '/analytics',
     },
     {
-      name: 'Apple',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
+      name: 'Cashew Nuts',
+      icon: '/plantation-crop/CASHEW-NUTS.png',
       link: '/aboutSection',
     },
     {
-      name: 'Grapes',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
+      name: 'Cocoa',
+      icon: '/plantation-crop/COCOA.png',
       link: '/serviceSection',
     },
     {
-      name: 'Orange',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
+      name: 'Coconut',
+      icon: '/plantation-crop/COCONUT.png',
       link: '/eventSection',
     },
     {
-      name: 'Kiwi',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
+      name: 'Coffee',
+      icon: '/plantation-crop/COFFEE.png',
       link: '/feedWorkingSection',
     },
     {
-      name: 'Pomogranate',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
+      name: 'Sugar',
+      icon: '/plantation-crop/SUGAR.png',
       link: '/myfpo',
     },
     {
-      name: 'Strawberry',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/myexport',
-    },
-    {
-      name: 'Blueberry',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/analytics',
-    },
-    {
-      name: 'Rasberry',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/',
-    },
-    {
-      name: 'Liche',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/analytics',
-    },
-    {
-      name: 'Banana',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/aboutSection',
-    },
-    {
-      name: 'Grapes',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/serviceSection',
-    },
-    {
-      name: 'Chikku',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/eventSection',
-    },
-    {
-      name: 'Ice Apple',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/feedWorkingSection',
-    },
-    {
-      name: 'Green Apple',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/myfpo',
-    },
-    {
-      name: 'Guava',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/myexport',
-    },
-    {
-      name: 'Water Melon',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
+      name: 'Tea',
+      icon: '/plantation-crop/TEA.png',
       link: '/myexport',
     },
   ]
+
+  const dataGuide = [
+    {
+      name: 'Climate',
+      icon: 'climate.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Soil Preparation',
+      icon: 'soil.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Seeds',
+      icon: 'seeds.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'Irrigation.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Pesticides',
+      icon: 'pesticides.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Dieases',
+      icon: 'diseases.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Internal Crop',
+      icon: 'internalcrop.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Pre-harvesting',
+      icon: 'preharvesting.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Post-Harvesting',
+      icon: 'postharvesting.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Crop Expenditure Tools',
+      icon: 'cropexpenditure.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Crop-Advisory',
+      icon: 'cropadvisory.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Agri Exports',
+      icon: 'agriexports.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Value Addition Unit',
+      icon: 'valueadditionunits.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Marketing',
+      icon: 'marketing.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'FAQ',
+      icon: 'faq.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Farmer Connect Social Media',
+      icon: 'connectsocialmedia.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+  ]
+
   return (
     <>
       <MyFarmList dataList={dataList} title="MyFarm - Fruits"></MyFarmList>

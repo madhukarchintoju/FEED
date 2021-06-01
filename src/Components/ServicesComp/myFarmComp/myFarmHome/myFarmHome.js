@@ -128,7 +128,7 @@ export default function MyFarmHome() {
       </Grid>
       <Grid container justify="center">
         <Button className={classes.feedConnect} variant="contained">
-          <b>Connect FPO </b>
+          <b>Connect FEED </b>
           <Icon className="fas fa-angle-double-right"></Icon>
         </Button>
       </Grid>

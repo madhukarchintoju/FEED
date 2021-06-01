@@ -4,41 +4,137 @@ import MyFarmList from '../../myFarmList/myFarmList'
 export default function Dairy() {
   const dataList = [
     {
-      name: 'Milk',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/myfarm/fruits/mango',
+      name: 'Butter',
+      icon: '/dairy/BUTTER.png',
+      link: '',
     },
     {
-      name: 'Panner',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/analytics',
-    },
-    {
-      name: 'Lassi',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/aboutSection',
-    },
-    {
-      name: 'Badam Milk',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/serviceSection',
-    },
-    {
-      name: 'Curd',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/eventSection',
-    },
-    {
-      name: 'Butter Milk',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/feedWorkingSection',
+      name: 'Cheese',
+      icon: '/dairy/CHEESE.png',
+      link: '',
     },
     {
       name: 'Ghee',
-      icon: 'https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png',
-      link: '/myfpo',
+      icon: '/dairy/GHEE.png',
+      link: '',
+    },
+    {
+      name: 'Milk Dairy',
+      icon: '/dairy/MILK DAIRY.png',
+      link: '',
     },
   ]
+  const dataGuide = [
+    {
+      name: 'Climate',
+      icon: 'climate.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Soil Preparation',
+      icon: 'soil.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Seeds',
+      icon: 'seeds.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'Irrigation.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Pesticides',
+      icon: 'pesticides.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Dieases',
+      icon: 'diseases.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Internal Crop',
+      icon: 'internalcrop.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Pre-harvesting',
+      icon: 'preharvesting.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Post-Harvesting',
+      icon: 'postharvesting.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Crop Expenditure Tools',
+      icon: 'cropexpenditure.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Crop-Advisory',
+      icon: 'cropadvisory.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Agri Exports',
+      icon: 'agriexports.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Value Addition Unit',
+      icon: 'valueadditionunits.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Marketing',
+      icon: 'marketing.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'FAQ',
+      icon: 'faq.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+    {
+      name: 'Farmer Connect Social Media',
+      icon: 'connectsocialmedia.png',
+      link: '',
+      download: 'mango.pdf',
+    },
+  ]
+
   return (
     <>
       <MyFarmList dataList={dataList} title="MyFarm - Dairy"></MyFarmList>
