@@ -32,10 +32,19 @@ export default function MyToolsHome() {
   ]
   return (
     <>
-      <MyToolList
-        dataList={dataList}
-        title="my-tools-home-heading.png"
-      ></MyToolList>
+      <div
+        style={{
+          backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-tools/bg/mytools.jpg")`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <MyToolList
+          dataList={dataList}
+          title="my-tools-home-heading.png"
+        ></MyToolList>
+      </div>
     </>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './myFarmHome.css'
 import { Link } from 'react-router-dom'
-import { Grid, Button, Icon, makeStyles } from '@material-ui/core'
+import { Grid, Avatar, Button, Icon, makeStyles } from '@material-ui/core'
 
 export default function MyFarmHome() {
   const useStyles = makeStyles((theme) => ({
@@ -20,11 +20,11 @@ export default function MyFarmHome() {
       height: '20em',
     },
     navLink: {
+      width: '6em',
+      height: '6em',
       '@media (max-width: 768px)': {
-        '& img': {
-          width: '7em',
-          height: '7em',
-        },
+        width: '4em',
+        height: '4em',
       },
     },
     feedConnect: {
@@ -33,8 +33,96 @@ export default function MyFarmHome() {
         marginTop: '2em',
       },
     },
+    guideItem: {
+      paddingTop: '0.4em',
+      borderRadius: '3em',
+      maxWidth: '19em',
+      margin: '1em',
+    },
+    color: {
+      color: 'black',
+      fontWeight: '500',
+    },
   }))
   const classes = useStyles()
+
+  const homeData = [
+    {
+      name: 'Fruits',
+      icon: 'fruits.png',
+      path: '/myfarm/fruits',
+    },
+    {
+      name: 'Vegetables',
+      icon: 'vegetables.png',
+      path: '/myfarm/vegetables',
+    },
+    {
+      name: 'Spices',
+      icon: 'spices.png',
+      path: '/myfarm/spices',
+    },
+    {
+      name: 'Cereals',
+      icon: 'cereals.png',
+      path: '/myfarm/cereals',
+    },
+    {
+      name: 'Oil Seeds',
+      icon: 'oilseeds.png',
+      path: '/myfarm/oilSeeds',
+    },
+    {
+      name: 'Forest Products',
+      icon: 'forestprod.png',
+      path: '/myfarm/forestProducts',
+    },
+    {
+      name: 'Animal Husb',
+      icon: 'liveanimals.png',
+      path: '/myfarm/animalhusbandry',
+    },
+    {
+      name: 'Poultry',
+      icon: 'liveanimals.png',
+      path: '/myfarm/poultry',
+    },
+    {
+      name: 'Aqua',
+      icon: 'aqua.png',
+      path: '/myfarm/aqua',
+    },
+    {
+      name: 'Dairy',
+      icon: 'dairy.png',
+      path: '/myfarm/dairy',
+    },
+    {
+      name: 'Plants',
+      icon: 'plants.png',
+      path: '/myfarm/plants',
+    },
+    {
+      name: 'Flowers',
+      icon: 'flowers.png',
+      path: '/myfarm/flowers',
+    },
+    {
+      name: 'Plantation Crop',
+      icon: 'plantationcrop.png',
+      path: '/myfarm/plantationcrop',
+    },
+    {
+      name: 'Fabric',
+      icon: 'fabrics.png',
+      path: '/myfarm/fabric',
+    },
+    {
+      name: 'Others',
+      icon: 'others.png',
+      path: '/myfarm/others',
+    },
+  ]
 
   return (
     <>
@@ -59,6 +147,7 @@ export default function MyFarmHome() {
             <img
               className={classes.grassLogo}
               src={`${process.env.PUBLIC_URL}/assets/farm-icon.jpg`}
+              alt=""
             />
           </Grid>
           <Grid item xs>
@@ -68,62 +157,48 @@ export default function MyFarmHome() {
             <img
               className={classes.antLogo}
               src={`${process.env.PUBLIC_URL}/assets/ant.png`}
+              alt=""
             />
           </Grid>
         </Grid>
+
         <Grid
           container
-          item
-          xs={12}
-          lg
           direction="row"
-          className={classes.navLink}
+          item
+          lg
+          xs={12}
+          justify="flex-start"
+          alignItems="center"
         >
-          <Grid item xs={6} lg={3} md={4}>
-            <Link to="/myfarm/spices">
-              <img src="https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/SPICES_nu_1c0Aea.png" />
-            </Link>
-          </Grid>
-          <Grid item xs={6} lg={3} md={4}>
-            <Link to="/myfarm/cereals">
-              <img src="https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/CEREALS_-akHzC2xIV.png" />
-            </Link>
-          </Grid>
-          <Grid item xs={6} lg={3} md={4}>
-            <Link to="/myfarm/aqua">
-              <img src="https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/AQUA_ALVRgxpyxM.png" />
-            </Link>
-          </Grid>
-          <Grid item xs={6} lg={3} md={4}>
-            <Link to="/myfarm/dairy">
-              <img src="https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/DAIRY_XAlsfOGZ19.png" />
-            </Link>
-          </Grid>
-          <Grid item xs={6} lg={3} md={4}>
-            <Link to="/myfarm/forestProducts">
-              <img src="https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/FOREST-PRODUCTS_BuVD3boEx.png" />
-            </Link>
-          </Grid>
-          <Grid item xs={6} lg={3} md={4}>
-            <Link to="/myfarm/oilSeeds">
-              <img src="https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/PLANTATION-CROP_qQoR-IXTcl.png" />
-            </Link>
-          </Grid>
-          <Grid item xs={6} lg={3} md={4}>
-            <Link to="/myfarm/plants">
-              <img src="https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/PLANTS_So2QIQ12i.png" />
-            </Link>
-          </Grid>
-          <Grid item xs={6} lg={3} md={4}>
-            <Link to="/myfarm/flowers">
-              <img src="https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/ROSE-FLOWER_lp6IRmHSrv.png" />
-            </Link>
-          </Grid>
-          <Grid item xs={6} lg={3} md={4}>
-            <Link to="/myfarm/poultry">
-              <img src="https://ik.imagekit.io/o0om8c0nr9/FEED-NEW/POULTRY_kK6Xr2XeR.png" />
-            </Link>
-          </Grid>
+          {homeData.map((item, index) => (
+            <Grid
+              key={index}
+              xs={6}
+              lg={2}
+              item
+              container
+              direction="column"
+              justify="center"
+              alignItems="center"
+              className="list-item"
+              component={Link}
+              to={item.path}
+            >
+              <Grid item className={classes.guideItem}>
+                <Avatar
+                  variant="square"
+                  className={classes.navLink}
+                  src={`${process.env.PUBLIC_URL}/assets/my-farm/home/${item.icon}`}
+                >
+                  {item.name}
+                </Avatar>
+              </Grid>
+              <Grid item className={classes.color}>
+                {item.name}
+              </Grid>
+            </Grid>
+          ))}
         </Grid>
       </Grid>
       <Grid container justify="center">
