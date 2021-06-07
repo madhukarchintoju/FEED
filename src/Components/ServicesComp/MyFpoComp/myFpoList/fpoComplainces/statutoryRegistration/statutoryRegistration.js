@@ -1,104 +1,92 @@
 import React from 'react'
 import './statutoryRegistration.css'
+import MyFpoListItem from '../../../myFpoListItem/myFpoListItem'
 
 export default function StatutoryRegistration() {
+  const dataList = [
+    {
+      name: 'FPO Registrations',
+      icon: '/compliances/statutory/fpor.png',
+      link: '',
+    },
+    {
+      name: 'FPC Registrationa',
+      icon: '/compliances/statutory/fpcr.png',
+      link: '',
+    },
+    {
+      name: 'GST Registrations',
+      icon: '/compliances/statutory/gstr.png',
+      link: '',
+    },
+    {
+      name: 'IEC Registrations',
+      icon: '/compliances/statutory/ieccr.png',
+      link: '',
+    },
+    {
+      name: 'MSME Registrations',
+      icon: '/compliances/statutory/msme.png',
+      link: '',
+    },
+    {
+      name: 'PAN Registrations',
+      icon: '/compliances/statutory/pan.png',
+      link: '',
+    },
+    {
+      name: 'FSSAI Registrations',
+      icon: '/compliances/statutory/fssai.png',
+      link: '',
+    },
+    {
+      name: 'ISO Registrations',
+      icon: '/compliances/statutory/iso.png',
+      link: '',
+    },
+    {
+      name: 'Shops Establishments',
+      icon: '/compliances/statutory/se.png',
+      link: '',
+    },
+    {
+      name: 'Trade License',
+      icon: '/compliances/statutory/trade.png',
+      link: '',
+    },
+    {
+      name: 'Labour License',
+      icon: '/compliances/statutory/labour.png',
+      link: '',
+    },
+    {
+      name: 'Other Registrations',
+      icon: '/compliances/statutory/anyother.png',
+      link: '',
+    },
+  ]
+  const headingSize = {
+    webWidth: 14,
+    mobWidth: 8,
+    webHeight: 4,
+    mobHeight: 2,
+  }
+  const cardSize = {
+    webWidth: 12,
+    mobWidth: 6,
+    webHeight: 3,
+    mobHeight: 2,
+  }
   return (
     <>
-      <div
-        className="statutory-compliance-wrap"
-        style={{
-          backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/statutory-compliances-bg.jpg")`,
-          backgroundSize: 'Cover',
-        }}
-      >
-        <div className="text-center pt-2">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-card.png`}
-            alt=""
-          />
-        </div>
-        <div className="row justify-content-around m-0 mt-2 text-center">
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-fpo-regi.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-fpc-regi.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-gst-regi.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-iec-regi.png`}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="row justify-content-around m-0 mt-2 text-center">
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-msme-regi.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-pan-regi.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-fssai-regi.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-iso-regi.png`}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="row justify-content-around m-0 mt-2 text-center">
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-shops-est.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-trade-lice.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-labour-licen.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/statutaory-registrations-oth-regi.png`}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="row justify-content-around m-0 mt-3 pb-4 text-center">
-          <button className="btn btn-warning">CONNECT TO FEED</button>
-        </div>
-      </div>
+      <MyFpoListItem
+        dataList={dataList}
+        cardTitle="/compliances/statutory/statutory.png"
+        headingSize={headingSize}
+        cardSize={cardSize}
+        headingAlign="center"
+        cardsView={3}
+      ></MyFpoListItem>
     </>
   )
 }

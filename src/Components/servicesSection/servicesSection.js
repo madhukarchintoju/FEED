@@ -13,7 +13,7 @@ export default function ServicesSection(props) {
             ) : (
               <div className="row">
                 <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12 m-auto">
-                  <h3 className="section-heading text-center">FEED Services</h3>
+                  <h5 className="section-heading text-center">FEED Services</h5>
                 </div>
               </div>
             )}
@@ -37,14 +37,14 @@ export default function ServicesSection(props) {
                             src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
                             alt=""
                           />
-                          <h4
+                          <h5
                             className="card-title my-auto"
                             style={{
                               color: '#fbba14',
                             }}
                           >
                             MY FPO
-                          </h4>
+                          </h5>
                         </div>
                       </div>
                     </Link>
@@ -63,7 +63,7 @@ export default function ServicesSection(props) {
                             src={`${process.env.PUBLIC_URL}/assets/farm-icon.jpg`}
                             alt=""
                           />
-                          <h4
+                          <h5
                             className="card-title P-5 my-auto"
                             style={{
                               position: 'relative',
@@ -71,7 +71,7 @@ export default function ServicesSection(props) {
                             }}
                           >
                             MY FARM
-                          </h4>
+                          </h5>
                         </div>
                       </div>
                     </Link>
@@ -90,14 +90,14 @@ export default function ServicesSection(props) {
                             src={`${process.env.PUBLIC_URL}/assets/my-business-icon.jpg`}
                             alt=""
                           />
-                          <h4
+                          <h5
                             className="card-title P-5 my-auto"
                             style={{
                               color: '#2f79e4',
                             }}
                           >
                             MY BUSINESS
-                          </h4>
+                          </h5>
                         </div>
                       </div>
                     </Link>
@@ -116,14 +116,14 @@ export default function ServicesSection(props) {
                             src={`${process.env.PUBLIC_URL}/assets/cart-icon.jpg`}
                             alt=""
                           />
-                          <h4
+                          <h5
                             className="card-title P-5 my-auto"
                             style={{
                               color: '#f54900',
                             }}
                           >
                             MY MARKET
-                          </h4>
+                          </h5>
                         </div>
                       </div>
                     </Link>
@@ -147,14 +147,14 @@ export default function ServicesSection(props) {
                             src={`${process.env.PUBLIC_URL}/assets/product-icon.jpg`}
                             alt=""
                           />
-                          <h4
+                          <h5
                             className="card-title P-5 my-auto"
                             style={{
                               color: '#832ad4',
                             }}
                           >
                             MY PRODUCTS
-                          </h4>
+                          </h5>
                         </div>
                       </div>
                     </Link>
@@ -173,14 +173,14 @@ export default function ServicesSection(props) {
                             src={`${process.env.PUBLIC_URL}/assets/52474.jpg`}
                             alt=""
                           />
-                          <h4
+                          <h5
                             className="card-title P-5 my-auto"
                             style={{
                               color: '#006a94',
                             }}
                           >
                             MY EXPORTS
-                          </h4>
+                          </h5>
                         </div>
                       </div>
                     </Link>
@@ -199,14 +199,14 @@ export default function ServicesSection(props) {
                             src={`${process.env.PUBLIC_URL}/assets/my-edu-icon.jpg`}
                             alt=""
                           />
-                          <h4
+                          <h5
                             className="card-title P-5 my-auto"
                             style={{
                               color: '#f11c18',
                             }}
                           >
                             MY EDUCATION
-                          </h4>
+                          </h5>
                         </div>
                       </div>
                     </Link>
@@ -225,14 +225,14 @@ export default function ServicesSection(props) {
                             src={`${process.env.PUBLIC_URL}/assets/tools-icon.jpg`}
                             alt=""
                           />
-                          <h4
+                          <h5
                             className="card-title P-5 my-auto"
                             style={{
                               color: '#312401',
                             }}
                           >
                             MY TOOLS
-                          </h4>
+                          </h5>
                         </div>
                       </div>
                     </Link>

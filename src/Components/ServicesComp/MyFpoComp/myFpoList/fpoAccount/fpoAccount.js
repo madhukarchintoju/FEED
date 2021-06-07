@@ -1,115 +1,92 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import MyFpoListItem from '../../myFpoListItem/myFpoListItem'
 import './fpoAccount.css'
+import { makeStyles } from '@material-ui/core'
 
 export default function FpoAccount() {
+  const useStyles = makeStyles((theme) => ({
+    fpoAccountWrap: {
+      backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/bg/accounts.jpg")`,
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+    },
+  }))
+  const classes = useStyles()
+  const dataList = [
+    {
+      name: 'Create Vendor',
+      icon: '/accounts/createvendor.png',
+      link: '',
+    },
+    {
+      name: 'Share Capital Registry',
+      icon: '/accounts/sharecapitalregistry.png',
+      link: '',
+    },
+    {
+      name: 'Purchase Registry',
+      icon: '/accounts/purcheseregistry.png',
+      link: '',
+    },
+    {
+      name: 'Sale Registry',
+      icon: '/accounts/salesregistry.png',
+      link: '',
+    },
+    {
+      name: 'Stock Registry',
+      icon: '/accounts/stockregistry.png',
+      link: '',
+    },
+    {
+      name: 'Create Product',
+      icon: '/accounts/createproduct.png',
+      link: '/myfpo/createProduct',
+    },
+    {
+      name: 'Ledger Registry',
+      icon: '/accounts/ledgerregistry.png',
+      link: '',
+    },
+    {
+      name: 'Bank Registry',
+      icon: '/accounts/bankregistry.png',
+      link: '',
+    },
+    {
+      name: 'Cash Book Registry',
+      icon: '/accounts/cashbookregistry.png',
+      link: '',
+    },
+    {
+      name: 'FPO Reports',
+      icon: '/accounts/reports.png',
+      link: '',
+    },
+  ]
+  const headingSize = {
+    webWidth: 18,
+    mobWidth: 8,
+    webHeight: 2,
+    mobHeight: 1,
+  }
+  const cardSize = {
+    webWidth: 9,
+    mobWidth: 4,
+    webHeight: 8,
+    mobHeight: 4,
+  }
+
   return (
     <>
-      <div
-        className="fpo-account-wrap"
-        style={{
-          backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/fpo-accounts-bg.jpg")`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="row m-0 pt-3">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/fpoaccountsheading.png`}
-            width="30%"
-            alt=""
-          />
-        </div>
-        <div className="row m-0 mt-3 d-lg-flex justify-content-around">
-          <div>
-            <Link to="/#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/fpocreatevendor-icon.png`}
-                alt=""
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/sharecapitalregistry-icon.png`}
-                alt=""
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/fpopurchaseregistry-icon.png`}
-                alt=""
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/fposaleregistryicon.png`}
-                alt=""
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/fpostockregistry-icon.png`}
-                alt=""
-              />
-            </Link>
-          </div>
-        </div>
-        <div className="row m-0 mt-4 d-lg-flex justify-content-around">
-          <div>
-            <Link to="/myfpo/createProduct">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/fpocreateproduct-icon.png`}
-                alt=""
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/fpoledgerregistry-icon.png`}
-                alt=""
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/fpobankregistry-icon.png`}
-                alt=""
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/fpocashbookregistry-icon.png`}
-                alt=""
-              />
-            </Link>
-          </div>
-          <div>
-            <Link to="/#">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/fporeports-icon.png`}
-                alt=""
-              />
-            </Link>
-          </div>
-        </div>
-        <div className="row m-0 mt-3 pb-4">
-          <div className="col-lg-12 text-center">
-            <button className="btn btn-warning">CONNECT TO FEED</button>
-          </div>
-        </div>
+      <div className={classes.fpoAccountWrap}>
+        <MyFpoListItem
+          dataList={dataList}
+          headingSize={headingSize}
+          cardTitle="/accounts/fpoaccountsheading.png"
+          headingAlign="flex-start"
+          cardSize={cardSize}
+        ></MyFpoListItem>
       </div>
     </>
   )

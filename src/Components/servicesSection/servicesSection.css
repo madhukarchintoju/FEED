@@ -36,7 +36,7 @@
   border-radius: 10px 10px 50% 50%;
 }
 
-.services-card .card-body h4 {
+.services-card .card-body h5 {
   position: relative;
   height: 10px;
   top: -50px;
@@ -110,7 +110,7 @@
     padding: 15px;
   }
 
-  .services-card .card-body h4 {
+  .services-card .card-body h5 {
     position: relative;
     /* height: 10px; */
     top: -50px;

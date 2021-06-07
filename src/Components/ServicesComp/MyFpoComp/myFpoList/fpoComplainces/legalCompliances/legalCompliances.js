@@ -1,87 +1,77 @@
 import React from 'react'
 import './legalCompliances.css'
+import MyFpoListItem from '../../../myFpoListItem/myFpoListItem'
 
 export default function LegalCompliances() {
+  const dataList = [
+    {
+      name: 'Monthly Returns Filling',
+      icon: '/compliances/legal/mgrf.png',
+      link: '',
+    },
+    {
+      name: 'PF, ESI, PT Filling',
+      icon: '/compliances/legal/pfesi.png',
+      link: '',
+    },
+    {
+      name: 'TDS Filling',
+      icon: '/compliances/legal/tdsf.png',
+      link: '',
+    },
+    {
+      name: 'ROC Compliances',
+      icon: '/compliances/legal/roc.png',
+      link: '',
+    },
+    {
+      name: 'Legal support Service',
+      icon: '/compliances/legal/lss.png',
+      link: '',
+    },
+    {
+      name: 'Auditor Appointment',
+      icon: '/compliances/legal/auditor.png',
+      link: '',
+    },
+    {
+      name: 'Minutes of Board Meeting',
+      icon: '/compliances/legal/mobm.png',
+      link: '',
+    },
+    {
+      name: 'Corporate Governance',
+      icon: '/compliances/legal/cg.png',
+      link: '',
+    },
+    {
+      name: 'Stock Checking',
+      icon: '/compliances/legal/stockchecking.png',
+      link: '',
+    },
+  ]
+  const headingSize = {
+    webWidth: 14,
+    mobWidth: 8,
+    webHeight: 4,
+    mobHeight: 2,
+  }
+  const cardSize = {
+    webWidth: 12,
+    mobWidth: 6,
+    webHeight: 3,
+    mobHeight: 2,
+  }
   return (
     <>
-      <div
-        className="legal-compliance-wrap"
-        style={{
-          backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/legal-compliances-bg.jpg")`,
-          backgroundSize: 'Contain',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <div className="text-center pt-2">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/legal-compliance-card.png`}
-            alt=""
-          />
-        </div>
-        <div className="row justify-content-around m-0 mt-2 text-center">
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/fpo-legal-compliances-gst-card.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/fpo-legal-compliances-filling-card.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/fpo-legal-compliances-tds-filling-card.png`}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="row justify-content-around m-0 mt-2 text-center">
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/fpo-legal-compliances-roc-card.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/fpo-legal-compliances-support-service-card.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/fpo-legal-compliances-audit-apoint-card.png`}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="row justify-content-around m-0 mt-2 text-center">
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/fpo-legal-compliances-mbm-card.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/fpo-legal-compliances-corp-gov-card.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/fpo-legal-compliances-stock-check-card.png`}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="row justify-content-around m-0 mt-3 pb-4 text-center">
-          <button className="btn btn-warning">CONNECT TO FEED</button>
-        </div>
-      </div>
+      <MyFpoListItem
+        dataList={dataList}
+        cardTitle="/compliances/legal/legalcomplianceshead.png"
+        headingSize={headingSize}
+        cardSize={cardSize}
+        headingAlign="center"
+        cardsView={4}
+      ></MyFpoListItem>
     </>
   )
 }

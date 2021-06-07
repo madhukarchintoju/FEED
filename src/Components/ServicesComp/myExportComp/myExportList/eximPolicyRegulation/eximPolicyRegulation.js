@@ -1,10 +1,57 @@
 import React from 'react'
 import './eximPolicyRegulation.css'
-import { Link } from 'react-router-dom'
-import { Grid, Button, Icon } from '@material-ui/core'
-import { spacing } from '@material-ui/system'
+import { Grid } from '@material-ui/core'
+import MyExportListItem from '../../myExportListItem/myExportListItem'
 
 export default function EximPolicyRegulation() {
+  const dataList = [
+    {
+      name: 'Why Exports',
+      icon: '/policy/agri-export-policy.png',
+      link: '/myexport/whyexport',
+    },
+    {
+      name: 'Start Export',
+      icon: '/policy/foreign-trade-policy.png',
+      link: '/myexport/startexport',
+    },
+    {
+      name: 'Product Selection',
+      icon: '/policy/my-export-export-policy.png',
+      link: '/myexport/exportproductselection',
+    },
+    {
+      name: 'Buyers Connection',
+      icon: '/policy/my-export-import-policy.png',
+      link: '/myexport/exportbuyersconnection',
+    },
+    {
+      name: 'Exim Policy Regulations',
+      icon: '/policy/my-export-state-wise-policy.png',
+      link: '/myexport/eximpolicyregulation',
+    },
+    {
+      name: 'Finance',
+      icon: '/policy/my-export-e-commerce-policy.png',
+      link: '',
+    },
+    {
+      name: 'Process Export Order',
+      icon: '/policy/my-export-hs-code-wise-policy.png',
+      link: '/myexport/processexportorder',
+    },
+    {
+      name: 'Exim Documentation',
+      icon: '/policy/my-export-import-regulation.png',
+      link: '/myexport/eximdocumentation',
+    },
+  ]
+  const cardSize = {
+    webWidth: 8,
+    mobWidth: 4,
+    webHeight: 8,
+    mobHeight: 4,
+  }
   return (
     <>
       <Grid
@@ -35,7 +82,7 @@ export default function EximPolicyRegulation() {
             />
           </Grid>
         </Grid>
-        <Grid container item xs={12} lg direction="row">
+        {/* <Grid container item xs={12} lg direction="row">
           <Grid item xs={6} md={4} lg={3}>
             <Link to="" className="nav-link">
               <img
@@ -105,6 +152,13 @@ export default function EximPolicyRegulation() {
           <Button className="myexport-broadcast-btn" variant="contained" mt={5}>
             <b>CONNECT TO FEED </b>
           </Button>
+        </Grid> */}
+        <Grid lg>
+          <MyExportListItem
+            dataList={dataList}
+            cardSize={cardSize}
+            cardsView={3}
+          ></MyExportListItem>
         </Grid>
       </Grid>
     </>
