@@ -15,6 +15,7 @@ import FpoLoanSchemes from '../myFpoList/fpoLoanSchemes/fpoLoanSchemes'
 import StatutoryRegistration from '../myFpoList/fpoComplainces/statutoryRegistration/statutoryRegistration'
 import LegalCompliances from '../myFpoList/fpoComplainces/legalCompliances/legalCompliances'
 import AnnualCompliances from '../myFpoList/fpoComplainces/annualCompliances/annualCompliances'
+import CreateProduct from '../myFpoList/fpoAccount/createProduct/createProduct'
 export default function MyFpoMain() {
   const navData = [
     {
@@ -93,6 +94,10 @@ export default function MyFpoMain() {
             <Route
               path="/myfpo/fpocompliances/annualcompliances"
               component={AnnualCompliances}
+            ></Route>
+            <Route
+              path="/myfpo/createProduct"
+              component={CreateProduct}
             ></Route>
             <Redirect to="/myfpo/home" />
           </Switch>

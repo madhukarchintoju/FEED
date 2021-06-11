@@ -23,7 +23,7 @@ export default function FpoAccount() {
         </div>
         <div className="row m-0 mt-3 d-lg-flex justify-content-around">
           <div>
-            <Link>
+            <Link to="/#">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/fpocreatevendor-icon.png`}
                 alt=""
@@ -31,7 +31,7 @@ export default function FpoAccount() {
             </Link>
           </div>
           <div>
-            <Link>
+            <Link to="/#">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/sharecapitalregistry-icon.png`}
                 alt=""
@@ -39,7 +39,7 @@ export default function FpoAccount() {
             </Link>
           </div>
           <div>
-            <Link>
+            <Link to="/#">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/fpopurchaseregistry-icon.png`}
                 alt=""
@@ -47,7 +47,7 @@ export default function FpoAccount() {
             </Link>
           </div>
           <div>
-            <Link>
+            <Link to="/#">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/fposaleregistryicon.png`}
                 alt=""
@@ -55,7 +55,7 @@ export default function FpoAccount() {
             </Link>
           </div>
           <div>
-            <Link>
+            <Link to="/#">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/fpostockregistry-icon.png`}
                 alt=""
@@ -65,7 +65,7 @@ export default function FpoAccount() {
         </div>
         <div className="row m-0 mt-4 d-lg-flex justify-content-around">
           <div>
-            <Link>
+            <Link to="/myfpo/createProduct">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/fpocreateproduct-icon.png`}
                 alt=""
@@ -73,7 +73,7 @@ export default function FpoAccount() {
             </Link>
           </div>
           <div>
-            <Link>
+            <Link to="/#">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/fpoledgerregistry-icon.png`}
                 alt=""
@@ -81,7 +81,7 @@ export default function FpoAccount() {
             </Link>
           </div>
           <div>
-            <Link>
+            <Link to="/#">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/fpobankregistry-icon.png`}
                 alt=""
@@ -89,7 +89,7 @@ export default function FpoAccount() {
             </Link>
           </div>
           <div>
-            <Link>
+            <Link to="/#">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/fpocashbookregistry-icon.png`}
                 alt=""
@@ -97,7 +97,7 @@ export default function FpoAccount() {
             </Link>
           </div>
           <div>
-            <Link>
+            <Link to="/#">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/fporeports-icon.png`}
                 alt=""
