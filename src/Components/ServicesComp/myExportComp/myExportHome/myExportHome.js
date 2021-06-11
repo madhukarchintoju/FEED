@@ -1,128 +1,83 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './myExportHome.css'
+import MyExportListItem from '../myExportListItem/myExportListItem'
 
 export default function MyExportHome() {
+  const dataList = [
+    {
+      name: 'Why Exports',
+      icon: '/home/why-exports.png',
+      link: '/myexport/whyexport',
+    },
+    {
+      name: 'Start Export',
+      icon: '/home/start-export.png',
+      link: '/myexport/startexport',
+    },
+    {
+      name: 'Product Selection',
+      icon: '/home/PRODUCT-SELECTION.png',
+      link: '/myexport/exportproductselection',
+    },
+    {
+      name: 'Buyers Connection',
+      icon: '/home/BUYERS-CONNECTIONS.png',
+      link: '/myexport/exportbuyersconnection',
+    },
+    {
+      name: 'Exim Policy Regulations',
+      icon: '/home/POLICIES.png',
+      link: '/myexport/eximpolicyregulation',
+    },
+    {
+      name: 'Finance',
+      icon: '/home/FINANCE.png',
+      link: '',
+    },
+    {
+      name: 'Process Export Order',
+      icon: '/home/PROCESS.png',
+      link: '/myexport/processexportorder',
+    },
+    {
+      name: 'Exim Documentation',
+      icon: '/home/DOCUMENTATION.png',
+      link: '/myexport/eximdocumentation',
+    },
+    {
+      name: 'Global Trade Updates',
+      icon: '/home/GLOBAL-UPDATE.png',
+      link: '/myexport/globaltradeupdates',
+    },
+    {
+      name: 'Events',
+      icon: '/home/EVENTS.png',
+      link: '/myexport/exportevents',
+    },
+    {
+      name: 'Tools & Services',
+      icon: '/home/TOOLS-SERVICES.png',
+      link: '/myexport/exporttoolservices',
+    },
+    {
+      name: 'Tarrif',
+      icon: '/home/TARIFF.png',
+      link: '/myexport/eximtarrifbenefits',
+    },
+  ]
+  const cardSize = {
+    webWidth: 9,
+    mobWidth: 5,
+    webHeight: 8,
+    mobHeight: 4,
+  }
   return (
     <>
-      <div>
-        <h2 style={{ fontWeight: '700' }}>MY EXPORTS</h2>
-        <div className="row m-0">
-          <div className="col-lg-12">
-            <div className="row">
-              <div className="col-lg-2">
-                <Link className="nav-link" to="/myexport/whyexport">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/why-exports.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-              <div className="col-lg-2">
-                <Link to="/myexport/startexport">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/start-export.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-              <div className="col-lg-2">
-                <Link
-                  className="nav-link"
-                  to="/myexport/exportproductselection"
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/PRODUCT-SELECTION.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-              <div className="col-lg-2">
-                <Link
-                  className="nav-link"
-                  to="/myexport/exportbuyersconnection"
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/BUYERS-CONNECTIONS.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-              <div className="col-lg-2">
-                <Link className="nav-link" to="/myexport/eximpolicyregulation">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/POLICIES.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-              <div className="col-lg-2">
-                <Link className="nav-link" to="">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/FINANCE.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-2">
-                <Link className="nav-link" to="/myexport/processexportorder">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/PROCESS.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-              <div className="col-lg-2">
-                <Link className="nav-link" to="/myexport/eximdocumentation">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/DOCUMENTATION.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-              <div className="col-lg-2">
-                <Link className="nav-link" to="/myexport/globaltradeupdates">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/GLOBAL-UPDATE.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-              <div className="col-lg-2">
-                <Link className="nav-link" to="/myexport/exportevents">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/EVENTS.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-              <div className="col-lg-2">
-                <Link className="nav-link" to="/myexport/exporttoolservices">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/TOOLS-SERVICES.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-              <div className="col-lg-2">
-                <Link className="nav-link" to="/myexport/eximtarrifbenefits">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-exports/TARIFF.png`}
-                    alt="Why Exports card"
-                  />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row m-0">
-          <div className="col-lg-12 text-center">
-            <button className="btn btn-success">CONNECT TO FEED</button>
-          </div>
-        </div>
-      </div>
+      <MyExportListItem
+        dataList={dataList}
+        cardSize={cardSize}
+        title="My-Exports"
+      ></MyExportListItem>
     </>
   )
 }

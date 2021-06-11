@@ -21,57 +21,57 @@ export default function MyExportMainComp() {
   const navData = [
     {
       name: 'Why Exports',
-      icon: 'fa fa-plus-circle',
+      icon: 'far fa-question-circle',
       path: '/myexport/whyexport',
     },
     {
       name: 'Start Exports',
-      icon: 'fa fa-address-card',
+      icon: 'fas fa-hourglass-start',
       path: '/myexport/startexport',
     },
     {
       name: 'Product Selection',
-      icon: 'fa fa-address-card',
+      icon: 'far fa-hand-pointer',
       path: '/myexport/exportproductselection',
     },
     {
       name: 'Buyers Connection',
-      icon: 'fa fa-address-card',
+      icon: 'fab fa-connectdevelop',
       path: '/myexport/exportbuyersconnection',
     },
     {
       name: `Exim Policies & Regulation`,
-      icon: 'fa fa-address-card',
+      icon: 'far fa-sticky-note',
       path: '/myexport/eximpolicyregulation',
     },
     {
       name: 'Process & Export Order',
-      icon: 'fa fa-address-card',
+      icon: 'fas fa-sort',
       path: '/myexport/processexportorder',
     },
     {
       name: 'Exim Documentation',
-      icon: 'fa fa-address-card',
+      icon: 'fas fa-file-alt',
       path: '/myexport/eximdocumentation',
     },
     {
       name: 'Global Trade Updates',
-      icon: 'fa fa-address-card',
+      icon: 'far fa-edit',
       path: '/myexport/globaltradeupdates',
     },
     {
       name: 'Events',
-      icon: 'fa fa-address-card',
+      icon: 'fas fa-calendar-week',
       path: '/myexport/exportevents',
     },
     {
       name: 'Tools & Services',
-      icon: 'fa fa-address-card',
+      icon: 'fas fa-calculator',
       path: '/myexport/exporttoolservices',
     },
     {
-      name: 'Exim Tarriff & Benfits',
-      icon: 'fa fa-address-card',
+      name: 'Exim Tariff & Benfits',
+      icon: 'fab fa-elementor',
       path: '/myexport/eximtarrifbenefits',
     },
   ]
@@ -85,7 +85,7 @@ export default function MyExportMainComp() {
           bgColor="#64c5bc"
           textColor="black"
         ></SideNavBar>
-        <div className="col">
+        <div className="p-0 col-lg">
           <Switch>
             <Route path="/myexport/home" component={MyExportHome}></Route>
             <Route path="/myexport/whyexport" component={WhyExport}></Route>

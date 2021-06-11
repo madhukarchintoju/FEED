@@ -1,7 +1,7 @@
 import React from 'react'
 import './myToolsList.css'
 import { Link } from 'react-router-dom'
-import { Grid, Avatar, Button, Icon, makeStyles } from '@material-ui/core'
+import { Grid, Avatar, Button, makeStyles } from '@material-ui/core'
 
 export default function MyToolsList(props) {
   const useStyles = makeStyles((theme) => ({
@@ -17,18 +17,26 @@ export default function MyToolsList(props) {
       fontWeight: '500',
     },
     listTitle: {
-      margin: '1em',
       '@media (max-width: 768px)': {
         margin: 0,
         marginLeft: '1em',
       },
     },
     toolsAvatar: {
+      margin: '1em',
       width: '11em',
       height: '5em',
       '@media (max-width: 768px)': {
         width: '6em',
-        height: '6em',
+        height: '3em',
+      },
+    },
+    listAvatar: {
+      width: '6em',
+      height: '6em',
+      '@media (max-width: 768px)': {
+        width: '3em',
+        height: '3em',
       },
     },
   }))
@@ -43,27 +51,30 @@ export default function MyToolsList(props) {
           className={classes.toolsAvatar}
         ></Avatar>
       </Grid>
-      <Grid container direction="row" justify="center" alignItems="center">
+      <Grid
+        container
+        direction="row"
+        spacing={2}
+        justify="flex-start"
+        alignItems="center"
+      >
         {props.dataList.map((item, index) => (
           <Grid
             key={index}
-            xs={4}
-            // lg={(props.dataList.length===7)?2:3}
+            xs={6}
             lg={2}
             item
             container
             direction="row"
-            justify="center"
+            justify="flex-start"
             alignItems="center"
             className="list-item"
-            component={Link}
-            to={item.link}
           >
             <Grid item container direction="column" alignItems="center">
-              <Grid>
+              <Grid component={Link} to={item.link}>
                 <Avatar
                   variant={props.variant || 'square'}
-                  className="list-avatar"
+                  className={classes.listAvatar}
                   src={`${process.env.PUBLIC_URL}/assets/my-tools/${item.icon}`}
                 >
                   {item.name}
@@ -77,7 +88,6 @@ export default function MyToolsList(props) {
       <Grid container justify="center" alignItems="flex-end">
         <Button className={classes.feedConnect} variant="contained">
           <b>Connect To FEED </b>
-          {/* <Icon className="fas fa-angle-double-right"></Icon> */}
         </Button>
       </Grid>
     </div>

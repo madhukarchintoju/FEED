@@ -42,10 +42,15 @@ export default function MyFarmList(props) {
             justify="center"
             alignItems="center"
             className="list-item"
-            component={Link}
-            to={item.link}
           >
-            <Grid item container direction="column" alignItems="center">
+            <Grid
+              item
+              container
+              direction="column"
+              alignItems="center"
+              component={Link}
+              to={item.link}
+            >
               <Grid>
                 <Avatar
                   variant={props.variant || 'square'}

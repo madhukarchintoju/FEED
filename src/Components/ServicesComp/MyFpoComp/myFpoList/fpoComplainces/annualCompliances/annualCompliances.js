@@ -1,59 +1,57 @@
 import React from 'react'
+import './annualCompliances.css'
+import MyFpoListItem from '../../../myFpoListItem/myFpoListItem'
 
 export default function AnnualCompliances() {
+  const dataList = [
+    {
+      name: 'Income Tax Returns',
+      icon: '/compliances/annual/itreturns.png',
+      link: '',
+    },
+    {
+      name: 'GST Annual Returns',
+      icon: '/compliances/annual/gstannualreturns.png',
+      link: '',
+    },
+    {
+      name: 'Preparations of Financials',
+      icon: '/compliances/annual/preparationsoffinancials.png',
+      link: '',
+    },
+    {
+      name: 'Audit Report',
+      icon: '/compliances/annual/auditreport.png',
+      link: '',
+    },
+    {
+      name: 'Stock Checking',
+      icon: '/compliances/annual/stockchecking.png',
+      link: '',
+    },
+  ]
+  const headingSize = {
+    webWidth: 14,
+    mobWidth: 8,
+    webHeight: 4,
+    mobHeight: 2,
+  }
+  const cardSize = {
+    webWidth: 12,
+    mobWidth: 6,
+    webHeight: 3,
+    mobHeight: 2,
+  }
   return (
     <>
-      <div
-        className="statutory-compliance-wrap"
-        style={{
-          backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/annual-compliances-bg.jpg")`,
-          backgroundSize: 'Cover',
-        }}
-      >
-        <div className="text-center pt-2">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/annual-compliances-card.png`}
-            alt=""
-          />
-        </div>
-        <div className="row justify-content-around m-0 mt-2 text-center">
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/annual-compliances-income-tax.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/annual-compliances-gst-return.png`}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="row justify-content-around m-0 mt-2 text-center">
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/annual-compliances-prep-finan.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/annual-compliances-audit-rpt.png`}
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/annual-compliances-stock-check.png`}
-              alt=""
-            />
-          </div>
-        </div>
-        <div className="row justify-content-around m-0 mt-3 pb-4 text-center">
-          <button className="btn btn-warning">CONNECT TO FEED</button>
-        </div>
-      </div>
+      <MyFpoListItem
+        dataList={dataList}
+        cardTitle="/compliances/annual/annualcomplianceshead.png"
+        headingSize={headingSize}
+        cardSize={cardSize}
+        headingAlign="center"
+        cardsView={4}
+      ></MyFpoListItem>
     </>
   )
 }

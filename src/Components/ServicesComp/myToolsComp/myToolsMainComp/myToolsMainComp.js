@@ -48,7 +48,7 @@ export default function MyToolsMainComp() {
           bgColor="black"
           textColor="white"
         ></SideNavBar>
-        <div className="col p-0">
+        <div className="col-lg p-0">
           <Switch>
             <Route path="/mytools/home" component={MyToolsHome}></Route>
             <Route path="/mytools/fpo" component={MyToolsFpo}></Route>
