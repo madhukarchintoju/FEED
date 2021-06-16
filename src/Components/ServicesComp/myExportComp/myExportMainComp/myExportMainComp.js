@@ -45,6 +45,11 @@ export default function MyExportMainComp() {
       path: '/myexport/eximpolicyregulation',
     },
     {
+      name: `Exim Finance & Insurance`,
+      icon: 'far fa-sticky-note',
+      path: '/myexport/eximfinanceinsurance',
+    },
+    {
       name: 'Process & Export Order',
       icon: 'fas fa-sort',
       path: '/myexport/processexportorder',

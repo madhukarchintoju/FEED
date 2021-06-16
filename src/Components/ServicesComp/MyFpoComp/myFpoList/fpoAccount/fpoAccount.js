@@ -16,7 +16,7 @@ export default function FpoAccount() {
     {
       name: 'Create Vendor',
       icon: '/accounts/createvendor.png',
-      link: '',
+      link: '/myfpo/account/createvendor',
     },
     {
       name: 'Share Capital Registry',
@@ -31,7 +31,7 @@ export default function FpoAccount() {
     {
       name: 'Sale Registry',
       icon: '/accounts/salesregistry.png',
-      link: '',
+      link: '/myfpo/account/salesregister',
     },
     {
       name: 'Stock Registry',

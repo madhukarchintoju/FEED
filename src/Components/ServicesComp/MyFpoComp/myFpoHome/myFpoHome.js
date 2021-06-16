@@ -3,11 +3,11 @@ import './myFpoHome.css'
 import { Link } from 'react-router-dom'
 import { makeStyles, Grid, Button, Icon, Avatar } from '@material-ui/core'
 
-export default function MyFpoHome() {
+export default function MyFpoHome(props) {
   const useStyles = makeStyles((theme) => ({
     homeItem: {
-      width: '8em',
-      height: '7em',
+      width: '9em',
+      height: '8em',
       margin: '1em',
       '@media (max-width:768px)': {
         width: '4.5em',
