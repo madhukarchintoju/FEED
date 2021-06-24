@@ -31,7 +31,7 @@ export default function FpoAccount() {
     {
       name: 'Sale Registry',
       icon: '/accounts/salesregistry.png',
-      link: '/myfpo/account/salesregister',
+      link: '/myfpo/salesregister',
     },
     {
       name: 'Stock Registry',

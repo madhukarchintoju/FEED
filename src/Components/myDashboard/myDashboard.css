@@ -1,0 +1,87 @@
+@keyframes rotate {
+  0%, 50% {
+      /* Keep the element at 12 o'clock until halfway through animation. */
+      transform: rotate(0) translateY(-220px) translateX(-35px) rotate(0);
+  }
+}
+
+#centre {
+  /* Position circles in the centre of the viewport. */
+  /* position: fixed;
+  left: 50%;
+  top: 50%; */
+
+  /* IE 10 bug: force hardware acceleration to prevent edge pixels
+     being left behind on animation. */
+  /* transform: rotateZ(0.01deg); */
+
+  position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.circle {
+  /* background: red; */
+  border-radius: 50%;
+  position: absolute;
+
+}
+
+/* .circle img {
+    box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.75);
+} */
+
+.middle {
+  height: 200px;
+  width: 200px;
+  left: -100px;
+  top: -100px;
+  background-image: 'URL("${process.env.PUBLIC_URL}/assets/my-dashboard/quickmenu.png")'
+}
+
+.outer {
+  /* Note: first half of animation duration is spent at 12 o'clock. */
+  animation: rotate 2s ease-out 1;
+  /* height: 60px;
+  width: 60px; */
+  left: -30px; /* top/left equal to radius. */
+  top: -30px;
+}
+
+.at-10-oclock {
+  /* transform: rotate(40) translateY(-7px) translateX(-223px) rotate(-90deg); */
+  transform: rotate(-36deg) translateY(-232px) translateX(-37px) rotate(-8deg);
+}
+
+.at-12-oclock {
+  transform: rotate(0) translateY(-220px) translateX(-35px) rotate(0deg);
+  z-index: 2;
+}
+
+.at-2-oclock {
+  transform: rotate(45deg) translateY(-182px) translateX(-53px) rotate(1deg);
+  z-index: 1; /* Make this slide out from between 12 and 4 o'clock. */
+}
+
+.at-4-oclock {
+  transform: rotate(90deg) translateY(-145px) translateX(-36px) rotate(0deg);
+}
+
+.at-5-oclock {
+  transform: rotate(135deg) translateY(-126px) translateX(-1px) rotate(3deg);
+}
+
+.at-6-oclock {
+  transform: rotate(180deg) translateY(-140px) translateX(40px) rotate(0deg);
+}
+
+.at-7-oclock {
+  transform: rotate(225deg) translateY(-180px) translateX(54px) rotate(-1deg);
+}
+
+.at-8-oclock {
+  transform: rotate(270deg) translateY(-220px) translateX(34px) rotate(-3deg);
+}
