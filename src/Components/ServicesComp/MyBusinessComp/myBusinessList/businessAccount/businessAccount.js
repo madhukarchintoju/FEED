@@ -6,7 +6,7 @@ export default function BusinessAccount() {
   return (
     <>
       <div
-        className="business-account-wrap"
+        className="fpo-account-wrap"
         // style={{
         //     backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/fpo-accounts-bg.jpg")`,
         //     backgroundSize: "cover",
@@ -15,12 +15,11 @@ export default function BusinessAccount() {
         // }}
       >
         <div className="row m-0 pt-3">
-          {/* <img
-                        src={`${process.env.PUBLIC_URL}/assets/fpoaccountsheading.png`}
-                        width="30%"
-                        alt=""
-                    /> */}
-          <h5>Business Account</h5>
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/fpoaccountsheading.png`}
+            width="30%"
+            alt=""
+          />
         </div>
         <div className="row m-0 mt-3 d-lg-flex justify-content-around">
           <div>
@@ -108,7 +107,7 @@ export default function BusinessAccount() {
         </div>
         <div className="row m-0 mt-3 pb-4">
           <div className="col-lg-12 text-center">
-            <button className="btn btn-primary">CONNECT TO FEED</button>
+            <button className="btn btn-warning">CONNECT TO FEED</button>
           </div>
         </div>
       </div>

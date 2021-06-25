@@ -18,9 +18,17 @@ export default function ServicesSection(props) {
               </div>
             )}
             <div className="row mt-3">
-              {window.innerWidth > 720 ? (<div className="col-lg-3 col-md-12 rocket-ant">
-                <img src={`${process.env.PUBLIC_URL}/assets/home/feedstartuplogo.png`} className="img-fluid" alt="FEED STARTUP" />
-              </div>):''}
+              {window.innerWidth > 720 ? (
+                <div className="col-lg-3 col-md-12 rocket-ant">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/home/feedstartuplogo.png`}
+                    className="img-fluid"
+                    alt="FEED STARTUP"
+                  />
+                </div>
+              ) : (
+                ''
+              )}
               <div className="col-lg-9 col-md-12 col-sm-12 col-xs-12">
                 <div className="row">
                   <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0">
@@ -43,9 +51,17 @@ export default function ServicesSection(props) {
                               color: '#fbba14',
                             }}
                           >
-                            MY FPC /<br/>MY COOPs
+                            MY FPC /<br />
+                            MY COOPs
                           </h5>
-                          {window.innerWidth >720 ? (<small>FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT</small>):''}
+                          {window.innerWidth > 720 ? (
+                            <small>
+                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              DEVELOPMENT
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                       </div>
                     </Link>
@@ -73,7 +89,14 @@ export default function ServicesSection(props) {
                           >
                             MY FARM
                           </h5>
-                          {window.innerWidth >720 ? (<small>FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT</small>):''}
+                          {window.innerWidth > 720 ? (
+                            <small>
+                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              DEVELOPMENT
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                       </div>
                     </Link>
@@ -100,7 +123,14 @@ export default function ServicesSection(props) {
                           >
                             MY BUSINESS
                           </h5>
-                          {window.innerWidth >720 ? (<small>FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT</small>):''}
+                          {window.innerWidth > 720 ? (
+                            <small>
+                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              DEVELOPMENT
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                       </div>
                     </Link>
@@ -127,7 +157,14 @@ export default function ServicesSection(props) {
                           >
                             MY MARKET
                           </h5>
-                          {window.innerWidth >720 ? (<small>FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT</small>):''}
+                          {window.innerWidth > 720 ? (
+                            <small>
+                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              DEVELOPMENT
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                       </div>
                     </Link>
@@ -159,7 +196,14 @@ export default function ServicesSection(props) {
                           >
                             MY PRODUCTS
                           </h5>
-                          {window.innerWidth >720 ? (<small>FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT</small>):''}
+                          {window.innerWidth > 720 ? (
+                            <small>
+                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              DEVELOPMENT
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                       </div>
                     </Link>
@@ -186,7 +230,14 @@ export default function ServicesSection(props) {
                           >
                             MY EXPORTS
                           </h5>
-                          {window.innerWidth >720 ? (<small>FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT</small>):''}
+                          {window.innerWidth > 720 ? (
+                            <small>
+                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              DEVELOPMENT
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                       </div>
                     </Link>
@@ -213,7 +264,14 @@ export default function ServicesSection(props) {
                           >
                             MY EDUCATION
                           </h5>
-                          {window.innerWidth >720 ? (<small>FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT</small>):''}
+                          {window.innerWidth > 720 ? (
+                            <small>
+                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              DEVELOPMENT
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                       </div>
                     </Link>
@@ -240,7 +298,14 @@ export default function ServicesSection(props) {
                           >
                             MY TOOLS
                           </h5>
-                          {window.innerWidth >720 ? (<small>FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT</small>):''}
+                          {window.innerWidth > 720 ? (
+                            <small>
+                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              DEVELOPMENT
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                       </div>
                     </Link>
