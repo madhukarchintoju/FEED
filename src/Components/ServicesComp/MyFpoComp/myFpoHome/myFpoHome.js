@@ -6,8 +6,8 @@ import { makeStyles, Grid, Button, Icon, Avatar } from '@material-ui/core'
 export default function MyFpoHome(props) {
   const useStyles = makeStyles((theme) => ({
     homeItem: {
-      width: '9em',
-      height: '8em',
+      width: '11em',
+      height: '10em',
       margin: '1em',
       '@media (max-width:768px)': {
         width: '4.5em',

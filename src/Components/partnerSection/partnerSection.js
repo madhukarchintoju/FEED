@@ -1,28 +1,61 @@
 import React from 'react'
 import './partnerSection.css'
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
+import { Grid, makeStyles, Avatar } from '@material-ui/core';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper.min.css'
 import 'swiper/components/navigation/navigation.min.css'
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y,Autoplay])
 
 export default function PartnerSection() {
+  const useStyles = makeStyles(theme => ({
+    partnerLogo: {
+      width: '4em',
+      height: '4em'
+    }
+  }));
+  const classes = useStyles();
+  const partnersLogo = [
+    {
+      logo: 'feed'
+    },
+    {
+      logo: 'nabard-logo'
+    },
+    {
+      logo: 'feed'
+    },
+    {
+      logo: 'nabard-logo'
+    },
+    {
+      logo: 'feed'
+    },
+    {
+      logo: 'nabard-logo'
+    },
+    {
+      logo: 'feed'
+    },
+    {
+      logo: 'nabard-logo'
+    },
+  ]
   return (
     <>
       <section className="mt-5">
         <div className="row Partners-section m-0">
-          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto">
-            <div className="row">
-              <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12 m-auto">
-                <h3 className="section-heading text-center">Partners</h3>
-              </div>
-            </div>
-            <div className="row text-center">
-              <div className="col-lg-10 col-md-12 col-sm-12 col-xs-12 m-auto">
+          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <Grid container justify='center'>
+              <h4 className="section-heading">Partners</h4>
+            </Grid>
+            <Grid className="row">
+              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <Swiper
-                  spaceBetween={50}
+                  // spaceBetween={40}
                   loop={true}
-                  navigation
+                  // navigation
+                  // autoplay={{ delay: 2000 }}
                   breakpoints={
                     ({
                       320: {
@@ -50,74 +83,22 @@ export default function PartnerSection() {
                     })
                   }
                 >
-                  <div className="row">
-                    <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                      <SwiperSlide key="1">
-                        <img
-                          src="assets/feed.png"
-                          width="100"
-                          alt="partner-logo"
-                        />
-                      </SwiperSlide>
-                    </div>
-                    <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                      <SwiperSlide key="2">
-                        <img
-                          src="assets/nabard-logo.png"
-                          width="100"
-                          alt="partner-logo"
-                        />
-                      </SwiperSlide>
-                    </div>
-                    <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                      <SwiperSlide key="3">
-                        <img
-                          src="assets/feed.png"
-                          width="100"
-                          alt="partner-logo"
-                        />
-                      </SwiperSlide>
-                    </div>
-                    <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                      <SwiperSlide key="4">
-                        <img
-                          src="assets/nabard-logo.png"
-                          width="100"
-                          alt="partner-logo"
-                        />
-                      </SwiperSlide>
-                    </div>
-                    <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                      <SwiperSlide key="5">
-                        <img
-                          src="assets/feed.png"
-                          width="100"
-                          alt="partner-logo"
-                        />
-                      </SwiperSlide>
-                    </div>
-                    <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                      <SwiperSlide key="6">
-                        <img
-                          src="assets/nabard-logo.png"
-                          width="100"
-                          alt="partner-logo"
-                        />
-                      </SwiperSlide>
-                    </div>
-                    <div className="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                      <SwiperSlide key="7">
-                        <img
-                          src="assets/feed.png"
-                          width="100"
-                          alt="partner-logo"
-                        />
-                      </SwiperSlide>
-                    </div>
-                  </div>
+                  <Grid lg={10} className="row" justify='center'>
+                    <Grid className='m-auto'>
+                      {partnersLogo.map((item, index) => (
+                        <SwiperSlide key="item">
+                          <Avatar
+                            variant="square"
+                            className={classes.partnerLogo}
+                            src={`${process.env.PUBLIC_URL}/assets/${item.logo}.png`}
+                          ></Avatar>
+                        </SwiperSlide>
+                      ))}
+                    </Grid>
+                  </Grid>
                 </Swiper>
               </div>
-            </div>
+            </Grid>
           </div>
         </div>
       </section>
