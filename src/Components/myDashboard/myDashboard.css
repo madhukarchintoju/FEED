@@ -1,7 +1,8 @@
 @keyframes rotate {
-  0%, 50% {
-      /* Keep the element at 12 o'clock until halfway through animation. */
-      transform: rotate(0) translateY(-220px) translateX(-35px) rotate(0);
+  0%,
+  50% {
+    /* Keep the element at 12 o'clock until halfway through animation. */
+    transform: rotate(0) translateY(-220px) translateX(-35px) rotate(0);
   }
 }
 
@@ -16,16 +17,15 @@
   /* transform: rotateZ(0.01deg); */
 
   position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .circle {
   /* background: red; */
   border-radius: 50%;
   position: absolute;
-
 }
 
 /* .circle img {
@@ -39,7 +39,7 @@ transform: translate(-50%, -50%);
   width: 200px;
   left: -100px;
   top: -100px;
-  background-image: 'URL("${process.env.PUBLIC_URL}/assets/my-dashboard/quickmenu.png")'
+  background-image: 'URL("${process.env.PUBLIC_URL}/assets/my-dashboard/quickmenu.png")';
 }
 
 .outer {
@@ -84,4 +84,45 @@ transform: translate(-50%, -50%);
 
 .at-8-oclock {
   transform: rotate(270deg) translateY(-220px) translateX(34px) rotate(-3deg);
+}
+
+.subscripPosition {
+  color: black;
+  text-decoration: none;
+  transform: rotate(0deg) translateY(-280px) translateX(-68px) rotate(0deg);
+}
+
+.transacpPosition {
+  color: black;
+  transform: rotate(0deg) translateY(-179px) translateX(210px) rotate(0deg);
+}
+
+.businessLeads {
+  color: black;
+  transform: rotate(0deg) translateY(-81px) translateX(261px) rotate(0deg);
+}
+
+.marketPosition {
+  color: black;
+  transform: rotate(0deg) translateY(47px) translateX(185px) rotate(0deg);
+}
+
+.reportsPosition {
+  color: black;
+  transform: rotate(0deg) translateY(126px) translateX(-70px) rotate(0deg);
+}
+
+.accountsPosition {
+  color: black;
+  transform: rotate(0deg) translateY(-34px) translateX(-335px) rotate(0deg);
+}
+
+.wishListPosition {
+  color: black;
+  transform: rotate(0deg) translateY(-193px) translateX(-387px) rotate(0deg);
+}
+
+.digitalMediaPosition {
+  color: black;
+  transform: rotate(0deg) translateY(-380px) translateX(-360px) rotate(0deg);
 }

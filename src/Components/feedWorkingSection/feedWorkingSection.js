@@ -1,5 +1,6 @@
 import React from 'react'
 import './feedWorkingSection.css'
+import { Grid, makeStyles, Avatar } from '@material-ui/core'
 
 export default function FeedWorkingSection() {
   return (
@@ -7,24 +8,23 @@ export default function FeedWorkingSection() {
       <section id="howFeedWorks">
         <div className="row m-0">
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <Grid container justify="center">
+              <h3 className="section-heading text-center">How FEED Works</h3>
+            </Grid>
             <div className="row">
-              <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12 m-auto">
-                <h3 className="section-heading text-center">How FEED Works</h3>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto p-0">
-                <video
+              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto p-0 video-wrap">
+                <iframe
                   width="100%"
-                  height="565"
-                  controls
-                  className="feed-video"
-                >
-                  <source src="assets/feed-video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                  height="500"
+                  src="https://www.youtube.com/embed/Ov8rF8MjXrY"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
+            <Grid></Grid>
           </div>
         </div>
       </section>

@@ -1,9 +1,9 @@
-import React from 'react';
-import './Footer.css';
-import { Link } from 'react-router-dom';
-import { Grid, makeStyles } from '@material-ui/core';
+import React from 'react'
+import './Footer.css'
+import { Link } from 'react-router-dom'
+import { Grid, makeStyles } from '@material-ui/core'
 export default function Footer() {
-  const useStyles = makeStyles(theme => ({
+  const useStyles = makeStyles((theme) => ({
     footerWrap: {
       backgroundColor: '#ff5a00',
       // position: 'fixed',
@@ -25,10 +25,10 @@ export default function Footer() {
     footerPolicyWrap: {
       borderTop: '1px solid white',
       marginTop: '1em',
-      paddingTop: '0.5em'
+      paddingTop: '0.5em',
     },
-  }));
-  const classes = useStyles();
+  }))
+  const classes = useStyles()
   const quickLinks = [
     {
       name: 'Home',
@@ -82,31 +82,31 @@ export default function Footer() {
   const myFpoLinks = [
     {
       name: 'About FPO',
-      link: '/myfpo/aboutfpo'
+      link: '/myfpo/aboutfpo',
     },
     {
       name: 'FPO Accounts',
-      link: '/myfpo/fpoaccount'
+      link: '/myfpo/fpoaccount',
     },
     {
       name: 'FPO Business Plan',
-      link: '/myfpo/fpobusinessplan'
+      link: '/myfpo/fpobusinessplan',
     },
     {
       name: 'FPO Compliance & Registary',
-      link: '/myfpo/fpocomplainces'
+      link: '/myfpo/fpocomplainces',
     },
     {
       name: 'FPO AGM & Board Meeting',
-      link: '/myfpo/fpoagmboard'
+      link: '/myfpo/fpoagmboard',
     },
     {
       name: 'FPO Loans & Schemes',
-      link: '/myfpo/fpoloanschemes'
+      link: '/myfpo/fpoloanschemes',
     },
     {
       name: 'Connect FEED',
-      link: ''
+      link: '',
     },
   ]
   const myBusinessLinks = [
@@ -288,7 +288,8 @@ export default function Footer() {
     {
       name: 'Product Guide',
       link: '',
-    }, {
+    },
+    {
       name: 'Feed Foot Print',
       link: '',
     },
@@ -368,22 +369,66 @@ export default function Footer() {
     },
   ]
   return (
-
     <>
-      <Grid
-        className={classes.footerWrap}
-      >
-        {window.innerWidth > 720 ?
-          (
-            <Grid
-              container
-              direction='row'
-              justify='space-evenly'
-              alignContent='center'
-            >
-              <Grid lg={1} md={6} sm={6} xs={12}>
-                <Grid className={classes.footerLinkHeading}><h6>Quick Links</h6></Grid>
-                {quickLinks.map((item, index) => (
+      <Grid className={classes.footerWrap}>
+        {window.innerWidth > 720 ? (
+          <Grid
+            container
+            direction="row"
+            justify="space-evenly"
+            alignContent="center"
+          >
+            <Grid lg={1} md={6} sm={6} xs={12}>
+              <Grid className={classes.footerLinkHeading}>
+                <h6>Quick Links</h6>
+              </Grid>
+              {quickLinks.map((item, index) => (
+                <Grid
+                  key={index}
+                  to={item.link}
+                  component={Link}
+                  className={classes.linkColor}
+                >
+                  <li className="nav-link">{item.name}</li>
+                </Grid>
+              ))}
+            </Grid>
+            <Grid lg={1} md={6} sm={6} xs={12}>
+              <Grid className={classes.footerLinkHeading}>
+                <h6>MY EXPORTS</h6>
+              </Grid>
+              {myExportsLinks.map((item, index) => (
+                <Grid
+                  key={index}
+                  to={item.link}
+                  component={Link}
+                  className={classes.linkColor}
+                >
+                  <li className="nav-link">{item.name}</li>
+                </Grid>
+              ))}
+            </Grid>
+            <Grid lg={1} md={6} sm={6} xs={12}>
+              <Grid className={classes.footerLinkHeading}>
+                <h6>MY FARM</h6>
+              </Grid>
+              {myFarmLinks.map((item, index) => (
+                <Grid
+                  key={index}
+                  to={item.link}
+                  component={Link}
+                  className={classes.linkColor}
+                >
+                  <li className="nav-link">{item.name}</li>
+                </Grid>
+              ))}
+            </Grid>
+            <Grid lg={1} md={6} sm={6} xs={12}>
+              <Grid>
+                <Grid className={classes.footerLinkHeading}>
+                  <h6>MY FPO</h6>
+                </Grid>
+                {myFpoLinks.map((item, index) => (
                   <Grid
                     key={index}
                     to={item.link}
@@ -394,9 +439,11 @@ export default function Footer() {
                   </Grid>
                 ))}
               </Grid>
-              <Grid lg={1} md={6} sm={6} xs={12}>
-                <Grid className={classes.footerLinkHeading}><h6>MY EXPORTS</h6></Grid>
-                {myExportsLinks.map((item, index) => (
+              <Grid className="mt-2">
+                <Grid className={classes.footerLinkHeading}>
+                  <h6>CAREERS</h6>
+                </Grid>
+                {careerLinks.map((item, index) => (
                   <Grid
                     key={index}
                     to={item.link}
@@ -407,9 +454,13 @@ export default function Footer() {
                   </Grid>
                 ))}
               </Grid>
-              <Grid lg={1} md={6} sm={6} xs={12}>
-                <Grid className={classes.footerLinkHeading}><h6>MY FARM</h6></Grid>
-                {myFarmLinks.map((item, index) => (
+            </Grid>
+            <Grid lg={1} md={6} sm={6} xs={12}>
+              <Grid>
+                <Grid className={classes.footerLinkHeading}>
+                  <h6>MY BUSINESS</h6>
+                </Grid>
+                {myBusinessLinks.map((item, index) => (
                   <Grid
                     key={index}
                     to={item.link}
@@ -420,65 +471,11 @@ export default function Footer() {
                   </Grid>
                 ))}
               </Grid>
-              <Grid lg={1} md={6} sm={6} xs={12}>
-                <Grid>
-                  <Grid className={classes.footerLinkHeading}><h6>MY FPO</h6></Grid>
-                  {myFpoLinks.map((item, index) => (
-                    <Grid
-                      key={index}
-                      to={item.link}
-                      component={Link}
-                      className={classes.linkColor}
-                    >
-                      <li className="nav-link">{item.name}</li>
-                    </Grid>
-                  ))}
+              <Grid className="mt-2">
+                <Grid className={classes.footerLinkHeading}>
+                  <h6>FEED INSIGHTS</h6>
                 </Grid>
-                <Grid className='mt-2'>
-                  <Grid className={classes.footerLinkHeading}><h6>CAREERS</h6></Grid>
-                  {careerLinks.map((item, index) => (
-                    <Grid
-                      key={index}
-                      to={item.link}
-                      component={Link}
-                      className={classes.linkColor}
-                    >
-                      <li className="nav-link">{item.name}</li>
-                    </Grid>
-                  ))}
-                </Grid>
-              </Grid>
-              <Grid lg={1} md={6} sm={6} xs={12}>
-                <Grid>
-                  <Grid className={classes.footerLinkHeading}><h6>MY BUSINESS</h6></Grid>
-                  {myBusinessLinks.map((item, index) => (
-                    <Grid
-                      key={index}
-                      to={item.link}
-                      component={Link}
-                      className={classes.linkColor}
-                    >
-                      <li className="nav-link">{item.name}</li>
-                    </Grid>
-                  ))}
-                </Grid>
-                <Grid className='mt-2'>
-                  <Grid className={classes.footerLinkHeading}><h6>FEED INSIGHTS</h6></Grid>
-                  {feedInsightsLinks.map((item, index) => (
-                    <Grid
-                      key={index}
-                      to={item.link}
-                      component={Link}
-                      className={classes.linkColor}
-                    >
-                      <li className="nav-link">{item.name}</li>
-                    </Grid>
-                  ))}
-                </Grid>
-              </Grid>
-              <Grid lg={1} md={6} sm={6} xs={12}>
-                <Grid className={classes.footerLinkHeading}><h6>MY PRODUCTS</h6></Grid>
-                {myProductsLinks.map((item, index) => (
+                {feedInsightsLinks.map((item, index) => (
                   <Grid
                     key={index}
                     to={item.link}
@@ -489,28 +486,51 @@ export default function Footer() {
                   </Grid>
                 ))}
               </Grid>
-              <Grid lg={1} md={6} sm={6} xs={12}>
-                <Grid className={classes.footerLinkHeading}><h6>MY TOOLS &amp; SERVICES</h6></Grid>
-                {myToolServicesLinks.map((item, index) => (
-                  <Grid
-                    key={index}
-                    to={item.link}
-                    component={Link}
-                    className={classes.linkColor}
-                  >
-                    <li className="nav-link">{item.name}</li>
-                  </Grid>
-                ))}
+            </Grid>
+            <Grid lg={1} md={6} sm={6} xs={12}>
+              <Grid className={classes.footerLinkHeading}>
+                <h6>MY PRODUCTS</h6>
               </Grid>
-              <Grid lg={1} md={6} sm={6} xs={12}>
-                <Grid><h6 style={{ fontSize: '14px', textAlign: 'center' }}>FEED STARUP APP</h6></Grid>
-                <Grid className='text-center'>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/footer/mobile.png`}
-                    width="90%"
-                    alt="FEED APP"
-                  />
+              {myProductsLinks.map((item, index) => (
+                <Grid
+                  key={index}
+                  to={item.link}
+                  component={Link}
+                  className={classes.linkColor}
+                >
+                  <li className="nav-link">{item.name}</li>
                 </Grid>
+              ))}
+            </Grid>
+            <Grid lg={1} md={6} sm={6} xs={12}>
+              <Grid className={classes.footerLinkHeading}>
+                <h6>MY TOOLS &amp; SERVICES</h6>
+              </Grid>
+              {myToolServicesLinks.map((item, index) => (
+                <Grid
+                  key={index}
+                  to={item.link}
+                  component={Link}
+                  className={classes.linkColor}
+                >
+                  <li className="nav-link">{item.name}</li>
+                </Grid>
+              ))}
+            </Grid>
+            <Grid lg={1} md={6} sm={6} xs={12}>
+              <Grid>
+                <h6 style={{ fontSize: '14px', textAlign: 'center' }}>
+                  FEED STARUP APP
+                </h6>
+              </Grid>
+              <Grid className="text-center" direction="column">
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/footer/mobile.png`}
+                  // width="90%"
+                  alt="FEED APP"
+                />
+              </Grid>
+              <Grid direction="column">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/footer/playstore.png`}
                   // width="90%"
@@ -523,8 +543,15 @@ export default function Footer() {
                 />
               </Grid>
             </Grid>
-          ) : ''}
-        <Grid container justify='space-evenly' className={classes.footerPolicyWrap}>
+          </Grid>
+        ) : (
+          ''
+        )}
+        <Grid
+          container
+          justify="space-evenly"
+          className={classes.footerPolicyWrap}
+        >
           <Grid>
             <Link to="/" style={{ color: 'white' }}>
               Terms & Conditions
@@ -545,7 +572,7 @@ export default function Footer() {
           </Grid>
           <Grid>
             <Grid className="my-auto header-social-icons">
-              <a href="" rel='noreferrer'>
+              <a href="" rel="noreferrer">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/facebook.svg`}
                   width="30"

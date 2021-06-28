@@ -13,3 +13,16 @@
 .fpo-cards-wrap .nav-link {
   color: black !important;
 }
+
+.myfpo-broadcast-btn {
+  width: 250px;
+  font-weight: bolder;
+  border-radius: 50px 50px;
+  background-color: #ffc107 !important;
+  border-radius: 25px 25px !important;
+  color: black;
+}
+
+.fpo-cards-wrap .nav-link {
+  color: black !important;
+}
