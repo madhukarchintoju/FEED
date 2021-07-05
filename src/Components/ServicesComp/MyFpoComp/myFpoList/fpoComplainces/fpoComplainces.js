@@ -40,6 +40,7 @@ export default function FpoComplainces() {
         headingSize={headingSize}
         cardSize={cardSize}
         headingAlign="center"
+        cardsJustify="space-around"
       ></MyFpoListItem>
     </>
   )

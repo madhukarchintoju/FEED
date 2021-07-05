@@ -24,18 +24,18 @@
 
 .header-top {
   background-color: rgb(255, 255, 255);
-  height: 177.5px;
+  height: 150.5px;
   padding: 0;
   margin: 0;
 }
 .feed-logo {
   height: inherit;
-  padding: 0px 10px 0px 10px;
+  padding: 0px 5px 0px 5px;
 }
 
 .feed-logo-img {
   height: inherit;
-  padding: 10px;
+  /* padding: 10px; */
   margin-bottom: 3px;
   border-radius: 0px 0px 50px 50px;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
@@ -48,7 +48,7 @@
 }
 .orange-stripe {
   height: 33.3%;
-  border-bottom-left-radius: 50px;
+  border-bottom-left-radius: 30px;
 }
 
 .white-bg {
@@ -57,7 +57,7 @@
 
 .green-stripe {
   height: 33.3%;
-  border-top-left-radius: 50px;
+  border-top-left-radius: 30px;
 }
 
 .topnav .search-container {
@@ -90,13 +90,27 @@
   margin: 2px;
 }
 
+.lng-select {
+  height: auto;
+  padding: 0px !important;
+}
+.search-bar input {
+  border: none;
+  border-radius: 5px 5px;
+}
+
+.download-btn {
+  height: auto;
+  padding: 1px !important;
+}
+
 .title {
   color: red;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 700;
   letter-spacing: 1px;
   word-spacing: 1px;
-  text-shadow: 1px 0px 0 #f3a42b, 1px 0px 0 #f3a42b;
+  /* text-shadow: 1px 0px 0 #f3a42b, 1px 0px 0 #f3a42b; */
 }
 .header-social-icons a img {
   border-radius: 50px 50px;
@@ -116,10 +130,7 @@
   padding: 0rem !important;
 }
 .nav-list ul li {
-  margin-right: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-family: 'Catamaran', sans-serif;
+  margin: 0px 8px 0px;
 }
 
 .nav-list ul li:hover {
@@ -128,7 +139,7 @@
 
 .nav-list ul li a {
   color: WHITE;
-  font-size: 18px !important;
+  font-size: 16px !important;
 }
 
 .nav-list ul li a:hover {
@@ -139,6 +150,13 @@
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
+}
+.dropdown-menu {
+  background-color: white;
+}
+
+.dropdown-item {
+  color: black !important;
 }
 
 .login-btn {
@@ -151,7 +169,7 @@
 }
 .login-btn {
   margin: 2px;
-  padding: 5px 20px;
+  /* padding: 2px 20px; */
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -179,7 +197,7 @@
 }
 .register-btn {
   margin: 2px;
-  padding: 5px 20px;
+  /* padding: 5px 20px; */
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -360,11 +378,17 @@
     display: none;
   }
   .title {
-    font-size: 18px;
+    font-size: 14px;
+  }
+  .reg-no {
+    font-size: 12px;
+  }
+  .nav-list ul li {
+    margin: 0px 5px 0px;
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 992px) and (max-width: 1250px) {
   .orange-stripe {
     height: 26.3%;
   }
@@ -389,11 +413,19 @@
     width: 20px;
   }
   .title {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 0rem !important;
   }
-  .nav-list ul li a {
+
+  .reg-no {
     font-size: 12px !important;
+    margin-bottom: 0rem !important;
+  }
+  .nav-list ul li {
+    margin: 0px 5px 0px;
+  }
+  .nav-list ul li a {
+    font-size: 10px !important;
   }
   .header-social-icons img {
     width: 15px;

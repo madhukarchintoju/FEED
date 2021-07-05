@@ -11,12 +11,25 @@ export default function Footer() {
       bottom: '0',
       width: '100%',
       color: 'white',
-      marginTop: '2em',
+      // marginTop: '2em',
       paddingTop: '1em',
       paddingBottom: '0.5em',
     },
     footerLinkHeading: {
-      borderBottom: '1px solid white',
+      // borderBottom: '1px solid white',
+      '&:before': {
+        content: '',
+        position: 'absolute',
+        left: '50%',
+        top: '0',
+        height: '3px',
+        width: '50px',
+        borderRadius: '3px',
+        borderBottom: '1px solid red',
+        zIndex: '2',
+        backgroundColor: '#007aff',
+        marginLeft: '-25px',
+      },
     },
     linkColor: {
       color: 'white',
@@ -43,28 +56,45 @@ export default function Footer() {
       link: '/serviceSection',
     },
     {
-      name: 'Events',
-      link: '/eventSection',
-    },
-    {
       name: 'How FEED Works',
       link: '/feedWorkingSection',
     },
+    {
+      name: 'Events',
+      link: '/eventSection',
+    },
+
     {
       name: 'FPO',
       link: 'myfpo',
     },
     {
       name: 'Exports',
-      link: 'myexport',
+      link: '/myexport',
     },
     {
-      name: 'Analytics',
-      link: '/analytics',
+      name: 'Exports Road Map',
+      link: '/',
+    },
+    {
+      name: 'Events & Updates',
+      link: '/',
+    },
+    {
+      name: 'Media',
+      link: '/',
+    },
+    {
+      name: 'Blogs',
+      link: '/',
+    },
+    {
+      name: 'Prices',
+      link: '/',
     },
     {
       name: 'Contact us',
-      link: '',
+      link: '/',
     },
     {
       name: 'Login',
@@ -76,7 +106,7 @@ export default function Footer() {
     },
     {
       name: 'Contact FEED',
-      link: '',
+      link: '/',
     },
   ]
   const myFpoLinks = [
@@ -106,7 +136,7 @@ export default function Footer() {
     },
     {
       name: 'Connect FEED',
-      link: '',
+      link: '/',
     },
   ]
   const myBusinessLinks = [
@@ -136,7 +166,7 @@ export default function Footer() {
     },
     {
       name: 'Connect FEED',
-      links: '',
+      links: '/',
     },
   ]
   const myExportsLinks = [
@@ -191,7 +221,7 @@ export default function Footer() {
     },
     {
       name: 'Contact FEED',
-      link: '',
+      link: '/',
     },
   ]
   const myFarmLinks = [
@@ -259,39 +289,39 @@ export default function Footer() {
   const myProductsLinks = [
     {
       name: 'Production',
-      link: '',
+      link: '/',
     },
     {
       name: 'Trade',
-      link: '',
+      link: '/',
     },
     {
       name: 'Untapped Market',
-      link: '',
+      link: '/',
     },
     {
       name: 'By Products',
-      link: '',
+      link: '/',
     },
     {
       name: 'Processing',
-      link: '',
+      link: '/',
     },
     {
       name: 'DataBase & Docs',
-      link: '',
+      link: '/',
     },
     {
       name: 'Schemes - policies',
-      link: '',
+      link: '/',
     },
     {
       name: 'Product Guide',
-      link: '',
+      link: '/',
     },
     {
       name: 'Feed Foot Print',
-      link: '',
+      link: '/',
     },
   ]
   const myToolServicesLinks = [
@@ -317,55 +347,55 @@ export default function Footer() {
     },
     {
       name: 'Contact FEED',
-      link: '',
+      link: '/',
     },
   ]
   const careerLinks = [
     {
       name: 'Why FEED',
-      link: '',
+      link: '/',
     },
     {
       name: 'Opportunities',
-      link: '',
+      link: '/',
     },
     {
       name: 'Internship programs',
-      link: '',
+      link: '/',
     },
     {
       name: 'FAQs',
-      link: '',
+      link: '/',
     },
     {
       name: 'Contact FEED',
-      link: '',
+      link: '/',
     },
   ]
   const feedInsightsLinks = [
     {
       name: 'Suggestions',
-      link: '',
+      link: '/',
     },
     {
       name: 'Sample Works',
-      link: '',
+      link: '/',
     },
     {
       name: 'Queries',
-      link: '',
+      link: '/',
     },
     {
       name: 'Complaints',
-      link: '',
+      link: '/',
     },
     {
       name: 'FAQs',
-      link: '',
+      link: '/',
     },
     {
       name: 'Contact FEED',
-      link: '',
+      link: '/',
     },
   ]
   return (
@@ -378,7 +408,7 @@ export default function Footer() {
             justify="space-evenly"
             alignContent="center"
           >
-            <Grid lg={1} md={6} sm={6} xs={12}>
+            <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid className={classes.footerLinkHeading}>
                 <h6>Quick Links</h6>
               </Grid>
@@ -393,7 +423,7 @@ export default function Footer() {
                 </Grid>
               ))}
             </Grid>
-            <Grid lg={1} md={6} sm={6} xs={12}>
+            <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid className={classes.footerLinkHeading}>
                 <h6>MY EXPORTS</h6>
               </Grid>
@@ -408,7 +438,7 @@ export default function Footer() {
                 </Grid>
               ))}
             </Grid>
-            <Grid lg={1} md={6} sm={6} xs={12}>
+            <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid className={classes.footerLinkHeading}>
                 <h6>MY FARM</h6>
               </Grid>
@@ -423,7 +453,7 @@ export default function Footer() {
                 </Grid>
               ))}
             </Grid>
-            <Grid lg={1} md={6} sm={6} xs={12}>
+            <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid>
                 <Grid className={classes.footerLinkHeading}>
                   <h6>MY FPO</h6>
@@ -455,7 +485,7 @@ export default function Footer() {
                 ))}
               </Grid>
             </Grid>
-            <Grid lg={1} md={6} sm={6} xs={12}>
+            <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid>
                 <Grid className={classes.footerLinkHeading}>
                   <h6>MY BUSINESS</h6>
@@ -487,7 +517,7 @@ export default function Footer() {
                 ))}
               </Grid>
             </Grid>
-            <Grid lg={1} md={6} sm={6} xs={12}>
+            <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid className={classes.footerLinkHeading}>
                 <h6>MY PRODUCTS</h6>
               </Grid>
@@ -502,7 +532,7 @@ export default function Footer() {
                 </Grid>
               ))}
             </Grid>
-            <Grid lg={1} md={6} sm={6} xs={12}>
+            <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid className={classes.footerLinkHeading}>
                 <h6>MY TOOLS &amp; SERVICES</h6>
               </Grid>
@@ -517,20 +547,20 @@ export default function Footer() {
                 </Grid>
               ))}
             </Grid>
-            <Grid lg={1} md={6} sm={6} xs={12}>
+            <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid>
                 <h6 style={{ fontSize: '14px', textAlign: 'center' }}>
-                  FEED STARUP APP
+                  FEED STARTUP APP
                 </h6>
               </Grid>
-              <Grid className="text-center" direction="column">
+              <Grid className="text-center">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/footer/mobile.png`}
                   // width="90%"
                   alt="FEED APP"
                 />
               </Grid>
-              <Grid direction="column">
+              <Grid>
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/footer/playstore.png`}
                   // width="90%"
@@ -572,35 +602,35 @@ export default function Footer() {
           </Grid>
           <Grid>
             <Grid className="my-auto header-social-icons">
-              <a href="" rel="noreferrer">
+              <a href="https://www.facebook.com/FEEDORGOFFICAL/">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/facebook.svg`}
                   width="30"
                   alt="facebook-icon"
                 />
               </a>
-              <a href="">
+              <a href="https://www.instagram.com/feed6306/">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/instagram.svg`}
                   width="30"
                   alt="instagram-icon"
                 />
               </a>
-              <a href="">
+              <a href="https://www.twitter.com/feedorg_">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/twitter.svg`}
                   width="30"
                   alt="twitter-icon"
                 />
               </a>
-              <a href="">
+              <a href="https://www.linkedin.com/in/feed-org-32637b1ba/">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/linkedin.svg`}
                   width="30"
                   alt="linkedin-icon"
                 />
               </a>
-              <a href="">
+              <a href="https://www.youtube.com/channel/UCTH5vGORnLhVLc5RLrpMl3A">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/youtube.svg`}
                   width="30"

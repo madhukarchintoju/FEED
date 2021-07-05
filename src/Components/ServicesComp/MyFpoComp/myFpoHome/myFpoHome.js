@@ -1,20 +1,48 @@
 import React from 'react'
 import './myFpoHome.css'
 import { Link } from 'react-router-dom'
-import { makeStyles, Grid, Button, Icon, Avatar } from '@material-ui/core'
+import {
+  makeStyles,
+  Grid,
+  Button,
+  Icon,
+  Avatar,
+  List,
+  ListItem,
+  ListItemAvatar,
+  ListItemText,
+  Typography,
+  Divider,
+} from '@material-ui/core'
 
 export default function MyFpoHome(props) {
   const useStyles = makeStyles((theme) => ({
     homeItem: {
-      width: '11em',
-      height: '10em',
-      margin: '1em',
+      width: '8em',
+      height: '7em',
+      // margin: '1em',
       '@media (max-width:768px)': {
         width: '4.5em',
         height: '4em',
       },
     },
     fpoConnectBtn: {
+      // width: '15em',
+      backgroundColor: '#ffc107',
+    },
+    newsfeedsWrap: {
+      boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+    },
+    newsfeeds: {
+      overflow: 'auto',
+      height: '300px',
+      backgroundColor: 'white',
+    },
+    newsfeedsHeading: {
+      height: '2em',
+      textAlign: 'center',
       backgroundColor: '#ffc107',
     },
   }))
@@ -22,33 +50,61 @@ export default function MyFpoHome(props) {
   const fpoHomeData = [
     {
       name: 'About Fpo',
-      icon: 'aboutfpo.png',
+      icon: 'aboutfpc.png',
       link: '/myfpo/aboutfpo',
     },
     {
       name: 'Fpo Account',
-      icon: 'fpoaccounts.png',
+      icon: 'fpcaccount.png',
       link: '/myfpo/fpoaccount',
     },
     {
       name: 'FPO Business Plan',
-      icon: 'fpobusinessplan.png',
+      icon: 'fpcbusinessplan.png',
       link: '/myfpo/fpobusinessplan',
     },
     {
+      name: 'Loans & Schemes',
+      icon: 'capacitybuilding.png',
+      link: '',
+    },
+    {
       name: 'FPO Compliances',
-      icon: 'fpocompliances.png',
+      icon: 'fpccompliances.png',
       link: '/myfpo/fpocomplainces',
     },
     {
       name: 'Agm & Board Meetings',
-      icon: 'fpoagmboard.png',
+      icon: 'fpcagmboard.png',
       link: '',
     },
     {
       name: 'Loans & Schemes',
-      icon: 'fpoloans.png',
+      icon: 'fpcloans.png',
       link: '',
+    },
+
+    {
+      name: 'Loans & Schemes',
+      icon: 'reports.png',
+      link: '',
+    },
+  ]
+  const fpcnewsupdates = [
+    {
+      primary: 'FEED',
+      secondary:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      primary: 'NABARD',
+      secondary:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      primary: 'FEED',
+      secondary:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
   ]
   return (
@@ -56,61 +112,74 @@ export default function MyFpoHome(props) {
       <Grid
         container
         direction="row"
-        justify="space-around"
-        alignItems="flex-start"
+        justify="flex-start"
+        // alignItems="flex-start"
         className="myfpo-home"
       >
         <Grid
           container
           item
-          direction="column"
           justify="space-evenly"
-          alignItems="center"
+          // alignItems="center"
+          direction="row"
           className="image-grid"
           xs={12}
-          lg={2}
+          lg={9}
+          md={9}
         >
-          <Grid item xs>
-            <img
-              className="fpo-icon-img"
-              src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
-              width="100"
-              alt="FPO Icon"
-            />
-          </Grid>
-          <Grid item xs>
-            <h1>MY FPO</h1>
-          </Grid>
-          <Grid item xs>
-            <img
-              className="ant-logo"
-              src={`${process.env.PUBLIC_URL}/assets/ant-small.png`}
-              alt="ant"
-            />
-          </Grid>
-        </Grid>
-        <Grid container item xs={12} lg direction="row" alignItems="center">
-          {fpoHomeData.map((item, index) => (
-            <Grid key={index} item xs={6} md={4} lg={4}>
-              <Grid>
-                <Avatar
-                  to={item.link}
-                  component={Link}
-                  variant="square"
-                  className={classes.homeItem}
-                  src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.icon}`}
-                >
-                  {item.name}
-                </Avatar>
+          <Grid container item xs={12}>
+            {fpoHomeData.map((item, index) => (
+              <Grid key={index} item xs={6} md={3} lg={3}>
+                <Grid>
+                  <Avatar
+                    to={item.link}
+                    component={Link}
+                    variant="square"
+                    className={classes.homeItem}
+                    src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.icon}`}
+                  >
+                    {item.name}
+                  </Avatar>
+                </Grid>
               </Grid>
-            </Grid>
-          ))}
+            ))}
+          </Grid>
+          <Grid container justify="center">
+            <Button className={classes.fpoConnectBtn} variant="contained">
+              <b>Connect FPC </b>
+            </Button>
+          </Grid>
         </Grid>
-        <Grid container justify="center">
-          <Button className={classes.fpoConnectBtn} variant="contained">
-            <b>Connect FPO </b>
-            <Icon className="fas fa-angle-double-right"></Icon>
-          </Button>
+        <Grid lg={3}>
+          <Grid className={classes.newsfeedsWrap}>
+            <Grid className={classes.newsfeedsHeading}>
+              <h6>News Updates &amp; Info</h6>
+            </Grid>
+            <List className={classes.newsfeeds}>
+              {fpcnewsupdates.map((item, index) => (
+                <>
+                  <ListItem alignItems="flex-start" key="item">
+                    <ListItemText
+                      primary={item.primary}
+                      secondary={
+                        <Grid>
+                          <Typography
+                            component="span"
+                            variant="body2"
+                            className={classes.inline}
+                            color="textPrimary"
+                          >
+                            {item.secondary}
+                          </Typography>
+                        </Grid>
+                      }
+                    />
+                  </ListItem>
+                  <Divider />
+                </>
+              ))}
+            </List>
+          </Grid>
         </Grid>
       </Grid>
     </>

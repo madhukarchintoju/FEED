@@ -1,5 +1,7 @@
 import React from 'react'
 import './myFpoMain.css'
+import { Grid, Button, Icon, Avatar } from '@material-ui/core'
+
 import MyFpoNav from '../myFpoNav/myFpoNav'
 import ServicesNavbar from '../../ServicesNavbar/ServicesNavbar.js'
 import SideNavBar from '../../sideNavBar/sideNavBar'
@@ -17,44 +19,81 @@ import LegalCompliances from '../myFpoList/fpoComplainces/legalCompliances/legal
 import AnnualCompliances from '../myFpoList/fpoComplainces/annualCompliances/annualCompliances'
 import CreateProduct from '../myFpoList/fpoAccount/createProduct/createProduct'
 import SalesRegistry from '../myFpoList/fpoAccount/salesRegister/salesRegister'
+import ClickAwayListener from '@material-ui/core/ClickAwayListener'
+import Grow from '@material-ui/core/Grow'
+import Paper from '@material-ui/core/Paper'
+import Popper from '@material-ui/core/Popper'
+import MenuItem from '@material-ui/core/MenuItem'
+import MenuList from '@material-ui/core/MenuList'
 export default function MyFpoMain() {
   const navData = [
     {
-      name: 'About FPO',
+      name: 'About FPC',
       icon: 'fa fa-plus-circle',
       path: '/myfpo/aboutfpo',
     },
     {
-      name: 'FPO Account',
+      name: 'FPC Account',
       icon: 'fa fa-address-card',
       path: '/myfpo/fpoaccount',
     },
     {
-      name: 'FPO Business Plan',
+      name: 'FPC Business Plan',
       icon: 'fa fa-briefcase',
       path: '/myfpo/fpobusinessplan',
     },
     {
-      name: 'FPO Compliances',
+      name: 'FPC Compliances',
       icon: 'fas fa-book-open',
       path: '/myfpo/fpocomplainces',
     },
     {
-      name: 'FPO AGM & Board',
+      name: 'FPC AGM & Board',
       icon: 'far fa-comments',
       path: '/myfpo/fpoagmboard',
     },
     {
-      name: 'FPO Loans Schemes',
+      name: 'FPC Loans Schemes',
       icon: 'fas fa-university',
       path: '/myfpo/fpoloanschemes',
     },
     {
-      name: 'FPO Connect',
+      name: 'FPC Connect',
       icon: 'fas fa-handshake',
       path: '/myfpo/fpoconnect',
     },
   ]
+  const [open, setOpen] = React.useState(false)
+  const anchorRef = React.useRef(null)
+
+  const handleToggle = () => {
+    setOpen((prevOpen) => !prevOpen)
+  }
+
+  const handleClose = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return
+    }
+
+    setOpen(false)
+  }
+
+  function handleListKeyDown(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault()
+      setOpen(false)
+    }
+  }
+
+  // return focus to the button when we transitioned from !open -> open
+  const prevOpen = React.useRef(open)
+  React.useEffect(() => {
+    if (prevOpen.current === true && open === false) {
+      anchorRef.current.focus()
+    }
+
+    prevOpen.current = open
+  }, [open])
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
@@ -66,6 +105,83 @@ export default function MyFpoMain() {
           textColor="black"
         ></SideNavBar>
         <div className="col p-0 fpo-content-wrap">
+          <Grid
+            container
+            direction="col"
+            justify="space-between"
+            style={{ marginBottom: '0.5em' }}
+          >
+            <Grid style={{ border: '1px solid red' }}>
+              <Button
+                variant="contained"
+                color="primary"
+                startIcon={<Icon className="fas fa-arrow-left" />}
+              >
+                Back
+              </Button>
+            </Grid>
+            <Grid
+              className=""
+              container
+              direction="col"
+              alignItems="center"
+              style={{ border: '1px solid red' }}
+            >
+              <Grid>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  startIcon={<Icon className="fa fa-plus-circle" />}
+                >
+                  Add To Quick Menu
+                </Button>
+              </Grid>
+              <Grid style={{ position: 'relative', zIndex: '50' }}>
+                <Avatar
+                  ref={anchorRef}
+                  aria-controls={open ? 'menu-list-grow' : undefined}
+                  aria-haspopup="true"
+                  onClick={handleToggle}
+                  src={`${process.env.PUBLIC_URL}/assets/farmer-avatar.jpg`}
+                />
+                <Popper
+                  open={open}
+                  anchorEl={anchorRef.current}
+                  role={undefined}
+                  transition
+                  disablePortal
+                >
+                  {({ TransitionProps, placement }) => (
+                    <Grow
+                      {...TransitionProps}
+                      style={{
+                        transformOrigin:
+                          placement === 'bottom'
+                            ? 'center top'
+                            : 'center bottom',
+                      }}
+                    >
+                      <Paper>
+                        <ClickAwayListener onClickAway={handleClose}>
+                          <MenuList
+                            autoFocusItem={open}
+                            id="menu-list-grow"
+                            onKeyDown={handleListKeyDown}
+                          >
+                            <MenuItem onClick={handleClose}>Profile</MenuItem>
+                            <MenuItem onClick={handleClose}>
+                              My account
+                            </MenuItem>
+                            <MenuItem onClick={handleClose}>Logout</MenuItem>
+                          </MenuList>
+                        </ClickAwayListener>
+                      </Paper>
+                    </Grow>
+                  )}
+                </Popper>
+              </Grid>
+            </Grid>
+          </Grid>
           <Switch>
             <Route path="/myfpo/home" component={MyFpoHome}></Route>
             <Route path="/myfpo/aboutfpo" component={AboutFpo}></Route>

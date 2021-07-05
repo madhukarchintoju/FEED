@@ -65,7 +65,7 @@ export default function MyFpoListItem(props) {
       <Grid
         container
         direction="row"
-        justify="space-around"
+        justify={props.cardsJustify || 'flex-start'}
         alignItems="center"
       >
         {props.dataList.map((item, index) => (

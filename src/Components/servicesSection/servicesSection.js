@@ -21,7 +21,7 @@ export default function ServicesSection(props) {
               {window.innerWidth > 720 ? (
                 <div className="col-lg-3 col-md-12 rocket-ant">
                   <img
-                    src={`${process.env.PUBLIC_URL}/assets/home/feedstartuplogo.png`}
+                    src={`${process.env.PUBLIC_URL}/assets/my-services/feedant.png`}
                     className="img-fluid"
                     alt="FEED STARTUP"
                   />
@@ -42,7 +42,7 @@ export default function ServicesSection(props) {
                         ></div>
                         <div className="card-body card-img">
                           <img
-                            src={`${process.env.PUBLIC_URL}/assets/fpo-icon.jpg`}
+                            src={`${process.env.PUBLIC_URL}/assets/my-services/myfpclogo.png`}
                             alt=""
                           />
                           <h5
@@ -51,8 +51,7 @@ export default function ServicesSection(props) {
                               color: '#fbba14',
                             }}
                           >
-                            MY FPC /<br />
-                            MY COOPs
+                            MY FPC / MY COOPs
                           </h5>
                           {window.innerWidth > 720 ? (
                             <small>
@@ -77,7 +76,7 @@ export default function ServicesSection(props) {
                         ></div>
                         <div className="card-body card-img">
                           <img
-                            src={`${process.env.PUBLIC_URL}/assets/farm-icon.jpg`}
+                            src={`${process.env.PUBLIC_URL}/assets/my-services/myfarmlogo.png`}
                             alt=""
                           />
                           <h5
@@ -112,7 +111,7 @@ export default function ServicesSection(props) {
                         ></div>
                         <div className="card-body card-img">
                           <img
-                            src={`${process.env.PUBLIC_URL}/assets/my-business-icon.jpg`}
+                            src={`${process.env.PUBLIC_URL}/assets/my-services/mybusinesslogo.png`}
                             alt=""
                           />
                           <h5
@@ -146,7 +145,7 @@ export default function ServicesSection(props) {
                         ></div>
                         <div className="card-body card-img">
                           <img
-                            src={`${process.env.PUBLIC_URL}/assets/cart-icon.jpg`}
+                            src={`${process.env.PUBLIC_URL}/assets/my-services/mymarketlogo.png`}
                             alt=""
                           />
                           <h5
@@ -185,7 +184,7 @@ export default function ServicesSection(props) {
                         ></div>
                         <div className="card-body card-img">
                           <img
-                            src={`${process.env.PUBLIC_URL}/assets/product-icon.jpg`}
+                            src={`${process.env.PUBLIC_URL}/assets/my-services/myproductslogo.png`}
                             alt=""
                           />
                           <h5
@@ -219,7 +218,7 @@ export default function ServicesSection(props) {
                         ></div>
                         <div className="card-body card-img">
                           <img
-                            src={`${process.env.PUBLIC_URL}/assets/52474.jpg`}
+                            src={`${process.env.PUBLIC_URL}/assets/my-services/myexportslogo.png`}
                             alt=""
                           />
                           <h5
@@ -253,7 +252,7 @@ export default function ServicesSection(props) {
                         ></div>
                         <div className="card-body card-img">
                           <img
-                            src={`${process.env.PUBLIC_URL}/assets/my-edu-icon.jpg`}
+                            src={`${process.env.PUBLIC_URL}/assets/my-services/myeducationlogo.png`}
                             alt=""
                           />
                           <h5
@@ -287,7 +286,7 @@ export default function ServicesSection(props) {
                         ></div>
                         <div className="card-body card-img">
                           <img
-                            src={`${process.env.PUBLIC_URL}/assets/tools-icon.jpg`}
+                            src={`${process.env.PUBLIC_URL}/assets/my-services/mytoolslogo.png`}
                             alt=""
                           />
                           <h5
