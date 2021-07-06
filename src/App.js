@@ -28,6 +28,7 @@ import MyToolsMainComp from './Components/ServicesComp/myToolsComp/myToolsMainCo
 import MyFpoMain from './Components/ServicesComp/MyFpoComp/myFpoMain/myFpoMain'
 import AnalyticsMain from './Components/analytics/analyticsMain/analyticsMain'
 import MyDashboard from './Components/myDashboard/myDashboard'
+import ContactUs from './Components/contactus/contactus'
 
 function App() {
   const ScrollToTop = () => {
@@ -50,6 +51,7 @@ function App() {
           <Route path="/analytics" exact component={AnalyticsMain} />
           <Route path="/serviceSection" exact component={ServicesSection} />
           <Route path="/eventSection" exact component={EventsSection} />
+          <Route path="/contactus" exact component={ContactUs}></Route>
           <Route
             path="/feedWorkingSection"
             exact

@@ -12,8 +12,8 @@
 .card-img img {
   position: relative;
   z-index: 10;
-  top: -80px;
-  padding: 10px;
+  top: -55px;
+  padding: 3px;
   border-radius: 50% 50%;
   background-color: white;
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75);
@@ -22,6 +22,8 @@
 }
 
 .services-card {
+  height: 200px;
+  max-height: 200px;
   margin: 2 auto !important;
   border-radius: 10px 10px 10px 10px !important;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -30,8 +32,8 @@
 }
 
 .services-card img {
-  width: 80;
-  height: 80px;
+  width: 65px;
+  height: 65px;
 }
 
 .services-card .services-card-header {
@@ -39,10 +41,13 @@
   border-radius: 10px 10px 50% 50%;
 }
 
+.card-body {
+  padding: 0rem !important;
+}
 .services-card .card-body h5 {
   position: relative;
   height: 10px;
-  top: -50px;
+  top: -30px;
   font-weight: bold;
 }
 
@@ -75,7 +80,7 @@
   .card-img img {
     position: relative;
     z-index: 10;
-    top: -55px;
+    top: -40px;
     width: 50 !important;
     padding: 5px;
     border-radius: 50% 50%;
@@ -116,7 +121,7 @@
   .services-card .card-body h5 {
     position: relative;
     /* height: 10px; */
-    top: -50px;
+    top: -30px;
     font-size: 10px;
     /* font-weight: bold; */
   }

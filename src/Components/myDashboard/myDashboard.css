@@ -2,7 +2,8 @@
   0%,
   50% {
     /* Keep the element at 12 o'clock until halfway through animation. */
-    transform: rotate(0) translateY(-220px) translateX(-35px) rotate(0);
+    /* transform: rotate(0) translateY(-197px) translateX(-29px) rotate(0deg); */
+    transform: rotate(0) translateY(5px) translateX(16px) rotate(0deg);
   }
 }
 
@@ -19,6 +20,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 1;
   transform: translate(-50%, -50%);
 }
 
@@ -51,78 +53,136 @@
   top: -30px;
 }
 
+.trancircle {
+  width: 100px;
+  height: 100px;
+  border: 6px solid coral;
+  border-radius: 50% 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.75);
+}
+
 .at-10-oclock {
-  /* transform: rotate(40) translateY(-7px) translateX(-223px) rotate(-90deg); */
-  transform: rotate(-36deg) translateY(-232px) translateX(-37px) rotate(-8deg);
+  /* transform: rotate(-36deg) translateY(-210px) translateX(-37px) rotate(-8deg); */
+  transform: rotate(-36deg) translateY(-19px) translateX(-113px) rotate(35deg);
 }
 
 .at-12-oclock {
-  transform: rotate(0) translateY(-220px) translateX(-35px) rotate(0deg);
+  transform: rotate(0) translateY(5px) translateX(16px) rotate(0deg);
   z-index: 2;
 }
 
 .at-2-oclock {
-  transform: rotate(45deg) translateY(-182px) translateX(-53px) rotate(1deg);
+  /* transform: rotate(45deg) translateY(-7px) translateX(10px) rotate(-47deg); */
+  transform: rotate(45deg) translateY(-56px) translateX(125px) rotate(-47deg);
   z-index: 1; /* Make this slide out from between 12 and 4 o'clock. */
 }
 
 .at-4-oclock {
-  transform: rotate(90deg) translateY(-145px) translateX(-36px) rotate(0deg);
+  /* transform: rotate(90deg) translateY(-144px) translateX(-28px) rotate(0deg); */
+  transform: rotate(90deg) translateY(-175px) translateX(158px) rotate(-90deg);
 }
 
 .at-5-oclock {
-  transform: rotate(135deg) translateY(-126px) translateX(-1px) rotate(3deg);
+  transform: rotate(135deg) translateY(-284px) translateX(97px) rotate(-133deg);
 }
 
 .at-6-oclock {
-  transform: rotate(180deg) translateY(-140px) translateX(40px) rotate(0deg);
+  /* transform: rotate(175deg) translateY(-323px) translateX(12px) rotate(184deg); */
+  transform: rotate(159deg) translateY(-304px) translateX(98px) rotate(-157deg);
 }
 
 .at-7-oclock {
-  transform: rotate(225deg) translateY(-180px) translateX(54px) rotate(-1deg);
+  /* transform: rotate(225deg) translateY(-171px) translateX(46px) rotate(-1deg); */
+  transform: rotate(-45deg) translateY(126px) translateX(-270px) rotate(45deg);
 }
 
 .at-8-oclock {
-  transform: rotate(270deg) translateY(-220px) translateX(34px) rotate(-3deg);
+  /* transform:rotate(270deg) translateY(-205px) translateX(28px) rotate(-3deg); */
+  transform: rotate(-36deg) translateY(45px) translateX(-211px) rotate(37deg);
 }
 
 .subscripPosition {
   color: black;
   text-decoration: none;
-  transform: rotate(0deg) translateY(-280px) translateX(-68px) rotate(0deg);
+  transform: rotate(0deg) translateY(-253px) translateX(-60px) rotate(0deg);
 }
 
 .transacpPosition {
   color: black;
-  transform: rotate(0deg) translateY(-179px) translateX(210px) rotate(0deg);
+  transform: rotate(0deg) translateY(-170px) translateX(181px) rotate(0deg);
 }
 
 .businessLeads {
   color: black;
-  transform: rotate(0deg) translateY(-81px) translateX(261px) rotate(0deg);
+  transform: rotate(0deg) translateY(-87px) translateX(199px) rotate(0deg);
 }
 
 .marketPosition {
   color: black;
-  transform: rotate(0deg) translateY(47px) translateX(185px) rotate(0deg);
+  transform: rotate(0deg) translateY(4px) translateX(184px) rotate(0deg);
 }
 
 .reportsPosition {
   color: black;
-  transform: rotate(0deg) translateY(126px) translateX(-70px) rotate(0deg);
+  transform: rotate(0deg) translateY(85px) translateX(-60px) rotate(0deg);
 }
 
 .accountsPosition {
   color: black;
-  transform: rotate(0deg) translateY(-34px) translateX(-335px) rotate(0deg);
+  transform: rotate(0deg) translateY(-50px) translateX(-291px) rotate(0deg);
 }
 
 .wishListPosition {
   color: black;
-  transform: rotate(0deg) translateY(-193px) translateX(-387px) rotate(0deg);
+  transform: rotate(0deg) translateY(-197px) translateX(-346px) rotate(0deg);
 }
 
 .digitalMediaPosition {
   color: black;
-  transform: rotate(0deg) translateY(-380px) translateX(-360px) rotate(0deg);
+  transform: rotate(0deg) translateY(-336px) translateX(-291px) rotate(0deg);
+}
+
+.rocket {
+  position: absolute;
+  right: 10px;
+  bottom: 50px;
+  animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translate(-10%, 0);
+  }
+  100% {
+    transform: translate(10%, -80vh);
+  }
+}
+
+.cloudBg {
+  position: absolute;
+  bottom: 0px;
+  /* z-index: -1; */
+  animation: cloud 10s linear infinite;
+}
+
+.cloudBg img {
+  background-position: center;
+}
+@keyframes cloud {
+  0% {
+    transform: scaleX(1);
+  }
+  /* 25%,75% {
+    opacity: 1;
+  } */
+  100% {
+    opacity: 1;
+    transform: scaleX(1.2);
+  }
 }

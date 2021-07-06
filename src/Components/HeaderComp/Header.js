@@ -7,6 +7,7 @@ import SwipeableNav from '../swipeableNav/swipeableNav'
 import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
+import { Divider } from '@material-ui/core'
 
 export default function Header() {
   const { t } = useTranslation()
@@ -28,7 +29,7 @@ export default function Header() {
       <div className="row container-fluid sticky-header header-top wrapper">
         <div className="feed-logo">
           <img
-            src={`${process.env.PUBLIC_URL}/assets/feed.png`}
+            src={`${process.env.PUBLIC_URL}/assets/home/feedlogonew.png`}
             className="feed-logo-img"
             alt="feed-logo"
           />
@@ -48,7 +49,7 @@ export default function Header() {
             <div className="my-auto text-white contact-num">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/phone.svg`}
-                width="25"
+                width="20"
                 alt="phone-icon"
               />{' '}
               <span>+91 9293858689</span>
@@ -56,7 +57,7 @@ export default function Header() {
             <div className="my-auto text-white contact-mail">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/email.svg`}
-                width="25"
+                width="20"
                 alt="email-icon"
               />{' '}
               <span>info@feedorg.com</span>
@@ -80,51 +81,55 @@ export default function Header() {
                 <span className="download-btn-text">Downloads</span>
               </button>
             </div>
-            <div className="my-auto search-bar">
+            {/* <div className="my-auto search-bar">
               <form className="form-inline">
                 <div className="form-group has-search">
                   <input
                     type="text"
-                    className="form-control"
                     placeholder="Search"
                   />
-                  {/* <span className="fa fa-search form-control-feedback"></span> */}
                 </div>
               </form>
-            </div>
+            </div> */}
             <div className="my-auto header-social-icons">
-              <a href="">
+              <a href="https://www.facebook.com/FEEDORGOFFICAL" target="_blank">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/facebook.svg`}
-                  width="30"
+                  width="25"
                   alt="facebook-icon"
                 />
               </a>
-              <a href="">
+              <a href="https://www.instagram.com" target="_blank">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/instagram.svg`}
-                  width="30"
+                  width="25"
                   alt="instagram-icon"
                 />
               </a>
-              <a href="">
+              <a href="https://twitter.com/feedorg_" target="_blank">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/twitter.svg`}
-                  width="30"
+                  width="25"
                   alt="twitter-icon"
                 />
               </a>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/company/74678041/admin/"
+                target="_blank"
+              >
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/linkedin.svg`}
-                  width="30"
+                  width="25"
                   alt="linkedin-icon"
                 />
               </a>
-              <a href="">
+              <a
+                href="https://www.youtube.com/channel/UCFE_feyAd4VsbMLDnUWIY4A"
+                target="_blank"
+              >
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/youtube.svg`}
-                  width="30"
+                  width="25"
                   alt="youtube-icon"
                 />
               </a>
@@ -137,6 +142,7 @@ export default function Header() {
                   src={`${process.env.PUBLIC_URL}/assets/feed.png`}
                   className="feed-logo-img img-fluid"
                   alt="feed-logo"
+                  width="60%"
                 />
               </div>
               <div>
@@ -144,9 +150,9 @@ export default function Header() {
                   FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT MULTI
                   STATE COOPERATIVE SOCIETY LTD.
                 </h5>
-                <h6 className="reg-no text-right m-0">
+                <p className="reg-no text-right m-0">
                   REG.No: MSCS/CR/1295/2020
-                </h6>
+                </p>
               </div>
             </div>
           </div>
@@ -156,6 +162,7 @@ export default function Header() {
               backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/green-bg.png")`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
+              // backgroundImage: 'linear-gradient(to right top, #30680c, #346f0f, #387712, #3d7e15, #418618, #3e8217, #3c7d16, #397915, #2f6910, #26590b, #1d4906, #153a01)'
             }}
           >
             {isMobile ? (
@@ -182,32 +189,83 @@ export default function Header() {
                     <i className="fa fa-bars" aria-hidden="true"></i>
                   </button>
                   <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ml-5">
-                      <li className="nav-item active">
-                        {/* <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a> */}
+                    <ul className="navbar-nav ml-3">
+                      <li className="nav-item">
                         <Link className="nav-link" to="/">
                           {t('home')} <span className="sr-only">(current)</span>
                         </Link>
                       </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/analytics">
-                          {t('analytics')}{' '}
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/aboutSection">
+                      <li className="nav-item dropdown">
+                        <Link
+                          to="/"
+                          className="nav-link dropdown-toggle"
+                          id="navbarDropdown"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
                           {t('about_us')}{' '}
                         </Link>
+                        <div
+                          className="dropdown-menu"
+                          aria-labelledby="navbarDropdown"
+                        >
+                          <Link to="/" className="dropdown-item">
+                            Founder Message
+                          </Link>
+                          <Link to="/" className="dropdown-item">
+                            Board of Directors
+                          </Link>
+                          <Link to="/" className="dropdown-item">
+                            Core Team
+                          </Link>
+                          <Link to="/" className="dropdown-item">
+                            Company Profile
+                          </Link>
+                        </div>
                       </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/serviceSection">
+                      <li className="nav-item dropdown">
+                        <Link
+                          to="/"
+                          className="nav-link dropdown-toggle"
+                          id="navbarDropdown"
+                          role="button"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
                           {t('services')}
                         </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/eventSection">
-                          {t('events')}{' '}
-                        </Link>
+                        <div
+                          className="dropdown-menu"
+                          aria-labelledby="navbarDropdown"
+                        >
+                          <Link to="/myfpo" className="dropdown-item">
+                            MY FPO
+                          </Link>
+                          <Link to="/myfarm" className="dropdown-item">
+                            MY FARM
+                          </Link>
+                          <Link to="/mybusiness" className="dropdown-item">
+                            MY BUSINESS
+                          </Link>
+                          <Link to="/mymarket" className="dropdown-item">
+                            MY MARKET
+                          </Link>
+                          <Link to="/myproduct" className="dropdown-item">
+                            MY PRODUCTS
+                          </Link>
+                          <Link to="/myexport" className="dropdown-item">
+                            MY EXPORTS
+                          </Link>
+                          <Link to="/myeducation" className="dropdown-item">
+                            MY EDUCATION
+                          </Link>
+                          <Link to="/mytools" className="dropdown-item">
+                            MY TOOLS
+                          </Link>
+                        </div>
                       </li>
                       <li className="nav-item">
                         <Link className="nav-link" to="/feedWorkingSection">
@@ -225,19 +283,46 @@ export default function Header() {
                         </Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="">
+                        <Link className="nav-link" to="/myexports">
+                          Export Road Map
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/eventSection">
+                          {t('Events & Updates')}{' '}
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/">
+                          Media
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/">
+                          Blogs
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/">
+                          Prices
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/contactus">
                           {t('contact_us')}{' '}
                         </Link>
                       </li>
                     </ul>
-                    <Link to="/login" className="nav-link my-auto">
-                      <button className="login-btn">{t('login_caps')}</button>
-                    </Link>
-                    <Link to="/register" className="nav-link">
-                      <button className="register-btn">
-                        {t('register_caps')}
-                      </button>
-                    </Link>
+                    <ul className="navbar-nav ml-auto">
+                      <Link to="/login" className="nav-link my-auto">
+                        <button className="login-btn">{t('login_caps')}</button>
+                      </Link>
+                      <Link to="/register" className="nav-link">
+                        <button className="register-btn">
+                          {t('register_caps')}
+                        </button>
+                      </Link>
+                    </ul>
                   </div>
                 </nav>
               </div>

@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './home.css'
+import { Link } from 'react-router-dom'
 import AboutSection from '../../Components/aboutSection/aboutSection'
 import ServicesSection from '../../Components/servicesSection/servicesSection'
 import EventsSection from '../../Components/eventsSection/eventsSection'
 import TestimonialSection from '../../Components/testimonialSection/testimonialSection'
 import FeedWorkingSection from '../../Components/feedWorkingSection/feedWorkingSection'
 import PartnerSection from '../../Components/partnerSection/partnerSection'
-import { Grid, makeStyles } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import SwiperCore, {
   Navigation,
   Pagination,
@@ -21,41 +22,40 @@ import 'swiper/components/navigation/navigation.min.css'
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade])
 
 function Home() {
-  const useStyles = makeStyles((theme) => ({}))
-  const classes = useStyles()
+  // const useStyles = makeStyles((theme) => ({}))
+  // const classes = useStyles()
+  const carouselImg = [
+    {
+      image: 'feedstartupdefbanner.png',
+      link: '',
+    },
+    {
+      image: 'feedstartupbnr.jpg',
+      link: '',
+    },
+  ]
   return (
     <>
       <Grid className="container-fluid p-0">
         <Grid>
           <Swiper
             loop="true"
-            // effect={'fade'}
             autoplay={{
-              delay: 2000,
+              delay: 5000,
             }}
-            // navigation
+            navigation
           >
-            <SwiperSlide>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/underconstruction.jpg`}
-                width="100%"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/feedstartupbnr.jpg`}
-                width="100%"
-                alt=""
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/feedbnrtwo.jpeg`}
-                width="100%"
-                alt=""
-              />
-            </SwiperSlide>
+            {carouselImg.map((item, index) => (
+              <SwiperSlide key={index}>
+                <Grid>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/home/${item.image}`}
+                    width="100%"
+                    alt="FEED STARTUP SLIDES"
+                  />
+                </Grid>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </Grid>
         <AboutSection shortView="true" />

@@ -1,6 +1,6 @@
 import React from 'react'
 import './partnerSection.css'
-import { Grid, makeStyles, Avatar } from '@material-ui/core'
+import { Grid, makeStyles } from '@material-ui/core'
 import SwiperCore, {
   Navigation,
   Pagination,
@@ -15,10 +15,21 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay])
 
 export default function PartnerSection() {
   const useStyles = makeStyles((theme) => ({
-    partnerLogo: {
-      width: '4em',
-      height: '4em',
+    PartnerSection: {
+      width: '98%',
+      margin: '2em auto 2em !important',
+      backgroundColor: 'white',
+      borderRadius: '15px 15px 15px 15px',
+      borderLeft: '5px solid orange',
+      borderRight: '5px solid green',
+      boxShadow: '0px 0px 8px 0px rgba(242, 107, 110, 0.75)',
+      webkitBoxShadow: '0px 0px 8px 0px rgba(242, 107, 110, 0.75)',
+      mozBoxShadow: '0px 0px 8px 0px rgba(242, 107, 110, 0.75)',
     },
+    // partnerLogo: {
+    //   width: '110px',
+    //   height: '110px',
+    // },
     partnerSlide: {
       textAlign: '-webkit-center',
     },
@@ -26,93 +37,85 @@ export default function PartnerSection() {
   const classes = useStyles()
   const partnersLogo = [
     {
-      logo: 'feed',
+      logo: 'bharatcall.png',
     },
     {
-      logo: 'nabard-logo',
+      logo: 'dgft.png',
     },
     {
-      logo: 'feed',
+      logo: 'fieo.png',
     },
     {
-      logo: 'nabard-logo',
+      logo: 'apeda.png',
     },
     {
-      logo: 'feed',
+      logo: 'aagama.png',
     },
     {
-      logo: 'nabard-logo',
-    },
-    {
-      logo: 'feed',
-    },
-    {
-      logo: 'nabard-logo',
+      logo: 'ibef.png',
     },
   ]
   return (
     <>
-      <section className="mt-5">
-        <div className="row Partners-section m-0">
-          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <Grid container className={classes.PartnerSection}>
+        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <Grid container justify="center">
+            <h4 className="section-heading">Partners</h4>
+          </Grid>
+          <Grid className="row">
             <Grid container justify="center">
-              <h4 className="section-heading">Partners</h4>
-            </Grid>
-            <Grid className="row">
-              <Grid container justify="center">
-                <Swiper
-                  loop={true}
-                  navigation
-                  autoplay={{ delay: 2000 }}
-                  breakpoints={
-                    ({
-                      320: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                      },
+              <Swiper
+                loop={true}
+                navigation
+                autoplay={{ delay: 2000 }}
+                breakpoints={
+                  ({
+                    320: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
                     },
-                    {
-                      480: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                      },
+                  },
+                  {
+                    480: {
+                      slidesPerView: 3,
+                      spaceBetween: 30,
                     },
-                    {
-                      768: {
-                        slidesPerView: 2,
-                        spaceBetween: 40,
-                      },
+                  },
+                  {
+                    768: {
+                      slidesPerView: 2,
+                      spaceBetween: 40,
                     },
-                    {
-                      868: {
-                        slidesPerView: 5,
-                        spaceBetween: 40,
-                      },
-                    })
-                  }
-                >
-                  <Grid container>
-                    <Grid>
-                      {partnersLogo.map((item, index) => (
-                        <SwiperSlide
-                          key="item"
-                          className={classes.partnerSlide}
-                        >
-                          <Avatar
+                  },
+                  {
+                    868: {
+                      slidesPerView: 5,
+                      spaceBetween: 40,
+                    },
+                  })
+                }
+              >
+                <Grid container>
+                  <Grid>
+                    {partnersLogo.map((item, index) => (
+                      <SwiperSlide key={index} className={classes.partnerSlide}>
+                        <Grid>
+                          <img
                             variant="square"
+                            src={`${process.env.PUBLIC_URL}/assets/partners/${item.logo}`}
                             className={classes.partnerLogo}
-                            src={`${process.env.PUBLIC_URL}/assets/${item.logo}.png`}
-                          ></Avatar>
-                        </SwiperSlide>
-                      ))}
-                    </Grid>
+                            alt="FEED PARTNERS LOGO"
+                          />
+                        </Grid>
+                      </SwiperSlide>
+                    ))}
                   </Grid>
-                </Swiper>
-              </Grid>
+                </Grid>
+              </Swiper>
             </Grid>
-          </div>
+          </Grid>
         </div>
-      </section>
+      </Grid>
     </>
   )
 }
