@@ -6,7 +6,7 @@ import ServicesSection from '../../Components/servicesSection/servicesSection'
 import EventsSection from '../../Components/eventsSection/eventsSection'
 import TestimonialSection from '../../Components/testimonialSection/testimonialSection'
 import FeedWorkingSection from '../../Components/feedWorkingSection/feedWorkingSection'
-import PartnerSection from '../../Components/partnerSection/partnerSection';
+import PartnerSection from '../../Components/partnerSection/partnerSection'
 import RoadMap from '../analytics/roadMap/roadMap'
 import { Grid } from '@material-ui/core'
 import SwiperCore, {
@@ -64,7 +64,7 @@ function Home() {
         <div className="resp-events-view">
           <EventsSection></EventsSection>
         </div>
-        <RoadMap/>
+        <RoadMap />
         <FeedWorkingSection />
         <TestimonialSection />
         <PartnerSection />

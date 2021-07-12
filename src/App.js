@@ -29,6 +29,7 @@ import MyFpoMain from './Components/ServicesComp/MyFpoComp/myFpoMain/myFpoMain'
 import AnalyticsMain from './Components/analytics/analyticsMain/analyticsMain'
 import MyDashboard from './Components/myDashboard/myDashboard'
 import ContactUs from './Components/contactus/contactus'
+import DashboardMain from './Components/myDashboard/dashboardMain/dashboardMain'
 
 function App() {
   const ScrollToTop = () => {
@@ -79,6 +80,7 @@ function App() {
           <Route path="/mymarket" component={MyMarketMainComp} />
           <Route path="/mytools" component={MyToolsMainComp} />
           <Route path="/mydashboard" component={MyDashboard}></Route>
+          <Route path="/dashboard" component={DashboardMain}></Route>
         </Switch>
         <Footer />
       </Router>
