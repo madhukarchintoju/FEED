@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 
 function PieChart() {
+  let chartRef = null
   const options = {
     chart: {
       type: 'pie',
+    },
+    title: {
+      text: 'Pie Chart',
     },
     series: [
       {
@@ -32,9 +36,24 @@ function PieChart() {
       },
     ],
   }
+
+  useEffect(() => {
+    if (!!chartRef) {
+      chartRef.reflow()
+    }
+  })
+
+  const getChart = (chart) => {
+    chartRef = chart
+  }
+
   return (
     <>
-      <HighchartsReact highcharts={Highcharts} options={options} />
+      <HighchartsReact
+        highcharts={Highcharts}
+        options={options}
+        callback={getChart}
+      />
     </>
   )
 }

@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     border: '1px solid',
     borderRadius: '1.5em',
     width: '20em',
+    marginLeft: '1.2em',
   },
   navHeader: {
     backgroundColor: '#0072b9',
@@ -52,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function DashboardSideNav() {
   const classes = useStyles()
-  const [selectedIndex, setSelectedIndex] = React.useState(1)
+  const [selectedIndex, setSelectedIndex] = React.useState(0)
 
   const handleListItemClick = (event, index) => {
     setSelectedIndex(index)
@@ -147,11 +148,7 @@ export default function DashboardSideNav() {
         <Divider />
         <ListItem
           button
-          className={
-            selectedIndex === 7
-              ? classes.selectedBottomList
-              : classes.hoverLastItem
-          }
+          className={selectedIndex === 7 ? classes.selectedList : classes.hover}
           onClick={(event) => handleListItemClick(event, 7)}
         >
           <ListItemIcon>
