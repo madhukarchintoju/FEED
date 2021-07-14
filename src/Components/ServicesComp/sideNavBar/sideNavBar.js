@@ -20,6 +20,7 @@ export default function SideNavBar(props) {
   const screenWidth = window.innerWidth > 769 ? true : false
 
   const [open, setOpen] = React.useState(screenWidth)
+  const [selected, setSelected] = React.useState()
 
   const useStyles = makeStyles((theme) => ({
     hide: {
@@ -62,6 +63,9 @@ export default function SideNavBar(props) {
       position: 'relative',
       zIndex: 1,
     },
+    selectedItem: {
+      backgroundColor: '#ffdc75',
+    },
   }))
   const classes = useStyles()
 
@@ -103,12 +107,24 @@ export default function SideNavBar(props) {
         <Divider />
         <List>
           {props?.data.map((item, index) => (
-            <div key={index}>
+            <div
+              key={index}
+              className={selected === index ? classes.selectedItem : ''}
+            >
               <ListItem
                 button
                 component={Link}
                 to={item.path}
-                onClick={!screenWidth ? handleDrawerClose : () => {}}
+                onClick={
+                  !screenWidth
+                    ? () => {
+                        setSelected(index)
+                        handleDrawerClose()
+                      }
+                    : () => {
+                        setSelected(index)
+                      }
+                }
               >
                 <ListItemIcon>
                   <Icon

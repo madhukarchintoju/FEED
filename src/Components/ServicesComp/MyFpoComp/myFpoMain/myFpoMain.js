@@ -1,8 +1,17 @@
 import React from 'react'
 import './myFpoMain.css'
-import { Grid, Button, Icon, Avatar } from '@material-ui/core'
-
-import MyFpoNav from '../myFpoNav/myFpoNav'
+import {
+  Grid,
+  Button,
+  Icon,
+  Avatar,
+  makeStyles,
+  Grow,
+  Paper,
+  Popper,
+  MenuItem,
+  MenuList,
+} from '@material-ui/core'
 import ServicesNavbar from '../../ServicesNavbar/ServicesNavbar.js'
 import SideNavBar from '../../sideNavBar/sideNavBar'
 import { Route, Switch, Redirect } from 'react-router-dom'
@@ -20,49 +29,64 @@ import AnnualCompliances from '../myFpoList/fpoComplainces/annualCompliances/ann
 import CreateProduct from '../myFpoList/fpoAccount/createProduct/createProduct'
 import SalesRegistry from '../myFpoList/fpoAccount/salesRegister/salesRegister'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
-import Grow from '@material-ui/core/Grow'
-import Paper from '@material-ui/core/Paper'
-import Popper from '@material-ui/core/Popper'
-import MenuItem from '@material-ui/core/MenuItem'
-import MenuList from '@material-ui/core/MenuList'
-export default function MyFpoMain() {
-  const navData = [
-    {
-      name: 'About FPC',
-      icon: 'fa fa-plus-circle',
-      path: '/myfpo/aboutfpo',
-    },
-    {
-      name: 'FPC Account',
-      icon: 'fa fa-address-card',
-      path: '/myfpo/fpoaccount',
-    },
-    {
-      name: 'FPC Business Plan',
-      icon: 'fa fa-briefcase',
-      path: '/myfpo/fpobusinessplan',
-    },
-    {
-      name: 'FPC Compliances',
-      icon: 'fas fa-book-open',
-      path: '/myfpo/fpocomplainces',
-    },
-    {
-      name: 'FPC AGM & Board',
-      icon: 'far fa-comments',
-      path: '/myfpo/fpoagmboard',
-    },
-    {
-      name: 'FPC Loans Schemes',
-      icon: 'fas fa-university',
-      path: '/myfpo/fpoloanschemes',
-    },
-    {
-      name: 'FPC Connect',
-      icon: 'fas fa-handshake',
-      path: '/myfpo/fpoconnect',
-    },
-  ]
+
+const background = {
+  '/myfpo/aboutfpo': {},
+  '/myfpo/fpoaccount': {
+    backgroundSize: 'cover',
+    backgroundImage: `URL("/assets/my-fpo/bg/accounts.jpg")`,
+    backgroundRepeat: 'no-repeat',
+  },
+  '/myfpo/fpobusinessplan-': {},
+  '/myfpo/fpocomplainces': {},
+  '/myfpo/fpoagmboard': {},
+  '/myfpo/fpoloanschemes': {},
+  '/myfpo/fpoconnect': {},
+}
+const navData = [
+  {
+    name: 'About FPC',
+    icon: 'fa fa-plus-circle',
+    path: '/myfpo/aboutfpo',
+  },
+  {
+    name: 'FPC Account',
+    icon: 'fa fa-address-card',
+    path: '/myfpo/fpoaccount',
+  },
+  {
+    name: 'FPC Business Plan',
+    icon: 'fa fa-briefcase',
+    path: '/myfpo/fpobusinessplan',
+  },
+  {
+    name: 'FPC Compliances',
+    icon: 'fas fa-book-open',
+    path: '/myfpo/fpocomplainces',
+  },
+  {
+    name: 'FPC AGM & Board',
+    icon: 'far fa-comments',
+    path: '/myfpo/fpoagmboard',
+  },
+  {
+    name: 'FPC Loans Schemes',
+    icon: 'fas fa-university',
+    path: '/myfpo/fpoloanschemes',
+  },
+  {
+    name: 'FPC Connect',
+    icon: 'fas fa-handshake',
+    path: '/myfpo/fpoconnect',
+  },
+]
+
+export default function MyFpoMain(props) {
+  const useStyles = makeStyles((theme) => ({
+    background: background[props.location.pathname],
+  }))
+  const classes = useStyles()
+
   const [open, setOpen] = React.useState(false)
   const anchorRef = React.useRef(null)
 
@@ -97,7 +121,7 @@ export default function MyFpoMain() {
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
-      <div className="row m-0 content-wrapper-services">
+      <div className={'row m-0 content-wrapper-services ' + classes.background}>
         <SideNavBar
           className="col p-0 sidenavbar"
           data={navData}
@@ -111,7 +135,7 @@ export default function MyFpoMain() {
             justify="space-between"
             style={{ marginBottom: '0.5em' }}
           >
-            <Grid style={{ border: '1px solid red' }}>
+            <Grid lg={12} item style={{ border: '1px solid red' }}>
               <Button
                 variant="contained"
                 color="primary"
@@ -121,8 +145,8 @@ export default function MyFpoMain() {
               </Button>
             </Grid>
             <Grid
-              className=""
               container
+              item
               direction="col"
               alignItems="center"
               style={{ border: '1px solid red' }}
