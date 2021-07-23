@@ -2,7 +2,6 @@
   "name": "feed-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./",
   "dependencies": {
     "@amcharts/amcharts4": "^4.10.20",
     "@capacitor/android": "^2.4.7",
