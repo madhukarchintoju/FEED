@@ -37,7 +37,7 @@ export default function MyFarmFruits() {
     },
     {
       name: 'Lemon',
-      icon: 'Lemon.png',
+      icon: 'lemon.png',
       link: '/myfarm/fruits/lemon',
       hsCode: '08055000',
     },

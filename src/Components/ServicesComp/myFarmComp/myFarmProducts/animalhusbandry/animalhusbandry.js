@@ -6,7 +6,7 @@ export default function AnimalHusbandry() {
   const dataList = [
     {
       name: 'Chicken',
-      icon: 'live-animals/CHICKEN.png',
+      icon: 'live-animals/chicken.png',
       link: '',
     },
     {

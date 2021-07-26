@@ -5,7 +5,7 @@ export default function Poultry() {
   const dataList = [
     {
       name: 'Eggs',
-      icon: '/poultry/eggs.png',
+      icon: 'poultry/eggs.png',
       link: '',
     },
   ]

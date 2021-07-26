@@ -5,32 +5,32 @@ export default function OilSeeds() {
   const dataList = [
     {
       name: 'Black Sesame',
-      icon: '/oil-seeds/BLACK-SESAME.png',
+      icon: 'oil-seeds/black-sesame.png',
       link: '',
     },
     {
       name: 'Castor Seeds',
-      icon: '/oil-seeds/CASTOR-SEEDS.png',
+      icon: 'oil-seeds/castor-seeds.png',
       link: '',
     },
     {
       name: 'Crude Palm',
-      icon: '/oil-seeds/CRUDE-PALM.png',
+      icon: 'oil-seeds/crude-palm.png',
       link: '',
     },
     {
       name: 'Ground Nut',
-      icon: '/oil-seeds/GROUND-NUT.png',
+      icon: 'oil-seeds/ground-nut.png',
       link: '',
     },
     {
       name: 'Niger Seeds',
-      icon: '/oil-seeds/NIGER-SEEDS.png',
+      icon: 'oil-seeds/niger-seeds.png',
       link: '',
     },
     {
       name: 'Sunflower Seeds',
-      icon: '/oil-seeds/SUNFLOWER-SEEDS.png',
+      icon: 'oil-seeds/sunflower-seeds.png',
       link: '',
     },
   ]
