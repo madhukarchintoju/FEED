@@ -15,52 +15,52 @@ export default function FpoAccount() {
   const dataList = [
     {
       name: 'Create Vendor',
-      icon: '/accounts/createvendor.png',
+      icon: 'accounts/createvendor.png',
       link: '/myfpo/account/createvendor',
     },
     {
       name: 'Share Capital Registry',
-      icon: '/accounts/sharecapitalregistry.png',
+      icon: 'accounts/sharecapitalregistry.png',
       link: '',
     },
     {
       name: 'Purchase Registry',
-      icon: '/accounts/purcheseregistry.png',
+      icon: 'accounts/purcheseregistry.png',
       link: '',
     },
     {
       name: 'Sale Registry',
-      icon: '/accounts/salesregistry.png',
+      icon: 'accounts/salesregistry.png',
       link: '/myfpo/salesregister',
     },
     {
       name: 'Stock Registry',
-      icon: '/accounts/stockregistry.png',
+      icon: 'accounts/stockregistry.png',
       link: '',
     },
     {
       name: 'Create Product',
-      icon: '/accounts/createproduct.png',
+      icon: 'accounts/createproduct.png',
       link: '/myfpo/createProduct',
     },
     {
       name: 'Ledger Registry',
-      icon: '/accounts/ledgerregistry.png',
+      icon: 'accounts/ledgerregistry.png',
       link: '',
     },
     {
       name: 'Bank Registry',
-      icon: '/accounts/bankregistry.png',
+      icon: 'accounts/bankregistry.png',
       link: '',
     },
     {
       name: 'Cash Book Registry',
-      icon: '/accounts/cashbookregistry.png',
+      icon: 'accounts/cashbookregistry.png',
       link: '',
     },
     {
       name: 'FPO Reports',
-      icon: '/accounts/reports.png',
+      icon: 'accounts/reports.png',
       link: '',
     },
   ]

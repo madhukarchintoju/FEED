@@ -6,7 +6,7 @@ export default function Others() {
   const dataList = [
     {
       name: 'Salt',
-      icon: '/other/salt.png',
+      icon: 'other/salt.png',
       link: '',
     },
   ]
@@ -38,7 +38,7 @@ export default function Others() {
     },
     {
       name: 'Irrigation',
-      icon: 'Irrigation.png',
+      icon: 'irrigation.png',
       link: '',
       download: 'mango.pdf',
     },

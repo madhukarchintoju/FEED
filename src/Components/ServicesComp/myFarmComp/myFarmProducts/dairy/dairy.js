@@ -5,22 +5,22 @@ export default function Dairy() {
   const dataList = [
     {
       name: 'Butter',
-      icon: '/dairy/BUTTER.png',
+      icon: 'dairy/butter.png',
       link: '',
     },
     {
       name: 'Cheese',
-      icon: '/dairy/CHEESE.png',
+      icon: 'dairy/cheese.png',
       link: '',
     },
     {
       name: 'Ghee',
-      icon: '/dairy/GHEE.png',
+      icon: 'dairy/ghee.png',
       link: '',
     },
     {
       name: 'Milk Dairy',
-      icon: '/dairy/MILK DAIRY.png',
+      icon: 'dairy/milk dairy.png',
       link: '',
     },
   ]
@@ -51,7 +51,7 @@ export default function Dairy() {
     },
     {
       name: 'Irrigation',
-      icon: 'Irrigation.png',
+      icon: 'irrigation.png',
       link: '',
       download: 'mango.pdf',
     },

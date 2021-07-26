@@ -6,22 +6,22 @@ export default function Fabric() {
   const dataList = [
     {
       name: 'Cotton',
-      icon: '/fabric/COTTON.png',
+      icon: 'fabric/cotton.png',
       link: '',
     },
     {
       name: 'Jute',
-      icon: '/fabric/jute.png',
+      icon: 'fabric/jute.png',
       link: '',
     },
     {
       name: 'Silk',
-      icon: '/fabric/silk.png',
+      icon: 'fabric/silk.png',
       link: '',
     },
     {
       name: 'Wool',
-      icon: '/fabric/wool.png',
+      icon: 'fabric/wool.png',
       link: '',
     },
   ]
@@ -53,7 +53,7 @@ export default function Fabric() {
     },
     {
       name: 'Irrigation',
-      icon: 'Irrigation.png',
+      icon: 'irrigation.png',
       link: '',
       download: 'mango.pdf',
     },

@@ -8,42 +8,42 @@ export default function Spices() {
   const dataList = [
     {
       name: 'Ajwan',
-      icon: '/spices/AJWAN.png',
+      icon: 'spices/ajwan.png',
       link: '/myfarm/spices/ajwan',
     },
     {
       name: 'Ansie',
-      icon: '/spices/ANISE.png',
+      icon: 'spices/anise.png',
       link: '/myfarm/spices/anise',
     },
     {
       name: 'Asafoetida',
-      icon: '/spices/ASAFOETIDA.png',
+      icon: 'spices/asafoetida.png',
       link: '/myfarm/spices/asafoetida',
     },
     {
       name: 'Black Pepper',
-      icon: '/spices/BLACK-PEPPER.png',
+      icon: 'spices/black-pepper.png',
       link: '/myfarm/spices/blackpepper',
     },
     {
       name: 'Cassia',
-      icon: '/spices/CASSIA.png',
+      icon: 'spices/cassia.png',
       link: '/myfarm/spices/cassia',
     },
     {
       name: 'Chilly',
-      icon: '/spices/CHILLY.png',
+      icon: 'spices/chilly.png',
       link: '/myfarm/spices/chilly',
     },
     {
       name: 'Corinader',
-      icon: '/spices/CORIANDER.png',
+      icon: 'spices/corinader.png',
       link: '/myfarm/spices/corinader',
     },
     {
       name: 'Cumin',
-      icon: '/spices/CUMIN.png',
+      icon: 'spices/cumin.png',
       link: '/myfarm/spices/cumin',
     },
     // {
@@ -53,42 +53,42 @@ export default function Spices() {
     // },
     {
       name: 'Fennel Seeds',
-      icon: '/spices/FENNEL-SEEDS.png',
+      icon: 'spices/fennel-seeds.png',
       link: '/myfarm/spices/fennelseeds',
     },
     {
       name: 'Fenugreek',
-      icon: '/spices/FENUGREEK.png',
+      icon: 'spices/fenugreek.png',
       link: '/myfarm/spices/fenugreek',
     },
     {
       name: 'Ginger',
-      icon: '/spices/GINGER.png',
+      icon: 'spices/ginger.png',
       link: '/myfarm/spices/ginger',
     },
     {
       name: 'Mint',
-      icon: '/spices/MINT.png',
+      icon: 'spices/mint.png',
       link: '/myfarm/spices/mint',
     },
     {
       name: 'Mustard',
-      icon: '/spices/MUSTARD.png',
+      icon: 'spices/mustard.png',
       link: '/myfarm/spices/mustard',
     },
     {
       name: 'Poppy Seeds',
-      icon: '/spices/POPPY SEEDS.png',
+      icon: 'spices/poppy-seeds.png',
       link: '/myfarm/spices/poppyseeds',
     },
     {
       name: 'Tamarind',
-      icon: '/spices/TAMARIND.png',
+      icon: 'spices/tamrind.png',
       link: '/myfarm/spices/tamrind',
     },
     {
       name: 'Turmeric',
-      icon: '/spices/TURMERIC.png',
+      icon: 'spices/turmeric.png',
       link: '/myfarm/spices/turmeric',
     },
   ]
@@ -119,7 +119,7 @@ export default function Spices() {
     },
     {
       name: 'Irrigation',
-      icon: 'Irrigation.png',
+      icon: 'irrigation.png',
       link: '',
       download: 'mango.pdf',
     },

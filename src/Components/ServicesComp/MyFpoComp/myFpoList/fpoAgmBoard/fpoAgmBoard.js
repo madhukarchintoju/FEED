@@ -14,27 +14,27 @@ export default function FpoAgmBoard() {
   const agmList = [
     {
       name: 'Mango',
-      icon: '/agmboard/agm/bylaw.png',
+      icon: 'agmboard/agm/bylaw.png',
       link: '',
     },
     {
       name: 'Mango',
-      icon: '/agmboard/agm/memberrights.png',
+      icon: 'agmboard/agm/memberrights.png',
       link: '',
     },
     {
       name: 'Mango',
-      icon: '/agmboard/agm/notices.png',
+      icon: 'agmboard/agm/notices.png',
       link: '',
     },
     {
       name: 'Mango',
-      icon: '/agmboard/agm/rulesandacts.png',
+      icon: 'agmboard/agm/rulesandacts.png',
       link: '',
     },
     {
       name: 'Mango',
-      icon: '/agmboard/agm/resolutions.png',
+      icon: 'agmboard/agm/resolutions.png',
       link: '',
     },
   ]
@@ -42,32 +42,32 @@ export default function FpoAgmBoard() {
   const bdmList = [
     {
       name: '',
-      icon: '/agmboard/bdm/dutiesofdirectors.png',
+      icon: 'agmboard/bdm/dutiesofdirectors.png',
       link: '',
     },
     {
       name: '',
-      icon: '/agmboard/bdm/powerofdirectors.png',
+      icon: 'agmboard/bdm/powerofdirectors.png',
       link: '',
     },
     {
       name: '',
-      icon: '/agmboard/bdm/listofdirectors.png',
+      icon: 'agmboard/bdm/listofdirectors.png',
       link: '',
     },
     {
       name: '',
-      icon: '/agmboard/bdm/notices.png',
+      icon: 'agmboard/bdm/notices.png',
       link: '',
     },
     {
       name: '',
-      icon: '/agmboard/bdm/rulesandacts.png',
+      icon: 'agmboard/bdm/rulesandacts.png',
       link: '',
     },
     {
       name: '',
-      icon: '/agmboard/bdm/resolutions.png',
+      icon: 'agmboard/bdm/resolutions.png',
       link: '',
     },
   ]

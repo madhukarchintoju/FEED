@@ -5,7 +5,7 @@ export default function Flowers() {
   const dataList = [
     {
       name: 'Rose',
-      icon: '/flowers/ROSE.png',
+      icon: 'flowers/rose.png',
       link: '',
     },
   ]
@@ -37,7 +37,7 @@ export default function Flowers() {
     },
     {
       name: 'Irrigation',
-      icon: 'Irrigation.png',
+      icon: 'irrigation.png',
       link: '',
       download: 'mango.pdf',
     },

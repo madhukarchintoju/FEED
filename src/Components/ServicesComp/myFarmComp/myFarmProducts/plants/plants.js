@@ -5,22 +5,22 @@ export default function Plants() {
   const dataList = [
     {
       name: 'Green Betel ',
-      icon: '/plants/GREEN-BETEL-LEAF.png',
+      icon: 'plants/green-betel-leaf.png',
       link: '',
     },
     {
       name: 'Guargum',
-      icon: '/plants/GUARGUM.png',
+      icon: 'plants/guargum.png',
       link: '',
     },
     {
       name: 'Neem',
-      icon: '/plants/NEEM-TULASI.png',
+      icon: 'plants/neem-tulasi.png',
       link: '',
     },
     {
       name: 'Tobacco',
-      icon: '/plants/TOBACCO.png',
+      icon: 'plants/tobacco.png',
       link: '',
     },
   ]
@@ -52,7 +52,7 @@ export default function Plants() {
     },
     {
       name: 'Irrigation',
-      icon: 'Irrigation.png',
+      icon: 'irrigation.png',
       link: '',
       download: 'mango.pdf',
     },

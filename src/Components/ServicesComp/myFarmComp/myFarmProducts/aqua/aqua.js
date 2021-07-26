@@ -7,12 +7,12 @@ export default function Aqua() {
   const dataList = [
     {
       name: 'Fish',
-      icon: '/aqua/FISH.png',
+      icon: 'aqua/fish.png',
       link: '/myfarm/aqua/fish',
     },
     {
       name: 'Prawns',
-      icon: '/aqua/PRAWN.png',
+      icon: 'aqua/prawn.png',
       link: '/myfarm/aqua/fish',
     },
   ]

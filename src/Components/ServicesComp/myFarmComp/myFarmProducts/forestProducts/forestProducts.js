@@ -5,12 +5,12 @@ export default function ForestProducts() {
   const dataList = [
     {
       name: 'Rubber',
-      icon: '/forest-products/RUBBER.png',
+      icon: 'forest-products/rubber.png',
       link: '',
     },
     {
       name: 'Wood',
-      icon: '/forest-products/WOOD.png',
+      icon: 'forest-products/wood.png',
       link: '',
     },
   ]

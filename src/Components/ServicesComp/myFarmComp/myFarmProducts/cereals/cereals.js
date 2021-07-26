@@ -7,52 +7,52 @@ export default function Cereals() {
   const dataList = [
     {
       name: 'Bajra',
-      icon: '/cereals/BAJRA.png',
+      icon: 'cereals/bajra.png',
       link: '/myfarm/cereals/bajra',
     },
     {
       name: 'Barley',
-      icon: '/cereals/BARLEY.png',
+      icon: 'cereals/barley.png',
       link: '/myfarm/cereals/barley',
     },
     {
       name: 'Maize Corn',
-      icon: '/cereals/MAIZE-CORN.png',
+      icon: 'cereals/maize-corn.png',
       link: '/myfarm/cereals/maizecorn',
     },
     {
       name: 'Oats',
-      icon: '/cereals/OATS.png',
+      icon: 'cereals/oats.png',
       link: '/myfarm/cereals/oats',
     },
     {
       name: 'Quinoa',
-      icon: '/cereals/QUINOA.png',
+      icon: 'cereals/quinoa.png',
       link: '/myfarm/cereals/quinoa',
     },
     {
       name: 'Ragi',
-      icon: '/cereals/RAGI.png',
+      icon: 'cereals/ragi.png',
       link: '/myfarm/cereals/ragi',
     },
     {
       name: 'Rice',
-      icon: '/cereals/RICE.png',
+      icon: 'cereals/rice.png',
       link: '/myfarm/cereals/rice',
     },
     {
       name: 'Sorghum Seeds',
-      icon: '/cereals/SORGHUM-SEEDS.png',
+      icon: 'cereals/sorghum-seeds.png',
       link: '/myfarm/cereals/sorghumseeds',
     },
     {
       name: 'Soya Beans',
-      icon: '/cereals/SOYA-BEANS.png',
+      icon: 'cereals/soya-beans.png',
       link: '/myfarm/cereals/soyabeans',
     },
     {
       name: 'Wheat',
-      icon: '/cereals/WHEAT.png',
+      icon: 'cereals/wheat.png',
       link: '/myfarm/cereals/wheat',
     },
   ]
@@ -83,7 +83,7 @@ export default function Cereals() {
     },
     {
       name: 'Irrigation',
-      icon: 'Irrigation.png',
+      icon: 'irrigation.png',
       link: '',
       download: 'mango.pdf',
     },

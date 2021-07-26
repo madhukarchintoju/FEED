@@ -6,17 +6,17 @@ export default function AnimalHusbandry() {
   const dataList = [
     {
       name: 'Chicken',
-      icon: '/live-animals/CHICKEN.png',
+      icon: 'live-animals/CHICKEN.png',
       link: '',
     },
     {
       name: 'Goat',
-      icon: '/live-animals/goat.png',
+      icon: 'live-animals/goat.png',
       link: '',
     },
     {
       name: 'Honey',
-      icon: '/other/honey.png',
+      icon: 'other/honey.png',
       link: '',
     },
   ]
@@ -48,7 +48,7 @@ export default function AnimalHusbandry() {
     },
     {
       name: 'Irrigation',
-      icon: 'Irrigation.png',
+      icon: 'irrigation.png',
       link: '',
       download: 'mango.pdf',
     },
