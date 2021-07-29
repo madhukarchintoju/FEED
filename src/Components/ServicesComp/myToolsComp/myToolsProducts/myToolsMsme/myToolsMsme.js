@@ -6,62 +6,62 @@ export default function MyToolsMsme() {
   const dataList = [
     {
       name: 'Statutory Registration',
-      icon: '/msme/my-tools-msme-statutory-reg.png',
+      icon: 'msme/my-tools-msme-statutory-reg.png',
       link: '',
     },
     {
       name: 'Business Compliances',
-      icon: '/msme/my-tools-msme-business-compliances.png',
+      icon: 'msme/my-tools-msme-business-compliances.png',
       link: '',
     },
     {
       name: 'IT & Digital Marketing',
-      icon: '/msme/my-tools-msme-itdm.png',
+      icon: 'msme/my-tools-msme-itdm.png',
       link: '',
     },
     {
       name: 'Industry Consultant',
-      icon: '/msme/my-tools-msme-industry-consultant.png',
+      icon: 'msme/my-tools-msme-industry-consultant.png',
       link: '',
     },
     {
       name: 'Document Formats',
-      icon: '/msme/my-tools-msme-document-format.png',
+      icon: 'msme/my-tools-msme-document-format.png',
       link: '',
     },
     {
       name: 'Calculators',
-      icon: '/msme/my-tools-msme-calculators.png',
+      icon: 'msme/my-tools-msme-calculators.png',
       link: '',
     },
     {
       name: 'Marketing Services',
-      icon: '/msme/my-tools-msme-marketing-services.png',
+      icon: 'msme/my-tools-msme-marketing-services.png',
       link: '',
     },
     {
       name: 'Loan Services',
-      icon: '/msme/my-tools-msme-loan-services.png',
+      icon: 'msme/my-tools-msme-loan-services.png',
       link: '',
     },
     {
       name: 'Insurance Services',
-      icon: '/msme/my-tools-msme-insurance-services.png',
+      icon: 'msme/my-tools-msme-insurance-services.png',
       link: '',
     },
     {
       name: 'Logistic Services',
-      icon: '/msme/my-tools-msme-logistics-services.png',
+      icon: 'msme/my-tools-msme-logistics-services.png',
       link: '',
     },
     {
       name: 'Legal Services',
-      icon: '/msme/my-tools-msme-legal-services.png',
+      icon: 'msme/my-tools-msme-legal-services.png',
       link: '',
     },
     {
       name: 'Exim Services',
-      icon: '/msme/my-tools-msme-exim-services.png',
+      icon: 'msme/my-tools-msme-exim-services.png',
       link: '',
     },
   ]

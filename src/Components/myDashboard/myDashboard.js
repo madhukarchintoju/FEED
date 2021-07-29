@@ -116,7 +116,7 @@ export default function MyDashboard() {
     <>
       <Grid className={classes.myDashboardWrap}>
         <div id="centre">
-          <Link>
+          <Link to="/dashboard">
             <div className={classes.quickMenu}>
               {/* <img
                 className=""
@@ -262,13 +262,13 @@ export default function MyDashboard() {
             alt="FPO Icon"
           />
         </Grid>
-        <Grid className="cloudBg" justify="center">
+        {/* <Grid className="cloudBg" justify="center">
           <img
             className=""
             src={`${process.env.PUBLIC_URL}/assets/my-dashboard/cloud1.png`}
             alt="FPO Icon"
           />
-        </Grid>
+        </Grid> */}
       </Grid>
     </>
   )

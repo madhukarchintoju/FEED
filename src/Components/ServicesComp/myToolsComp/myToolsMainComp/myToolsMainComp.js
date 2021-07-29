@@ -47,6 +47,7 @@ export default function MyToolsMainComp() {
           data={navData}
           bgColor="black"
           textColor="white"
+          serviceTitle="MY TOOLS"
         ></SideNavBar>
         <div className="col-lg p-0">
           <Switch>

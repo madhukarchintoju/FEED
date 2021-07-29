@@ -5,11 +5,9 @@ import {
   makeStyles,
   Grid,
   Button,
-  Icon,
   Avatar,
   List,
   ListItem,
-  ListItemAvatar,
   ListItemText,
   Typography,
   Divider,
@@ -18,8 +16,8 @@ import {
 export default function MyFpoHome(props) {
   const useStyles = makeStyles((theme) => ({
     homeItem: {
-      width: '8em',
-      height: '7em',
+      width: '9em',
+      height: '8em',
       // margin: '1em',
       '@media (max-width:768px)': {
         width: '4.5em',
@@ -31,19 +29,28 @@ export default function MyFpoHome(props) {
       backgroundColor: '#ffc107',
     },
     newsfeedsWrap: {
+      marginTop: '10px',
       boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
       webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
       mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
     },
     newsfeeds: {
       overflow: 'auto',
-      height: '300px',
-      backgroundColor: 'white',
+      height: '420px',
+      // backgroundColor: 'red',
+      // border:'1px solid red',
+      padding: '2px',
+      color: 'white',
+      // backgroundImage: `url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100')`
+      backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/home/notibgsix.jpg")`,
+      backgroundSize: 'cover',
     },
     newsfeedsHeading: {
       height: '2em',
       textAlign: 'center',
-      backgroundColor: '#ffc107',
+      alignItems: 'center',
+      backgroundColor: '#111927',
+      color: 'white',
     },
   }))
   const classes = useStyles()
@@ -99,7 +106,17 @@ export default function MyFpoHome(props) {
     {
       primary: 'NABARD',
       secondary:
+        'NABARD helps multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      primary: 'FEED',
+      secondary:
         'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      primary: 'NABARD',
+      secondary:
+        'NABARD helps multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
     {
       primary: 'FEED',
@@ -112,75 +129,54 @@ export default function MyFpoHome(props) {
       <Grid
         container
         direction="row"
-        justify="flex-start"
+        justifyContent="space-around"
         // alignItems="flex-start"
         className="myfpo-home"
       >
-        <Grid
-          container
-          item
-          justify="space-evenly"
-          // alignItems="center"
-          direction="row"
-          className="image-grid"
-          xs={12}
-          lg={9}
-          md={9}
-        >
-          <Grid container item xs={12}>
-            {fpoHomeData.map((item, index) => (
-              <Grid key={index} item xs={6} md={3} lg={3}>
-                <Grid>
-                  <Avatar
-                    to={item.link}
-                    component={Link}
-                    variant="square"
-                    className={classes.homeItem}
-                    src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.icon}`}
-                  >
-                    {item.name}
-                  </Avatar>
-                </Grid>
+        <Grid container item lg={8} xs={12}>
+          {fpoHomeData.map((item, index) => (
+            <Grid key={index} item xs={6} md={3} lg={3}>
+              <Grid className="homeItemWrap">
+                <Avatar
+                  to={item.link}
+                  component={Link}
+                  variant="square"
+                  className={classes.homeItem}
+                  src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.icon}`}
+                >
+                  {item.name}
+                </Avatar>
               </Grid>
-            ))}
-          </Grid>
-          <Grid container justify="center">
-            <Button className={classes.fpoConnectBtn} variant="contained">
-              <b>Connect FPC </b>
-            </Button>
-          </Grid>
+            </Grid>
+          ))}
         </Grid>
-        <Grid lg={3}>
+        <Grid lg={3} item>
           <Grid className={classes.newsfeedsWrap}>
             <Grid className={classes.newsfeedsHeading}>
-              <h6>News Updates &amp; Info</h6>
+              <h6 className="my-auto">News Updates &amp; Info</h6>
             </Grid>
             <List className={classes.newsfeeds}>
               {fpcnewsupdates.map((item, index) => (
-                <>
-                  <ListItem alignItems="flex-start" key="item">
+                <Grid key={index}>
+                  <ListItem
+                    alignItems="flex-start"
+                    className="notificationItem"
+                  >
                     <ListItemText
                       primary={item.primary}
-                      secondary={
-                        <Grid>
-                          <Typography
-                            component="span"
-                            variant="body2"
-                            className={classes.inline}
-                            color="textPrimary"
-                          >
-                            {item.secondary}
-                          </Typography>
-                        </Grid>
-                      }
+                      secondary={item.secondary}
                     />
                   </ListItem>
-                  <Divider />
-                </>
+                </Grid>
               ))}
             </List>
           </Grid>
         </Grid>
+      </Grid>
+      <Grid container justifyContent="center" className="mt-3">
+        <Button className={classes.fpoConnectBtn} variant="contained">
+          <b>Connect FPC </b>
+        </Button>
       </Grid>
     </>
   )

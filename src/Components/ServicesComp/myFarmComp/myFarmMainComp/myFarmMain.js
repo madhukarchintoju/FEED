@@ -14,11 +14,12 @@ import PlantationCrop from '../myFarmProducts/plantationCrop/plantationCrop'
 import Poultry from '../myFarmProducts/poultry/poultry'
 import Spices from '../myFarmProducts/spices/spices'
 import Plants from '../myFarmProducts/plants/plants'
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { Redirect, Route, Switch, useHistory } from 'react-router-dom'
 import MyFarmHome from '../myFarmHome/myFarmHome'
 import Fabric from '../myFarmProducts/fabric/fabric'
 import AnimalHusbandry from '../myFarmProducts/animalhusbandry/animalhusbandry'
 import Others from '../myFarmProducts/others/others'
+import MyFarmGuideContent from '../myFarmGuideContent/myFarmGuideContent'
 
 export default function MyFarmMainComp() {
   const navData = [
@@ -98,16 +99,18 @@ export default function MyFarmMainComp() {
       path: '/myfarm/others',
     },
   ]
-
+  const history = useHistory()
+  console.log(history.location.pathname)
   return (
     <div>
       <ServicesNavbar></ServicesNavbar>
-      <div className="row m-0">
+      <div className="row m-0 myfarmmain">
         <SideNavBar
           className="col-lg"
           data={navData}
           bgColor="#a4cf3e"
           textColor="black"
+          serviceTitle="MY FARM"
         ></SideNavBar>
         <div className="p-0 col-lg my-farm-wrap">
           <Switch>
@@ -128,6 +131,10 @@ export default function MyFarmMainComp() {
             <Route path="/myfarm/animalhusbandry" component={AnimalHusbandry} />
             <Route path="/myfarm/fabric" component={Fabric} />
             <Route path="/myfarm/others" component={Others} />
+            <Route
+              path="/myfarm/guidecontent"
+              component={MyFarmGuideContent}
+            ></Route>
             <Redirect to="/myfarm/home"></Redirect>
           </Switch>
         </div>

@@ -6,47 +6,47 @@ export default function LegalCompliances() {
   const dataList = [
     {
       name: 'Monthly Returns Filling',
-      icon: '/compliances/legal/mgrf.png',
+      icon: 'compliances/legal/mgrf.png',
       link: '',
     },
     {
       name: 'PF, ESI, PT Filling',
-      icon: '/compliances/legal/pfesi.png',
+      icon: 'compliances/legal/pfesi.png',
       link: '',
     },
     {
       name: 'TDS Filling',
-      icon: '/compliances/legal/tdsf.png',
+      icon: 'compliances/legal/tdsf.png',
       link: '',
     },
     {
       name: 'ROC Compliances',
-      icon: '/compliances/legal/roc.png',
+      icon: 'compliances/legal/roc.png',
       link: '',
     },
     {
       name: 'Legal support Service',
-      icon: '/compliances/legal/lss.png',
+      icon: 'compliances/legal/lss.png',
       link: '',
     },
     {
       name: 'Auditor Appointment',
-      icon: '/compliances/legal/auditor.png',
+      icon: 'compliances/legal/auditor.png',
       link: '',
     },
     {
       name: 'Minutes of Board Meeting',
-      icon: '/compliances/legal/mobm.png',
+      icon: 'compliances/legal/mobm.png',
       link: '',
     },
     {
       name: 'Corporate Governance',
-      icon: '/compliances/legal/cg.png',
+      icon: 'compliances/legal/cg.png',
       link: '',
     },
     {
       name: 'Stock Checking',
-      icon: '/compliances/legal/stockchecking.png',
+      icon: 'compliances/legal/stockchecking.png',
       link: '',
     },
   ]

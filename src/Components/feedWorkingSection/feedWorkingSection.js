@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './feedWorkingSection.css'
 import { Grid, makeStyles } from '@material-ui/core'
+import ReactPlayer from 'react-player'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper.min.css'
 import 'swiper/components/scrollbar/scrollbar.min.css'
@@ -9,13 +10,14 @@ SwiperCore.use([Scrollbar, Mousewheel])
 
 const useStyles = makeStyles((theme) => ({
   FeedWorkingSectionWrap: {
-    marginTop: '2em',
-    padding: '1em',
+    // marginTop: '2em',
+    // padding: '1em',
     // backgroundColor: '#DCD9D4',
     // backgroundImage: 'linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%)',
     // backgroundBlendMode: 'soft-light,screen',
-    borderRadius: '20px 20px',
-    backgroundImage: 'linear-gradient(120deg, #a1c4fd 0%, #ff9c9c 100%)',
+    // borderRadius: '20px 20px',
+    padding: '8px',
+    // backgroundImage: 'linear-gradient(120deg, #a1c4fd 0%, #ff9c9c 100%)',
     // backgroundColor:'#ff9c9c',
   },
   feedWorksHeading: {
@@ -44,56 +46,77 @@ const useStyles = makeStyles((theme) => ({
   recomvideos: {
     overflow: 'auto',
     height: '450px',
+    // border: '3px solid black'
   },
   recomvideocard: {
-    borderTopLeftRadius: '5px',
-    borderBottomLeftRadius: '5px',
+    border: '1px solid #f1be5f',
+    // borderTopLeftRadius: '5px',
+    // borderBottomLeftRadius: '5px',
     marginBottom: '4px',
     backgroundColor: 'white',
   },
 }))
 const recommendedVideos = [
   {
+    title: 'FARM TO FOREIGN EXPORTS',
     srclink: 'https://www.youtube.com/embed/ka-nmA0DOAI',
   },
   {
+    title: 'Feed Exports',
     srclink: 'https://www.youtube.com/embed/bOkzpur79Us',
   },
   {
+    title: 'Feed Hand Hold Farmers',
     srclink: 'https://www.youtube.com/embed/Ov8rF8MjXrY',
   },
   {
+    title: 'FARM TO FOREIGN EXPORTS',
     srclink: 'https://www.youtube.com/embed/ka-nmA0DOAI',
   },
   {
+    title: 'Feed Exports',
     srclink: 'https://www.youtube.com/embed/bOkzpur79Us',
   },
   {
+    title: 'Feed Hand Hold Farmers',
     srclink: 'https://www.youtube.com/embed/Ov8rF8MjXrY',
   },
 ]
+// const regTitle = recommendedVideos[0].title.slice(0,15)
+// console.log(regTitle)
 export default function FeedWorkingSection() {
-  const Images = [
-    'assets/event-img-one.jpg',
-    'assets/event-img-two.jpg',
-    'assets/event-img-three.jpg',
-    'assets/event-img-four.jpg',
-  ]
-  const [selectedImg, setSelectedImg] = useState(Images[0])
   const classes = useStyles()
+  const [selectedVideo, setSelectedVideo] = useState([
+    recommendedVideos[0].srclink,
+  ])
   return (
     <>
-      <Grid id="howFeedWorks" className={classes.FeedWorkingSectionWrap}>
+      <Grid id="howFeedWorks" className="mt-3">
         <div className="row m-0">
-          <Grid container justify="center">
-            <h3 className={classes.feedWorksHeading}>How FEED Works</h3>
+          <Grid container justifyContent="center">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/videosection/howfeedworks.png`}
+              alt="How FEED Works"
+            />
           </Grid>
-          <Grid container justify="space-around">
-            <Grid item lg={7} md={7} className={classes.mainVideo}>
+          <Grid
+            container
+            justifyContent="space-evenly"
+            className={classes.FeedWorkingSectionWrap}
+          >
+            <Grid
+              item
+              lg={7}
+              md={7}
+              sm={12}
+              xs={12}
+              className={classes.mainVideo}
+            >
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/Ov8rF8MjXrY"
+                src={selectedVideo}
+                // src="https://www.youtube.com/embed/Ov8rF8MjXrY?autoplay=1&mute=1&enablejsapi=1"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -102,48 +125,68 @@ export default function FeedWorkingSection() {
               ></iframe>
             </Grid>
             <Grid item lg={4} md={4}>
-              {/* <Swiper direction={'vertical'} slidesPerColumn={'auto'} freeMode={true} scrollbar={true} mousewheel={true} className='mySwiper'>
-                <SwiperSlide> */}
-              <Grid className={classes.recomvideos}>
+              <Grid
+                className={classes.recomvideos}
+                style={{ borderRadius: '15px 15px' }}
+              >
                 {recommendedVideos.map((item, index) => (
                   <Grid item xs={12} key={index}>
                     <Grid
                       container
-                      justify="space-between"
+                      justifyContent="space-between"
                       className={classes.recomvideocard}
                     >
-                      <Grid item lg={7} md={6} sm={6} xs={6}>
-                        <iframe
-                          width="100%"
-                          height="100%"
-                          src={item.srclink}
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          style={{
-                            borderTopLeftRadius: '5px',
-                            borderBottomLeftRadius: '5px',
-                          }}
-                        ></iframe>
-                      </Grid>
-                      <Grid item lg={4} md={5} sm={5} xs={6}>
-                        <h6>How To start Exports</h6>
-                        <small>
-                          lorem ipsum rem web development request lorem. lorem
-                          ipsum rem web development request lorem
-                        </small>
-                      </Grid>
+                      <div className="" style={{ maxWidth: '500px' }}>
+                        <div className="row no-gutters justify-content-between">
+                          <div
+                            className="col-sm-5"
+                            style={{ background: '#868e96' }}
+                          >
+                            <ReactPlayer
+                              width="100%"
+                              height="100%"
+                              url={item.srclink}
+                              title="YouTube video player"
+                              frameBorder="0"
+                              allow="accelerometer; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></ReactPlayer>
+                          </div>
+                          <div
+                            className="col-sm-6"
+                            onClick={() => setSelectedVideo(item.srclink)}
+                            style={{ cursor: 'pointer' }}
+                          >
+                            <div className="card-body">
+                              <h6>{item.title}</h6>
+                              <p className="card-text">
+                                Alice is a freelance web designer and developer
+                                based in London.
+                              </p>
+                              <button
+                                key={index}
+                                onClick={() => setSelectedVideo(item.srclink)}
+                                className="btn btn-danger"
+                              >
+                                <i className="far fa-play-circle"></i> Play
+                                Video
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </Grid>
                   </Grid>
                 ))}
               </Grid>
-              {/* </SwiperSlide>
-              </Swiper> */}
             </Grid>
           </Grid>
         </div>
       </Grid>
+      {/* <ReactPlayer url={selectedVideo}></ReactPlayer>
+      {videolinks.map((item, index) => (
+        <button key={index} onClick={()=> setSelectedVideo(item)}>select</button>
+      ))} */}
     </>
   )
 }

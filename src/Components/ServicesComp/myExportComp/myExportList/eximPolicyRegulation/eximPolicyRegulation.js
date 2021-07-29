@@ -7,42 +7,42 @@ export default function EximPolicyRegulation() {
   const dataList = [
     {
       name: 'Why Exports',
-      icon: '/policy/agri-export-policy.png',
+      icon: 'policy/agri-export-policy.png',
       link: '/myexport/whyexport',
     },
     {
       name: 'Start Export',
-      icon: '/policy/foreign-trade-policy.png',
+      icon: 'policy/foreign-trade-policy.png',
       link: '/myexport/startexport',
     },
     {
       name: 'Product Selection',
-      icon: '/policy/my-export-export-policy.png',
+      icon: 'policy/my-export-export-policy.png',
       link: '/myexport/exportproductselection',
     },
     {
       name: 'Buyers Connection',
-      icon: '/policy/my-export-import-policy.png',
+      icon: 'policy/my-export-import-policy.png',
       link: '/myexport/exportbuyersconnection',
     },
     {
       name: 'Exim Policy Regulations',
-      icon: '/policy/my-export-state-wise-policy.png',
+      icon: 'policy/my-export-state-wise-policy.png',
       link: '/myexport/eximpolicyregulation',
     },
     {
       name: 'Finance',
-      icon: '/policy/my-export-e-commerce-policy.png',
+      icon: 'policy/my-export-e-commerce-policy.png',
       link: '',
     },
     {
       name: 'Process Export Order',
-      icon: '/policy/my-export-hs-code-wise-policy.png',
+      icon: 'policy/my-export-hs-code-wise-policy.png',
       link: '/myexport/processexportorder',
     },
     {
       name: 'Exim Documentation',
-      icon: '/policy/my-export-import-regulation.png',
+      icon: 'policy/my-export-import-regulation.png',
       link: '/myexport/eximdocumentation',
     },
   ]

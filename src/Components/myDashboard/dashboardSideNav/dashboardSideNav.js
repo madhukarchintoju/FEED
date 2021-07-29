@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { ListItem, List, makeStyles } from '@material-ui/core'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -11,27 +12,38 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     maxWidth: 360,
     backgroundColor: theme.palette.background.paper,
-    border: '1px solid',
-    borderRadius: '1.5em',
+    // border: '1px solid red',
+    borderRadius: '15px 15px',
     width: '20em',
     marginLeft: '1.2em',
+    boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+    webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+    mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
   },
   navHeader: {
-    backgroundColor: '#0072b9',
+    // backgroundColor: '#0072b9',
+    backgroundColor: '#636260',
     color: 'white',
-    borderTopLeftRadius: '1.5em',
-    borderTopRightRadius: '1.5em',
+    borderTopLeftRadius: '15px',
+    borderTopRightRadius: '15px',
     textAlign: 'center',
+    fontWeight: '600',
   },
   selectedList: {
     backgroundColor: '#fcc30b',
+    background:
+      'linear-gradient(90deg, rgba(255,68,0,1) 44%, rgba(255,255,255,1) 100%)',
+    color: 'white',
     '&:hover': {
+      color: 'white',
       backgroundColor: '#fcc30b',
     },
   },
   hover: {
     '&:hover': {
+      color: 'black',
       backgroundColor: '#ffeaa6',
+      borderRadius: '15px 15px',
     },
   },
   hoverLastItem: {
@@ -42,12 +54,20 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   selectedBottomList: {
-    backgroundColor: '#fcc30b',
+    // backgroundColor: '#fcc30b',
+    // background: 'rgb(255,68,0)',
+    background:
+      'linear-gradient(90deg, rgba(255,68,0,1) 0%, rgba(255,255,255,1) 100%)',
     borderBottomLeftRadius: '1.5em',
     borderBottomRightRadius: '1.5em',
   },
   listNavMain: {
     padding: 0,
+    // border:'1px solid red',
+    borderRadius: '15px 15px',
+  },
+  ListItem: {
+    borderRadius: '15px 15px',
   },
 }))
 
@@ -70,6 +90,8 @@ export default function DashboardSideNav() {
           <ListItemText primary="Dashboard Home" />
         </ListItem>
         <ListItem
+          component={Link}
+          to="/dashboard/mysubscription"
           button
           className={selectedIndex === 0 ? classes.selectedList : classes.hover}
           onClick={(event) => handleListItemClick(event, 0)}
@@ -81,6 +103,8 @@ export default function DashboardSideNav() {
         </ListItem>
         <Divider />
         <ListItem
+          component={Link}
+          to="/dashboard/myitdm"
           button
           className={selectedIndex === 1 ? classes.selectedList : classes.hover}
           onClick={(event) => handleListItemClick(event, 1)}
@@ -92,6 +116,8 @@ export default function DashboardSideNav() {
         </ListItem>
         <Divider />
         <ListItem
+          component={Link}
+          to="/dashboard/mymarket"
           button
           className={selectedIndex === 2 ? classes.selectedList : classes.hover}
           onClick={(event) => handleListItemClick(event, 2)}
@@ -103,6 +129,8 @@ export default function DashboardSideNav() {
         </ListItem>
         <Divider />
         <ListItem
+          component={Link}
+          to="/dashboard/mybusinessleads"
           button
           className={selectedIndex === 3 ? classes.selectedList : classes.hover}
           onClick={(event) => handleListItemClick(event, 3)}
@@ -114,6 +142,8 @@ export default function DashboardSideNav() {
         </ListItem>
         <Divider />
         <ListItem
+          component={Link}
+          to="/dashboard/myofferscoupons"
           button
           className={selectedIndex === 4 ? classes.selectedList : classes.hover}
           onClick={(event) => handleListItemClick(event, 4)}
@@ -125,6 +155,8 @@ export default function DashboardSideNav() {
         </ListItem>
         <Divider />
         <ListItem
+          component={Link}
+          to="/dashboard/myaccount"
           button
           className={selectedIndex === 5 ? classes.selectedList : classes.hover}
           onClick={(event) => handleListItemClick(event, 5)}
@@ -136,6 +168,8 @@ export default function DashboardSideNav() {
         </ListItem>
         <Divider />
         <ListItem
+          component={Link}
+          to="/dashboard/mytransaction"
           button
           className={selectedIndex === 6 ? classes.selectedList : classes.hover}
           onClick={(event) => handleListItemClick(event, 6)}
@@ -147,6 +181,8 @@ export default function DashboardSideNav() {
         </ListItem>
         <Divider />
         <ListItem
+          component={Link}
+          to="/dashboard/myreports"
           button
           className={selectedIndex === 7 ? classes.selectedList : classes.hover}
           onClick={(event) => handleListItemClick(event, 7)}

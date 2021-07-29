@@ -1,3 +1,25 @@
+.myfarmmain::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+
+/* Track */
+.myfarmmain::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  /* border-radius: 10px; */
+}
+
+/* Handle */
+.myfarmmain::-webkit-scrollbar-thumb {
+  background: green;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.myfarmmain::-webkit-scrollbar-thumb:hover {
+  background: green;
+}
+
 @media only screen and (max-width: 768px) {
   .my-farm-wrap {
     min-height: 782px !important;
