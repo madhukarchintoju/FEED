@@ -20,7 +20,7 @@ export default function ServicesNavbar() {
                     style={{ borderRadius: '50px 50px' }}
                     alt=""
                   />{' '}
-                  MY FPO
+                  MY FPC
                 </button>
               </Link>
               <Link className="nav-link" to="/myfarm">

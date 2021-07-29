@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import './eventsSection.css'
 import {
   Grid,
@@ -9,6 +9,8 @@ import {
   Typography,
   Divider,
 } from '@material-ui/core'
+import Gallery from 'react-photo-gallery'
+import Carousel, { Modal, ModalGateway } from 'react-images'
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import SwiperCore, { Pagination } from 'swiper/core';
 
@@ -23,6 +25,17 @@ export default function EventsSection() {
   //   'assets/event-img-four.jpg',
   // ]
   // const [selectedImg, setSelectedImg] = useState(Images[0])
+  const [currentImage, setCurrentImage] = useState(0)
+  const [viewerIsOpen, setViewerIsOpen] = useState(false)
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index)
+    setViewerIsOpen(true)
+  }, [])
+
+  const closeLightbox = () => {
+    setCurrentImage(0)
+    setViewerIsOpen(false)
+  }
   const useStyles = makeStyles((theme) => ({
     eventupdatesWrap: {
       boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
@@ -31,13 +44,13 @@ export default function EventsSection() {
     },
     newsfeeds: {
       overflow: 'auto',
-      height: '500px',
+      height: '540px',
       backgroundColor: 'white',
     },
     newsfeedsHeading: {
       height: '2em',
       textAlign: 'center',
-      backgroundColor: '#ce9bff',
+      backgroundColor: '#f08e16',
     },
   }))
   const eventsupdates = [
@@ -92,27 +105,53 @@ export default function EventsSection() {
     },
   ]
   const classes = useStyles()
+  const photos = [
+    {
+      src: `${process.env.PUBLIC_URL}/assets/eventupdates/2.jpg`,
+      width: 4,
+      height: 4,
+    },
+    {
+      src: `${process.env.PUBLIC_URL}/assets/eventupdates/5.jpg`,
+      width: 3,
+      height: 4,
+    },
+    {
+      src: `${process.env.PUBLIC_URL}/assets/eventupdates/4.jpg`,
+      width: 3,
+      height: 4,
+    },
+    {
+      src: `${process.env.PUBLIC_URL}/assets/eventupdates/3.jpg`,
+      width: 4,
+      height: 3,
+    },
+    {
+      src: `${process.env.PUBLIC_URL}/assets/eventupdates/1.jpg`,
+      width: 4,
+      height: 3,
+    },
+  ]
   return (
     <>
       <Grid id="eventsUpdates" className="events-section">
         <div className="row m-0">
           <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <Grid container justify="center">
-              <h3 className="section-heading text-center">
-                Events &amp; Updates
-              </h3>
+            <Grid container justifyContent="center">
+              <img
+                src={`${process.env.PUBLIC_URL}/assets/eventupdates/eventsandupdatesnameplate.png`}
+                alt="Event and Updates"
+              />
             </Grid>
-            <Grid container>
+            <Grid container className="mt-3">
               <Grid className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                 <Grid className={classes.eventupdatesWrap}>
-                  <h6 className={classes.newsfeedsHeading}>
-                    Central / State Updates
-                  </h6>
+                  <h6 className={classes.newsfeedsHeading}>Central Updates</h6>
                   <List className={classes.newsfeeds}>
                     {eventsupdates.map((item, index) => (
                       <Grid key={index}>
                         <ListItem alignItems="flex-start">
-                          <Grid container justify="space-between">
+                          <Grid container justifyContent="space-between">
                             <Grid item lg={4}>
                               <img
                                 src={`${process.env.PUBLIC_URL}/assets/testimonials/farmerone.png`}
@@ -162,7 +201,7 @@ export default function EventsSection() {
                 </div>
               </div> */}
               <Grid item lg={6}>
-                <Grid container justify="space-around">
+                {/* <Grid container justify="space-around">
                   <Grid item lg={8} style={{ border: '1px solid red' }}>
                     <img
                       src={`${process.env.PUBLIC_URL}/assets/event-img-one.jpg`}
@@ -177,8 +216,8 @@ export default function EventsSection() {
                       width="100%"
                     />
                   </Grid>
-                </Grid>
-                <Grid container justify="space-around">
+                </Grid> */}
+                {/* <Grid container justify="space-around">
                   <Grid item lg={4} style={{ border: '1px solid red' }}>
                     <Grid style={{ border: '1px solid red' }}>
                       <img
@@ -221,18 +260,33 @@ export default function EventsSection() {
                       />
                     </Grid>
                   </Grid>
-                </Grid>
+                </Grid> */}
+                <div>
+                  <Gallery photos={photos} onClick={openLightbox} />
+                  <ModalGateway>
+                    {viewerIsOpen ? (
+                      <Modal onClose={closeLightbox}>
+                        <Carousel
+                          currentIndex={currentImage}
+                          views={photos.map((x) => ({
+                            ...x,
+                            srcset: x.srcSet,
+                            caption: x.title,
+                          }))}
+                        />
+                      </Modal>
+                    ) : null}
+                  </ModalGateway>
+                </div>
               </Grid>
               <Grid className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                 <Grid className={classes.eventupdatesWrap}>
-                  <h6 className={classes.newsfeedsHeading}>
-                    Central / State Updates
-                  </h6>
+                  <h6 className={classes.newsfeedsHeading}>State Updates</h6>
                   <List className={classes.newsfeeds}>
                     {eventsupdates.map((item, index) => (
                       <Grid key={index}>
                         <ListItem alignItems="flex-start">
-                          <Grid container justify="space-between">
+                          <Grid container justifyContent="space-between">
                             <Grid item lg={4}>
                               <img
                                 src={`${process.env.PUBLIC_URL}/assets/testimonials/farmertwo.jpg`}

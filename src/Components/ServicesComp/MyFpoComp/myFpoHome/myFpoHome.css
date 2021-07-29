@@ -2,8 +2,14 @@
   /* border: 1px solid red; */
 }
 .myfpo-home {
-  padding: 5px;
-  background-color: #f8ffbe;
+  padding-right: 5px;
+}
+
+.homeItemWrap {
+  transition: 0.5s ease;
+}
+.homeItemWrap:hover {
+  transform: scale(1.1);
 }
 .fpo-icon-img {
   border-radius: 50px 50px;
@@ -25,4 +31,22 @@
 
 .fpo-cards-wrap .nav-link {
   color: black !important;
+}
+
+.notificationItem {
+  margin-bottom: 4px;
+  padding: 0px 10px 0px 10px;
+  backdrop-filter: blur(6px) saturate(180%);
+  -webkit-backdrop-filter: blur(6px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+.notificationItem:hover {
+  backdrop-filter: blur(15px) saturate(100%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+.notificationItem .MuiTypography-colorTextSecondary {
+  color: white;
 }

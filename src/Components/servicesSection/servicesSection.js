@@ -11,9 +11,14 @@ export default function ServicesSection(props) {
             {props?.titleRequired === false ? (
               ''
             ) : (
-              <div className="row">
-                <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12 m-auto">
-                  <h5 className="section-heading text-center">FEED Services</h5>
+              <div className="row text-center">
+                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 m-auto">
+                  {/* <h5 className="section-heading text-center">FEED Services</h5> */}
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/my-services/feedservicesnameplate.png`}
+                    className="img-fluid"
+                    alt="FEED STARTUP"
+                  />
                 </div>
               </div>
             )}

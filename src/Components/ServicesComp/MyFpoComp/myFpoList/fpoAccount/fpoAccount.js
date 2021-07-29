@@ -6,8 +6,8 @@ import { makeStyles } from '@material-ui/core'
 export default function FpoAccount() {
   const useStyles = makeStyles((theme) => ({
     fpoAccountWrap: {
-      backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/bg/accounts.jpg")`,
-      backgroundSize: 'cover',
+      backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/accounts/myfpoaccountsbg.png")`,
+      backgroundSize: '100% 100%',
       backgroundRepeat: 'no-repeat',
     },
   }))
@@ -64,12 +64,6 @@ export default function FpoAccount() {
       link: '',
     },
   ]
-  const headingSize = {
-    webWidth: 18,
-    mobWidth: 8,
-    webHeight: 2,
-    mobHeight: 1,
-  }
   const cardSize = {
     webWidth: 9,
     mobWidth: 4,
@@ -79,15 +73,7 @@ export default function FpoAccount() {
 
   return (
     <>
-      <div className={classes.fpoAccountWrap}>
-        <MyFpoListItem
-          dataList={dataList}
-          headingSize={headingSize}
-          cardTitle="/accounts/fpoaccountsheading.png"
-          headingAlign="flex-start"
-          cardSize={cardSize}
-        ></MyFpoListItem>
-      </div>
+      <MyFpoListItem dataList={dataList} cardSize={cardSize}></MyFpoListItem>
     </>
   )
 }

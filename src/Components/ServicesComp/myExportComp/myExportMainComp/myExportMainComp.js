@@ -89,6 +89,7 @@ export default function MyExportMainComp() {
           data={navData}
           bgColor="#64c5bc"
           textColor="black"
+          serviceTitle="MY EXPORTS"
         ></SideNavBar>
         <div className="p-0 col-lg">
           <Switch>

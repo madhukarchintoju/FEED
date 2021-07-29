@@ -12,8 +12,6 @@ import './aboutSection.css'
 export default function AboutSection(props) {
   const useStyles = makeStyles((theme) => ({
     aboutBg: {
-      // backgroundColor: '#d2774b',
-      // color: 'white',
       marginTop: '1em',
       padding: '1em',
       background: 'rgba(255, 255, 255, 0.8)',
@@ -29,7 +27,6 @@ export default function AboutSection(props) {
     //   paddingBottom: '1em',
     // },
     objectiveBg: {
-      // backgroundColor: '#9c4242',
       margin: '5px',
       opacity: '0.5em',
       color: 'white',
@@ -46,20 +43,32 @@ export default function AboutSection(props) {
       color: 'black',
       textAlign: 'justify',
       textJustify: 'inter-word',
+      '@media (max-width:768px)': {
+        fontSize: '12px',
+      },
     },
     missionContent: {
       fontWeight: '500',
       color: 'black',
+      '@media (max-width:768px)': {
+        fontSize: '12px',
+      },
     },
     visionContent: {
       fontWeight: '500',
       color: 'black',
+      '@media (max-width:768px)': {
+        fontSize: '12px',
+      },
     },
     aboutUsContent: {
       fontWeight: '500',
       color: 'black',
       textAlign: 'justify',
       textJustify: 'inter-word',
+      '@media (max-width:768px)': {
+        fontSize: '12px',
+      },
     },
     visionCard: {
       height: '100%',
@@ -105,9 +114,6 @@ export default function AboutSection(props) {
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
     },
-    aboutFeedContent: {
-      marginTop: '2em',
-    },
   }))
   const classes = useStyles()
   const aboutUsContent = {
@@ -125,76 +131,15 @@ export default function AboutSection(props) {
       <Grid
         item
         container
-        justify="center"
+        justifyContent="center"
         className={classes.aboutSectionWrap}
       >
-        <Grid item container justify="space-around">
-          {window.innerWidth > 1000 ? (
-            <Grid item lg={12} md={12} sm={12}>
-              <Grid item container justify="flex-start">
-                <Grid>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/aboutsection/ship.png`}
-                    className="img-fluid shipmove"
-                    alt=""
-                    // style={{ position: 'relative', bottom: '-150px', zIndex: '-2' }}
-                  />
-                </Grid>
-              </Grid>
-              <Grid>
-                <div className="oceanWrap">
-                  <div>
-                    <svg
-                      className="waves"
-                      viewBox="0 24 150 28"
-                      preserveAspectRatio="none"
-                      style={{ position: 'relative', bottom: '50px' }}
-                    >
-                      <defs>
-                        <path
-                          id="gentle-wave"
-                          d="M-110 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-                        />
-                      </defs>
-                      <g className="parallax">
-                        <use
-                          href="#gentle-wave"
-                          x="48"
-                          y="2"
-                          fill="rgba(0,172,193,0.5)"
-                        />
-                        <use
-                          href="#gentle-wave"
-                          x="48"
-                          y="7"
-                          fill="rgba(32,156,255,0.5)"
-                        />
-                        <use
-                          href="#gentle-wave"
-                          x="48"
-                          y="3"
-                          fill="rgba(0,122,183,0.7)"
-                        />
-                        <use
-                          href="#gentle-wave"
-                          x="48"
-                          y="5"
-                          fill="rgba(104,224,207,0.1)"
-                        />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </Grid>
-            </Grid>
-          ) : (
-            ''
-          )}
+        <Grid item container justifyContent="space-around">
           <Grid className={classes.aboutFeedBg}>
             <h4 className={classes.aboutFeedHeading}>About FEED</h4>
             <Grid
               container
-              justify="space-around"
+              justifyContent="space-around"
               className={classes.aboutFeedContent}
             >
               <Grid item lg={5} md={4} sm={4}>
@@ -232,7 +177,7 @@ export default function AboutSection(props) {
             </Grid>
             <Grid
               container
-              justify="space-around"
+              justifyContent="space-around"
               style={{ marginTop: '0.2em' }}
             >
               <Grid item lg={5} md={5} sm={5}>
@@ -242,7 +187,7 @@ export default function AboutSection(props) {
                       <Grid
                         container
                         alignItems="center"
-                        justify="space-between"
+                        justifyContent="space-between"
                       >
                         <h4 className={classes.textRed}>Vision</h4>
                         <img
@@ -272,7 +217,7 @@ export default function AboutSection(props) {
                       <Grid
                         container
                         alignItems="center"
-                        justify="space-between"
+                        justifyContent="space-between"
                       >
                         <h4 className={classes.textRed}>Mission</h4>
                         <img
@@ -298,7 +243,7 @@ export default function AboutSection(props) {
                 </Card>
               </Grid>
             </Grid>
-            <Grid container justify="center">
+            <Grid container justifyContent="center">
               <Grid item lg={11} md={11} sm={11} className={classes.aboutBg}>
                 {/* <h4>About us</h4> */}
                 <Grid className={classes.aboutUsContent}>
@@ -317,7 +262,7 @@ export default function AboutSection(props) {
                     ORGANISATIONS (FPO) by conducting EXPORT PROMOTIONAL
                     MEETINGS in all districts of India.
                   </p>
-                  <Grid container justify="flex-end">
+                  <Grid container justifyContent="flex-end">
                     {props.shortView && (
                       <Link to="/aboutsection" className="text-dark">
                         <u>Read more...</u>

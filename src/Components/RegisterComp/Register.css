@@ -1,0 +1,21 @@
+.regFormHeading {
+  /* background: #498554;
+background: -webkit-linear-gradient(to right, #498554 0%, #92e49e 100%);
+background: -moz-linear-gradient(to right, #498554 0%, #92e49e 100%);
+background: linear-gradient(to right, #498554 0%, #92e49e 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; */
+  /* background-color: rgb(211, 209, 82);
+color: white;
+text-align: center;
+padding-bottom: 5px;
+margin-bottom: 10px; */
+}
+
+.formDetailsWrap {
+  /* padding: 8px; */
+  /* border-radius: 15px 15px; */
+  /* box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75); */
+}

@@ -6,47 +6,47 @@ export default function EximTarrifbenefits() {
   const dataList = [
     {
       name: 'Know Export Tariff',
-      icon: '/tariff/know-export-tariff.png',
+      icon: 'tariff/know-export-tariff.png',
       link: '',
     },
     {
       name: 'Interest Subvention Scheme',
-      icon: '/tariff/interest-subvention-schemes.png',
+      icon: 'tariff/interest-subvention-schemes.png',
       link: '',
     },
     {
       name: 'Export Policy',
-      icon: '/tariff/export-policy.png',
+      icon: 'tariff/export-policy.png',
       link: '',
     },
     {
       name: 'SPS-PBT Measures',
-      icon: '/tariff/sps-tbt-measures.png',
+      icon: 'tariff/sps-tbt-measures.png',
       link: '',
     },
     {
       name: 'MEIS/RODTEP',
-      icon: '/tariff/meis-rodtep.png',
+      icon: 'tariff/meis-rodtep.png',
       link: '',
     },
     {
       name: 'GST Other',
-      icon: '/tariff/gst-other.png',
+      icon: 'tariff/gst-other.png',
       link: '',
     },
     {
       name: 'Duty Drawbacks',
-      icon: '/tariff/tax-refund.png',
+      icon: 'tariff/tax-refund.png',
       link: '',
     },
     {
       name: 'Tma',
-      icon: '/tariff/tma.png',
+      icon: 'tariff/tma.png',
       link: '',
     },
     {
       name: 'Exim Documentation',
-      icon: '/tariff/meis-rodtep.png',
+      icon: 'tariff/meis-rodtep.png',
       link: '',
     },
   ]

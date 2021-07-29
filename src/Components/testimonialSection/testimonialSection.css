@@ -269,3 +269,21 @@
   height: 10px;
   transition: all 300ms ease-in-out;
 }
+
+.testimonials-carousel-wrap .swiper-button-prev:after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f359';
+  font-size: 40px;
+  color: white;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.testimonials-carousel-wrap .swiper-button-next:after {
+  font-family: 'Font Awesome 5 Free';
+  content: '\f35a';
+  font-size: 40px;
+  color: white;
+  border-radius: 50%;
+  background-color: black;
+}

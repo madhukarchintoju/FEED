@@ -6,62 +6,62 @@ export default function StatutoryRegistration() {
   const dataList = [
     {
       name: 'FPO Registrations',
-      icon: '/compliances/statutory/fpor.png',
+      icon: 'compliances/statutory/fpor.png',
       link: '',
     },
     {
       name: 'FPC Registrationa',
-      icon: '/compliances/statutory/fpcr.png',
+      icon: 'compliances/statutory/fpcr.png',
       link: '',
     },
     {
       name: 'GST Registrations',
-      icon: '/compliances/statutory/gstr.png',
+      icon: 'compliances/statutory/gstr.png',
       link: '',
     },
     {
       name: 'IEC Registrations',
-      icon: '/compliances/statutory/ieccr.png',
+      icon: 'compliances/statutory/ieccr.png',
       link: '',
     },
     {
       name: 'MSME Registrations',
-      icon: '/compliances/statutory/msme.png',
+      icon: 'compliances/statutory/msme.png',
       link: '',
     },
     {
       name: 'PAN Registrations',
-      icon: '/compliances/statutory/pan.png',
+      icon: 'compliances/statutory/pan.png',
       link: '',
     },
     {
       name: 'FSSAI Registrations',
-      icon: '/compliances/statutory/fssai.png',
+      icon: 'compliances/statutory/fssai.png',
       link: '',
     },
     {
       name: 'ISO Registrations',
-      icon: '/compliances/statutory/iso.png',
+      icon: 'compliances/statutory/iso.png',
       link: '',
     },
     {
       name: 'Shops Establishments',
-      icon: '/compliances/statutory/se.png',
+      icon: 'compliances/statutory/se.png',
       link: '',
     },
     {
       name: 'Trade License',
-      icon: '/compliances/statutory/trade.png',
+      icon: 'compliances/statutory/trade.png',
       link: '',
     },
     {
       name: 'Labour License',
-      icon: '/compliances/statutory/labour.png',
+      icon: 'compliances/statutory/labour.png',
       link: '',
     },
     {
       name: 'Other Registrations',
-      icon: '/compliances/statutory/anyother.png',
+      icon: 'compliances/statutory/anyother.png',
       link: '',
     },
   ]
