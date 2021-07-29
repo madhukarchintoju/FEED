@@ -6,32 +6,32 @@ export default function MyToolsFarmer() {
   const dataList = [
     {
       name: '',
-      icon: '/farmer/my-tools-farmer-crop-exp-tool.png',
+      icon: 'farmer/my-tools-farmer-crop-exp-tool.png',
       link: '',
     },
     {
       name: '',
-      icon: '/farmer/my-tools-farmer-crop-advisory.png',
+      icon: 'farmer/my-tools-farmer-crop-advisory.png',
       link: '',
     },
     {
       name: '',
-      icon: '/farmer/my-tools-farmer-farm-equipment.png',
+      icon: 'farmer/my-tools-farmer-farm-equipment.png',
       link: '',
     },
     {
       name: '',
-      icon: '/farmer/my-tools-farmer-find-dealers.png',
+      icon: 'farmer/my-tools-farmer-find-dealers.png',
       link: '',
     },
     {
       name: '',
-      icon: '/farmer/my-tools-farmer-value-addition-units.png',
+      icon: 'farmer/my-tools-farmer-value-addition-units.png',
       link: '',
     },
     {
       name: '',
-      icon: '/farmer/my-tools-farmer-fertilizer-calculator.png',
+      icon: 'farmer/my-tools-farmer-fertilizer-calculator.png',
       link: '',
     },
     {
@@ -41,17 +41,17 @@ export default function MyToolsFarmer() {
     },
     {
       name: '',
-      icon: '/farmer/my-tools-farmer-loan-services.png',
+      icon: 'farmer/my-tools-farmer-loan-services.png',
       link: '',
     },
     {
       name: '',
-      icon: '/farmer/my-tools-farmer-insurance-services.png',
+      icon: 'farmer/my-tools-farmer-insurance-services.png',
       link: '',
     },
     {
       name: '',
-      icon: '/farmer/my-tools-farmer-logistics-services.png',
+      icon: 'farmer/my-tools-farmer-logistics-services.png',
       link: '',
     },
   ]

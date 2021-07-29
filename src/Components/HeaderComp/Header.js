@@ -14,7 +14,7 @@ export default function Header() {
   const languageChange = (event) => {
     i18n.changeLanguage(event.target.value)
   }
-  const isMobile = window.innerWidth > 769 ? false : true
+  const isMobile = window.innerWidth > 869 ? false : true
   const [open, setOpen] = useState(false)
   const toggleDrawer = () => {
     setOpen(true)
@@ -29,7 +29,7 @@ export default function Header() {
       <div className="row container-fluid sticky-header header-top wrapper">
         <div className="feed-logo">
           <img
-            src={`${process.env.PUBLIC_URL}/assets/home/feedlogonew.png`}
+            src={`${process.env.PUBLIC_URL}/assets/home/feedlogonewtitle.png`}
             className="feed-logo-img"
             alt="feed-logo"
           />
@@ -75,12 +75,35 @@ export default function Header() {
                 </select>
               </form>
             </div>
-            <div className="my-auto">
-              <button className="btn btn-primary download-btn form-control">
+            <div className="btn-group">
+              <button className="download-btn btn-primary mr-1">
                 <i className="fa fa-download" aria-hidden="true"></i>{' '}
                 <span className="download-btn-text">Downloads</span>
               </button>
+              <Link to="/mediapage">
+                <button className="btn-primary mr-1">Media</button>
+              </Link>
+              <button className="btn-primary">Blogs</button>
             </div>
+            {/* <div>
+              <ul className='nav'>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">
+                    Media
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">
+                    Blogs
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/">
+                    Prices
+                  </Link>
+                </li>
+              </ul>
+            </div> */}
             {/* <div className="my-auto search-bar">
               <form className="form-inline">
                 <div className="form-group has-search">
@@ -91,58 +114,65 @@ export default function Header() {
                 </div>
               </form>
             </div> */}
-            <div className="my-auto header-social-icons">
-              <a href="https://www.facebook.com/FEEDORGOFFICAL" target="_blank">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/facebook.svg`}
-                  width="25"
-                  alt="facebook-icon"
-                />
-              </a>
-              <a href="https://www.instagram.com" target="_blank">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/instagram.svg`}
-                  width="25"
-                  alt="instagram-icon"
-                />
-              </a>
-              <a href="https://twitter.com/feedorg_" target="_blank">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/twitter.svg`}
-                  width="25"
-                  alt="twitter-icon"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/74678041/admin/"
-                target="_blank"
-              >
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/linkedin.svg`}
-                  width="25"
-                  alt="linkedin-icon"
-                />
-              </a>
-              <a
-                href="https://www.youtube.com/channel/UCFE_feyAd4VsbMLDnUWIY4A"
-                target="_blank"
-              >
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/youtube.svg`}
-                  width="25"
-                  alt="youtube-icon"
-                />
-              </a>
-            </div>
+            {window.innerWidth > 425 ? (
+              <div className="my-auto header-social-icons">
+                <a
+                  href="https://www.facebook.com/FEEDORGOFFICAL"
+                  target="_blank"
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/facebook.svg`}
+                    width="25"
+                    alt="facebook-icon"
+                  />
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/instagram.svg`}
+                    width="25"
+                    alt="instagram-icon"
+                  />
+                </a>
+                <a href="https://twitter.com/feedorg_" target="_blank">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/twitter.svg`}
+                    width="25"
+                    alt="twitter-icon"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/74678041/admin/"
+                  target="_blank"
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/linkedin.svg`}
+                    width="25"
+                    alt="linkedin-icon"
+                  />
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCFE_feyAd4VsbMLDnUWIY4A"
+                  target="_blank"
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/youtube.svg`}
+                    width="25"
+                    alt="youtube-icon"
+                  />
+                </a>
+              </div>
+            ) : (
+              ''
+            )}
           </div>
           <div className="row white-bg">
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 resp-logo-title">
               <div className="resp-mobile-logo d-lg-none d-xl-none">
                 <img
-                  src={`${process.env.PUBLIC_URL}/assets/feed.png`}
+                  src={`${process.env.PUBLIC_URL}/assets/home/feedlogonewtitle.png`}
                   className="feed-logo-img img-fluid"
                   alt="feed-logo"
-                  width="60%"
+                  // width="60%"
                 />
               </div>
               <div>
@@ -186,7 +216,7 @@ export default function Header() {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                   >
-                    <i className="fa fa-bars" aria-hidden="true"></i>
+                    <i className="fa fa-bars p-0" aria-hidden="true"></i>
                   </button>
                   <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ml-3">
@@ -225,47 +255,20 @@ export default function Header() {
                           </Link>
                         </div>
                       </li>
-                      <li className="nav-item dropdown">
-                        <Link
-                          to="/"
-                          className="nav-link dropdown-toggle"
-                          id="navbarDropdown"
-                          role="button"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          {t('services')}
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/serviceSection">
+                          {t('services')}{' '}
                         </Link>
-                        <div
-                          className="dropdown-menu"
-                          aria-labelledby="navbarDropdown"
-                        >
-                          <Link to="/myfpo" className="dropdown-item">
-                            MY FPO
-                          </Link>
-                          <Link to="/myfarm" className="dropdown-item">
-                            MY FARM
-                          </Link>
-                          <Link to="/mybusiness" className="dropdown-item">
-                            MY BUSINESS
-                          </Link>
-                          <Link to="/mymarket" className="dropdown-item">
-                            MY MARKET
-                          </Link>
-                          <Link to="/myproduct" className="dropdown-item">
-                            MY PRODUCTS
-                          </Link>
-                          <Link to="/myexport" className="dropdown-item">
-                            MY EXPORTS
-                          </Link>
-                          <Link to="/myeducation" className="dropdown-item">
-                            MY EDUCATION
-                          </Link>
-                          <Link to="/mytools" className="dropdown-item">
-                            MY TOOLS
-                          </Link>
-                        </div>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/eventSection">
+                          {t('Events & Updates')}{' '}
+                        </Link>
+                      </li>
+                      <li className="nav-item">
+                        <Link className="nav-link" to="/myexports">
+                          Export Road Map
+                        </Link>
                       </li>
                       <li className="nav-item">
                         <Link className="nav-link" to="/feedWorkingSection">
@@ -282,17 +285,7 @@ export default function Header() {
                           {t('exports')}{' '}
                         </Link>
                       </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/myexports">
-                          Export Road Map
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/eventSection">
-                          {t('Events & Updates')}{' '}
-                        </Link>
-                      </li>
-                      <li className="nav-item">
+                      {/* <li className="nav-item">
                         <Link className="nav-link" to="/">
                           Media
                         </Link>
@@ -301,9 +294,9 @@ export default function Header() {
                         <Link className="nav-link" to="/">
                           Blogs
                         </Link>
-                      </li>
+                      </li> */}
                       <li className="nav-item">
-                        <Link className="nav-link" to="/">
+                        <Link className="nav-link" to="/mydashboard">
                           Prices
                         </Link>
                       </li>

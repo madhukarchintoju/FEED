@@ -6,8 +6,8 @@ import { makeStyles } from '@material-ui/core'
 export default function FpoAccount() {
   const useStyles = makeStyles((theme) => ({
     fpoAccountWrap: {
-      backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/bg/accounts.jpg")`,
-      backgroundSize: 'cover',
+      backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/accounts/myfpoaccountsbg.png")`,
+      backgroundSize: '100% 100%',
       backgroundRepeat: 'no-repeat',
     },
   }))
@@ -15,61 +15,55 @@ export default function FpoAccount() {
   const dataList = [
     {
       name: 'Create Vendor',
-      icon: '/accounts/createvendor.png',
+      icon: 'accounts/createvendor.png',
       link: '/myfpo/account/createvendor',
     },
     {
       name: 'Share Capital Registry',
-      icon: '/accounts/sharecapitalregistry.png',
+      icon: 'accounts/sharecapitalregistry.png',
       link: '',
     },
     {
       name: 'Purchase Registry',
-      icon: '/accounts/purcheseregistry.png',
+      icon: 'accounts/purcheseregistry.png',
       link: '',
     },
     {
       name: 'Sale Registry',
-      icon: '/accounts/salesregistry.png',
+      icon: 'accounts/salesregistry.png',
       link: '/myfpo/salesregister',
     },
     {
       name: 'Stock Registry',
-      icon: '/accounts/stockregistry.png',
+      icon: 'accounts/stockregistry.png',
       link: '',
     },
     {
       name: 'Create Product',
-      icon: '/accounts/createproduct.png',
+      icon: 'accounts/createproduct.png',
       link: '/myfpo/createProduct',
     },
     {
       name: 'Ledger Registry',
-      icon: '/accounts/ledgerregistry.png',
+      icon: 'accounts/ledgerregistry.png',
       link: '',
     },
     {
       name: 'Bank Registry',
-      icon: '/accounts/bankregistry.png',
+      icon: 'accounts/bankregistry.png',
       link: '',
     },
     {
       name: 'Cash Book Registry',
-      icon: '/accounts/cashbookregistry.png',
+      icon: 'accounts/cashbookregistry.png',
       link: '',
     },
     {
       name: 'FPO Reports',
-      icon: '/accounts/reports.png',
+      icon: 'accounts/reports.png',
       link: '',
     },
   ]
-  const headingSize = {
-    webWidth: 18,
-    mobWidth: 8,
-    webHeight: 2,
-    mobHeight: 1,
-  }
   const cardSize = {
     webWidth: 9,
     mobWidth: 4,
@@ -79,15 +73,7 @@ export default function FpoAccount() {
 
   return (
     <>
-      <div className={classes.fpoAccountWrap}>
-        <MyFpoListItem
-          dataList={dataList}
-          headingSize={headingSize}
-          cardTitle="/accounts/fpoaccountsheading.png"
-          headingAlign="flex-start"
-          cardSize={cardSize}
-        ></MyFpoListItem>
-      </div>
+      <MyFpoListItem dataList={dataList} cardSize={cardSize}></MyFpoListItem>
     </>
   )
 }

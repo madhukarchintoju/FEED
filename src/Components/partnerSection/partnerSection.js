@@ -15,9 +15,12 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay])
 
 export default function PartnerSection() {
   const useStyles = makeStyles((theme) => ({
+    partnerSectionWrap: {
+      marginTop: '1em',
+    },
     PartnerSection: {
       width: '98%',
-      margin: '2em auto 2em !important',
+      margin: '0.5em auto 2em !important',
       backgroundColor: 'white',
       borderRadius: '15px 15px 15px 15px',
       borderLeft: '5px solid orange',
@@ -36,6 +39,9 @@ export default function PartnerSection() {
   }))
   const classes = useStyles()
   const partnersLogo = [
+    {
+      logo: 'nabardlogo.png',
+    },
     {
       logo: 'bharatcall.png',
     },
@@ -57,64 +63,73 @@ export default function PartnerSection() {
   ]
   return (
     <>
-      <Grid container className={classes.PartnerSection}>
-        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <Grid container justify="center">
-            <h4 className="section-heading">Partners</h4>
-          </Grid>
-          <Grid className="row">
-            <Grid container justify="center">
-              <Swiper
-                loop={true}
-                navigation
-                autoplay={{ delay: 2000 }}
-                breakpoints={
-                  ({
-                    320: {
-                      slidesPerView: 1,
-                      spaceBetween: 20,
+      <Grid className={classes.partnerSectionWrap}>
+        <Grid container justifyContent="center">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/partners/partnersnameplate.png`}
+            alt="Event and Updates"
+          />
+        </Grid>
+        <Grid container className={classes.PartnerSection}>
+          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <Grid className="row partnerSlideWrap">
+              <Grid container justifyContent="center">
+                <Swiper
+                  loop={true}
+                  navigation
+                  autoplay={{ delay: 2000 }}
+                  breakpoints={
+                    ({
+                      320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                      },
                     },
-                  },
-                  {
-                    480: {
-                      slidesPerView: 3,
-                      spaceBetween: 30,
+                    {
+                      480: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                      },
                     },
-                  },
-                  {
-                    768: {
-                      slidesPerView: 2,
-                      spaceBetween: 40,
+                    {
+                      768: {
+                        slidesPerView: 2,
+                        spaceBetween: 40,
+                      },
                     },
-                  },
-                  {
-                    868: {
-                      slidesPerView: 5,
-                      spaceBetween: 40,
-                    },
-                  })
-                }
-              >
-                <Grid container>
-                  <Grid>
-                    {partnersLogo.map((item, index) => (
-                      <SwiperSlide key={index} className={classes.partnerSlide}>
-                        <Grid>
-                          <img
-                            variant="square"
-                            src={`${process.env.PUBLIC_URL}/assets/partners/${item.logo}`}
-                            className={classes.partnerLogo}
-                            alt="FEED PARTNERS LOGO"
-                          />
-                        </Grid>
-                      </SwiperSlide>
-                    ))}
+                    {
+                      868: {
+                        slidesPerView: 5,
+                        spaceBetween: 40,
+                      },
+                    })
+                  }
+                >
+                  <Grid container>
+                    <Grid>
+                      {partnersLogo.map((item, index) => (
+                        <SwiperSlide
+                          key={index}
+                          className={classes.partnerSlide}
+                        >
+                          <Grid>
+                            <img
+                              variant="square"
+                              src={`${process.env.PUBLIC_URL}/assets/partners/${item.logo}`}
+                              className={classes.partnerLogo}
+                              alt="FEED PARTNERS LOGO"
+                              width="100"
+                            />
+                          </Grid>
+                        </SwiperSlide>
+                      ))}
+                    </Grid>
                   </Grid>
-                </Grid>
-              </Swiper>
+                </Swiper>
+              </Grid>
             </Grid>
-          </Grid>
-        </div>
+          </div>
+        </Grid>
       </Grid>
     </>
   )

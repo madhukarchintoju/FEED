@@ -1,7 +1,7 @@
 import React from 'react'
 import './sideNavBar.css'
 import clsx from 'clsx'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import {
   makeStyles,
   Drawer,
@@ -21,7 +21,6 @@ export default function SideNavBar(props) {
 
   const [open, setOpen] = React.useState(screenWidth)
   const [selected, setSelected] = React.useState()
-
   const useStyles = makeStyles((theme) => ({
     hide: {
       display: 'none',
@@ -50,7 +49,9 @@ export default function SideNavBar(props) {
       justifyContent: 'flex-end',
       padding: theme.spacing(0, 1),
       ...theme.mixins.toolbar,
-      minHeight: '50px !important',
+      minHeight: '0px !important',
+      backgroundColor: 'grey',
+      color: 'white',
     },
     content: {
       flexGrow: 1,
@@ -93,7 +94,12 @@ export default function SideNavBar(props) {
           }),
         }}
       >
-        <div className={classes.toolbar}>
+        <div container className={classes.toolbar}>
+          {window.innerWidth > 769 ? (
+            <h5 className="mt-2">{props.serviceTitle}</h5>
+          ) : (
+            ''
+          )}
           {open ? (
             <IconButton onClick={handleDrawerClose}>
               <ChevronLeftIcon style={{ color: props.textColor }} />

@@ -4,17 +4,12 @@ import { Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core'
 
 export default function FpoAgmBoard() {
-  const useStyles = makeStyles((theme) => ({
-    fpoAgmBoardWrap: {
-      backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/bg/agmboard.jpg")`,
-      backgroundSize: 'cover',
-    },
-  }))
+  const useStyles = makeStyles((theme) => ({}))
   const classes = useStyles()
   const agmList = [
     {
       name: 'Mango',
-      icon: '/agmboard/agm/bylaw.png',
+      icon: '/agmboard/agm/bylaws.png',
       link: '',
     },
     {
@@ -24,17 +19,17 @@ export default function FpoAgmBoard() {
     },
     {
       name: 'Mango',
-      icon: '/agmboard/agm/notices.png',
+      icon: '/agmboard/agm/rulesandact.png',
       link: '',
     },
     {
       name: 'Mango',
-      icon: '/agmboard/agm/rulesandacts.png',
+      icon: '/agmboard/agm/noticesagm.png',
       link: '',
     },
     {
       name: 'Mango',
-      icon: '/agmboard/agm/resolutions.png',
+      icon: '/agmboard/agm/resolution.png',
       link: '',
     },
   ]
@@ -42,7 +37,7 @@ export default function FpoAgmBoard() {
   const bdmList = [
     {
       name: '',
-      icon: '/agmboard/bdm/dutiesofdirectors.png',
+      icon: '/agmboard/bdm/dutiesanddirectors.png',
       link: '',
     },
     {
@@ -57,17 +52,17 @@ export default function FpoAgmBoard() {
     },
     {
       name: '',
-      icon: '/agmboard/bdm/notices.png',
+      icon: '/agmboard/bdm/noticesbod.png',
       link: '',
     },
     {
       name: '',
-      icon: '/agmboard/bdm/rulesandacts.png',
+      icon: '/agmboard/bdm/rulesandactbod.png',
       link: '',
     },
     {
       name: '',
-      icon: '/agmboard/bdm/resolutions.png',
+      icon: '/agmboard/bdm/resolutionbod.png',
       link: '',
     },
   ]
@@ -79,26 +74,24 @@ export default function FpoAgmBoard() {
   }
   return (
     <>
-      <Grid className={classes.fpoAgmBoardWrap}>
-        <Grid container direction="row">
-          <Grid item lg={6} xs={12}>
-            <MyFpoListItem
-              dataList={agmList}
-              title="Annual General Meeting"
-              cardSize={cardSize}
-              headingAlign="center"
-              cardsView={4}
-            ></MyFpoListItem>
-          </Grid>
-          <Grid item lg={6} xs={12}>
-            <MyFpoListItem
-              dataList={bdmList}
-              title="Board of Directors Meeting"
-              cardSize={cardSize}
-              headingAlign="center"
-              cardsView={4}
-            ></MyFpoListItem>
-          </Grid>
+      <Grid container direction="row" justifyContent="space-between">
+        <Grid item lg={5} xs={12}>
+          <MyFpoListItem
+            dataList={agmList}
+            title="Annual General Meeting"
+            cardSize={cardSize}
+            headingAlign="center"
+            cardsView={6}
+          ></MyFpoListItem>
+        </Grid>
+        <Grid item lg={5} xs={12}>
+          <MyFpoListItem
+            dataList={bdmList}
+            title="Board of Directors Meeting"
+            cardSize={cardSize}
+            headingAlign="center"
+            cardsView={6}
+          ></MyFpoListItem>
         </Grid>
       </Grid>
     </>

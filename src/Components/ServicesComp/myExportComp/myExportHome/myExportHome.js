@@ -6,62 +6,62 @@ export default function MyExportHome() {
   const dataList = [
     {
       name: 'Why Exports',
-      icon: '/home/why-exports.png',
+      icon: 'home/why-exports.png',
       link: '/myexport/whyexport',
     },
     {
       name: 'Start Export',
-      icon: '/home/start-export.png',
+      icon: 'home/start-export.png',
       link: '/myexport/startexport',
     },
     {
       name: 'Product Selection',
-      icon: '/home/PRODUCT-SELECTION.png',
+      icon: 'home/PRODUCT-SELECTION.png',
       link: '/myexport/exportproductselection',
     },
     {
       name: 'Buyers Connection',
-      icon: '/home/BUYERS-CONNECTIONS.png',
+      icon: 'home/BUYERS-CONNECTIONS.png',
       link: '/myexport/exportbuyersconnection',
     },
     {
       name: 'Exim Policy Regulations',
-      icon: '/home/POLICIES.png',
+      icon: 'home/POLICIES.png',
       link: '/myexport/eximpolicyregulation',
     },
     {
       name: 'Finance',
-      icon: '/home/FINANCE.png',
+      icon: 'home/FINANCE.png',
       link: '',
     },
     {
       name: 'Process Export Order',
-      icon: '/home/PROCESS.png',
+      icon: 'home/PROCESS.png',
       link: '/myexport/processexportorder',
     },
     {
       name: 'Exim Documentation',
-      icon: '/home/DOCUMENTATION.png',
+      icon: 'home/DOCUMENTATION.png',
       link: '/myexport/eximdocumentation',
     },
     {
       name: 'Global Trade Updates',
-      icon: '/home/GLOBAL-UPDATE.png',
+      icon: 'home/GLOBAL-UPDATE.png',
       link: '/myexport/globaltradeupdates',
     },
     {
       name: 'Events',
-      icon: '/home/EVENTS.png',
+      icon: 'home/EVENTS.png',
       link: '/myexport/exportevents',
     },
     {
       name: 'Tools & Services',
-      icon: '/home/TOOLS-SERVICES.png',
+      icon: 'home/TOOLS-SERVICES.png',
       link: '/myexport/exporttoolservices',
     },
     {
       name: 'Tarrif',
-      icon: '/home/TARIFF.png',
+      icon: 'home/TARIFF.png',
       link: '/myexport/eximtarrifbenefits',
     },
   ]

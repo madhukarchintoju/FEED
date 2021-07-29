@@ -30,6 +30,7 @@ import AnalyticsMain from './Components/analytics/analyticsMain/analyticsMain'
 import MyDashboard from './Components/myDashboard/myDashboard'
 import ContactUs from './Components/contactus/contactus'
 import DashboardMain from './Components/myDashboard/dashboardMain/dashboardMain'
+import MediaPage from './Components/mediaPage/mediaPage'
 
 function App() {
   const ScrollToTop = () => {
@@ -69,6 +70,7 @@ function App() {
             exact
             component={NewsletterSection}
           />
+          <Route path="/mediapage" component={MediaPage}></Route>
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
           <Route path="/myfpo" component={MyFpoMain} />

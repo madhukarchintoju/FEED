@@ -6,27 +6,27 @@ export default function AnnualCompliances() {
   const dataList = [
     {
       name: 'Income Tax Returns',
-      icon: '/compliances/annual/itreturns.png',
+      icon: 'compliances/annual/itreturns.png',
       link: '',
     },
     {
       name: 'GST Annual Returns',
-      icon: '/compliances/annual/gstannualreturns.png',
+      icon: 'compliances/annual/gstannualreturns.png',
       link: '',
     },
     {
       name: 'Preparations of Financials',
-      icon: '/compliances/annual/preparationsoffinancials.png',
+      icon: 'compliances/annual/preparationsoffinancials.png',
       link: '',
     },
     {
       name: 'Audit Report',
-      icon: '/compliances/annual/auditreport.png',
+      icon: 'compliances/annual/auditreport.png',
       link: '',
     },
     {
       name: 'Stock Checking',
-      icon: '/compliances/annual/stockchecking.png',
+      icon: 'compliances/annual/stockchecking.png',
       link: '',
     },
   ]

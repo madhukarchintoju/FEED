@@ -1,7 +1,18 @@
 import React from 'react'
 import './myFarmHome.css'
 import { Link } from 'react-router-dom'
-import { Grid, Avatar, Button, Icon, makeStyles } from '@material-ui/core'
+import {
+  Grid,
+  Avatar,
+  Button,
+  Icon,
+  makeStyles,
+  ListItem,
+  ListItemText,
+  Typography,
+  List,
+  Divider,
+} from '@material-ui/core'
 
 export default function MyFarmHome() {
   const useStyles = makeStyles((theme) => ({
@@ -20,8 +31,8 @@ export default function MyFarmHome() {
       height: '20em',
     },
     navLink: {
-      width: '6em',
-      height: '6em',
+      width: '8em',
+      height: '8em',
       '@media (max-width: 768px)': {
         width: '4em',
         height: '4em',
@@ -42,6 +53,21 @@ export default function MyFarmHome() {
     color: {
       color: 'black',
       fontWeight: '500',
+    },
+    newsfeedsWrap: {
+      boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+    },
+    newsfeeds: {
+      overflow: 'auto',
+      height: '400px',
+      backgroundColor: 'white',
+    },
+    newsfeedsHeading: {
+      height: '2em',
+      textAlign: 'center',
+      backgroundColor: '#d2cf6e',
     },
   }))
   const classes = useStyles()
@@ -124,62 +150,60 @@ export default function MyFarmHome() {
     },
   ]
 
+  const fpcnewsupdates = [
+    {
+      primary: 'FEED',
+      secondary:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      primary: 'NABARD',
+      secondary:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      primary: 'FEED',
+      secondary:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      primary: 'FEED',
+      secondary:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      primary: 'FEED',
+      secondary:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+  ]
   return (
     <>
       <Grid
         container
         direction="row"
-        justify="space-around"
+        justifyContent="space-around"
         alignItems="flex-start"
         className={classes.grid}
       >
-        <Grid
-          container
-          item
-          direction="column"
-          justify="space-evenly"
-          alignItems="center"
-          className={classes.imageGrid}
-          xs={12}
-          lg={3}
-        >
-          <Grid item xs>
-            <img
-              className={classes.grassLogo}
-              src={`${process.env.PUBLIC_URL}/assets/farm-icon.jpg`}
-              alt=""
-            />
-          </Grid>
-          <Grid item xs>
-            <h1>MY FARM</h1>
-          </Grid>
-          <Grid item xs>
-            <img
-              className={classes.antLogo}
-              src={`${process.env.PUBLIC_URL}/assets/ant.png`}
-              alt=""
-            />
-          </Grid>
-        </Grid>
-
         <Grid
           container
           direction="row"
           item
           lg
           xs={12}
-          justify="flex-start"
+          justifyContent="flex-start"
           alignItems="center"
         >
           {homeData.map((item, index) => (
             <Grid
               key={index}
               xs={6}
-              lg={2}
+              lg={3}
               item
               container
               direction="column"
-              justify="center"
+              justifyContent="center"
               alignItems="center"
               className="list-item"
               component={Link}
@@ -200,8 +224,28 @@ export default function MyFarmHome() {
             </Grid>
           ))}
         </Grid>
+        <Grid lg={3} item>
+          <Grid className={classes.newsfeedsWrap}>
+            <Grid className={classes.newsfeedsHeading}>
+              <h6>News Updates &amp; Info</h6>
+            </Grid>
+            <List className={classes.newsfeeds}>
+              {fpcnewsupdates.map((item, index) => (
+                <Grid key={index}>
+                  <ListItem alignItems="flex-start">
+                    <ListItemText
+                      primary={item.primary}
+                      secondary={item.secondary}
+                    />
+                  </ListItem>
+                  <Divider />
+                </Grid>
+              ))}
+            </List>
+          </Grid>
+        </Grid>
       </Grid>
-      <Grid container justify="center">
+      <Grid container justifyContent="center">
         <Button className={classes.feedConnect} variant="contained">
           <b>Connect FEED </b>
           <Icon className="fas fa-angle-double-right"></Icon>

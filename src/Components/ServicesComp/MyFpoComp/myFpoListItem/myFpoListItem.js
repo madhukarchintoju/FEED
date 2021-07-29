@@ -49,7 +49,7 @@ export default function MyFpoListItem(props) {
     <div className="my-farm-list">
       <Grid
         container
-        justify={props.headingAlign || 'center'}
+        justifyContent={props.headingAlign || 'center'}
         className={classes.titleHeading}
       >
         {props.cardTitle ? (
@@ -65,7 +65,7 @@ export default function MyFpoListItem(props) {
       <Grid
         container
         direction="row"
-        justify={props.cardsJustify || 'flex-start'}
+        justifyContent={props.cardsJustify || 'flex-start'}
         alignItems="center"
       >
         {props.dataList.map((item, index) => (
@@ -80,7 +80,7 @@ export default function MyFpoListItem(props) {
             className="listItem"
             alignItems="center"
           >
-            <Grid item container justify="center">
+            <Grid item container justifyContent="center">
               <Grid>
                 <Avatar
                   to={item.link}
@@ -97,7 +97,7 @@ export default function MyFpoListItem(props) {
           </Grid>
         ))}
       </Grid>
-      <Grid container justify="center" alignItems="flex-end">
+      <Grid container justifyContent="center" alignItems="flex-end">
         <Button className={classes.feedConnect} variant="contained">
           <b>Connect FEED </b>
           <Icon className="fas fa-angle-double-right"></Icon>

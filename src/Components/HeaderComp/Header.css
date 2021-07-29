@@ -20,6 +20,10 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
+  box-shadow: inset 0px 0px 10px 0px #ababab;
+  -webkit-box-shadow: inset 0px 0px 10px 0px #ababab;
+  -moz-box-shadow: inset 0px 0px 10px 0px #ababab;
+  -o-box-shadow: inset 0px 0px 10px 0px #ababab;
 }
 
 .header-top {
@@ -37,7 +41,7 @@
   height: inherit;
   /* padding: 10px; */
   margin-bottom: 3px;
-  border-radius: 0px 0px 50px 50px;
+  border-radius: 0px 0px 30px 30px;
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.75);
@@ -272,7 +276,7 @@
 
   .title {
     color: red;
-    font-size: 0.75em !important;
+    font-size: 0.85em !important;
     font-weight: 500;
     letter-spacing: 0.5px;
     word-spacing: 0.5px;

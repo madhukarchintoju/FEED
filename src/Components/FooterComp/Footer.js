@@ -135,7 +135,7 @@ export default function Footer() {
       link: '/myfpo/fpoloanschemes',
     },
     {
-      name: 'Connect FEED',
+      name: 'Connect FPC',
       link: '/',
     },
   ]
@@ -405,7 +405,7 @@ export default function Footer() {
           <Grid
             container
             direction="row"
-            justify="space-evenly"
+            justifyContent="space-evenly"
             alignContent="center"
           >
             <Grid item lg={1} md={6} sm={6} xs={12}>
@@ -425,9 +425,9 @@ export default function Footer() {
             </Grid>
             <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid className={classes.footerLinkHeading}>
-                <h6>MY EXPORTS</h6>
+                <h6>MY FPO</h6>
               </Grid>
-              {myExportsLinks.map((item, index) => (
+              {myFpoLinks.map((item, index) => (
                 <Grid
                   key={index}
                   to={item.link}
@@ -454,36 +454,34 @@ export default function Footer() {
               ))}
             </Grid>
             <Grid item lg={1} md={6} sm={6} xs={12}>
-              <Grid>
-                <Grid className={classes.footerLinkHeading}>
-                  <h6>MY FPO</h6>
-                </Grid>
-                {myFpoLinks.map((item, index) => (
-                  <Grid
-                    key={index}
-                    to={item.link}
-                    component={Link}
-                    className={classes.linkColor}
-                  >
-                    <li className="nav-link">{item.name}</li>
-                  </Grid>
-                ))}
+              <Grid className={classes.footerLinkHeading}>
+                <h6>MY PRODUCTS</h6>
               </Grid>
-              <Grid className="mt-2">
-                <Grid className={classes.footerLinkHeading}>
-                  <h6>CAREERS</h6>
+              {myProductsLinks.map((item, index) => (
+                <Grid
+                  key={index}
+                  to={item.link}
+                  component={Link}
+                  className={classes.linkColor}
+                >
+                  <li className="nav-link">{item.name}</li>
                 </Grid>
-                {careerLinks.map((item, index) => (
-                  <Grid
-                    key={index}
-                    to={item.link}
-                    component={Link}
-                    className={classes.linkColor}
-                  >
-                    <li className="nav-link">{item.name}</li>
-                  </Grid>
-                ))}
+              ))}
+            </Grid>
+            <Grid item lg={1} md={6} sm={6} xs={12}>
+              <Grid className={classes.footerLinkHeading}>
+                <h6>MY EXPORTS</h6>
               </Grid>
+              {myExportsLinks.map((item, index) => (
+                <Grid
+                  key={index}
+                  to={item.link}
+                  component={Link}
+                  className={classes.linkColor}
+                >
+                  <li className="nav-link">{item.name}</li>
+                </Grid>
+              ))}
             </Grid>
             <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid>
@@ -518,34 +516,36 @@ export default function Footer() {
               </Grid>
             </Grid>
             <Grid item lg={1} md={6} sm={6} xs={12}>
-              <Grid className={classes.footerLinkHeading}>
-                <h6>MY PRODUCTS</h6>
-              </Grid>
-              {myProductsLinks.map((item, index) => (
-                <Grid
-                  key={index}
-                  to={item.link}
-                  component={Link}
-                  className={classes.linkColor}
-                >
-                  <li className="nav-link">{item.name}</li>
+              <Grid>
+                <Grid className={classes.footerLinkHeading}>
+                  <h6>MY TOOLS &amp; SERVICES</h6>
                 </Grid>
-              ))}
-            </Grid>
-            <Grid item lg={1} md={6} sm={6} xs={12}>
-              <Grid className={classes.footerLinkHeading}>
-                <h6>MY TOOLS &amp; SERVICES</h6>
+                {myToolServicesLinks.map((item, index) => (
+                  <Grid
+                    key={index}
+                    to={item.link}
+                    component={Link}
+                    className={classes.linkColor}
+                  >
+                    <li className="nav-link">{item.name}</li>
+                  </Grid>
+                ))}
               </Grid>
-              {myToolServicesLinks.map((item, index) => (
-                <Grid
-                  key={index}
-                  to={item.link}
-                  component={Link}
-                  className={classes.linkColor}
-                >
-                  <li className="nav-link">{item.name}</li>
+              <Grid className="mt-2">
+                <Grid className={classes.footerLinkHeading}>
+                  <h6>CAREERS</h6>
                 </Grid>
-              ))}
+                {careerLinks.map((item, index) => (
+                  <Grid
+                    key={index}
+                    to={item.link}
+                    component={Link}
+                    className={classes.linkColor}
+                  >
+                    <li className="nav-link">{item.name}</li>
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
             <Grid item lg={1} md={6} sm={6} xs={12}>
               <Grid>
@@ -579,7 +579,7 @@ export default function Footer() {
         )}
         <Grid
           container
-          justify="space-evenly"
+          justifyContent="space-evenly"
           className={classes.footerPolicyWrap}
         >
           <Grid>

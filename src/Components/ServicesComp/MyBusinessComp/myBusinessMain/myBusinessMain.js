@@ -54,6 +54,7 @@ export default function MyBusinessMain() {
           data={navData}
           bgColor="#8660a9"
           textColor="white"
+          serviceTitle="MY BUSINESS"
         ></SideNavBar>
         <div className="col">
           <Switch>

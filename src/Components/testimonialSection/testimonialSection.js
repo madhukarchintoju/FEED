@@ -159,97 +159,101 @@ export default function TestimonialSection() {
           </div>
         </div>
       </Grid> */}
-      <Grid container justify="center">
-        <Grid className="section-title">
-          <h2>Testimonials.</h2>
-          <span className="section-separator"></span>
-          <p>See what people are saying.</p>
+      <Grid>
+        <Grid container justifyContent="center" className="mb-1">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/testimonials/testimonialsnameplate.png`}
+            alt="Event and Updates"
+          />
         </Grid>
-      </Grid>
-      <div className="testimonials-carousel-wrap">
-        {/* <div class="listing-carousel-button listing-carousel-button-next"><i class="fa fa-caret-right" style={{ color: '#fff' }}></i></div> */}
-        {/* <div class="listing-carousel-button listing-carousel-button-prev"><i class="fa fa-caret-left" style={{ color: '#fff' }}></i></div> */}
-        <Grid>
-          <Swiper
-            loop={true}
-            navigation
-            autoplay={{
-              delay: 2000,
-            }}
-            centeredSlides={true}
-            breakpoints={
-              ({
-                320: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
+        <div
+          className="testimonials-carousel-wrap"
+          style={{
+            backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/testimonials/s.jpg")`,
+          }}
+        >
+          <Grid>
+            <Swiper
+              loop={true}
+              navigation
+              autoplay={{
+                delay: 2000,
+              }}
+              centeredSlides={true}
+              breakpoints={
+                ({
+                  320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
                 },
-              },
-              {
-                480: {
-                  slidesPerView: 1,
-                  spaceBetween: 30,
+                {
+                  480: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                  },
                 },
-              },
-              {
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 40,
+                {
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
                 },
-              },
-              {
-                868: {
-                  slidesPerView: 3,
-                  spaceBetween: 40,
-                },
-              })
-            }
-          >
-            <Grid>
-              {testimonialDetails.map((item, index) => (
-                <SwiperSlide key={index}>
-                  <div className="testimonialCard">
-                    <div className="testimonilaAvatar">
-                      <img
-                        src={`${process.env.PUBLIC_URL}/assets/testimonials/${item.img}`}
-                        alt=""
-                        width="100"
-                      />
-                    </div>
-                    <div className="testimonials-text-before">
-                      <i className="fa fa-quote-left"></i>
-                    </div>
-                    <div className="testimonials-text">
-                      <p className="testimonialMessage">{item.message}</p>
-                      <span className="text-link">
-                        <Rating
-                          name="size-small"
-                          precision={0.5}
-                          defaultValue={5}
-                          size="small"
+                {
+                  868: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                  },
+                })
+              }
+            >
+              <Grid>
+                {testimonialDetails.map((item, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="testimonialCard">
+                      <div className="testimonilaAvatar">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/testimonials/${item.img}`}
+                          alt=""
+                          width="100"
                         />
-                      </span>
-                      <div className="testimonials-avatar">
-                        <h3>{item.name}</h3>
-                        <h5 className="testimonialProfession">
-                          {item.profession}
-                        </h5>
-                        {/* <div class="listing-rating">
+                      </div>
+                      <div className="testimonials-text-before">
+                        <i className="fa fa-quote-left"></i>
+                      </div>
+                      <div className="testimonials-text">
+                        <p className="testimonialMessage">{item.message}</p>
+                        <span className="text-link">
+                          <Rating
+                            name="size-small"
+                            precision={0.5}
+                            defaultValue={5}
+                            size="small"
+                          />
+                        </span>
+                        <div className="testimonials-avatar">
+                          <h3>{item.name}</h3>
+                          <h5 className="testimonialProfession">
+                            {item.profession}
+                          </h5>
+                          {/* <div class="listing-rating">
                           <i class="fa fa-star"></i>
                         </div> */}
+                        </div>
+                      </div>
+                      <div className="testimonials-text-after">
+                        <i className="fa fa-quote-right"></i>
                       </div>
                     </div>
-                    <div className="testimonials-text-after">
-                      <i className="fa fa-quote-right"></i>
-                    </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Grid>
-          </Swiper>
-        </Grid>
+                  </SwiperSlide>
+                ))}
+              </Grid>
+            </Swiper>
+          </Grid>
 
-        {/* <div class="tc-pagination"></div> */}
-      </div>
+          {/* <div class="tc-pagination"></div> */}
+        </div>
+      </Grid>
     </>
   )
 }
