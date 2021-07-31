@@ -21,7 +21,7 @@ export default function AboutFpo() {
     },
     {
       productName: 'Juice Bottle',
-      productImg: 'byproductsfour.jpeg',
+      productImg: 'byproducttwo.jpg',
       productContent: `Alice is a freelance web designer 
       and developer based in London. She is specialized in HTML5, CSS3, 
       JavaScript, Bootstrap, etc freelance web designer and developer based in London. 

@@ -18,11 +18,12 @@ import LegalCompliances from '../myFpoList/fpoComplainces/legalCompliances/legal
 import AnnualCompliances from '../myFpoList/fpoComplainces/annualCompliances/annualCompliances'
 import CreateProduct from '../myFpoList/fpoAccount/createProduct/createProduct'
 import SalesRegistry from '../myFpoList/fpoAccount/salesRegister/salesRegister'
+import WidgetsBar from '../../widgetsBar/widgetsBar'
 
 export default function MyFpoMain(props) {
   const background = {
     '/myfpo/home': {
-      backgroundColor: '#f8ffbe',
+      backgroundColor: '#f7f1dd',
     },
     '/myfpo/aboutfpo': {
       backgroundColor: '',
@@ -65,12 +66,12 @@ export default function MyFpoMain(props) {
   const navData = [
     {
       name: 'About FPC',
-      icon: 'fa fa-plus-circle',
+      icon: 'fas fa-info-circle',
       path: '/myfpo/aboutfpo',
     },
     {
       name: 'FPC Account',
-      icon: 'fa fa-address-card',
+      icon: 'fas fa-calculator',
       path: '/myfpo/fpoaccount',
     },
     {
@@ -85,12 +86,12 @@ export default function MyFpoMain(props) {
     },
     {
       name: 'FPC Compliances',
-      icon: 'fas fa-book-open',
+      icon: 'fas fa-file-invoice',
       path: '/myfpo/fpocomplainces',
     },
     {
       name: 'FPC AGM & Board',
-      icon: 'far fa-comments',
+      icon: 'fas fa-users',
       path: '/myfpo/fpoagmboard',
     },
     {
@@ -99,21 +100,21 @@ export default function MyFpoMain(props) {
       path: '/myfpo/fpoloanschemes',
     },
     {
-      name: 'FPC Connect',
-      icon: 'fas fa-handshake',
-      path: '/myfpo/fpoconnect',
+      name: 'Reports',
+      icon: 'fas fa-file-pdf',
+      path: '',
     },
     {
-      name: 'Reports',
-      icon: 'fas fa-handshake',
-      path: '',
+      name: 'FPC Connect',
+      icon: 'fas fa-network-wired',
+      path: '/myfpo/fpoconnect',
     },
   ]
   const useStyles = makeStyles((theme) => ({
     background: background[props.location.pathname],
   }))
   const classes = useStyles()
-  let history = useHistory()
+  const widgetsBar = <WidgetsBar />
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
@@ -123,36 +124,12 @@ export default function MyFpoMain(props) {
           data={navData}
           bgColor="#ffc107"
           textColor="black"
+          serviceTitleBg="rgb(107 109 153)"
           serviceTitle="MY FPC"
         ></SideNavBar>
         <div className="col-lg p-0 fpo-content-wrap">
-          <Grid
-            container
-            justifyContent="space-between"
-            style={{ marginBottom: '0.2em' }}
-          >
-            <Grid>
-              <Button
-                variant="contained"
-                color="primary"
-                startIcon={<Icon className="fas fa-arrow-left" />}
-                onClick={() => history.goBack()}
-              >
-                Back
-              </Button>
-            </Grid>
-            <Grid style={{ display: 'flex' }}>
-              <Grid>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  startIcon={<Icon className="fa fa-plus-circle" />}
-                >
-                  Add To Quick Menu
-                </Button>
-              </Grid>
-            </Grid>
-          </Grid>
+          {/* <WidgetsBar screenTitle="fpc home"></WidgetsBar> */}
+          {widgetsBar}
           <Switch>
             <Route path="/myfpo/home" component={MyFpoHome}></Route>
             <Route path="/myfpo/aboutfpo" component={AboutFpo}></Route>

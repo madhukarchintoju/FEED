@@ -36,7 +36,7 @@ export default function MyFpoHome(props) {
     },
     newsfeeds: {
       overflow: 'auto',
-      height: '420px',
+      height: '410px',
       // backgroundColor: 'red',
       // border:'1px solid red',
       padding: '2px',
@@ -47,9 +47,11 @@ export default function MyFpoHome(props) {
     },
     newsfeedsHeading: {
       height: '2em',
+      paddingTop: '5px',
+      justifyContent: 'center',
       textAlign: 'center',
       alignItems: 'center',
-      backgroundColor: '#111927',
+      backgroundColor: 'rgb(107 109 153)',
       color: 'white',
     },
   }))
@@ -133,6 +135,19 @@ export default function MyFpoHome(props) {
         // alignItems="flex-start"
         className="myfpo-home"
       >
+        <Grid item lg={12} className="p-1">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum.
+          </p>
+        </Grid>
         <Grid container item lg={8} xs={12}>
           {fpoHomeData.map((item, index) => (
             <Grid key={index} item xs={6} md={3} lg={3}>
@@ -153,7 +168,7 @@ export default function MyFpoHome(props) {
         <Grid lg={3} item>
           <Grid className={classes.newsfeedsWrap}>
             <Grid className={classes.newsfeedsHeading}>
-              <h6 className="my-auto">News Updates &amp; Info</h6>
+              <h6 className="my-auto mt-2">Updates &amp; Information</h6>
             </Grid>
             <List className={classes.newsfeeds}>
               {fpcnewsupdates.map((item, index) => (
@@ -172,11 +187,6 @@ export default function MyFpoHome(props) {
             </List>
           </Grid>
         </Grid>
-      </Grid>
-      <Grid container justifyContent="center" className="mt-3">
-        <Button className={classes.fpoConnectBtn} variant="contained">
-          <b>Connect FPC </b>
-        </Button>
       </Grid>
     </>
   )

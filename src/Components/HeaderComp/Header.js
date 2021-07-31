@@ -177,7 +177,7 @@ export default function Header() {
               </div>
               <div>
                 <h5 className="m-2 title text-center">
-                  FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP DEVELOPMENT MULTI
+                  FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP DEVELOPMENT MULTI
                   STATE COOPERATIVE SOCIETY LTD.
                 </h5>
                 <p className="reg-no text-right m-0">
@@ -227,7 +227,6 @@ export default function Header() {
                       </li>
                       <li className="nav-item dropdown">
                         <Link
-                          to="/"
                           className="nav-link dropdown-toggle"
                           id="navbarDropdown"
                           role="button"
@@ -241,17 +240,23 @@ export default function Header() {
                           className="dropdown-menu"
                           aria-labelledby="navbarDropdown"
                         >
+                          <Link to="/aboutsection" className="dropdown-item">
+                            About FEED
+                          </Link>
                           <Link to="/" className="dropdown-item">
                             Founder Message
                           </Link>
-                          <Link to="/" className="dropdown-item">
+                          {/* <Link to="/" className="dropdown-item">
                             Board of Directors
+                          </Link> */}
+                          <Link to="/" className="dropdown-item">
+                            FEED Core Team
                           </Link>
                           <Link to="/" className="dropdown-item">
-                            Core Team
+                            FEED Profile
                           </Link>
                           <Link to="/" className="dropdown-item">
-                            Company Profile
+                            Organization Structure
                           </Link>
                         </div>
                       </li>

@@ -16,8 +16,8 @@ export default function MyFarmGuide(props) {
       fontWeight: '500',
     },
     guideAvatar: {
-      width: '8em',
-      height: '3em',
+      width: '14em',
+      height: '5em',
       '@media (max-width: 768px)': {
         width: '6em',
         height: '2em',
@@ -43,9 +43,14 @@ export default function MyFarmGuide(props) {
       <Grid container justify="center" className={classes.guideTitle}>
         <h4>{props.title}</h4>
       </Grid>
-      <Grid container direction="row" justify="flex-start" alignItems="center">
+      <Grid
+        container
+        direction="row"
+        justify="space-evenly"
+        alignItems="center"
+      >
         {props.dataGuide.map((item, index) => (
-          <Grid key={index} xs={3} lg={2} item className={classes.guideItem}>
+          <Grid key={index} xs={3} lg={4} item className={classes.guideItem}>
             <div>
               <a
                 href={`${process.env.PUBLIC_URL}/assets/my-farm/pdf/${item.download}`}
