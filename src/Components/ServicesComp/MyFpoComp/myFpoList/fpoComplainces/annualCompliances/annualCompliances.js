@@ -46,7 +46,7 @@ export default function AnnualCompliances() {
     <>
       <MyFpoListItem
         dataList={dataList}
-        cardTitle="/compliances/annual/annualcomplianceshead.png"
+        cardTitle="compliances/annual/annualcomplianceshead.png"
         headingSize={headingSize}
         cardSize={cardSize}
         headingAlign="center"

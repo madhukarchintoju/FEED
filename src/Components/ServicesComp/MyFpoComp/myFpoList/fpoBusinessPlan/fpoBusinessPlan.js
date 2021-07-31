@@ -1,9 +1,50 @@
 import React from 'react'
-
+import { Grid, Button, Icon, Avatar, makeStyles } from '@material-ui/core'
 export default function FpoBusinessPlan() {
+  const useStyles = makeStyles((theme) => ({
+    businessPlanPara: {
+      margin: 'auto',
+      width: '90%',
+      padding: '2px',
+      textAlign: 'justify',
+      textJustify: 'inter-word',
+    },
+  }))
+  const classes = useStyles()
   return (
     <>
-      <h1>fpo business plan</h1>
+      <div>
+        <h1 className="text-center">FPC Business Plan</h1>
+        <Grid item lg={12} className={classes.businessPlanPara}>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s, when
+            an unknown printer took a galley of type and scrambled it to make a
+            type specimen book. It has survived not only five centuries, but
+            also the leap into electronic typesetting, remaining essentially
+            unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently
+            with desktop publishing software like Aldus PageMaker including
+            versions of Lorem Ipsum.
+          </p>
+        </Grid>
+        <Grid container justifyContent="center">
+          <a href="/" download>
+            <button className="btn btn-danger m-auto" download>
+              Download Business Plan <i class="fas fa-cloud-download-alt"></i>
+            </button>
+          </a>
+        </Grid>
+      </div>
     </>
   )
 }

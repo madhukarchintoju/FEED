@@ -66,7 +66,7 @@ export default function LegalCompliances() {
     <>
       <MyFpoListItem
         dataList={dataList}
-        cardTitle="/compliances/legal/legalcomplianceshead.png"
+        cardTitle="compliances/legal/legalcomplianceshead.png"
         headingSize={headingSize}
         cardSize={cardSize}
         headingAlign="center"

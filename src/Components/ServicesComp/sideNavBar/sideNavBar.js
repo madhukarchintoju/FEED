@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './sideNavBar.css'
 import clsx from 'clsx'
 import { Link, useHistory } from 'react-router-dom'
@@ -19,8 +19,9 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 export default function SideNavBar(props) {
   const screenWidth = window.innerWidth > 769 ? true : false
 
-  const [open, setOpen] = React.useState(screenWidth)
-  const [selected, setSelected] = React.useState()
+  const [open, setOpen] = useState(screenWidth)
+  const [selected, setSelected] = useState()
+  const [showServiceTitle, setShowServiceTitle] = useState(true)
   const useStyles = makeStyles((theme) => ({
     hide: {
       display: 'none',
@@ -50,8 +51,9 @@ export default function SideNavBar(props) {
       padding: theme.spacing(0, 1),
       ...theme.mixins.toolbar,
       minHeight: '0px !important',
-      backgroundColor: 'grey',
+      background: `${props.serviceTitleBg}` || 'grey',
       color: 'white',
+      // color:''
     },
     content: {
       flexGrow: 1,
@@ -66,18 +68,22 @@ export default function SideNavBar(props) {
     },
     selectedItem: {
       backgroundColor: '#ffdc75',
+      // background: 'rgb(230,185,52)',
+      // color: "white",
+      // background: 'linear-gradient(0deg, rgba(241,241,241,1) 0%, rgba(204,167,0,1) 45%)'
     },
   }))
   const classes = useStyles()
 
   const handleDrawerOpen = () => {
     setOpen(true)
+    setShowServiceTitle(true)
   }
 
   const handleDrawerClose = () => {
     setOpen(false)
+    setShowServiceTitle(false)
   }
-
   return (
     <div className="side-navbar">
       <Drawer
@@ -95,8 +101,8 @@ export default function SideNavBar(props) {
         }}
       >
         <div container className={classes.toolbar}>
-          {window.innerWidth > 769 ? (
-            <h5 className="mt-2">{props.serviceTitle}</h5>
+          {showServiceTitle ? (
+            <h5 className="mt-2 text-bold">{props.serviceTitle}</h5>
           ) : (
             ''
           )}
@@ -111,7 +117,7 @@ export default function SideNavBar(props) {
           )}
         </div>
         <Divider />
-        <List>
+        <List style={{ padding: '0em' }}>
           {props?.data.map((item, index) => (
             <div
               key={index}
@@ -135,7 +141,7 @@ export default function SideNavBar(props) {
                 <ListItemIcon>
                   <Icon
                     className={item.icon}
-                    style={{ color: props.textColor }}
+                    style={{ width: '2em', color: props.textColor }}
                   />
                 </ListItemIcon>
                 <ListItemText primary={item.name} />

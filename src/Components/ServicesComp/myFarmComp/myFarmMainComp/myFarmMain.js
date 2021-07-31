@@ -1,5 +1,6 @@
 import React from 'react'
 import './myFarmMain.css'
+import { Redirect, Route, Switch } from 'react-router-dom'
 import ServicesNavbar from '../../ServicesNavbar/ServicesNavbar'
 import SideNavBar from '../../sideNavBar/sideNavBar'
 import MyFarmFruits from '../myFarmProducts/fruits/fruits'
@@ -14,7 +15,6 @@ import PlantationCrop from '../myFarmProducts/plantationCrop/plantationCrop'
 import Poultry from '../myFarmProducts/poultry/poultry'
 import Spices from '../myFarmProducts/spices/spices'
 import Plants from '../myFarmProducts/plants/plants'
-import { Redirect, Route, Switch, useHistory } from 'react-router-dom'
 import MyFarmHome from '../myFarmHome/myFarmHome'
 import Fabric from '../myFarmProducts/fabric/fabric'
 import AnimalHusbandry from '../myFarmProducts/animalhusbandry/animalhusbandry'
@@ -99,8 +99,6 @@ export default function MyFarmMainComp() {
       path: '/myfarm/others',
     },
   ]
-  const history = useHistory()
-  console.log(history.location.pathname)
   return (
     <div>
       <ServicesNavbar></ServicesNavbar>
