@@ -64,7 +64,7 @@ export default function ContactUs() {
           <Grid lg={7} item>
             <h4 className="text-center">FEED Offices</h4>
             <Grid container justifyContent="space-between" className="mt-4">
-              <Grid>
+              {/* <Grid>
                 <h5 className="fas fa-building"> Head Office</h5>
                 <h5>New Delhi</h5>
                 <address>
@@ -98,7 +98,7 @@ export default function ContactUs() {
                     <i className="fas fa-globe"></i> www.feedorg.com
                   </small>
                 </Grid>
-              </Grid>
+              </Grid> */}
               <Grid>
                 <h5 className="fas fa-home"> Branch Office</h5>
                 <h5>Vijayawada</h5>

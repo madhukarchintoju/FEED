@@ -14,7 +14,7 @@ export default function MyItDm() {
         </Grid>
         <Grid>
           <Grid container lg={12} item justify="space-around">
-            <Grid className="card cards__item webDevCard">
+            <Grid className="itdmcard cards__item webDevCard">
               <div className="card__frame">
                 <div className="card__picture">
                   <img
@@ -41,7 +41,7 @@ export default function MyItDm() {
                 </ul>
               </div>
             </Grid>
-            <Grid className="card cards__item SocialMediaCard">
+            <Grid className="itdmcard cards__item SocialMediaCard">
               <div className="card__frame">
                 <div className="card__picture">
                   <img
@@ -63,7 +63,7 @@ export default function MyItDm() {
                 </ul>
               </div>
             </Grid>
-            <Grid className="card cards__item GoogleMarketingcard">
+            <Grid className="itdmcard cards__item GoogleMarketingcard">
               <div className="card__frame">
                 <div className="card__picture">
                   <img
@@ -87,7 +87,7 @@ export default function MyItDm() {
         </Grid>
         <Grid>
           <Grid container lg={12} item justify="space-around">
-            <Grid className="card cards__item mobileAppCard">
+            <Grid className="itdmcard cards__item mobileAppCard">
               <div className="card__frame">
                 <div className="card__picture">
                   <img
@@ -110,7 +110,7 @@ export default function MyItDm() {
                 </ul>
               </div>
             </Grid>
-            <Grid className="card cards__item smsCard">
+            <Grid className="itdmcard cards__item smsCard">
               <div className="card__frame">
                 <div className="card__picture">
                   <img
@@ -132,7 +132,7 @@ export default function MyItDm() {
                 </ul>
               </div>
             </Grid>
-            <Grid className="card cards__item offlineMarketingCard">
+            <Grid className="itdmcard cards__item offlineMarketingCard">
               <div className="card__frame">
                 <div className="card__picture">
                   <img
