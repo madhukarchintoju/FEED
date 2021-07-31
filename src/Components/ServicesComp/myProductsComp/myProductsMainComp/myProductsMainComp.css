@@ -1,0 +1,219 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.sections a {
+  text-decoration: none !important;
+  color: black !important;
+}
+.pp-side-menu {
+  padding: 0px !important;
+}
+.pp-side-menu h2 {
+  color: #00a651;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.pp-side-menu .card {
+  margin-bottom: 6px;
+  border-top-right-radius: 50px !important;
+  cursor: pointer;
+}
+.pp-side-menu .card-header {
+  position: relative;
+  background: #005e9e;
+  border-top-right-radius: 50px !important;
+  border: none !important;
+  outline: none !important;
+  padding: 10px;
+  overflow: hidden;
+}
+.pp-side-menu .card-header h4 {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  left: 28px;
+}
+.pp-side-menu .card-header button {
+  background: transparent;
+  color: white;
+  padding: 0px !important;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 30px;
+}
+.pp-side-menu .card-header button i {
+  font-size: 25px;
+}
+.pp-side-menu .card-header .shape {
+  width: 50px;
+  height: 50px;
+  background: #ee145b;
+  border: 1px solid white;
+  position: absolute;
+  top: -3px;
+  left: -32px;
+  transform: rotate(46deg);
+}
+.form-div {
+  padding-top: 10px !important;
+}
+.form {
+  width: 400px;
+  height: 350px;
+  background-image: linear-gradient(
+    to bottom,
+    #70d0f6,
+    #93d9f6,
+    #b1e2f7,
+    #ccebf8,
+    #e7f4f9
+  );
+  border-radius: 20px;
+  padding: 20px !important;
+  margin: 0 auto !important;
+}
+.form input {
+  border: none !important;
+  outline: none !important;
+  border-radius: 20px !important;
+}
+.form label {
+  font-weight: bold !important;
+}
+.form button {
+  border: none;
+  outline: none;
+  width: 40%;
+  padding: 10px !important;
+  color: white;
+  background: #ee1c24;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.connect-to-feed button {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 10px !important;
+  color: black;
+  background: #00baf2;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.sections .card {
+  width: 250px;
+  height: 200px;
+  border-radius: 20px;
+  margin: 10px 0px 20px 40px;
+}
+.sections .card-header {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.sections .card-body {
+  padding: 5px 0px 0px !important;
+}
+.sections .card-body ul {
+  padding: 0px 0px 0px 10px !important;
+}
+.sections .card-body li {
+  list-style-type: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.sections .card-body .icon img {
+  width: 80px;
+  height: 90px;
+}
+.sec-1 .card-header,
+.sec-2 .card-header,
+.sec-3 .card-header {
+  background: #ffcb05;
+}
+.sec-4 .card-header,
+.sec-5 .card-header,
+.sec-6 .card-header {
+  background: #c7ebfc;
+}
+.sec-7 .card-header,
+.sec-8 .card-header,
+.sec-9 .card-header {
+  background: #bfd730;
+}
+.sec-7 .card-body li {
+  font-size: 14px;
+}
+.sec-9 .card-body li {
+  font-size: 14px;
+}
+.sec-1 img,
+.sec-2 img,
+.sec-4 img {
+  position: absolute;
+  right: 20px;
+}
+@media only screen and (min-width: 801px) and (max-width: 1550px) {
+  .pp-side-menu h2 {
+    color: #00a651;
+    font-size: 20px;
+  }
+  .pp-side-menu .card-header {
+    padding: 8px;
+  }
+  .pp-side-menu .card-header h4 {
+    color: white;
+    font-size: 13px;
+    position: relative;
+    left: 28px;
+  }
+  .pp-side-menu .card-header button {
+    bottom: 10px;
+  }
+  .pp-side-menu .card-header button i {
+    font-size: 16px;
+  }
+  .pp-side-menu .card-header .shape {
+    top: -9px;
+    left: -40px;
+  }
+  .form {
+    width: 300px;
+    height: 325px;
+  }
+  .form label {
+    font-size: 13px;
+  }
+  .form input {
+    height: 30px;
+  }
+  .form button {
+    padding: 3px !important;
+  }
+  .form-div .sections {
+    padding: 0px !important;
+  }
+  .sections .card {
+    width: 200px;
+    height: 180px;
+    border-radius: 20px;
+    margin: 10px 0px 20px 10px;
+  }
+  .sections .card-header {
+    padding: 10px;
+  }
+  .sections .card-header h5 {
+    font-size: 14px;
+  }
+  .sections .card-body .icon img {
+    width: 60px;
+    height: 70px;
+  }
+  .sections .card-body li {
+    font-size: 11px;
+  }
+}

@@ -37,6 +37,10 @@ function Home() {
   const classes = useStyles()
   const carouselImg = [
     {
+      image: 'underconstruction.jpg',
+      link: '',
+    },
+    {
       image: 'feedstartupdefbanner.png',
       link: '',
     },
