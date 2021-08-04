@@ -94,9 +94,9 @@ export default function MyFpoHome(props) {
     },
 
     {
-      name: 'Loans & Schemes',
+      name: 'FPC Reports',
       icon: 'reports.png',
-      link: '',
+      link: '/myfpo/reports',
     },
   ]
   const fpcnewsupdates = [
@@ -135,57 +135,118 @@ export default function MyFpoHome(props) {
         // alignItems="flex-start"
         className="myfpo-home"
       >
-        <Grid item lg={12} className="p-1">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </p>
-        </Grid>
-        <Grid container item lg={8} xs={12}>
-          {fpoHomeData.map((item, index) => (
-            <Grid key={index} item xs={6} md={3} lg={3}>
-              <Grid className="homeItemWrap">
-                <Avatar
-                  to={item.link}
-                  component={Link}
-                  variant="square"
-                  className={classes.homeItem}
-                  src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.icon}`}
-                >
-                  {item.name}
-                </Avatar>
-              </Grid>
-            </Grid>
-          ))}
-        </Grid>
-        <Grid lg={3} item>
-          <Grid className={classes.newsfeedsWrap}>
-            <Grid className={classes.newsfeedsHeading}>
-              <h6 className="my-auto mt-2">Updates &amp; Information</h6>
-            </Grid>
-            <List className={classes.newsfeeds}>
-              {fpcnewsupdates.map((item, index) => (
-                <Grid key={index}>
-                  <ListItem
-                    alignItems="flex-start"
-                    className="notificationItem"
+        <h5>MY FPC Home</h5>
+        <Grid
+          container
+          item
+          lg={12}
+          justifyContent="space-evenly"
+          className="p-1"
+        >
+          <Grid container item lg={8}>
+            {fpoHomeData.map((item, index) => (
+              <Grid key={index} item xs={6} md={3} lg={3}>
+                <Grid className="homeItemWrap">
+                  <Avatar
+                    to={item.link}
+                    component={Link}
+                    variant="square"
+                    className={classes.homeItem}
+                    src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.icon}`}
                   >
-                    <ListItemText
-                      primary={item.primary}
-                      secondary={item.secondary}
-                    />
-                  </ListItem>
+                    {item.name}
+                  </Avatar>
                 </Grid>
-              ))}
-            </List>
+              </Grid>
+            ))}
           </Grid>
+          <Grid item lg={3}>
+            <Grid className={classes.newsfeedsWrap}>
+              <Grid className={classes.newsfeedsHeading}>
+                <h6 className="my-auto mt-2">Updates &amp; Information</h6>
+              </Grid>
+              <List className={classes.newsfeeds}>
+                {fpcnewsupdates.map((item, index) => (
+                  <Grid key={index}>
+                    <ListItem
+                      alignItems="flex-start"
+                      className="notificationItem"
+                    >
+                      <ListItemText
+                        primary={item.primary}
+                        secondary={item.secondary}
+                      />
+                    </ListItem>
+                  </Grid>
+                ))}
+              </List>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid container item lg={10} xs={12}>
+          <h5>Glance at the services offered to FPOs by FEED</h5>
+          <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
+            <li>
+              To conduct baseline survey and analyse the social and financial
+              viability to form an FPO{' '}
+            </li>
+            <li>
+              To provide statutory registration support for registration of
+              company &amp; other formalities associated
+            </li>
+            <li>
+              To cater to the needs of FPOs by connecting them to various STATE
+              &amp; central govt. schemes &amp; orgs like Export promotional
+              councils/committees
+            </li>
+            <li>
+              To provide capacity building training to FPOs for better
+              management and Workshops on Good Agricultural Practices (GAP) to
+              producer members
+            </li>
+            <li>
+              To build awareness on judicious and timely use of chemicals{' '}
+            </li>
+            <li>
+              To provide required quality inspection certifications as per the
+              export country/region
+            </li>
+            <li>
+              To make them self-sustainable by providing domestic and
+              International market linkages along with the database of
+              International buyers from top 50 trading countries with India
+            </li>
+            <li>
+              To render end-to-end support in exporting their product in global
+              markets through latest technology software{' '}
+            </li>
+            <li>
+              To serve as a guide in raising L/Cs, taking export insurance
+              policies, Logistic support etc.
+            </li>
+            <li>
+              To provide the technical support in managing day-to-day activities
+              like preparing business plan, legal and annual compliances etc.
+            </li>
+            <li>
+              To assess the capital requirements &amp; financial viability of
+              FPO and accordingly perform the resource mobilization and credit
+              support
+            </li>
+            <li>
+              To establish processing units to do value addition to FPO products
+              to enhance their members income levels
+            </li>
+            <li>
+              To provide support in marketing their products through E-commerce
+              and in International fairs
+            </li>
+            <li>
+              To integrate agriculture marketing infrastructure support to the
+              end roots and supply the farm machinery and other inputs at low
+              costs to FPOs
+            </li>
+          </ul>
         </Grid>
       </Grid>
     </>

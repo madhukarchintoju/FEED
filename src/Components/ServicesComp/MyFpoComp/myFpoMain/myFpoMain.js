@@ -19,11 +19,14 @@ import AnnualCompliances from '../myFpoList/fpoComplainces/annualCompliances/ann
 import CreateProduct from '../myFpoList/fpoAccount/createProduct/createProduct'
 import SalesRegistry from '../myFpoList/fpoAccount/salesRegister/salesRegister'
 import WidgetsBar from '../../widgetsBar/widgetsBar'
+import CreateVendor from '../myFpoList/fpoAccount/createVendor/createVendor'
+import FpoReports from '../myFpoList/fpoReports/fpoReports'
+import FpoCapacityBuilding from '../myFpoList/fpoCapacityBuilding/fpoCapacityBuilding'
 
 export default function MyFpoMain(props) {
   const background = {
     '/myfpo/home': {
-      backgroundColor: '#f7f1dd',
+      // backgroundColor: '#f7f1dd',
     },
     '/myfpo/aboutfpo': {
       backgroundColor: '',
@@ -82,7 +85,7 @@ export default function MyFpoMain(props) {
     {
       name: 'Capacity Building',
       icon: 'fas fa-handshake',
-      path: '',
+      path: '/myfpo/fpocapacitybuilding',
     },
     {
       name: 'FPC Compliances',
@@ -102,7 +105,7 @@ export default function MyFpoMain(props) {
     {
       name: 'Reports',
       icon: 'fas fa-file-pdf',
-      path: '',
+      path: '/myfpo/reports',
     },
     {
       name: 'FPC Connect',
@@ -110,6 +113,7 @@ export default function MyFpoMain(props) {
       path: '/myfpo/fpoconnect',
     },
   ]
+
   const useStyles = makeStyles((theme) => ({
     background: background[props.location.pathname],
   }))
@@ -143,7 +147,12 @@ export default function MyFpoMain(props) {
               path="/myfpo/fpocomplainces"
               component={FpoComplainces}
             ></Route>
+            <Route
+              path="/myfpo/fpocapacitybuilding"
+              component={FpoCapacityBuilding}
+            ></Route>
             <Route path="/myfpo/fpoconnect" component={FpoConnect}></Route>
+            <Route path="/myfpo/reports" component={FpoReports}></Route>
             <Route
               path="/myfpo/fpoloanschemes"
               component={FpoLoanSchemes}
@@ -164,6 +173,7 @@ export default function MyFpoMain(props) {
               path="/myfpo/createProduct"
               component={CreateProduct}
             ></Route>
+            <Route path="/myfpo/createvendor" component={CreateVendor}></Route>
             <Route
               path="/myfpo/salesregister"
               component={SalesRegistry}

@@ -81,7 +81,7 @@ export default function StatutoryRegistration() {
     <>
       <MyFpoListItem
         dataList={dataList}
-        cardTitle="/compliances/statutory/statutory.png"
+        cardTitle="compliances/statutory/statutory.png"
         headingSize={headingSize}
         cardSize={cardSize}
         headingAlign="center"

@@ -16,6 +16,21 @@ i18n.use(LanguageDetector).init({
         login_caps: 'LOGIN',
         register_caps: 'REGISTER',
         analytics: 'Analytics',
+        vision: `To spread to all corners of India and emerge as a
+        one-stop solution to farmers, small traders, MSMEs,
+        new entrepreneurs from rural and semi-urban areas for
+        marketing their agricultural commodities in domestic
+        and International markets by means of effective
+        technical interface.`,
+        mission: `To form product based cooperative societies (FPOs),
+        impart the capacity building to export in the form of
+        training sessions, provide the information on global
+        marketing opportunities through"FEED STARTUP"
+        Technology for their respective agricultural products
+        and render end-to-end support in real-time export
+        process i.e., from selection of buyers to shipment of
+        good.`,
+        main_objective: '',
       },
     },
     te: {
@@ -31,6 +46,9 @@ i18n.use(LanguageDetector).init({
         login_caps: 'ప్రవేశించండి',
         register_caps: 'రిజిస్టర్',
         analytics: 'విశ్లేషణలు',
+        vision:
+          'గ్రామీణ పట్టణ ప్రాంతాల్లోని రైతులు, వ్యాపారులు, MSME పరిశ్రమలు, నూతన ఔత్సాహిక పారిశ్రామిక వేత్తలు వ్యవసాయ  ఉత్పత్తులను దేశీయ మరియు అంతర్జాతీయ మార్కెట్లో మార్కెటింగ్ చేసుకునేందుకు అవసరమైన సమర్ధవంతమైన సాంకేతిక వేదికను వినియోగించి దేశంలోని అన్ని ప్రాంతాల్లో ఆరోగ్యకరమైన సాగు నుంచి ఉత్పత్తుల ఎగుమతుల వరకు సమస్త సేవలు అందించేందుకు ఏకీకృత పరిష్కార వేదికగా FEED కృషి చేస్తుంది.',
+        mission: '',
       },
     },
 
