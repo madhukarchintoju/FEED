@@ -21,7 +21,6 @@ export default function SideNavBar(props) {
 
   const [open, setOpen] = useState(screenWidth)
   const [selected, setSelected] = useState()
-  const [showServiceTitle, setShowServiceTitle] = useState(true)
   const useStyles = makeStyles((theme) => ({
     hide: {
       display: 'none',
@@ -47,7 +46,7 @@ export default function SideNavBar(props) {
     toolbar: {
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'flex-end',
+      justifyContent: 'space-between',
       padding: theme.spacing(0, 1),
       ...theme.mixins.toolbar,
       minHeight: '0px !important',
@@ -77,12 +76,10 @@ export default function SideNavBar(props) {
 
   const handleDrawerOpen = () => {
     setOpen(true)
-    setShowServiceTitle(true)
   }
 
   const handleDrawerClose = () => {
     setOpen(false)
-    setShowServiceTitle(false)
   }
   return (
     <div className="side-navbar">
@@ -101,11 +98,7 @@ export default function SideNavBar(props) {
         }}
       >
         <div container className={classes.toolbar}>
-          {showServiceTitle ? (
-            <h5 className="mt-2 text-bold">{props.serviceTitle}</h5>
-          ) : (
-            ''
-          )}
+          {open ? <h5 className="mt-2 text-bold">{props.serviceTitle}</h5> : ''}
           {open ? (
             <IconButton onClick={handleDrawerClose}>
               <ChevronLeftIcon style={{ color: props.textColor }} />

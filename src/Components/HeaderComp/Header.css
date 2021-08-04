@@ -20,10 +20,10 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
-  box-shadow: inset 0px 0px 10px 0px #ababab;
+  /* box-shadow: inset 0px 0px 10px 0px #ababab;
   -webkit-box-shadow: inset 0px 0px 10px 0px #ababab;
   -moz-box-shadow: inset 0px 0px 10px 0px #ababab;
-  -o-box-shadow: inset 0px 0px 10px 0px #ababab;
+  -o-box-shadow: inset 0px 0px 10px 0px #ababab; */
 }
 
 .header-top {

@@ -222,7 +222,7 @@
 	padding-bottom: 15px; */
   /* position: relative; */
 }
-.sec-title::after {
+/* .sec-title .aboutFpc-testimonial-title-tag::after {
   content: '';
   position: absolute;
   left: 0;
@@ -230,7 +230,7 @@
   width: 100px;
   height: 3px;
   background: #000;
-}
+} */
 .sec-title h2 {
   font-size: 60px;
   font-family: 'Montserrat', sans-serif;

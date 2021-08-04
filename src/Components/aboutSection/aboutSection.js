@@ -7,9 +7,15 @@ import {
 } from '@material-ui/core'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import i18n from 'i18next'
 import './aboutSection.css'
 
 export default function AboutSection(props) {
+  const { t } = useTranslation()
+  const languageChange = (event) => {
+    i18n.changeLanguage(event.target.value)
+  }
   const useStyles = makeStyles((theme) => ({
     aboutBg: {
       marginTop: '1em',
@@ -197,14 +203,7 @@ export default function AboutSection(props) {
                         />
                       </Grid>
                       <Grid className={classes.visionContent}>
-                        <p>
-                          To spread to all corners of India and emerge as a
-                          one-stop solution to farmers, small traders, MSMEs,
-                          new entrepreneurs from rural and semi-urban areas for
-                          marketing their agricultural commodities in domestic
-                          and International markets by means of effective
-                          technical interface.
-                        </p>
+                        <p>{t('vision')}</p>
                       </Grid>
                     </CardContent>
                   </CardActionArea>
@@ -235,7 +234,7 @@ export default function AboutSection(props) {
                           Technology for their respective agricultural products
                           and render end-to-end support in real-time export
                           process i.e., from selection of buyers to shipment of
-                          good
+                          good.
                         </p>
                       </Grid>
                     </CardContent>

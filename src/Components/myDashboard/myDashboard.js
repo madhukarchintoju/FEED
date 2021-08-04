@@ -134,9 +134,8 @@ export default function MyDashboard() {
               <Grid className="outer circle at-12-oclock">
                 <Grid className={classes.subscriptionImg}>
                   <img
-                    className=""
                     src={`${process.env.PUBLIC_URL}/assets/my-dashboard/mysubscription.png`}
-                    alt="FPO Icon"
+                    alt="My Subscriptions"
                   />
                 </Grid>
               </Grid>
@@ -150,9 +149,8 @@ export default function MyDashboard() {
               <Grid className="outer circle at-2-oclock">
                 <Grid className={classes.itdmImg}>
                   <img
-                    className=""
                     src={`${process.env.PUBLIC_URL}/assets/my-dashboard/itdm.png`}
-                    alt="FPO Icon"
+                    alt="IT &amp; Digital Media"
                   />
                 </Grid>
               </Grid>
@@ -166,9 +164,8 @@ export default function MyDashboard() {
               <Grid className="outer circle at-4-oclock">
                 <Grid className={classes.marketImg}>
                   <img
-                    className=""
-                    src={`${process.env.PUBLIC_URL}/assets/my-dashboard/bullkart1.png`}
-                    alt="FPO Icon"
+                    src={`${process.env.PUBLIC_URL}/assets/my-dashboard/bullkartone.png`}
+                    alt="My Market"
                   />
                 </Grid>
               </Grid>
@@ -182,9 +179,8 @@ export default function MyDashboard() {
               <Grid className="outer circle at-5-oclock">
                 <Grid className={classes.businessleadsImg}>
                   <img
-                    className=""
                     src={`${process.env.PUBLIC_URL}/assets/my-dashboard/businessleads.png`}
-                    alt="FPO Icon"
+                    alt="My Business Leads"
                   />
                 </Grid>
               </Grid>
@@ -198,9 +194,8 @@ export default function MyDashboard() {
               <Grid className="outer circle at-6-oclock">
                 <Grid className={classes.couponsImg}>
                   <img
-                    className=""
                     src={`${process.env.PUBLIC_URL}/assets/my-dashboard/coupons.png`}
-                    alt="FPO Icon"
+                    alt="Coupons &amp; Offers"
                   />
                 </Grid>
               </Grid>
@@ -214,9 +209,8 @@ export default function MyDashboard() {
               <Grid className="outer circle at-7-oclock">
                 <Grid className={classes.reportsImg}>
                   <img
-                    className=""
                     src={`${process.env.PUBLIC_URL}/assets/my-dashboard/reports.png`}
-                    alt="FPO Icon"
+                    alt="My Reports"
                   />
                 </Grid>
               </Grid>
@@ -230,9 +224,8 @@ export default function MyDashboard() {
               <Grid className="outer circle at-8-oclock">
                 <Grid className={classes.transactionsImg}>
                   <img
-                    className=""
                     src={`${process.env.PUBLIC_URL}/assets/my-dashboard/transactions.png`}
-                    alt="FPO Icon"
+                    alt="My Transactions"
                   />
                 </Grid>
               </Grid>
@@ -246,9 +239,8 @@ export default function MyDashboard() {
               <Grid className="outer circle at-10-oclock">
                 <Grid className={classes.accountsImg}>
                   <img
-                    className=""
                     src={`${process.env.PUBLIC_URL}/assets/my-dashboard/accounts.png`}
-                    alt="FPO Icon"
+                    alt="My Accounts"
                   />
                 </Grid>
               </Grid>
@@ -257,7 +249,6 @@ export default function MyDashboard() {
         </div>
         <Grid style={{ float: 'right' }} className="rocket">
           <img
-            className=""
             src={`${process.env.PUBLIC_URL}/assets/my-dashboard/rocket.png`}
             alt="FPO Icon"
           />

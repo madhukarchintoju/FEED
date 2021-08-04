@@ -31,6 +31,8 @@ import MyDashboard from './Components/myDashboard/myDashboard'
 import ContactUs from './Components/contactus/contactus'
 import DashboardMain from './Components/myDashboard/dashboardMain/dashboardMain'
 import MediaPage from './Components/mediaPage/mediaPage'
+import Blogs from './Components/blogs/blogs'
+import AboutList from './Components/aboutSection/aboutList/aboutList'
 
 function App() {
   const ScrollToTop = () => {
@@ -50,6 +52,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/aboutSection" exact component={AboutSection} />
+          <Route path="/aboutlist" component={AboutList}></Route>
           <Route path="/analytics" exact component={AnalyticsMain} />
           <Route path="/serviceSection" exact component={ServicesSection} />
           <Route path="/eventSection" exact component={EventsSection} />
@@ -71,6 +74,7 @@ function App() {
             component={NewsletterSection}
           />
           <Route path="/mediapage" component={MediaPage}></Route>
+          <Route path="/blogspage" component={Blogs}></Route>
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
           <Route path="/myfpo" component={MyFpoMain} />

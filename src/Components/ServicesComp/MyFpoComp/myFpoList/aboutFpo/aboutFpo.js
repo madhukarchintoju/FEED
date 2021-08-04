@@ -10,6 +10,33 @@ import SwiperCore, {
 } from 'swiper/core'
 SwiperCore.use([Pagination, Navigation, Autoplay, EffectCoverflow])
 export default function AboutFpo() {
+  const aboutFpcStatistics = [
+    {
+      statTitle: 'Registered Farmers',
+      statcount: '9000+',
+      backgroundColor: '#B9C406',
+    },
+    {
+      statTitle: 'Acres of land',
+      statcount: '25000+',
+      backgroundColor: '#704404',
+    },
+    {
+      statTitle: 'Villages Covered',
+      statcount: '120+',
+      backgroundColor: '#F1931B',
+    },
+    {
+      statTitle: 'Countries Served',
+      statcount: '50+',
+      backgroundColor: 'green',
+    },
+    {
+      statTitle: 'Customers Worldwide',
+      statcount: '50000+',
+      backgroundColor: '#C0334D',
+    },
+  ]
   const productAndServices = [
     {
       productName: 'Juice',
@@ -147,7 +174,7 @@ export default function AboutFpo() {
       backgroundColor: 'white',
     },
     aboutFpoContentWrap: {
-      marginTop: '0.2em',
+      marginTop: '1.5em',
     },
     pnsImg: {
       maxWidth: '220px',
@@ -203,6 +230,57 @@ export default function AboutFpo() {
   return (
     <>
       <Grid className={classes.aboutFpoWrap}>
+        <Grid container justifyContent="center">
+          <h5>About FPC</h5>
+        </Grid>
+        <Grid item lg={11} className="m-auto">
+          <ul
+            style={{
+              textAlign: 'justify',
+              textJustify: 'inter-word',
+              fontWeight: '600',
+            }}
+          >
+            <li>
+              Exclusive Single page website for FPO along with Business
+              Analytics.
+            </li>
+            <li>
+              Accessibility to CEO of FPO for maintaining accounts &amp;
+              information on board meetings.
+            </li>
+            <li>
+              Improves visibility of FPO website through “Share FPO profile
+              option” anywhere and anytime to potential buyers.
+            </li>
+          </ul>
+        </Grid>
+        <Grid
+          container
+          item
+          lg={11}
+          className="m-auto"
+          justifyContent="space-around"
+        >
+          {aboutFpcStatistics.map((item, index) => (
+            <Grid
+              key={index}
+              lg={2}
+              style={{
+                borderRadius: '10px 10px',
+                backgroundColor: item.backgroundColor,
+                boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+                webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+                mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75) ',
+              }}
+            >
+              <div class="text-white p-1">
+                <h6 class="">{item.statTitle}</h6>
+                <p class="">{item.statcount}</p>
+              </div>
+            </Grid>
+          ))}
+        </Grid>
         <Grid container className={classes.aboutFpo}>
           <Grid
             container
@@ -211,7 +289,7 @@ export default function AboutFpo() {
             justifyContent="space-around"
             className={classes.aboutFpoContentWrap}
           >
-            <Grid lg={8} item className="about-fpo-content">
+            <Grid lg={10} item className="about-fpo-content">
               <fieldset>
                 <legend>
                   <Grid
@@ -227,7 +305,7 @@ export default function AboutFpo() {
                     </h4>
                   </Grid>
                 </legend>
-                <h5 className="ml-3">About FPC</h5>
+                <h5 className="ml-3">About FPC :</h5>
                 <Grid className="about-fpo-descpr">
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -260,7 +338,7 @@ export default function AboutFpo() {
                 </Grid>
               </fieldset>
             </Grid>
-            <Grid lg={3} item>
+            {/* <Grid lg={3} item>
               <div className="about-fpo-info-card">
                 <div className="col-lg-6 p-1 about-fpo-info-card-role info-card-orange">
                   <span className="my-auto">01</span>
@@ -321,7 +399,7 @@ export default function AboutFpo() {
                 </div>
                 <div className="col-lg-6">Info</div>
               </div>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
         <Grid container item className={classes.productServicesWrap}>

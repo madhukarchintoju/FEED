@@ -76,14 +76,25 @@ export default function Header() {
               </form>
             </div>
             <div className="btn-group">
-              <button className="download-btn btn-primary mr-1">
-                <i className="fa fa-download" aria-hidden="true"></i>{' '}
-                <span className="download-btn-text">Downloads</span>
-              </button>
-              <Link to="/mediapage">
-                <button className="btn-primary mr-1">Media</button>
+              <Link to="">
+                <button className="btn-secondary mr-1">
+                  <span className="download-btn-text">
+                    <i className="fa fa-download" aria-hidden="true"></i>{' '}
+                    Downloads
+                  </span>
+                </button>
               </Link>
-              <button className="btn-primary">Blogs</button>
+
+              <Link to="/mediapage">
+                <button className="btn-warning mr-1">
+                  <i class="fas fa-photo-video"></i> Media
+                </button>
+              </Link>
+              <Link to="/blogspage">
+                <button className="btn-info">
+                  <i class="fab fa-blogger"></i> Blogs
+                </button>
+              </Link>
             </div>
             {/* <div>
               <ul className='nav'>
@@ -249,7 +260,10 @@ export default function Header() {
                           {/* <Link to="/" className="dropdown-item">
                             Board of Directors
                           </Link> */}
-                          <Link to="/" className="dropdown-item">
+                          <Link
+                            to="/aboutlist/coreteam"
+                            className="dropdown-item"
+                          >
                             FEED Core Team
                           </Link>
                           <Link to="/" className="dropdown-item">

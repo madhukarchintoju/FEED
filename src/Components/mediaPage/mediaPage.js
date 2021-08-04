@@ -22,12 +22,12 @@ export default function MediaPage() {
     },
     {
       src: `${process.env.PUBLIC_URL}/assets/eventupdates/2.jpg`,
-      width: 3,
+      width: 4,
       height: 4,
     },
     {
       src: `${process.env.PUBLIC_URL}/assets/eventupdates/3.jpg`,
-      width: 3,
+      width: 4,
       height: 4,
     },
     {
@@ -42,12 +42,12 @@ export default function MediaPage() {
     },
     {
       src: `${process.env.PUBLIC_URL}/assets/eventupdates/6.jpg`,
-      width: 3,
+      width: 4,
       height: 4,
     },
     {
       src: `${process.env.PUBLIC_URL}/assets/eventupdates/7.jpg`,
-      width: 3,
+      width: 4,
       height: 4,
     },
     {

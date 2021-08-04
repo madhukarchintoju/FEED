@@ -74,6 +74,18 @@ export default function FpoAgmBoard() {
   }
   return (
     <>
+      <Grid item lg={7} className="m-auto">
+        <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
+          <li>
+            Helps to improve transparency and promotes better governance of the
+            FPO
+          </li>
+          <li>
+            Includes Bye-laws, Notices, Resolutions, Duties of Board and other
+            Rules &amp; Regulations
+          </li>
+        </ul>
+      </Grid>
       <Grid container direction="row" justifyContent="space-between">
         <Grid item lg={5} xs={12}>
           <MyFpoListItem

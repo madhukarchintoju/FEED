@@ -76,6 +76,7 @@ export default function CreateVendor() {
       alert(JSON.stringify(values, null, 2))
     },
   })
+  console.log(formik.values)
   return (
     <>
       <Grid container direction="column" justify="center" alignItems="center">

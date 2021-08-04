@@ -1,5 +1,6 @@
 import React from 'react'
 import './fpoComplainces.css'
+import { Grid, Button, Icon, Avatar, makeStyles } from '@material-ui/core'
 import MyFpoListItem from '../../myFpoListItem/myFpoListItem'
 
 export default function FpoComplainces() {
@@ -34,9 +35,25 @@ export default function FpoComplainces() {
   }
   return (
     <>
+      <Grid item lg={11} className="m-auto">
+        <Grid className="text-center">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/my-fpo/compliances/home/head.png`}
+            width="30%"
+            alt="..."
+          />
+        </Grid>
+        <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
+          <li>
+            Create customized business plans as per the requirement of the FPO
+          </li>
+          <li>Promotes operational &amp; financial sustainability</li>
+          <li>Expert advice on Trading, Production &amp; Service categories</li>
+        </ul>
+      </Grid>
       <MyFpoListItem
         dataList={dataList}
-        cardTitle="compliances/home/head.png"
+        // cardTitle="compliances/home/head.png"
         headingSize={headingSize}
         cardSize={cardSize}
         headingAlign="center"
