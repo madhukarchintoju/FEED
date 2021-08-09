@@ -56,22 +56,75 @@
       rel="stylesheet"
     />
     <!-- <script data-search-pseudo-elements defer src="https://use.fontawesome.com/releases/latest/js/all.js" integrity="sha384-L469/ELG4Bg9sDQbl0hvjMq8pOcqFgkSpwhwnslzvVVGpDjYJ6wJJyYjvG3u8XW7" crossorigin="anonymous"></script> -->
-    <!-- <script>var chatbot_id=5126;!function(){var t,e,a=document,s="smatbot-chatbot";a.getElementById(s)||(t=a.createElement("script"),t.id=s,t.type="text/javascript",t.src="https://smatbot.s3.amazonaws.com/files/smatbot_plugin.js.gz",e=a.getElementsByTagName("script")[0],e.parentNode.insertBefore(t,e))}();</script><script src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.5.1/fingerprint2.min.js"></script> -->
-    <!-- <div style="float: left;position: fixed;bottom: 0;right: 0;z-index: 9999;"><iframe src="https://www.smatbot.com/kya_backend/share?code=Feed_5126" style="border:0;" width="400" height="500"></iframe></div> -->
   </head>
 
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div>
+      <img
+        style="
+          float: left;
+          position: fixed;
+          bottom: 25px;
+          right: 25px;
+          z-index: 102;
+          cursor: pointer;
+        "
+        id="smat-bot-image"
+        src="https://custpostimages.s3.ap-south-1.amazonaws.com/4727/feed_logo.png"
+        alt="Girl in a jacket"
+        width="70"
+        height="70"
+      />
+      <i
+        style="
+          float: left;
+          position: fixed;
+          bottom: 469px;
+          right: 25px;
+          z-index: 101;
+          font-size: 32px;
+          cursor: pointer;
+        "
+        id="smat-bot-toggle"
+        class="far fa-times-circle"
+      ></i>
+    </div>
+    <div
+      style="float: left; position: fixed; bottom: 20px; right: 0; z-index: 100"
+    >
+      <iframe
+        id="smat-bot"
+        src="https://www.smatbot.com/kya_backend/share?code=Feed_5126"
+        style="border: 0"
+        width="400"
+        height="500"
+      ></iframe>
+    </div>
+
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <script>
+      $(document).ready(function () {
+        if (window.innerWidth < 425) {
+          $('#smat-bot').hide()
+          $('#smat-bot-toggle').hide()
+          $('#smat-bot-image').show()
+        } else {
+          $('#smat-bot-image').hide()
+        }
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+        $('#smat-bot-toggle').click(function () {
+          $('#smat-bot').hide()
+          $('#smat-bot-toggle').hide()
+          $('#smat-bot-image').show()
+        })
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+        $('#smat-bot-image').click(function () {
+          $('#smat-bot').show()
+          $('#smat-bot-toggle').show()
+          $('#smat-bot-image').hide()
+        })
+      })
+    </script>
   </body>
 </html>

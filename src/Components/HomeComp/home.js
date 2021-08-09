@@ -60,6 +60,7 @@ function Home() {
     newsfeeds: {
       height: '540px',
       backgroundColor: 'white',
+      padding: 0,
     },
     newsfeedsHeading: {
       height: '2em',
@@ -390,7 +391,7 @@ function Home() {
           </div>
         </Grid>
         {/* </div> */}
-        <RoadMap />
+        {/* <RoadMap /> */}
         <FeedWorkingSection />
         <TestimonialSection />
         <PartnerSection />
