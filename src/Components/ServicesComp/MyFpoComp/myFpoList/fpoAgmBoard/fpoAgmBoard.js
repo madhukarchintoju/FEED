@@ -74,7 +74,7 @@ export default function FpoAgmBoard() {
   }
   return (
     <>
-      <Grid item lg={7} className="m-auto">
+      <Grid item lg={10} className="m-auto">
         <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
           <li>
             Helps to improve transparency and promotes better governance of the

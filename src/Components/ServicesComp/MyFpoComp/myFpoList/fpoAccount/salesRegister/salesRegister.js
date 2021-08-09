@@ -102,15 +102,6 @@ const useStyles = makeStyles((theme) => ({
   textField: {
     margin: '5px',
   },
-  // formControl:{
-  //   margin:'5px'
-  // }
-  pageHeader: {
-    height: '3em',
-    backgroundColor: '#ffc107',
-    color: 'white',
-    marginBottom: '0.5em',
-  },
   tabCard: {
     margin: '0.5em',
     borderRadius: '0px 0px 20px 20px',
@@ -133,12 +124,6 @@ export default function SalesRegister() {
 
   return (
     <>
-      <Grid className={classes.pageHeader}>
-        <h4>
-          {' '}
-          <i class="far fa-user"></i> SALES REGISTER
-        </h4>
-      </Grid>
       <Grid className={classes.root}>
         {/* <Grid position="static"> */}
         <Tabs

@@ -91,7 +91,7 @@ export default function FeedWorkingSection() {
   ])
   return (
     <>
-      <Grid id="howFeedWorks" className="mt-3">
+      <Grid id="howFeedWorks" className="mt-5">
         <div className="row m-0">
           <Grid container justifyContent="center">
             <img

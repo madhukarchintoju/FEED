@@ -54,7 +54,7 @@ export default function MyFarmMainComp() {
       path: '/myfarm/forestProducts',
     },
     {
-      name: 'Animal Husb',
+      name: 'Animal Husbandry',
       icon: 'fas fa-fan',
       path: '/myfarm/animalhusbandry',
     },
@@ -109,6 +109,7 @@ export default function MyFarmMainComp() {
           bgColor="#a4cf3e"
           textColor="black"
           serviceTitle="MY FARM"
+          selectedSideNavLink="linear-gradient(90deg, rgba(164,207,62,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="p-0 col-lg my-farm-wrap">
           <Switch>

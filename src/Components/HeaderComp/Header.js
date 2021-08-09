@@ -77,7 +77,7 @@ export default function Header() {
             </div>
             <div className="btn-group">
               <Link to="">
-                <button className="btn-secondary mr-1">
+                <button className="btn-primary mr-1">
                   <span className="download-btn-text">
                     <i className="fa fa-download" aria-hidden="true"></i>{' '}
                     Downloads
@@ -86,12 +86,12 @@ export default function Header() {
               </Link>
 
               <Link to="/mediapage">
-                <button className="btn-warning mr-1">
+                <button className="btn-primary mr-1">
                   <i class="fas fa-photo-video"></i> Media
                 </button>
               </Link>
               <Link to="/blogspage">
-                <button className="btn-info">
+                <button className="btn-primary">
                   <i class="fab fa-blogger"></i> Blogs
                 </button>
               </Link>

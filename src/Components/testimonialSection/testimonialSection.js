@@ -159,7 +159,7 @@ export default function TestimonialSection() {
           </div>
         </div>
       </Grid> */}
-      <Grid>
+      <Grid className="mt-5">
         <Grid container justifyContent="center" className="mb-1">
           <img
             src={`${process.env.PUBLIC_URL}/assets/testimonials/testimonialsnameplate.png`}

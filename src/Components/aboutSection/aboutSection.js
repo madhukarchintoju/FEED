@@ -226,16 +226,7 @@ export default function AboutSection(props) {
                         />
                       </Grid>
                       <Grid className={classes.missionContent}>
-                        <p>
-                          To form product based cooperative societies (FPOs),
-                          impart the capacity building to export in the form of
-                          training sessions, provide the information on global
-                          marketing opportunities through"FEED STARTUP"
-                          Technology for their respective agricultural products
-                          and render end-to-end support in real-time export
-                          process i.e., from selection of buyers to shipment of
-                          good.
-                        </p>
+                        <p>{t('mission')}</p>
                       </Grid>
                     </CardContent>
                   </CardActionArea>

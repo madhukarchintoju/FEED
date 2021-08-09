@@ -27,10 +27,15 @@ export default function MyFarmList(props) {
 
   return (
     <div className="my-farm-list">
-      <Grid container justify="center" className={classes.listTitle}>
+      <Grid container justifyContent="center" className={classes.listTitle}>
         <h4>{props.title}</h4>
       </Grid>
-      <Grid container direction="row" justify="flex-start" alignItems="center">
+      <Grid
+        container
+        direction="row"
+        justifyContent="flex-start"
+        alignItems="center"
+      >
         {props.dataList.map((item, index) => (
           <Grid
             key={index}
@@ -39,7 +44,7 @@ export default function MyFarmList(props) {
             item
             container
             direction="row"
-            justify="center"
+            justifyContent="center"
             alignItems="center"
             className="list-item"
           >
@@ -65,7 +70,7 @@ export default function MyFarmList(props) {
           </Grid>
         ))}
       </Grid>
-      <Grid container justify="center" alignItems="flex-end">
+      <Grid container justifyContent="center" alignItems="flex-end">
         <Button className={classes.feedConnect} variant="contained">
           <b>Connect FEED </b>
           <Icon className="fas fa-angle-double-right"></Icon>

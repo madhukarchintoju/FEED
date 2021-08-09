@@ -46,13 +46,16 @@ export default function SideNavBar(props) {
     toolbar: {
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'space-between',
+      justifyContent: 'flex-end',
       padding: theme.spacing(0, 1),
       ...theme.mixins.toolbar,
       minHeight: '0px !important',
       background: `${props.serviceTitleBg}` || 'grey',
       color: 'white',
-      // color:''
+      // borderBottom:'2px dotted orange'
+      //       boxShadow: '0px 5px 5px 0px rgba(255,255,255,0.75)',
+      // webkitBoxShadow: '0px 5px 5px 0px rgba(255,255,255,0.75)',
+      // mozBoxShadow: '0px 5px 5px 0px rgba(255,255,255,0.75)',
     },
     content: {
       flexGrow: 1,
@@ -60,16 +63,19 @@ export default function SideNavBar(props) {
     },
     paper: {
       backgroundColor: props.bgColor || 'grey',
+      border: 'none',
       color: props.textColor || 'white',
       top: 'initial',
       position: 'relative',
       zIndex: 1,
     },
     selectedItem: {
-      backgroundColor: '#ffdc75',
+      // backgroundColor: '#ffdc75',
       // background: 'rgb(230,185,52)',
       // color: "white",
-      // background: 'linear-gradient(0deg, rgba(241,241,241,1) 0%, rgba(204,167,0,1) 45%)'
+      background:
+        props.selectedSideNavLink ||
+        'linear-gradient(90deg, rgba(255,193,7,1) 17%, rgba(255,255,255,1) 67%)',
     },
   }))
   const classes = useStyles()
@@ -98,7 +104,11 @@ export default function SideNavBar(props) {
         }}
       >
         <div container className={classes.toolbar}>
-          {open ? <h5 className="mt-2 text-bold">{props.serviceTitle}</h5> : ''}
+          {open ? (
+            <h5 className="mt-2 text-bold mr-5">{props.serviceTitle}</h5>
+          ) : (
+            ''
+          )}
           {open ? (
             <IconButton onClick={handleDrawerClose}>
               <ChevronLeftIcon style={{ color: props.textColor }} />
