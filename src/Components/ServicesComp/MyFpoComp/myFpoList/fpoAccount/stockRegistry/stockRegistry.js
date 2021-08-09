@@ -12,6 +12,7 @@ import {
   Box,
   Typography,
 } from '@material-ui/core'
+import DataGrid from '../../../../../datagrid/datagrid'
 function TabPanel(props) {
   const { children, value, index, ...other } = props
 
@@ -104,13 +105,13 @@ export default function StockRegistry() {
 
         {/* </AppBar> */}
         <TabPanel value={value} index={0}>
-          Item One
+          <DataGrid></DataGrid>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item Two
+          <DataGrid></DataGrid>
         </TabPanel>
         <TabPanel value={value} index={2}>
-          Item Three
+          <DataGrid></DataGrid>
         </TabPanel>
       </div>
     </>
