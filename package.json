@@ -27,6 +27,7 @@
     "prettier": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-easy-marquee": "^1.1.4",
     "react-i18next": "^11.8.15",
     "react-images": "^1.2.0-beta.7",
     "react-owl-carousel": "^2.3.3",

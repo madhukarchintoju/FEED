@@ -1,15 +1,14 @@
-import React, { Component, useState, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
 import './home.css'
-import { Link } from 'react-router-dom'
 import AboutSection from '../../Components/aboutSection/aboutSection'
 import ServicesSection from '../../Components/servicesSection/servicesSection'
-import EventsSection from '../../Components/eventsSection/eventsSection'
 import TestimonialSection from '../../Components/testimonialSection/testimonialSection'
 import FeedWorkingSection from '../../Components/feedWorkingSection/feedWorkingSection'
 import PartnerSection from '../../Components/partnerSection/partnerSection'
 import RoadMap from '../analytics/roadMap/roadMap'
 import Gallery from 'react-photo-gallery'
 import Carousel, { Modal, ModalGateway } from 'react-images'
+import Marquee from 'react-easy-marquee'
 import {
   Grid,
   makeStyles,
@@ -59,7 +58,6 @@ function Home() {
       mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
     },
     newsfeeds: {
-      overflow: 'auto',
       height: '540px',
       backgroundColor: 'white',
     },
@@ -292,28 +290,39 @@ function Home() {
                       Central / State Updates
                     </h6>
                     <List className={classes.newsfeeds}>
-                      {centralupdates.map((item, index) => (
-                        <Grid key={index}>
-                          <ListItem alignItems="flex-start">
-                            <Grid container justifyContent="space-between">
-                              <Grid item lg={4}>
-                                <img
-                                  src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
-                                  width="100"
-                                  alt=""
-                                />
+                      <Marquee
+                        duration={10000}
+                        height="inherit"
+                        width="100%"
+                        axis="Y"
+                        align="center"
+                        overflow="hidden"
+                        pauseOnHover={false}
+                        reverse={true}
+                      >
+                        {centralupdates.map((item, index) => (
+                          <Grid key={index}>
+                            <ListItem alignItems="flex-start">
+                              <Grid container justifyContent="space-between">
+                                <Grid item lg={4}>
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
+                                    width="100"
+                                    alt=""
+                                  />
+                                </Grid>
+                                <Grid item lg={7}>
+                                  <ListItemText
+                                    primary={item.primary}
+                                    secondary={item.secondary}
+                                  />
+                                </Grid>
                               </Grid>
-                              <Grid item lg={7}>
-                                <ListItemText
-                                  primary={item.primary}
-                                  secondary={item.secondary}
-                                />
-                              </Grid>
-                            </Grid>
-                          </ListItem>
-                          <Divider />
-                        </Grid>
-                      ))}
+                            </ListItem>
+                            <Divider />
+                          </Grid>
+                        ))}
+                      </Marquee>
                     </List>
                   </Grid>
                 </Grid>
@@ -340,28 +349,39 @@ function Home() {
                   <Grid className={classes.eventupdatesWrap}>
                     <h6 className={classes.newsfeedsHeading}>FEED Updates</h6>
                     <List className={classes.newsfeeds}>
-                      {feedUpdates.map((item, index) => (
-                        <Grid key={index}>
-                          <ListItem alignItems="flex-start">
-                            <Grid container justifyContent="space-between">
-                              <Grid item lg={4}>
-                                <img
-                                  src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
-                                  width="100"
-                                  alt=""
-                                />
+                      <Marquee
+                        duration={10000}
+                        height="inherit"
+                        width="100%"
+                        axis="Y"
+                        align="center"
+                        overflow="hidden"
+                        pauseOnHover={false}
+                        reverse={true}
+                      >
+                        {feedUpdates.map((item, index) => (
+                          <Grid key={index}>
+                            <ListItem alignItems="flex-start">
+                              <Grid container justifyContent="space-between">
+                                <Grid item lg={4}>
+                                  <img
+                                    src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
+                                    width="100"
+                                    alt=""
+                                  />
+                                </Grid>
+                                <Grid item lg={7}>
+                                  <ListItemText
+                                    primary={item.primary}
+                                    secondary={item.secondary}
+                                  />
+                                </Grid>
                               </Grid>
-                              <Grid item lg={7}>
-                                <ListItemText
-                                  primary={item.primary}
-                                  secondary={item.secondary}
-                                />
-                              </Grid>
-                            </Grid>
-                          </ListItem>
-                          <Divider />
-                        </Grid>
-                      ))}
+                            </ListItem>
+                            <Divider />
+                          </Grid>
+                        ))}
+                      </Marquee>
                     </List>
                   </Grid>
                 </Grid>
@@ -370,7 +390,7 @@ function Home() {
           </div>
         </Grid>
         {/* </div> */}
-        {/* <RoadMap /> */}
+        <RoadMap />
         <FeedWorkingSection />
         <TestimonialSection />
         <PartnerSection />
