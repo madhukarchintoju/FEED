@@ -196,8 +196,9 @@ function Login() {
         <Grid container lg={12} justify="space-between" alignItems="center">
           <Grid lg={5}>
             <img
-              src={`${process.env.PUBLIC_URL}/assets/login/loginimg.png`}
+              src={`${process.env.PUBLIC_URL}/assets/login/loginimgtwo.jpg`}
               width="100%"
+              alt="login img"
             />
           </Grid>
           <Grid lg={6}>

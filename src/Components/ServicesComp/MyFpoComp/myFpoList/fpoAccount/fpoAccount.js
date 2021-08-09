@@ -1,5 +1,6 @@
 import React from 'react'
 import MyFpoListItem from '../../myFpoListItem/myFpoListItem'
+import { Link } from 'react-router-dom'
 import './fpoAccount.css'
 import { Grid, makeStyles } from '@material-ui/core'
 
@@ -86,7 +87,7 @@ export default function FpoAccount() {
       <Grid className="text-center">
         <h5>FPO/FPC Accounts</h5>
       </Grid>
-      <Grid item lg={7} className="m-auto">
+      <Grid item lg={11} className="m-auto">
         <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
           <li>
             Enables to track the input, output, monthly and yearly expenditures
@@ -98,70 +99,91 @@ export default function FpoAccount() {
         </ul>
       </Grid>
       {/* <MyFpoListItem dataList={dataList} cardSize={cardSize}></MyFpoListItem> */}
+
       <Grid container item lg={12} justifyContent="center">
         <Grid item lg={5} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/createvendor.png`}
-            alt=""
-          />
+          <Link to="/myfpo/createvendor">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/createvendor.png`}
+              alt=""
+            />
+          </Link>
         </Grid>
         <Grid item lg={5} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/createproduct.png`}
-            alt=""
-          />
+          <Link to="/myfpo/createProduct">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/createproduct.png`}
+              alt=""
+            />
+          </Link>
         </Grid>
       </Grid>
       <Grid container item lg={12}>
         <Grid item lg={4} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/sharecapitalregistry.png`}
-            alt=""
-          />
+          <Link to="/myfpo/sharecapitalregistry">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/sharecapitalregistry.png`}
+              alt=""
+            />
+          </Link>
         </Grid>
         <Grid item lg={4} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/purcheseregistry.png`}
-            alt=""
-          />
+          <Link to="/myfpo/purchaseregistry">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/purcheseregistry.png`}
+              alt=""
+            />
+          </Link>
         </Grid>
         <Grid item lg={4} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/salesregistry.png`}
-            alt=""
-          />
+          <Link to="/myfpo/salesregister">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/salesregistry.png`}
+              alt=""
+            />
+          </Link>
         </Grid>
         <Grid item lg={4} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/stockregistry.png`}
-            alt=""
-          />
+          <Link to="/myfpo/stockregistry">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/stockregistry.png`}
+              alt=""
+            />
+          </Link>
         </Grid>
         <Grid item lg={4} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/bankregistry.png`}
-            alt=""
-          />
+          <Link to="/myfpo/bankregistry">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/bankregistry.png`}
+              alt=""
+            />
+          </Link>
         </Grid>
         <Grid item lg={4} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/cashbookregistry.png`}
-            alt=""
-          />
+          <Link to="/myfpo/cashbookregistry">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/cashbookregistry.png`}
+              alt=""
+            />
+          </Link>
         </Grid>
       </Grid>
       <Grid container item lg={12} justifyContent="center">
         <Grid item lg={5} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/ledgerregistry.png`}
-            alt=""
-          />
+          <Link to="/myfpo/ledgerregistry">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/ledgerregistry.png`}
+              alt=""
+            />
+          </Link>
         </Grid>
         <Grid item lg={5} className="text-center">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/reports.png`}
-            alt=""
-          />
+          <Link to="/myfpo/fporeports">
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/reports.png`}
+              alt=""
+            />
+          </Link>
         </Grid>
       </Grid>
     </>

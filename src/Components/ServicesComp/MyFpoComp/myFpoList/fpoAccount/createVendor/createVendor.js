@@ -12,23 +12,25 @@ import * as yup from 'yup'
 export default function CreateVendor() {
   const useStyles = makeStyles((theme) => ({
     formRoot: {
-      boxShadow: '0px 2px 22px 4px rgba(0,0,0,0.2)',
-      webkitBoxShadow: '0px 2px 22px 4px rgba(0,0,0,0.2)',
-      mozBoxShadow: '0px 2px 22px 4px rgba(0,0,0,0.2)',
-      marginTop: '2em',
+      width: '95%',
+      boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      marginTop: '1em',
+      paddingBottom: '1em',
       '@media (max-width: 768px)': {
         marginTop: '0',
       },
+      // border:'1px solid red'
     },
     form: {
-      // padding: '2em 6em 3em 6em',
-      padding: '2em',
-      '& div': {
-        marginBottom: '0.4em',
-      },
-      '@media (max-width: 768px)': {
-        padding: '1em',
-      },
+      // padding: '2em',
+      // '& div': {
+      //   marginBottom: '0.4em',
+      // },
+      // '@media (max-width: 768px)': {
+      //   padding: '1em',
+      // },
     },
     title: {
       textAlign: 'center',
@@ -87,16 +89,8 @@ export default function CreateVendor() {
               <Grid item lg={5}>
                 <TextField
                   fullWidth
-                  id="gstNum"
-                  name="gstNum"
-                  label="GST Number"
-                  value={formik.values.gstNum}
-                  onChange={formik.handleChange}
-                  error={formik.touched.gstNum && Boolean(formik.errors.gstNum)}
-                  helperText={formik.touched.gstNum && formik.errors.gstNum}
-                />
-                <TextField
-                  fullWidth
+                  variant="outlined"
+                  margin="normal"
                   id="cmpName"
                   name="cmpName"
                   label="Company Name"
@@ -109,9 +103,37 @@ export default function CreateVendor() {
                 />
                 <TextField
                   fullWidth
+                  variant="outlined"
+                  margin="normal"
                   id="custName"
                   name="custName"
-                  label="Customer Name"
+                  label="Vendor Name"
+                  value={formik.values.custName}
+                  onChange={formik.handleChange}
+                  error={
+                    formik.touched.custName && Boolean(formik.errors.custName)
+                  }
+                  helperText={formik.touched.custName && formik.errors.custName}
+                />
+                <TextField
+                  fullWidth
+                  variant="outlined"
+                  margin="normal"
+                  id="gstNum"
+                  name="gstNum"
+                  label="GST Number"
+                  value={formik.values.gstNum}
+                  onChange={formik.handleChange}
+                  error={formik.touched.gstNum && Boolean(formik.errors.gstNum)}
+                  helperText={formik.touched.gstNum && formik.errors.gstNum}
+                />
+                <TextField
+                  fullWidth
+                  variant="outlined"
+                  margin="normal"
+                  id="custName"
+                  name="custName"
+                  label="Vendor Phone"
                   value={formik.values.custName}
                   onChange={formik.handleChange}
                   error={
@@ -123,6 +145,8 @@ export default function CreateVendor() {
               <Grid item lg={5}>
                 <TextField
                   fullWidth
+                  variant="outlined"
+                  margin="normal"
                   id="emailId"
                   name="emailId"
                   label="Email Id"
@@ -133,8 +157,10 @@ export default function CreateVendor() {
                   }
                   helperText={formik.touched.emailId && formik.errors.emailId}
                 />
-                <TextField
+                {/* <TextField
                   fullWidth
+                  variant="outlined"
+                  margin="normal"
                   id="address"
                   name="address"
                   label="Address"
@@ -144,37 +170,43 @@ export default function CreateVendor() {
                     formik.touched.address && Boolean(formik.errors.address)
                   }
                   helperText={formik.touched.address && formik.errors.address}
-                  // InputProps={{
-                  //   endAdornment: (
-                  //     <InputAdornment position="end">Kg</InputAdornment>
-                  //   ),
-                  // }}
+                /> */}
+                <TextField
+                  fullWidth
+                  margin="normal"
+                  id="address"
+                  label="Address"
+                  placeholder="Enter Address"
+                  multiline
+                  rows={4}
+                  variant="outlined"
+                  name="address"
+                  value={formik.values.address}
+                  onChange={formik.handleChange}
+                  error={
+                    formik.touched.address && Boolean(formik.errors.address)
+                  }
+                  helperText={formik.touched.address && formik.errors.address}
                 />
               </Grid>
             </Grid>
             <Grid
               container
               direction="row"
-              justify="space-around"
+              justifyContent="space-evenly"
               alignItems="center"
               xs={11}
             >
-              <Button item color="primary" variant="contained">
-                Save
-              </Button>
-              <Button item color="primary" variant="contained">
-                Print
-              </Button>
-              <Button item color="primary" variant="contained">
-                PDF
-              </Button>
-              <Button
+              {/* <Button
                 item
                 color="primary"
                 variant="contained"
                 className={classes.cancelButton}
               >
                 Cancel
+              </Button> */}
+              <Button item color="primary" variant="contained">
+                Save
               </Button>
             </Grid>
           </form>

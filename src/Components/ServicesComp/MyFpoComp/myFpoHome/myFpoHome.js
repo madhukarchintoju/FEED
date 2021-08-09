@@ -140,10 +140,10 @@ export default function MyFpoHome(props) {
           container
           item
           lg={12}
-          justifyContent="space-evenly"
+          justifyContent="space-between"
           className="p-1"
         >
-          <Grid container item lg={8}>
+          <Grid container item lg={8} className="mx-auto">
             {fpoHomeData.map((item, index) => (
               <Grid key={index} item xs={6} md={3} lg={3}>
                 <Grid className="homeItemWrap">
@@ -183,8 +183,31 @@ export default function MyFpoHome(props) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid container item lg={10} xs={12}>
-          <h5>Glance at the services offered to FPOs by FEED</h5>
+        <Grid
+          container
+          item
+          lg={10}
+          xs={12}
+          style={{
+            // backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/home/pointsbg.jpg")`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            // opacity:"0.1",
+            // backgroundImage: `url("${process.env.PUBLIC_URL}/assets/my-fpo/home/keypointsbg.jpg"), linear-gradient(90deg, rgba(246,246,246,1) 35%, rgba(255,255,255,1) 100%)`,
+            // filter:'FlipV',
+            // msFilter: "FlipV",
+            // transform: 'rotateY(180deg)',
+          }}
+        >
+          <h4
+            style={{
+              textDecoration: 'underline',
+              fontFamily: `'STIX Two Text', serif`,
+              fontWeight: '600',
+            }}
+          >
+            Glance at the services offered to FPOs by FEED
+          </h4>
           <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
             <li>
               To conduct baseline survey and analyse the social and financial

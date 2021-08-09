@@ -22,6 +22,13 @@ import WidgetsBar from '../../widgetsBar/widgetsBar'
 import CreateVendor from '../myFpoList/fpoAccount/createVendor/createVendor'
 import FpoReports from '../myFpoList/fpoReports/fpoReports'
 import FpoCapacityBuilding from '../myFpoList/fpoCapacityBuilding/fpoCapacityBuilding'
+import ShareCapitalRegistry from '../myFpoList/fpoAccount/shareCapitalRegistry/shareCapitalRegistry'
+import PurchaseRegistry from '../myFpoList/fpoAccount/purchaseRegistry/purchaseRegistry'
+import StockRegistry from '../myFpoList/fpoAccount/stockRegistry/stockRegistry'
+import BankRegistry from '../myFpoList/fpoAccount/bankRegistry/bankRegistry'
+import CashbookRegistry from '../myFpoList/fpoAccount/cashbookRegistry/cashbookRegistry'
+import LedgerRegistry from '../myFpoList/fpoAccount/ledgerRegistry/ledgerRegistry'
+import Reports from '../myFpoList/fpoAccount/reports/reports'
 
 export default function MyFpoMain(props) {
   const background = {
@@ -128,8 +135,9 @@ export default function MyFpoMain(props) {
           data={navData}
           bgColor="#ffc107"
           textColor="black"
-          serviceTitleBg="rgb(107 109 153)"
+          serviceTitleBg="#d6a920"
           serviceTitle="MY FPC"
+          selectedSideNavLink="linear-gradient(90deg, rgba(255,193,7,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="col-lg p-0 fpo-content-wrap">
           {/* <WidgetsBar screenTitle="fpc home"></WidgetsBar> */}
@@ -178,6 +186,28 @@ export default function MyFpoMain(props) {
               path="/myfpo/salesregister"
               component={SalesRegistry}
             ></Route>
+            <Route
+              path="/myfpo/sharecapitalregistry"
+              component={ShareCapitalRegistry}
+            ></Route>
+            <Route
+              path="/myfpo/purchaseregistry"
+              component={PurchaseRegistry}
+            ></Route>
+            <Route
+              path="/myfpo/stockregistry"
+              component={StockRegistry}
+            ></Route>
+            <Route path="/myfpo/bankregistry" component={BankRegistry}></Route>
+            <Route
+              path="/myfpo/cashbookregistry"
+              component={CashbookRegistry}
+            ></Route>
+            <Route
+              path="/myfpo/ledgerregistry"
+              component={LedgerRegistry}
+            ></Route>
+            <Route path="/myfpo/fporeports" component={Reports}></Route>
             <Redirect to="/myfpo/home" />
           </Switch>
         </div>

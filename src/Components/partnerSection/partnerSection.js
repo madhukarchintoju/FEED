@@ -16,7 +16,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay])
 export default function PartnerSection() {
   const useStyles = makeStyles((theme) => ({
     partnerSectionWrap: {
-      marginTop: '1em',
+      marginTop: '2em',
     },
     PartnerSection: {
       width: '98%',

@@ -58,7 +58,8 @@ function Home() {
       mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
     },
     newsfeeds: {
-      height: '540px',
+      overflow: 'auto',
+      height: '460px',
       backgroundColor: 'white',
       padding: 0,
     },
@@ -284,8 +285,8 @@ function Home() {
                   alt="Event and Updates"
                 />
               </Grid>
-              <Grid container className="mt-3">
-                <Grid className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+              <Grid container className="mt-1" justifyContent="space-evenly">
+                <Grid item lg={3}>
                   <Grid className={classes.eventupdatesWrap}>
                     <h6 className={classes.newsfeedsHeading}>
                       Central / State Updates
@@ -327,7 +328,7 @@ function Home() {
                     </List>
                   </Grid>
                 </Grid>
-                <Grid item lg={6}>
+                <Grid item lg={5}>
                   <div>
                     <Gallery photos={photos} onClick={openLightbox} />
                     <ModalGateway>
@@ -346,7 +347,7 @@ function Home() {
                     </ModalGateway>
                   </div>
                 </Grid>
-                <Grid className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <Grid lg={3}>
                   <Grid className={classes.eventupdatesWrap}>
                     <h6 className={classes.newsfeedsHeading}>FEED Updates</h6>
                     <List className={classes.newsfeeds}>

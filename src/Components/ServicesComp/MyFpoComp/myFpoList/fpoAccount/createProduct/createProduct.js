@@ -6,28 +6,34 @@ import {
   makeStyles,
   Grid,
   InputAdornment,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  OutlinedInput,
 } from '@material-ui/core'
 import * as yup from 'yup'
 
 export default function CreateProduct() {
   const useStyles = makeStyles((theme) => ({
     formRoot: {
-      boxShadow: '0px 2px 22px 4px rgba(0,0,0,0.2)',
-      webkitBoxShadow: '0px 2px 22px 4px rgba(0,0,0,0.2)',
-      mozBoxShadow: '0px 2px 22px 4px rgba(0,0,0,0.2)',
+      margin: 'auto',
+      boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
       marginTop: '2em',
+      paddingBottom: '1em',
       '@media (max-width: 768px)': {
         marginTop: '0',
       },
     },
     form: {
-      padding: '2em 6em 3em 6em',
-      '& div': {
-        marginBottom: '0.4em',
-      },
-      '@media (max-width: 768px)': {
-        padding: '1em',
-      },
+      // padding: '2em 6em 3em 6em',
+      // '& div': {
+      //   marginBottom: '0.4em',
+      // },
+      // '@media (max-width: 768px)': {
+      //   padding: '1em',
+      // },
     },
     title: {
       textAlign: 'center',
@@ -67,76 +73,162 @@ export default function CreateProduct() {
       alert(JSON.stringify(values, null, 2))
     },
   })
+  const productCategoryList = [
+    {
+      id: 1,
+      name: 'Fruits',
+    },
+    {
+      id: 2,
+      name: 'Vegetables',
+    },
+    {
+      id: 3,
+      name: 'Spices',
+    },
+    {
+      id: 4,
+      name: 'Cereals',
+    },
+    {
+      id: 5,
+      name: 'Oil Seeds',
+    },
+    {
+      id: 6,
+      name: 'Forest Products',
+    },
+    {
+      id: 7,
+      name: 'Animal Husbandry',
+    },
+    {
+      id: 8,
+      name: 'Poultry',
+    },
+    {
+      id: 9,
+      name: 'Aqua',
+    },
+    {
+      id: 10,
+      name: 'Dairy',
+    },
+    {
+      id: 11,
+      name: 'Plants',
+    },
+    {
+      id: 12,
+      name: 'Flowers',
+    },
+    {
+      id: 13,
+      name: 'Plantation Crop',
+    },
+    {
+      id: 14,
+      name: 'Fabric',
+    },
+    {
+      id: 15,
+      name: 'Others',
+    },
+  ]
   return (
     <>
-      <Grid container direction="column" justify="center" alignItems="center">
-        <Grid item className={classes.formRoot}>
+      <Grid container direction="column">
+        <Grid item lg={10} className={classes.formRoot}>
           <h5 className={classes.title}>Create Product</h5>
           <form onSubmit={formik.handleSubmit} className={classes.form}>
-            <TextField
-              fullWidth
-              id="productName"
-              name="productName"
-              label="Product Name"
-              value={formik.values.productName}
-              onChange={formik.handleChange}
-              error={
-                formik.touched.productName && Boolean(formik.errors.productName)
-              }
-              helperText={
-                formik.touched.productName && formik.errors.productName
-              }
-            />
-            <TextField
-              fullWidth
-              id="hsnCode"
-              name="hsnCode"
-              label="HSN Code"
-              value={formik.values.hsnCode}
-              onChange={formik.handleChange}
-              error={formik.touched.hsnCode && Boolean(formik.errors.hsnCode)}
-              helperText={formik.touched.hsnCode && formik.errors.hsnCode}
-            />
-            <TextField
-              fullWidth
-              id="quantity"
-              name="quantity"
-              label="Quantity"
-              type="number"
-              value={formik.values.quantity}
-              onChange={formik.handleChange}
-              error={formik.touched.quantity && Boolean(formik.errors.quantity)}
-              helperText={formik.touched.quantity && formik.errors.quantity}
-              InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">Kg</InputAdornment>
-                ),
-              }}
-            />
-            <Grid
-              container
-              direction="row"
-              justify="space-around"
-              alignItems="center"
-              xs={11}
-            >
-              <Button item color="primary" variant="contained">
-                Save
-              </Button>
-              <Button item color="primary" variant="contained">
-                Print
-              </Button>
-              <Button item color="primary" variant="contained">
-                PDF
-              </Button>
-              <Button
-                item
-                color="primary"
-                variant="contained"
-                className={classes.cancelButton}
+            <Grid container direction="row" lg={8} className="m-auto">
+              <TextField
+                fullWidth
+                variant="outlined"
+                margin="normal"
+                id="productName"
+                name="productName"
+                label="Product Name"
+                value={formik.values.productName}
+                onChange={formik.handleChange}
+                error={
+                  formik.touched.productName &&
+                  Boolean(formik.errors.productName)
+                }
+                helperText={
+                  formik.touched.productName && formik.errors.productName
+                }
+              />
+              <TextField
+                select
+                fullWidth
+                margin="normal"
+                variant="outlined"
+                id="hsnCode"
+                name="hsnCode"
+                label="Product Category"
+                value={formik.values.hsnCode}
+                onChange={formik.handleChange}
+                error={formik.touched.hsnCode && Boolean(formik.errors.hsnCode)}
+                helperText={formik.touched.hsnCode && formik.errors.hsnCode}
               >
-                Cancel
-              </Button>
+                {productCategoryList.map((item) => (
+                  <MenuItem key={item.id} value={item.id}>
+                    {item.name}
+                  </MenuItem>
+                ))}
+              </TextField>
+              <TextField
+                fullWidth
+                variant="outlined"
+                margin="normal"
+                id="quantity"
+                name="quantity"
+                label="HSN CODE"
+                type="number"
+                error={
+                  formik.touched.quantity && Boolean(formik.errors.quantity)
+                }
+                helperText={formik.touched.quantity && formik.errors.quantity}
+              />
+              <TextField
+                fullWidth
+                variant="outlined"
+                margin="normal"
+                id="quantity"
+                name="quantity"
+                label="Amount"
+                type="number"
+                error={
+                  formik.touched.quantity && Boolean(formik.errors.quantity)
+                }
+                helperText={formik.touched.quantity && formik.errors.quantity}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">₹</InputAdornment>
+                  ),
+                }}
+              />
+              <Grid
+                container
+                direction="row"
+                justify="space-around"
+                alignItems="center"
+                xs={11}
+                className="mt-3"
+              >
+                <Button
+                  item
+                  color="primary"
+                  variant="contained"
+                  className={classes.cancelButton}
+                >
+                  Cancel
+                </Button>
+                <Button item color="primary" variant="contained">
+                  Save
+                </Button>
+              </Grid>
             </Grid>
           </form>
         </Grid>

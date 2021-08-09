@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './aboutFpo.css'
 import { Grid, makeStyles, Avatar, TextField } from '@material-ui/core'
+import CountUp, { useCountUp } from 'react-countup'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, {
   Pagination,
@@ -9,38 +10,38 @@ import SwiperCore, {
   EffectCoverflow,
 } from 'swiper/core'
 SwiperCore.use([Pagination, Navigation, Autoplay, EffectCoverflow])
-export default function AboutFpo() {
+export default function AboutFpo(props) {
   const aboutFpcStatistics = [
     {
       statTitle: 'Registered Farmers',
-      statcount: '9000+',
+      statcount: 300,
       backgroundColor: '#B9C406',
     },
     {
       statTitle: 'Acres of land',
-      statcount: '25000+',
+      statcount: 1000,
       backgroundColor: '#704404',
     },
     {
       statTitle: 'Villages Covered',
-      statcount: '120+',
+      statcount: 10,
       backgroundColor: '#F1931B',
     },
     {
       statTitle: 'Countries Served',
-      statcount: '50+',
-      backgroundColor: 'green',
+      statcount: 5,
+      backgroundColor: '#f96762',
     },
     {
       statTitle: 'Customers Worldwide',
-      statcount: '50000+',
-      backgroundColor: '#C0334D',
+      statcount: 500,
+      backgroundColor: '#996aa0',
     },
   ]
   const productAndServices = [
     {
       productName: 'Juice',
-      productImg: 'byproductone.jpg',
+      productImg: 'grapes.jpg',
       productContent: `Alice is a freelance web designer 
       and developer based in London. She is specialized in HTML5, CSS3, 
       JavaScript, Bootstrap, etc freelance web designer and developer based in London. 
@@ -48,7 +49,7 @@ export default function AboutFpo() {
     },
     {
       productName: 'Juice Bottle',
-      productImg: 'byproducttwo.jpg',
+      productImg: 'banana.jpg',
       productContent: `Alice is a freelance web designer 
       and developer based in London. She is specialized in HTML5, CSS3, 
       JavaScript, Bootstrap, etc freelance web designer and developer based in London. 
@@ -56,7 +57,7 @@ export default function AboutFpo() {
     },
     {
       productName: 'Organic Juice',
-      productImg: 'byproductsthree.jpg',
+      productImg: 'papaya.jpg',
       productContent: `Alice is a freelance web designer 
       and developer based in London. She is specialized in HTML5, CSS3, 
       JavaScript, Bootstrap, etc freelance web designer and developer based in London. 
@@ -64,7 +65,7 @@ export default function AboutFpo() {
     },
     {
       productName: 'Organic juice Bottle',
-      productImg: 'byproducttwo.jpg',
+      productImg: 'guava.jpg',
       productContent: `Alice is a freelance web designer 
       and developer based in London. She is specialized in HTML5, CSS3, 
       JavaScript, Bootstrap, etc freelance web designer and developer based in London. 
@@ -74,31 +75,23 @@ export default function AboutFpo() {
   const aboutGallery = [
     {
       name: '',
-      galleryImg: 'fruitcut.jpg',
+      galleryImg: 'galleryimgone.jpg',
     },
     {
       name: '',
-      galleryImg: 'mixedfruitsbasket.jpg',
+      galleryImg: 'galleryimgtwo.jpg',
     },
     {
       name: '',
-      galleryImg: 'orangestree.jpg',
+      galleryImg: 'galleryimgthree.jpg',
     },
     {
       name: '',
-      galleryImg: 'fruitcut.jpg',
+      galleryImg: 'galleryimgfour.jpg',
     },
     {
       name: '',
-      galleryImg: 'mixedfruitsbasket.jpg',
-    },
-    {
-      name: '',
-      galleryImg: 'orangestree.jpg',
-    },
-    {
-      name: '',
-      galleryImg: 'pineapple.jpg',
+      galleryImg: 'galleryimgfive.jpg',
     },
   ]
   const aboutfpotestimonial = [
@@ -166,12 +159,19 @@ export default function AboutFpo() {
     aboutFpo: {
       // height:'450px',
     },
+    fpcLogo: {
+      width: '5em',
+      height: '5em',
+    },
     aboutFpoTitle: {
       padding: '3px',
       marginLeft: '5px',
+      marginRight: '10px',
       border: '3px solid grey',
       borderRadius: '10px 10px',
       backgroundColor: 'white',
+      fontFamily: `'STIX Two Text', serif`,
+      fontSize: '28px',
     },
     aboutFpoContentWrap: {
       marginTop: '1.5em',
@@ -227,11 +227,15 @@ export default function AboutFpo() {
     },
   }))
   const classes = useStyles()
+  const data = [0, 1, 2, 3, 4, 5, 6]
   return (
     <>
       <Grid className={classes.aboutFpoWrap}>
-        <Grid container justifyContent="center">
-          <h5>About FPC</h5>
+        <Grid container justifyContent="center" className="mb-3">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/aboutfpcnameplate.jpg`}
+            alt=""
+          />
         </Grid>
         <Grid item lg={11} className="m-auto">
           <ul
@@ -267,6 +271,8 @@ export default function AboutFpo() {
               key={index}
               lg={2}
               style={{
+                marginTop: '10px',
+                textAlign: 'center',
                 borderRadius: '10px 10px',
                 backgroundColor: item.backgroundColor,
                 boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
@@ -274,9 +280,16 @@ export default function AboutFpo() {
                 mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75) ',
               }}
             >
-              <div class="text-white p-1">
-                <h6 class="">{item.statTitle}</h6>
-                <p class="">{item.statcount}</p>
+              <div className="text-white p-1">
+                <h6>{item.statTitle}</h6>
+                <h2>
+                  <CountUp
+                    duration={2}
+                    start={0}
+                    end={item.statcount}
+                  ></CountUp>
+                  <span>+</span>
+                </h2>
               </div>
             </Grid>
           ))}
@@ -289,23 +302,35 @@ export default function AboutFpo() {
             justifyContent="space-around"
             className={classes.aboutFpoContentWrap}
           >
-            <Grid lg={10} item className="about-fpo-content">
+            <Grid lg={11} item className="about-fpo-content">
               <fieldset>
                 <legend>
                   <Grid
-                    container
-                    style={{ display: 'flex', justifyContent: 'center' }}
+                  // container
+                  // style={{ display: 'flex', justifyContent: 'center' }}
                   >
-                    <Avatar
-                      src={`${process.env.PUBLIC_URL}/assets/sample-fpo-logo.svg`}
-                      alt="FPO LOGO"
-                    />
+                    <Grid>
+                      <img
+                        src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/fpclogo.jpg`}
+                        // width='120'
+                        alt="FPO LOGO"
+                        className={classes.fpcLogo}
+                      />
+                    </Grid>
+
+                    {/* <Grid> */}
                     <h4 className={classes.aboutFpoTitle}>
-                      Fruits Farm Producer Co Pvt Ltd
+                      Fruits Farm Producer Ltd
                     </h4>
+                    {/* </Grid> */}
                   </Grid>
                 </legend>
-                <h5 className="ml-3">About FPC :</h5>
+                <h5
+                  className="ml-3"
+                  style={{ fontFamily: `'STIX Two Text', serif` }}
+                >
+                  About FPC :
+                </h5>
                 <Grid className="about-fpo-descpr">
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
@@ -406,10 +431,10 @@ export default function AboutFpo() {
           <Grid container justifyContent="center">
             <h3 className="productServicesTitle">Products and Services</h3>
           </Grid>
-          <Grid container item lg={12} justifyContent="space-around">
+          <Grid container justifyContent="space-around">
             {productAndServices.map((item, index) => (
-              <Grid key={index} lg={3} item>
-                <Grid item className="prcard">
+              <Grid key={index} lg={3} item className="prcard">
+                <Grid item>
                   <Grid className="nav-link">
                     <img
                       src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/${item.productImg}`}
@@ -479,7 +504,7 @@ export default function AboutFpo() {
                     <Grid className={classes.fpoImgSize}>
                       <img
                         variant="square"
-                        src={`${process.env.PUBLIC_URL}/assets/common/${item.galleryImg}`}
+                        src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/${item.galleryImg}`}
                         alt="FPO Images"
                         width="100%"
                         className=""
@@ -497,7 +522,7 @@ export default function AboutFpo() {
               src={`${process.env.PUBLIC_URL}/assets/common/certificationicon.png`}
               alt="certification icon"
             />
-            <h2 className="text-warning">Our Licenses and Certifications</h2>
+            <h2 className="licensesTitle">Our Licenses and Certifications</h2>
           </Grid>
           <Grid container justifyContent="center">
             {certificationPartners.map((item, index) => (
@@ -575,7 +600,16 @@ export default function AboutFpo() {
             </div>
           </Grid>
         </Grid>
-        <Grid container item>
+        <Grid
+          container
+          item
+          style={{
+            height: 'fit-content',
+            backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/about/aboutcontactbnr.png")`,
+            backgroundSize: '60% 100%',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
           <Grid className="ctrWrap">
             <div className="text-left">
               <h4 className="text-danger font-italic">Contact Us</h4>
