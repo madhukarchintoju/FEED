@@ -19,7 +19,7 @@ import Register from './Components/RegisterComp/Register'
 import Login from './Components/LoginComp/Login'
 import Footer from './Components/FooterComp/Footer'
 import MyFarmMainComp from './Components/ServicesComp/myFarmComp/myFarmMainComp/myFarmMain'
-import MyProductsMainComp from './Components/ServicesComp/myProductsComp/myProductsMainComp/myProductsMainComp'
+// import MyProductsMainComp from './Components/ServicesComp/myProductsComp/myProductsMainComp/myProductsMainComp'
 import MyBusinessMain from './Components/ServicesComp/MyBusinessComp/myBusinessMain/myBusinessMain'
 import MyExportMainComp from './Components/ServicesComp/myExportComp/myExportMainComp/myExportMainComp'
 import MyEduMainComp from './Components/ServicesComp/myEduComp/myEduMainComp/myEduMainComp'
@@ -33,6 +33,14 @@ import DashboardMain from './Components/myDashboard/dashboardMain/dashboardMain'
 import MediaPage from './Components/mediaPage/mediaPage'
 import Blogs from './Components/blogs/blogs'
 import AboutList from './Components/aboutSection/aboutList/aboutList'
+
+import ProductProfile from './Components/ServicesComp/productProfile/productProfile'
+import Production from './Components/ServicesComp/productProfile/production'
+import BIProducts from './Components/ServicesComp/productProfile/biproducts'
+import SchemesAndPolicies from './Components/ServicesComp/productProfile/schemes-and-policies'
+import ProcessingUnits from './Components/ServicesComp/productProfile/processing-units'
+import Trade from './Components/ServicesComp/productProfile/trade'
+import UntappedProducts from './Components/ServicesComp/productProfile/untapped-products'
 
 function App() {
   const ScrollToTop = () => {
@@ -79,7 +87,34 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/myfpo" component={MyFpoMain} />
           <Route path="/myfarm" component={MyFarmMainComp} />
-          <Route path="/myproducts" component={MyProductsMainComp} />
+          {/* <Route path="/myproducts" component={MyProductsMainComp} /> */}
+          <Route path="/productprofile" exact component={ProductProfile} />
+          <Route
+            path="/productprofile/production"
+            exact
+            component={Production}
+          />
+          <Route
+            path="/productprofile/bi-products"
+            exact
+            component={BIProducts}
+          />
+          <Route
+            path="/productprofile/schemes-and-policies"
+            exact
+            component={SchemesAndPolicies}
+          />
+          <Route
+            path="/productprofile/processing-units"
+            exact
+            component={ProcessingUnits}
+          />
+          <Route path="/productprofile/trade" exact component={Trade} />
+          <Route
+            path="/productprofile/untapped-products"
+            exact
+            component={UntappedProducts}
+          />
           <Route path="/mybusiness" component={MyBusinessMain} />
           <Route path="/myexport" component={MyExportMainComp} />
           <Route path="/myeducation" component={MyEduMainComp} />

@@ -1,0 +1,19 @@
+.processing-content .card {
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.processing-content .card .card-header {
+  background: #f7941d;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.processing-content .card .card-header h5 {
+  color: white;
+}
+.pu-icon {
+  padding: 20px !important;
+}
+.pu-icon img {
+  width: 180px;
+  height: 120px;
+}

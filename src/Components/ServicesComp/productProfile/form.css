@@ -1,0 +1,45 @@
+.ppform-row {
+  background-image: linear-gradient(
+    to right top,
+    #5433ff,
+    #005eff,
+    #007bff,
+    #0092ff,
+    #00a6ff,
+    #00b4ff,
+    #00c1ff,
+    #00ceff,
+    #00dafe,
+    #1ee6fb,
+    #40f1f7,
+    #5ffbf1
+  );
+  padding: 20px !important;
+}
+#ppform label {
+  font-weight: bold !important;
+}
+#ppform input {
+  width: 50%;
+}
+#ppform input {
+  padding: 10px !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 10px !important;
+}
+.ppform-submit-btn {
+  background-image: linear-gradient(
+    to bottom,
+    #f0b817,
+    #f1a303,
+    #f18d00,
+    #ef7605,
+    #eb5d12
+  );
+  color: white;
+  padding: 5px;
+  width: 50%;
+  border: 2px solid black;
+}

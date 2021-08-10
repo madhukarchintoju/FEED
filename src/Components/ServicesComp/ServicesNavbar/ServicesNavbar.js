@@ -34,7 +34,7 @@ export default function ServicesNavbar() {
                   MY FARM
                 </button>
               </Link>
-              <Link className="nav-link" to="/myproducts">
+              <Link className="nav-link" to="/productprofile">
                 <button className="btn btn-primary">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/product-icon.jpg`}
