@@ -1,0 +1,75 @@
+.pp-side-menu {
+  padding: 0px !important;
+}
+.pp-side-menu h2 {
+  color: #00a651;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.pp-side-menu .card {
+  margin-bottom: 6px;
+  border-top-right-radius: 50px !important;
+  cursor: pointer;
+}
+.pp-side-menu .card-header {
+  position: relative;
+  background: #005e9e;
+  border-top-right-radius: 50px !important;
+  border: none !important;
+  outline: none !important;
+  padding: 10px;
+  overflow: hidden;
+}
+.pp-side-menu .card-header h4 {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  left: 28px;
+}
+.pp-side-menu .card-header button {
+  background: transparent;
+  color: white;
+  padding: 0px !important;
+  border: none;
+  outline: none;
+  position: absolute;
+  right: 30px;
+}
+.pp-side-menu .card-header button i {
+  font-size: 25px;
+}
+.pp-side-menu .card-header .shape {
+  width: 50px;
+  height: 50px;
+  background: #ee145b;
+  border: 1px solid white;
+  position: absolute;
+  top: -3px;
+  left: -32px;
+  transform: rotate(46deg);
+}
+@media only screen and (min-width: 801px) and (max-width: 1550px) {
+  .pp-side-menu h2 {
+    color: #00a651;
+    font-size: 20px;
+  }
+  .pp-side-menu .card-header {
+    padding: 8px;
+  }
+  .pp-side-menu .card-header h4 {
+    color: white;
+    font-size: 13px;
+    position: relative;
+    left: 28px;
+  }
+  .pp-side-menu .card-header button {
+    bottom: 10px;
+  }
+  .pp-side-menu .card-header button i {
+    font-size: 16px;
+  }
+  .pp-side-menu .card-header .shape {
+    top: -9px;
+    left: -40px;
+  }
+}

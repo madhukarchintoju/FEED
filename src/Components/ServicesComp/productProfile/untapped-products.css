@@ -1,0 +1,65 @@
+.utp-main-title {
+  color: #ed1c24;
+  font-weight: bold;
+}
+.utp-flag-row .card-body {
+  padding: 10px !important;
+}
+.utp-flag-row .card {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 2px solid black;
+}
+.utp-flag-row .card-header {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  background: #fdb913;
+}
+.country-flag {
+  padding: 10px;
+}
+.country-flag h6 {
+  font-size: 13px;
+}
+.utp-policies {
+  width: 80%;
+  margin: 0 auto !important;
+}
+.utp-policies ul li {
+  /* display:inline-flex;
+    justify-content: space-between; */
+  text-align: center;
+  list-style-type: none;
+  width: 15%;
+  padding: 10px !important;
+  color: black;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin-right: 10px !important;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.1);
+}
+.utp-text-content {
+  position: relative;
+  width: 50%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 25px !important;
+}
+.utp-text-content p {
+  font-weight: 500;
+}
+.utp-top-left-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.utp-bottom-right-border {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.utp-text-content .more-info {
+  color: #2e3192;
+}

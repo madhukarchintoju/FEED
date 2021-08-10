@@ -6,74 +6,17 @@
   text-decoration: none !important;
   color: black !important;
 }
-.pp-side-menu {
-  padding: 0px !important;
-}
-.pp-side-menu h2 {
-  color: #00a651;
-  font-size: 30px;
-  margin-top: 10px;
-}
-.pp-side-menu .card {
-  margin-bottom: 6px;
-  border-top-right-radius: 50px !important;
-  cursor: pointer;
-}
-.pp-side-menu .card-header {
-  position: relative;
-  background: #005e9e;
-  border-top-right-radius: 50px !important;
-  border: none !important;
-  outline: none !important;
-  padding: 10px;
-  overflow: hidden;
-}
-.pp-side-menu .card-header h4 {
-  color: white;
-  font-size: 18px;
-  position: relative;
-  left: 28px;
-}
-.pp-side-menu .card-header button {
-  background: transparent;
-  color: white;
-  padding: 0px !important;
-  border: none;
-  outline: none;
-  position: absolute;
-  right: 30px;
-}
-.pp-side-menu .card-header button i {
-  font-size: 25px;
-}
-.pp-side-menu .card-header .shape {
-  width: 50px;
-  height: 50px;
-  background: #ee145b;
-  border: 1px solid white;
-  position: absolute;
-  top: -3px;
-  left: -32px;
-  transform: rotate(46deg);
-}
 .form-div {
   padding-top: 10px !important;
 }
-.form {
-  width: 400px;
-  height: 350px;
-  background-image: linear-gradient(
-    to bottom,
-    #70d0f6,
-    #93d9f6,
-    #b1e2f7,
-    #ccebf8,
-    #e7f4f9
-  );
-  border-radius: 20px;
-  padding: 20px !important;
-  margin: 0 auto !important;
-}
+/* .form{
+    width:400px;
+    height:350px;
+    background-image: linear-gradient(to bottom, #70d0f6, #93d9f6, #b1e2f7, #ccebf8, #e7f4f9);
+    border-radius:20px;
+    padding:20px!important;
+    margin:0 auto!important;
+} */
 .form input {
   border: none !important;
   outline: none !important;
@@ -108,20 +51,30 @@
   border-radius: 20px;
   margin: 10px 0px 20px 40px;
 }
-.sections .card-header {
+.db-sec {
+  width: 300px;
+  height: 250px;
+  border-radius: 20px;
+  margin: 10px auto 30px auto !important;
+}
+.sections .card-header,
+.db-sec .card-header {
   color: black;
   font-weight: bold;
   text-align: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.sections .card-body {
+.sections .card-body,
+.db-sec .card-body {
   padding: 5px 0px 0px !important;
 }
-.sections .card-body ul {
+.sections .card-body ul,
+.db-sec .card-body ul {
   padding: 0px 0px 0px 10px !important;
 }
-.sections .card-body li {
+.sections .card-body li,
+.db-sec .card-body li {
   list-style-type: none;
   font-weight: bold;
   margin-bottom: 10px;
@@ -157,30 +110,10 @@
   position: absolute;
   right: 20px;
 }
+.ant img {
+  height: 280px;
+}
 @media only screen and (min-width: 801px) and (max-width: 1550px) {
-  .pp-side-menu h2 {
-    color: #00a651;
-    font-size: 20px;
-  }
-  .pp-side-menu .card-header {
-    padding: 8px;
-  }
-  .pp-side-menu .card-header h4 {
-    color: white;
-    font-size: 13px;
-    position: relative;
-    left: 28px;
-  }
-  .pp-side-menu .card-header button {
-    bottom: 10px;
-  }
-  .pp-side-menu .card-header button i {
-    font-size: 16px;
-  }
-  .pp-side-menu .card-header .shape {
-    top: -9px;
-    left: -40px;
-  }
   .form {
     width: 300px;
     height: 325px;

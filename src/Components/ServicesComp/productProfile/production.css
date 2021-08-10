@@ -1,0 +1,17 @@
+.production-table table {
+  width: 100%;
+}
+.production-table table th {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+}
+.production-table table .main-row th {
+  background: #feb913;
+}
+.area-ha {
+  background: #e0ec8e;
+}
+.production-mt {
+  background: #c0e4cd;
+}

@@ -174,7 +174,7 @@ export default function ServicesSection(props) {
                     </Link>
                   </div>
                   <div className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0">
-                    <Link className="nav-link" to="/myproducts">
+                    <Link className="nav-link" to="/productprofile">
                       <div
                         className="text-center services-card m-2"
                         style={{
