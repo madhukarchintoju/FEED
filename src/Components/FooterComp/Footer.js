@@ -553,7 +553,7 @@ export default function Footer() {
                   FEED STARTUP APP
                 </h6>
               </Grid>
-              <Grid className="text-center">
+              <Grid className="text-center banner-right">
                 <img
                   src={`${process.env.PUBLIC_URL}/assets/footer/mobile.png`}
                   // width="90%"

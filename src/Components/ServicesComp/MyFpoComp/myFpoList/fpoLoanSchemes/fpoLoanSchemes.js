@@ -4,7 +4,10 @@ export default function FpoLoanSchemes() {
   return (
     <>
       <Grid className="text-center">
-        <h5>FPC Loans &amp; Schemes</h5>
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/my-fpo/fpcloansschemes/fpcloansandschemesnameplate.png`}
+          alt="..."
+        />
       </Grid>
       <Grid container item lg={11} className="m-auto">
         <ul>

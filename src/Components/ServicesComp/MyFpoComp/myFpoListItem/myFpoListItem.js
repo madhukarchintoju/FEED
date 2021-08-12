@@ -1,7 +1,7 @@
 import React from 'react'
 import './myFpoListItem.css'
 import { Link } from 'react-router-dom'
-import { Grid, Avatar, Button, Icon, makeStyles } from '@material-ui/core'
+import { Grid, Avatar, makeStyles } from '@material-ui/core'
 
 export default function MyFpoListItem(props) {
   const useStyles = makeStyles((theme) => ({
@@ -97,12 +97,12 @@ export default function MyFpoListItem(props) {
           </Grid>
         ))}
       </Grid>
-      <Grid container justifyContent="center" alignItems="flex-end">
+      {/* <Grid container justifyContent="center" alignItems="flex-end">
         <Button className={classes.feedConnect} variant="contained">
           <b>Connect FEED </b>
           <Icon className="fas fa-angle-double-right"></Icon>
         </Button>
-      </Grid>
+      </Grid> */}
     </div>
   )
 }

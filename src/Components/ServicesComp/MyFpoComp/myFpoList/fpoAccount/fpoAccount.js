@@ -1,5 +1,4 @@
 import React from 'react'
-import MyFpoListItem from '../../myFpoListItem/myFpoListItem'
 import { Link } from 'react-router-dom'
 import './fpoAccount.css'
 import { Grid, makeStyles } from '@material-ui/core'
@@ -13,68 +12,6 @@ export default function FpoAccount() {
     },
   }))
   const classes = useStyles()
-  const dataList = [
-    {
-      id: '1',
-      name: 'Create Vendor',
-      icon: 'accounts/createvendor.png',
-      link: '/myfpo/createvendor',
-    },
-    {
-      id: '2',
-      name: 'Share Capital Registry',
-      icon: 'accounts/sharecapitalregistry.png',
-      link: '',
-    },
-    {
-      id: '3',
-      name: 'Purchase Registry',
-      icon: 'accounts/purcheseregistry.png',
-      link: '',
-    },
-    {
-      id: '4',
-      name: 'Sale Registry',
-      icon: 'accounts/salesregistry.png',
-      link: '/myfpo/salesregister',
-    },
-    {
-      id: '5',
-      name: 'Stock Registry',
-      icon: 'accounts/stockregistry.png',
-      link: '',
-    },
-    {
-      id: '6',
-      name: 'Create Product',
-      icon: 'accounts/createproduct.png',
-      link: '/myfpo/createProduct',
-    },
-    {
-      id: '7',
-      name: 'Ledger Registry',
-      icon: 'accounts/ledgerregistry.png',
-      link: '',
-    },
-    {
-      id: '8',
-      name: 'Bank Registry',
-      icon: 'accounts/bankregistry.png',
-      link: '',
-    },
-    {
-      id: '9',
-      name: 'Cash Book Registry',
-      icon: 'accounts/cashbookregistry.png',
-      link: '',
-    },
-    {
-      id: '10',
-      name: 'FPO Reports',
-      icon: 'accounts/reports.png',
-      link: '',
-    },
-  ]
   const cardSize = {
     webWidth: 11,
     mobWidth: 4,
@@ -85,7 +22,10 @@ export default function FpoAccount() {
   return (
     <>
       <Grid className="text-center">
-        <h5>FPO/FPC Accounts</h5>
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/fpcfpoaccountsnameplate.png`}
+          alt=""
+        />
       </Grid>
       <Grid item lg={11} className="m-auto">
         <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>

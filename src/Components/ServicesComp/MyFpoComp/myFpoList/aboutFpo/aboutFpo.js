@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './aboutFpo.css'
-import { Grid, makeStyles, Avatar, TextField } from '@material-ui/core'
-import CountUp, { useCountUp } from 'react-countup'
+import { Grid, makeStyles, Avatar } from '@material-ui/core'
+import CountUp from 'react-countup'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, {
   Pagination,
@@ -227,13 +227,12 @@ export default function AboutFpo(props) {
     },
   }))
   const classes = useStyles()
-  const data = [0, 1, 2, 3, 4, 5, 6]
   return (
     <>
       <Grid className={classes.aboutFpoWrap}>
         <Grid container justifyContent="center" className="mb-3">
           <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/aboutfpcnameplate.jpg`}
+            src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/aboutfpcnameplate.png`}
             alt=""
           />
         </Grid>

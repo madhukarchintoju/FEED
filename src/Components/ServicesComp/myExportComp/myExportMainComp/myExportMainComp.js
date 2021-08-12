@@ -9,13 +9,22 @@ import StartExport from '../myExportList/startExport/startExport'
 import ExportProductSelection from '../myExportList/exportProductSelection/exportProductSelection'
 import ExportBuyersConnections from '../myExportList/exportBuyersConnection/exportBuyersConnection'
 import EximPolicyRegulation from '../myExportList/eximPolicyRegulation/eximPolicyRegulation'
+import AgriExportPolicy from '../myExportList/eximPolicyRegulation/agriExportPolicy/agriExportPolicy'
+import ForeignTradePolicy from '../myExportList/eximPolicyRegulation/foreignTradePolicy/foreignTradePolicy'
+import ExportPolicy from '../myExportList/eximPolicyRegulation/exportPolicy/exportPolicy'
+import ImportPolicy from '../myExportList/eximPolicyRegulation/importPolicy/importPolicy'
+import StateWisePolicy from '../myExportList/eximPolicyRegulation/stateWisePolicy/stateWisePolicy'
+import ECommercePolicy from '../myExportList/eximPolicyRegulation/eCommercePolicy/eCommercePolicy'
+import HsCodePolicy from '../myExportList/eximPolicyRegulation/hsCodePolicy/hsCodePolicy'
+import ImportRegulations from '../myExportList/eximPolicyRegulation/importRegulations/importRegulations'
 import ProcessExportOrder from '../myExportList/processExportOrder/processExportOrder'
 import EximDocumentation from '../myExportList/eximDocumentation/eximDocumentation'
 import GlobalTradeUpdates from '../myExportList/globalTradeUpdates/globalTradeUpdates'
-import ExportEvents from '../myExportList/exportEvents/exportEvents'
+// import ExportEvents from '../myExportList/exportEvents/exportEvents'
 import ExportToolServices from '../myExportList/exportToolServices/exportToolServices'
 import EximTarrifbenefits from '../myExportList/eximTarrifBenefits/eximTarrifBenefits'
 import EximFinanceInsurance from '../myExportList/eximFinanceInsurance/eximFinanceInsurance'
+import CountrySelection from '../myExportList/countrySelection/countrySelection'
 
 export default function MyExportMainComp() {
   const navData = [
@@ -25,7 +34,7 @@ export default function MyExportMainComp() {
       path: '/myexport/whyexport',
     },
     {
-      name: 'Start Exports',
+      name: 'How to Start Exports',
       icon: 'fas fa-hourglass-start',
       path: '/myexport/startexport',
     },
@@ -60,24 +69,29 @@ export default function MyExportMainComp() {
       path: '/myexport/eximdocumentation',
     },
     {
-      name: 'Global Trade Updates',
+      name: 'Global Trade Updates & Events',
       icon: 'far fa-edit',
       path: '/myexport/globaltradeupdates',
     },
     {
-      name: 'Events',
-      icon: 'fas fa-calendar-week',
-      path: '/myexport/exportevents',
+      name: 'Country Selection',
+      icon: 'far fa-edit',
+      path: '/myexport/countryselection',
+    },
+    // {
+    //   name: 'Events',
+    //   icon: 'fas fa-calendar-week',
+    //   path: '/myexport/exportevents',
+    // },
+    {
+      name: 'Exim Tariff & Benfits',
+      icon: 'fab fa-elementor',
+      path: '/myexport/eximtarrifbenefits',
     },
     {
       name: 'Tools & Services',
       icon: 'fas fa-calculator',
       path: '/myexport/exporttoolservices',
-    },
-    {
-      name: 'Exim Tariff & Benfits',
-      icon: 'fab fa-elementor',
-      path: '/myexport/eximtarrifbenefits',
     },
   ]
   return (
@@ -90,6 +104,7 @@ export default function MyExportMainComp() {
           bgColor="#64c5bc"
           textColor="black"
           serviceTitle="MY EXPORTS"
+          selectedSideNavLink="linear-gradient(90deg, rgba(100,197,188,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="p-0 col-lg">
           <Switch>
@@ -109,6 +124,38 @@ export default function MyExportMainComp() {
               component={EximPolicyRegulation}
             ></Route>
             <Route
+              path="/myexport/agriexportpolicy"
+              component={AgriExportPolicy}
+            ></Route>
+            <Route
+              path="/myexport/foreigntradepolicy"
+              component={ForeignTradePolicy}
+            ></Route>
+            <Route
+              path="/myexport/exportpolicy"
+              component={ExportPolicy}
+            ></Route>
+            <Route
+              path="/myexport/importpolicy"
+              component={ImportPolicy}
+            ></Route>
+            <Route
+              path="/myexport/statewisepolicy"
+              component={StateWisePolicy}
+            ></Route>
+            <Route
+              path="/myexport/ecommercepolicy"
+              component={ECommercePolicy}
+            ></Route>
+            <Route
+              path="/myexport/hscodepolicy"
+              component={HsCodePolicy}
+            ></Route>
+            <Route
+              path="/myexport/importregulations"
+              component={ImportRegulations}
+            ></Route>
+            <Route
               path="/myexport/processexportorder"
               component={ProcessExportOrder}
             ></Route>
@@ -121,9 +168,13 @@ export default function MyExportMainComp() {
               component={GlobalTradeUpdates}
             ></Route>
             <Route
+              path="/myexport/countryselection"
+              component={CountrySelection}
+            ></Route>
+            {/* <Route
               path="/myexport/exportevents"
               component={ExportEvents}
-            ></Route>
+            ></Route> */}
             <Route
               path="/myexport/exporttoolservices"
               component={ExportToolServices}

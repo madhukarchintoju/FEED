@@ -6,44 +6,44 @@ import MyExportListItem from '../../myExportListItem/myExportListItem'
 export default function EximPolicyRegulation() {
   const dataList = [
     {
-      name: 'Why Exports',
+      name: 'Agri Export Policy Regulation',
       icon: 'policy/agri-export-policy.png',
-      link: '/myexport/whyexport',
+      link: '/myexport/agriexportpolicy',
     },
     {
       name: 'Start Export',
       icon: 'policy/foreign-trade-policy.png',
-      link: '/myexport/startexport',
+      link: '/myexport/foreigntradepolicy',
     },
     {
       name: 'Product Selection',
       icon: 'policy/my-export-export-policy.png',
-      link: '/myexport/exportproductselection',
+      link: '/myexport/exportpolicy',
     },
     {
       name: 'Buyers Connection',
       icon: 'policy/my-export-import-policy.png',
-      link: '/myexport/exportbuyersconnection',
+      link: '/myexport/importpolicy',
     },
     {
       name: 'Exim Policy Regulations',
       icon: 'policy/my-export-state-wise-policy.png',
-      link: '/myexport/eximpolicyregulation',
+      link: '/myexport/statewisepolicy',
     },
     {
       name: 'Finance',
       icon: 'policy/my-export-e-commerce-policy.png',
-      link: '',
+      link: '/myexport/ecommercepolicy',
     },
     {
       name: 'Process Export Order',
       icon: 'policy/my-export-hs-code-wise-policy.png',
-      link: '/myexport/processexportorder',
+      link: '/myexport/hscodepolicy',
     },
     {
       name: 'Exim Documentation',
       icon: 'policy/my-export-import-regulation.png',
-      link: '/myexport/eximdocumentation',
+      link: '/myexport/importregulations',
     },
   ]
   const cardSize = {
@@ -54,6 +54,9 @@ export default function EximPolicyRegulation() {
   }
   return (
     <>
+      <Grid container justifyContent="center">
+        <h5>Export-Import Policy &amp; Benefits</h5>
+      </Grid>
       <Grid
         container
         direction="row"
@@ -71,89 +74,18 @@ export default function EximPolicyRegulation() {
           xs={12}
           lg={2}
         >
-          <Grid item xs>
+          {/* <Grid item xs>
             <h4>EXIM POLICY & REGULATIONS</h4>
-          </Grid>
-          <Grid item xs>
+          </Grid> */}
+          {/* <Grid item xs>
             <img
               className="ant-logo"
               src={`${process.env.PUBLIC_URL}/assets/ant-small.png`}
               alt="ant"
             />
-          </Grid>
+          </Grid> */}
         </Grid>
-        {/* <Grid container item xs={12} lg direction="row">
-          <Grid item xs={6} md={4} lg={3}>
-            <Link to="" className="nav-link">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/agri-export-policy.png`}
-                alt="About FPO"
-              />
-            </Link>
-          </Grid>
-          <Grid item xs={6} md={4} lg={3}>
-            <Link to="" className="nav-link">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/foreign-trade-policy.png`}
-                alt="FPO Account"
-              />
-            </Link>
-          </Grid>
-          <Grid item xs={6} md={4} lg={3}>
-            <Link to="" className="nav-link">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/my-export-export-policy.png`}
-                alt="FPO Business Plan"
-              />
-            </Link>
-          </Grid>
-          <Grid item xs={6} md={4} lg={3}>
-            <Link to="" className="nav-link">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/my-export-import-policy.png`}
-                alt="FPO Compliances"
-              />
-            </Link>
-          </Grid>
-          <Grid item xs={6} md={4} lg={3}>
-            <Link to="" className="nav-link">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/my-export-state-wise-policy.png`}
-                alt="FPO Agm Board Metting"
-              />
-            </Link>
-          </Grid>
-          <Grid item xs={6} md={4} lg={3}>
-            <Link to="" className="nav-link">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/my-export-e-commerce-policy.png`}
-                alt="FPO Loan Schemes"
-              />
-            </Link>
-          </Grid>
-          <Grid item xs={6} md={4} lg={3}>
-            <Link to="" className="nav-link">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/my-export-hs-code-wise-policy.png`}
-                alt="FPO Loan Schemes"
-              />
-            </Link>
-          </Grid>
-          <Grid item xs={6} md={4} lg={3}>
-            <Link to="" className="nav-link">
-              <img
-                src={`${process.env.PUBLIC_URL}/assets/my-export-import-regulation.png`}
-                alt="FPO Loan Schemes"
-              />
-            </Link>
-          </Grid>
-        </Grid>
-        <Grid container justify="center">
-          <Button className="myexport-broadcast-btn" variant="contained" mt={5}>
-            <b>CONNECT TO FEED </b>
-          </Button>
-        </Grid> */}
-        <Grid lg>
+        <Grid lg={12}>
           <MyExportListItem
             dataList={dataList}
             cardSize={cardSize}

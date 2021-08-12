@@ -127,32 +127,44 @@ function Home() {
   ]
   const feedUpdates = [
     {
-      logo: 'feedlogo.png',
-      primary: 'FEED',
+      logo: 'myfpclogo.png',
+      primary: 'FPC',
       secondary:
         'FEED is a multi-state co-operative society working for the uplift.',
     },
     {
-      logo: 'feedlogo.png',
-      primary: 'NABARD',
+      logo: 'myfarmlogo.png',
+      primary: 'Farm',
       secondary:
         'FEED is a multi-state co-operative society working for the uplift.',
     },
     {
-      logo: 'feedlogo.png',
-      primary: 'FEED',
+      logo: 'mybusinesslogo.png',
+      primary: 'My Business',
       secondary:
         'FEED is a multi-state co-operative society working for the uplift.',
     },
     {
-      logo: 'feedlogo.png',
-      primary: 'FEED',
+      logo: 'myexportslogo.png',
+      primary: 'My Exports',
       secondary:
         'FEED is a multi-state co-operative society working for the uplift.',
     },
     {
-      logo: 'feedlogo.png',
-      primary: 'FEED',
+      logo: 'myproductslogo.png',
+      primary: 'MY Products',
+      secondary:
+        'FEED is a multi-state co-operative society working for the uplift.',
+    },
+    {
+      logo: 'mymarketlogo.png',
+      primary: 'My Market',
+      secondary:
+        'FEED is a multi-state co-operative society working for the uplift.',
+    },
+    {
+      logo: 'mytoolslogo.png',
+      primary: 'My Tools',
       secondary:
         'FEED is a multi-state co-operative society working for the uplift.',
     },
@@ -160,31 +172,31 @@ function Home() {
   const centralupdates = [
     {
       logo: 'nabardlogo.png',
-      primary: 'FEED',
+      primary: 'Nabard',
       secondary:
         'FEED is a multi-state co-operative society working for the uplift.',
     },
     {
       logo: 'dgft.png',
-      primary: 'NABARD',
+      primary: 'DGFT',
       secondary:
         'FEED is a multi-state co-operative society working for the uplift.',
     },
     {
       logo: 'fieo.png',
-      primary: 'FEED',
+      primary: 'FIEO',
       secondary:
         'FEED is a multi-state co-operative society working for the uplift.',
     },
     {
       logo: 'apeda.png',
-      primary: 'FEED',
+      primary: 'Apeda',
       secondary:
         'FEED is a multi-state co-operative society working for the uplift.',
     },
     {
       logo: 'ibef.png',
-      primary: 'FEED',
+      primary: 'IBEF',
       secondary:
         'FEED is a multi-state co-operative society working for the uplift.',
     },
@@ -299,14 +311,18 @@ function Home() {
                         axis="Y"
                         align="center"
                         overflow="hidden"
-                        pauseOnHover={false}
+                        pauseOnHover={true}
                         reverse={true}
                       >
                         {centralupdates.map((item, index) => (
                           <Grid key={index}>
                             <ListItem alignItems="flex-start">
-                              <Grid container justifyContent="space-between">
-                                <Grid item lg={4}>
+                              <Grid
+                                container
+                                justifyContent="flex-start"
+                                alignItems="center"
+                              >
+                                <Grid item lg={2}>
                                   <img
                                     src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
                                     width="100"
@@ -358,14 +374,14 @@ function Home() {
                         axis="Y"
                         align="center"
                         overflow="hidden"
-                        pauseOnHover={false}
+                        pauseOnHover={true}
                         reverse={true}
                       >
                         {feedUpdates.map((item, index) => (
                           <Grid key={index}>
                             <ListItem alignItems="flex-start">
-                              <Grid container justifyContent="space-between">
-                                <Grid item lg={4}>
+                              <Grid container justifyContent="flex-start">
+                                <Grid item lg={2}>
                                   <img
                                     src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
                                     width="100"

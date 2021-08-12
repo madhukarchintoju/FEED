@@ -38,13 +38,10 @@ import {
   makeStyles,
   Grid,
   Button,
-  Icon,
-  Avatar,
   TextField,
   Select,
   MenuItem,
   FormControl,
-  TextareaAutosize,
   Radio,
   RadioGroup,
   FormControlLabel,
@@ -52,14 +49,11 @@ import {
 } from '@material-ui/core'
 // import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel'
-import OutlinedInput from '@material-ui/core/OutlinedInput'
 import InputAdornment from '@material-ui/core/InputAdornment'
-import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
-import { red } from '@material-ui/core/colors'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -202,27 +196,77 @@ export default function SalesRegister() {
                   className={classes.textField}
                 />
                 <TextField
-                  variant="outlined"
                   fullWidth
-                  type="number"
-                  id="quantity"
-                  name="quantity"
-                  label="Quantity"
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position="end">Units</InputAdornment>
-                    ),
-                  }}
-                  className={classes.textField}
-                />
-                <TextField
-                  fullWidth
-                  id="tanDetails"
-                  name="tanDetails"
-                  label="Tan Details"
+                  id="productName"
+                  name="productName"
+                  label="Product Name"
                   variant="outlined"
                   className={classes.textField}
                 />
+
+                <FormControl component="fieldset">
+                  <FormLabel component="legend">Tax</FormLabel>
+                  <RadioGroup row aria-label="position" name="position">
+                    <FormControlLabel
+                      value="excluded"
+                      control={<Radio color="primary" />}
+                      label="Tax Excluded"
+                      labelPlacement="end"
+                    />
+                    <FormControlLabel
+                      value="included"
+                      control={<Radio color="primary" />}
+                      label="Tax Included"
+                    />
+                  </RadioGroup>
+                </FormControl>
+                <FormControl component="fieldset" margin="normal">
+                  <FormLabel component="legend">Tax Percentage</FormLabel>
+                  <RadioGroup row aria-label="position" name="position">
+                    <FormControlLabel
+                      value="5"
+                      control={<Radio color="primary" />}
+                      label="5"
+                      labelPlacement="end"
+                    />
+                    <FormControlLabel
+                      value="12"
+                      control={<Radio color="primary" />}
+                      label="12"
+                    />
+                    <FormControlLabel
+                      value="18"
+                      control={<Radio color="primary" />}
+                      label="18"
+                    />
+                    <FormControlLabel
+                      value="28"
+                      control={<Radio color="primary" />}
+                      label="28"
+                    />
+                  </RadioGroup>
+                </FormControl>
+
+                <Grid container lg={12} justifyContent="space-between">
+                  <TextField
+                    lg={6}
+                    item
+                    label="IGST"
+                    variant="outlined"
+                    margin="normal"
+                    name="memberName"
+                  />
+                  <TextField
+                    lg={6}
+                    item
+                    label="CGST + SGST"
+                    variant="outlined"
+                    margin="normal"
+                    name="memberName"
+                  />
+                </Grid>
+              </Grid>
+              <Grid lg={5}>
                 <TextField
                   variant="outlined"
                   fullWidth
@@ -232,8 +276,6 @@ export default function SalesRegister() {
                   label="Total Value"
                   className={classes.textField}
                 />
-              </Grid>
-              <Grid lg={5}>
                 <TextField
                   variant="outlined"
                   fullWidth
@@ -284,14 +326,6 @@ export default function SalesRegister() {
                 />
                 <TextField
                   fullWidth
-                  id="rate"
-                  name="rate"
-                  label="Rate"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <TextField
-                  fullWidth
                   id="total"
                   name="total"
                   label="Total"
@@ -315,10 +349,274 @@ export default function SalesRegister() {
                   className={classes.textField}
                 />
                 <TextField
+                  variant="outlined"
+                  fullWidth
+                  id="invoiceDate"
+                  label="Invoice Date"
+                  type="date"
+                  defaultValue=""
+                  className={classes.textField}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />
+                <TextField
                   fullWidth
                   id="companyName"
                   name="companyName"
                   label="Company Name"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+                <FormControl
+                  variant="outlined"
+                  className={classes.textField}
+                  fullWidth
+                >
+                  <InputLabel id="demo-simple-select-helper-label">
+                    Product Category
+                  </InputLabel>
+                  <Select
+                    labelId="demo-simple-select-helper-label"
+                    id="demo-simple-select-helper"
+                    // value={age}
+                    onChange={handleChange}
+                  >
+                    <MenuItem value={10}>Fruits</MenuItem>
+                    <MenuItem value={20}>Vegetables</MenuItem>
+                    <MenuItem value={30}>Dairy</MenuItem>
+                  </Select>
+                </FormControl>
+                <TextField
+                  fullWidth
+                  id="productName"
+                  name="productName"
+                  label="Product Name"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+                <TextField
+                  fullWidth
+                  id="productCost"
+                  name="productCost"
+                  label="Product Cost"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  type="number"
+                  id="hsnCode"
+                  name="hsnCode"
+                  label="HSN Code"
+                  className={classes.textField}
+                />
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  label="Quantity"
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">Units</InputAdornment>
+                    ),
+                  }}
+                  className={classes.textField}
+                />
+                <TextField
+                  fullWidth
+                  id="openStockDisplay"
+                  name="openStockDisplay"
+                  label="Open Stock Display"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  label="Quantity"
+                  className={classes.textField}
+                />
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  label="Rate"
+                  className={classes.textField}
+                />
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  id="taxableValue"
+                  name="taxableValue"
+                  label="Taxable Value"
+                  className={classes.textField}
+                />
+              </Grid>
+              <Grid lg={5}>
+                <FormControl component="fieldset">
+                  <FormLabel component="legend">Tax</FormLabel>
+                  <RadioGroup row aria-label="position" name="position">
+                    <FormControlLabel
+                      value="excluded"
+                      control={<Radio color="primary" />}
+                      label="Tax Excluded"
+                      labelPlacement="end"
+                    />
+                    <FormControlLabel
+                      value="included"
+                      control={<Radio color="primary" />}
+                      label="Tax Included"
+                    />
+                  </RadioGroup>
+                </FormControl>
+                <FormControl component="fieldset" margin="normal">
+                  <FormLabel component="legend">Tax Percentage</FormLabel>
+                  <RadioGroup row aria-label="position" name="position">
+                    <FormControlLabel
+                      value="5"
+                      control={<Radio color="primary" />}
+                      label="5"
+                      labelPlacement="end"
+                    />
+                    <FormControlLabel
+                      value="12"
+                      control={<Radio color="primary" />}
+                      label="12"
+                    />
+                    <FormControlLabel
+                      value="18"
+                      control={<Radio color="primary" />}
+                      label="18"
+                    />
+                    <FormControlLabel
+                      value="28"
+                      control={<Radio color="primary" />}
+                      label="28"
+                    />
+                  </RadioGroup>
+                </FormControl>
+
+                <Grid container lg={12} justifyContent="space-between">
+                  <TextField
+                    lg={6}
+                    item
+                    label="IGST"
+                    variant="outlined"
+                    margin="normal"
+                    name="memberName"
+                  />
+                  <TextField
+                    lg={6}
+                    item
+                    label="CGST + SGST"
+                    variant="outlined"
+                    margin="normal"
+                    name="memberName"
+                  />
+                </Grid>
+                <TextField
+                  fullWidth
+                  id="totalInvoiceValue"
+                  name="totalInvoiceValue"
+                  label="Total Invoice Value"
+                  variant="outlined"
+                  className={classes.textField}
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <small>(including shipping charges)</small>
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+                <TextField
+                  fullWidth
+                  id="discount"
+                  name="discount"
+                  label="Discount"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+                <TextField
+                  fullWidth
+                  id="roundoff"
+                  name="roundoff"
+                  label="Round off"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+                <TextField
+                  fullWidth
+                  id="totalamountWords"
+                  name="totalamountWords"
+                  label="Total Amount Words"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+              </Grid>
+            </Grid>
+          </form>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          <form>
+            <Grid container direction="row" justify="space-evenly">
+              <Grid lg={5}>
+                <TextField
+                  fullWidth
+                  id="creditNoteNumber"
+                  name="creditNoteNumber"
+                  label="Credit Note Number"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  id="creditnotedate"
+                  name="creditnotedate"
+                  label="Credit Note Date"
+                  type="date"
+                  defaultValue=""
+                  className={classes.textField}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />
+                <TextField
+                  fullWidth
+                  id="originalInvoiceNumber"
+                  name="originalInvoiceNumber"
+                  label="Original Invoice Number"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  id="originalInvoiceDate"
+                  name="originalInvoiceDate"
+                  label="Oiginal Invoice Date"
+                  type="date"
+                  defaultValue=""
+                  className={classes.textField}
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />
+                <TextField
+                  fullWidth
+                  id="customerCompanyName"
+                  name="customerCompanyName"
+                  label="Customer / Company Name"
                   variant="outlined"
                   className={classes.textField}
                 />
@@ -351,202 +649,11 @@ export default function SalesRegister() {
                   className={classes.textField}
                 />
                 <TextField
-                  variant="outlined"
                   fullWidth
-                  type="number"
                   id="quantity"
                   name="quantity"
                   label="Quantity"
-                  className={classes.textField}
-                />
-                <TextField
                   variant="outlined"
-                  fullWidth
-                  id="taxableValue"
-                  name="taxableValue"
-                  label="Taxable Value"
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position="end">Lt / Kg</InputAdornment>
-                    ),
-                  }}
-                  className={classes.textField}
-                />
-                <TextField
-                  fullWidth
-                  id="discount"
-                  name="discount"
-                  label="Discount"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <TextField
-                  fullWidth
-                  id="roundoff"
-                  name="roundoff"
-                  label="Round off"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-              </Grid>
-              <Grid lg={5}>
-                <TextField
-                  variant="outlined"
-                  fullWidth
-                  id="invoiceDate"
-                  label="Invoice Date"
-                  type="date"
-                  defaultValue=""
-                  className={classes.textField}
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                />
-                <TextField
-                  fullWidth
-                  id="openStockDisplay"
-                  name="openStockDisplay"
-                  label="Open Stock Display"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <TextField
-                  fullWidth
-                  id="productName"
-                  name="productName"
-                  label="Product Name"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <TextField
-                  fullWidth
-                  id="productCost"
-                  name="productCost"
-                  label="Product Cost"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <FormControl
-                  variant="outlined"
-                  className={classes.textField}
-                  fullWidth
-                >
-                  <InputLabel id="demo-simple-select-helper-label">
-                    GST Rate
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-helper-label"
-                    id="demo-simple-select-helper"
-                    // value={age}
-                    onChange={handleChange}
-                  >
-                    <MenuItem value={10}>10</MenuItem>
-                    <MenuItem value={20}>20</MenuItem>
-                    <MenuItem value={30}>30</MenuItem>
-                  </Select>
-                </FormControl>
-                <FormControl component="fieldset" className={classes.textField}>
-                  <FormLabel component="legend">GST Type</FormLabel>
-                  <RadioGroup row aria-label="position" name="position">
-                    <FormControlLabel
-                      value="igst"
-                      control={<Radio color="primary" />}
-                      label="IGST"
-                      // labelPlacement="end"
-                    />
-                    <FormControlLabel
-                      value="cgst"
-                      control={<Radio color="primary" />}
-                      label="CGST"
-                    />
-                    <FormControlLabel
-                      value="sgst"
-                      control={<Radio color="primary" />}
-                      label="SGST"
-                    />
-                  </RadioGroup>
-                </FormControl>
-                <TextField
-                  fullWidth
-                  id="totalInvoiceValue"
-                  name="totalInvoiceValue"
-                  label="Total Invoice Value"
-                  variant="outlined"
-                  className={classes.textField}
-                  InputProps={{
-                    endAdornment: (
-                      <InputAdornment position="end">
-                        <small>(including shipping charges)</small>
-                      </InputAdornment>
-                    ),
-                  }}
-                />
-                <TextField
-                  fullWidth
-                  id="totalamountWords"
-                  name="totalamountWords"
-                  label="Total Amount Words"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-              </Grid>
-            </Grid>
-          </form>
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          <form>
-            <Grid container direction="row" justify="space-evenly">
-              <Grid lg={5}>
-                <TextField
-                  fullWidth
-                  id="creditNoteNumber"
-                  name="creditNoteNumber"
-                  label="Credit Note Number"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <TextField
-                  fullWidth
-                  id="originalInvoiceNumber"
-                  name="originalInvoiceNumber"
-                  label="Original Invoice Number"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <TextField
-                  fullWidth
-                  id="customerCompanyName"
-                  name="customerCompanyName"
-                  label="Customer / Company Name"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <FormControl
-                  variant="outlined"
-                  className={classes.textField}
-                  fullWidth
-                >
-                  <InputLabel id="demo-simple-select-helper-label">
-                    Select Category
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-helper-label"
-                    id="demo-simple-select-helper"
-                    // value={age}
-                    onChange={handleChange}
-                  >
-                    <MenuItem value={10}>Fruits</MenuItem>
-                    <MenuItem value={20}>Vegetables</MenuItem>
-                    <MenuItem value={30}>Dairy</MenuItem>
-                  </Select>
-                </FormControl>
-                <TextField
-                  variant="outlined"
-                  fullWidth
-                  type="number"
-                  id="hsnCode"
-                  name="hsnCode"
-                  label="HSN Code"
                   className={classes.textField}
                 />
                 <TextField
@@ -560,9 +667,89 @@ export default function SalesRegister() {
                 />
                 <TextField
                   fullWidth
+                  id="taxableValue"
+                  name="taxableValue"
+                  label="Taxable Value"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+              </Grid>
+              <Grid lg={5}>
+                <FormControl component="fieldset">
+                  <FormLabel component="legend">Tax</FormLabel>
+                  <RadioGroup row aria-label="position" name="position">
+                    <FormControlLabel
+                      value="excluded"
+                      control={<Radio color="primary" />}
+                      label="Tax Excluded"
+                      labelPlacement="end"
+                    />
+                    <FormControlLabel
+                      value="included"
+                      control={<Radio color="primary" />}
+                      label="Tax Included"
+                    />
+                  </RadioGroup>
+                </FormControl>
+                <FormControl component="fieldset" margin="normal">
+                  <FormLabel component="legend">Tax Percentage</FormLabel>
+                  <RadioGroup row aria-label="position" name="position">
+                    <FormControlLabel
+                      value="5"
+                      control={<Radio color="primary" />}
+                      label="5"
+                      labelPlacement="end"
+                    />
+                    <FormControlLabel
+                      value="12"
+                      control={<Radio color="primary" />}
+                      label="12"
+                    />
+                    <FormControlLabel
+                      value="18"
+                      control={<Radio color="primary" />}
+                      label="18"
+                    />
+                    <FormControlLabel
+                      value="28"
+                      control={<Radio color="primary" />}
+                      label="28"
+                    />
+                  </RadioGroup>
+                </FormControl>
+
+                <Grid container lg={12} justifyContent="space-between">
+                  <TextField
+                    lg={6}
+                    item
+                    label="IGST"
+                    variant="outlined"
+                    margin="normal"
+                    name="memberName"
+                  />
+                  <TextField
+                    lg={6}
+                    item
+                    label="CGST + SGST"
+                    variant="outlined"
+                    margin="normal"
+                    name="memberName"
+                  />
+                </Grid>
+                <TextField
+                  fullWidth
                   id="totalValue"
                   name="totalValue"
                   label="Total Value"
+                  variant="outlined"
+                  className={classes.textField}
+                />
+
+                <TextField
+                  fullWidth
+                  id="charges"
+                  name="charges"
+                  label="Charges"
                   variant="outlined"
                   className={classes.textField}
                 />
@@ -572,85 +759,6 @@ export default function SalesRegister() {
                   id="totalValueWords"
                   name="totalValueWords"
                   label="Total Value  In Words"
-                  className={classes.textField}
-                />
-              </Grid>
-              <Grid lg={5}>
-                <TextField
-                  variant="outlined"
-                  fullWidth
-                  id="creditnotedate"
-                  name="creditnotedate"
-                  label="Credit Note Date"
-                  type="date"
-                  defaultValue=""
-                  className={classes.textField}
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                />
-                <TextField
-                  variant="outlined"
-                  fullWidth
-                  id="originalInvoiceDate"
-                  name="originalInvoiceDate"
-                  label="Oiginal Invoice Date"
-                  type="date"
-                  defaultValue=""
-                  className={classes.textField}
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                />
-                <TextField
-                  fullWidth
-                  id="productName"
-                  name="productName"
-                  label="Product Name"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <FormControl
-                  variant="outlined"
-                  className={classes.textField}
-                  fullWidth
-                >
-                  <InputLabel id="demo-simple-select-helper-label">
-                    Select Product
-                  </InputLabel>
-                  <Select
-                    labelId="demo-simple-select-helper-label"
-                    id="demo-simple-select-helper"
-                    // value={age}
-                    onChange={handleChange}
-                  >
-                    <MenuItem value={10}>Fruits</MenuItem>
-                    <MenuItem value={20}>Vegetables</MenuItem>
-                    <MenuItem value={30}>Dairy</MenuItem>
-                  </Select>
-                </FormControl>
-                <TextField
-                  fullWidth
-                  id="quantity"
-                  name="quantity"
-                  label="Quantity"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <TextField
-                  fullWidth
-                  id="taxableValue"
-                  name="taxableValue"
-                  label="Taxable Value"
-                  variant="outlined"
-                  className={classes.textField}
-                />
-                <TextField
-                  fullWidth
-                  id="charges"
-                  name="charges"
-                  label="Charges"
-                  variant="outlined"
                   className={classes.textField}
                 />
                 <TextField
