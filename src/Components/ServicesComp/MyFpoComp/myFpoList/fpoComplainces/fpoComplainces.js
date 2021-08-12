@@ -1,6 +1,6 @@
 import React from 'react'
 import './fpoComplainces.css'
-import { Grid, Button, Icon, Avatar, makeStyles } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import MyFpoListItem from '../../myFpoListItem/myFpoListItem'
 
 export default function FpoComplainces() {
@@ -38,8 +38,7 @@ export default function FpoComplainces() {
       <Grid item lg={11} className="m-auto">
         <Grid className="text-center">
           <img
-            src={`${process.env.PUBLIC_URL}/assets/my-fpo/compliances/home/head.png`}
-            width="30%"
+            src={`${process.env.PUBLIC_URL}/assets/my-fpo/compliances/home/fpccompliancesnameplate.png`}
             alt="..."
           />
         </Grid>

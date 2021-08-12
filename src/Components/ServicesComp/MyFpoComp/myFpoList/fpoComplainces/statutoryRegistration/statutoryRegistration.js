@@ -6,12 +6,12 @@ export default function StatutoryRegistration() {
   const dataList = [
     {
       name: 'FPO Registrations',
-      icon: 'compliances/statutory/fpor.png',
+      icon: 'compliances/statutory/fpofpcregistration.png',
       link: '',
     },
     {
       name: 'FPC Registrationa',
-      icon: 'compliances/statutory/fpcr.png',
+      icon: 'compliances/statutory/companyregistration.png',
       link: '',
     },
     {

@@ -4,8 +4,11 @@ import { Grid } from '@material-ui/core'
 export default function FpoReports() {
   return (
     <>
-      <Grid className="text-center">
-        <h5>FPC Reports</h5>
+      <Grid container justifyContent="center">
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/my-fpo/reports/fpcconnectnameplate.png`}
+          alt="..."
+        />
       </Grid>
       <Grid container item lg={11} className="m-auto">
         <ul>

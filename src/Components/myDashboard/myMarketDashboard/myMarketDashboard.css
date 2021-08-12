@@ -59,11 +59,6 @@
 
 .mhcCard:hover .markcircle {
   border-color: var(--bg-color-light);
-  /* background: var(--bg-color); */
-}
-
-.cmhcCard:hover .markcircle:after {
-  /* background: var(--bg-color-light); */
 }
 
 .mhcCard:hover p {
@@ -104,26 +99,6 @@
   height: 118px;
   display: block;
   position: absolute;
-  /* background: var(--bg-color); */
   border-radius: 50%;
-  /* top: 7px;
-  left: 7px; */
   transition: opacity 0.3s ease-out;
 }
-
-/* .circle svg {
-  z-index: 10000;
-  transform: translateZ(0);
-} */
-
-/* .overlay {
-  width: 118px;
-  position: absolute; 
-  height: 118px;
-  border-radius: 50%;
-  background: var(--bg-color);
-  top: 70px;
-  left: 50px;
-  z-index: 0;
-  transition: transform 0.3s ease-out;
-} */

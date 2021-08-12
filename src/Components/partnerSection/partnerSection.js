@@ -64,7 +64,7 @@ export default function PartnerSection() {
   return (
     <>
       <Grid className={classes.partnerSectionWrap}>
-        <Grid container justifyContent="center">
+        <Grid container justifyContent="center" className="mb-3">
           <img
             src={`${process.env.PUBLIC_URL}/assets/partners/partnersnameplate.png`}
             alt="Event and Updates"

@@ -1,13 +1,5 @@
 import React from 'react'
-import {
-  Grid,
-  Button,
-  Icon,
-  Avatar,
-  makeStyles,
-  TextField,
-  MenuItem,
-} from '@material-ui/core'
+import { Grid, makeStyles, TextField, MenuItem } from '@material-ui/core'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper.min.css'
 import 'swiper/components/effect-flip/effect-flip.min.css'
@@ -65,7 +57,7 @@ export default function FpoBusinessPlan() {
       paddingBottom: '10px',
     },
     businessPlanPara: {
-      margin: 'auto',
+      margin: '15px auto auto auto',
       width: '90%',
       padding: '2px',
       textAlign: 'justify',
@@ -85,7 +77,12 @@ export default function FpoBusinessPlan() {
   return (
     <>
       <div className={classes.businessPlanWrap}>
-        <h1 className="text-center">FPC Business Plan</h1>
+        <Grid container justifyContent="center">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/my-fpo/businessplan/fpcbusinessplannameplate.png`}
+            alt=""
+          />
+        </Grid>
         <Grid
           container
           item
@@ -154,6 +151,7 @@ export default function FpoBusinessPlan() {
                 <SwiperSlide key={index}>
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/my-fpo/businessplan/${item.img}`}
+                    alt=""
                   />
                 </SwiperSlide>
               ))}

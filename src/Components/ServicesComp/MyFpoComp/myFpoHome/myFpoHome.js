@@ -4,13 +4,10 @@ import { Link } from 'react-router-dom'
 import {
   makeStyles,
   Grid,
-  Button,
   Avatar,
   List,
   ListItem,
   ListItemText,
-  Typography,
-  Divider,
 } from '@material-ui/core'
 
 export default function MyFpoHome(props) {
@@ -135,7 +132,12 @@ export default function MyFpoHome(props) {
         // alignItems="flex-start"
         className="myfpo-home"
       >
-        <h5>MY FPC Home</h5>
+        <Grid container justifyContent="center">
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/myfpcnameplate.png`}
+            alt="..."
+          />
+        </Grid>
         <Grid
           container
           item

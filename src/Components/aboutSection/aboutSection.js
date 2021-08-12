@@ -122,16 +122,6 @@ export default function AboutSection(props) {
     },
   }))
   const classes = useStyles()
-  const aboutUsContent = {
-    contentOne: `FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP DEVELOPMENT MULTI STATE COOPERATIVE SOCIETY LTD. (FEED) registered under MSCS Act, 2002 with Regd.No. MSCS /CR /1295 /2020 and currently operating in the states of Andhra Pradesh and Telangana. `,
-    contentTwo: `FEED is a multi - state cooperative society We're the first - of - its kind export based multi - state cooperative society working for the uplift of exports from farmers, new entrepreneurs and MSMES from rural and semi - urban areas through the concept of product-based FARMER PRODUCER ORGANISATIONS (FPO) by conducting EXPORT PROMOTIONAL MEETINGS in all districts of India. `,
-    contentThree: `FEED connects with around 15+ Central Government departments, Export Based Organizations (Banks, Ports, CHAs, Export promotion councils, Commodity boards, Embassies, FIEO, DGFT, NABARD, NCDC, ECGC, SFAC etc) to ensure updated data dissemination on export prices, govt. schemes to FEED members (FPOs, MSMEs etc.) `,
-    contentFour: `FEED signs MoU with State Governments to develop export entrepreneurship & establish value addition units in order to enhance exports and economy of the states.`,
-    contentFive: ` We promote exports by conducting EXPORT PROMOTIONAL MEETINGS in every district. We tend to create awareness on exports and inform the product potentiality of various agricultural commodities in International markets through our export promotional meetings.`,
-    contentSix: `FEED forms PRODUCT - BASED EXPORT ORIENTED FPOs for the top 10 products in every district. FEED provides hand - holding support to such FPOs formed throughout the export cycle. `,
-    contentSeven: `We also assist the FPOs in establishing processing units to enhance their income levels and help them reach the International quality standards.`,
-    contentEight: ` All in all, FEED's vision is to provide the FPOS & MSMEs the exposure to best prices in both domestic and international markets and render end - to - end support in capturing such markets.`,
-  }
   return (
     <>
       <Grid
@@ -160,23 +150,7 @@ export default function AboutSection(props) {
                 <Grid>
                   <h4 className={classes.textRed}>FEED Main Objective:</h4>
                   <Grid className={classes.objectiveContent}>
-                    <p className="m-0">
-                      FEED is a multi-state co-operative society working for the
-                      uplift of exports from all corners of India, We Provide
-                      <br />
-                      Crucial technical software and social platform connecting
-                      : "Farmers, Traders, MSME industries &amp; new
-                      entrepreneurs" in Rural and Semi Urban areas
-                    </p>
-                    <p className="text-center m-0">with</p>
-                    <p>
-                      "International markets, Export Promotional councils,
-                      Central and state governments, Banks and Financial
-                      institutes, ports" by organizing Exports Promotional
-                      meetings, Forming FPO's (product wise) and supporting the
-                      FPOs with technical information &amp; support on
-                      processing export orders.
-                    </p>
+                    <p>{t('main_objective')}</p>
                   </Grid>
                 </Grid>
               </Grid>
@@ -237,21 +211,8 @@ export default function AboutSection(props) {
               <Grid item lg={11} md={11} sm={11} className={classes.aboutBg}>
                 {/* <h4>About us</h4> */}
                 <Grid className={classes.aboutUsContent}>
-                  <p>
-                    FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP DEVELOPMENT MULTI
-                    STATE COOPERATIVE SOCIETY LTD. (FEED) registered under MSCS
-                    Act, 2002 with Regd.No. MSCS /CR /1295 /2020 and currently
-                    operating in the states of Andhra Pradesh and Telangana.
-                  </p>
-                  <p>
-                    FEED is a multi - state cooperative society We're the first
-                    - of - its kind export based multi - state cooperative
-                    society working for the uplift of exports from farmers, new
-                    entrepreneurs and MSMES from rural and semi - urban areas
-                    through the concept of product-based FARMER PRODUCER
-                    ORGANISATIONS (FPO) by conducting EXPORT PROMOTIONAL
-                    MEETINGS in all districts of India.
-                  </p>
+                  <p>{t('about_para_one')}</p>
+                  <p>{t('about_para_two')}</p>
                   <Grid container justifyContent="flex-end">
                     {props.shortView && (
                       <Link to="/aboutsection" className="text-dark">
@@ -261,16 +222,15 @@ export default function AboutSection(props) {
                   </Grid>
                   {!props.shortView && (
                     <>
-                      <p>{aboutUsContent.contentThree}</p>
-                      <p>{aboutUsContent.contentFour}</p>
-                      <p>{aboutUsContent.contentFive}</p>
-                      <p>{aboutUsContent.contentSix}</p>
-                      <p>{aboutUsContent.contentSeven}</p>
-                      <p>{aboutUsContent.contentEight}</p>
+                      <p>{t('about_para_three')}</p>
+                      <p>{t('about_para_four')}</p>
+                      <p>{t('about_para_five')}</p>
+                      <p>{t('about_para_six')}</p>
+                      <p>{t('about_para_seven')}</p>
+                      <p>{t('about_para_eight')}</p>
                     </>
                   )}
                 </Grid>
-                <p>{aboutUsContent.content}</p>
               </Grid>
             </Grid>
           </Grid>
