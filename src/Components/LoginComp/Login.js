@@ -1,284 +1,192 @@
 import React, { useState } from 'react'
+import { useFormik } from 'formik'
+import * as yup from 'yup'
 import './Login.css'
+import { useHistory } from 'react-router-dom'
 import {
-  makeStyles,
   Grid,
   TextField,
-  Radio,
   FormControlLabel,
   FormControl,
-  FormLabel,
-  RadioGroup,
   FormGroup,
   Checkbox,
   IconButton,
   OutlinedInput,
   InputLabel,
   InputAdornment,
+  Snackbar,
 } from '@material-ui/core'
 import Visibility from '@material-ui/icons/Visibility'
 import VisibilityOff from '@material-ui/icons/VisibilityOff'
 import PersonIcon from '@material-ui/icons/Person'
 import VpnKeyIcon from '@material-ui/icons/VpnKey'
+import { Link } from 'react-router-dom'
+import MuiAlert from '@material-ui/lab/Alert'
+import { connect } from 'react-redux'
+import { loginSuccess, tokenStored } from '../../redux/actions'
 
-function Login() {
-  const [addclass, setaddclass] = useState('')
-  const [values, setValues] = React.useState({
+import { loginFpcMember } from '../apiServices/apiServices'
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />
+}
+
+function Login(props) {
+  const history = useHistory()
+  const [values, setValues] = useState({
     password: '',
     showPassword: false,
   })
-  const handleChange = (prop) => (event) => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
+  const [snack, setSnack] = useState(false)
+  const [error, setError] = useState('')
+
   const handleClickShowPassword = () => {
     setValues({ ...values, showPassword: !values.showPassword })
   }
   const handleMouseDownPassword = (event) => {
     event.preventDefault()
   }
-  return (
-    <>
-      {/* <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg-6 m-auto login-section">
-            <form>
-              <div className="form-group mb-4">
-                <input
-                  type="text"
-                  className="form-control"
-                  name="identity"
-                  placeholder="Email Id / Membership Id"
-                />
-              </div>
-              <div className="form-group mb-4">
-                <input
-                  type="password"
-                  className="form-control"
-                  name="password"
-                  placeholder="Password"
-                />
-              </div>
-              <div className="form-group text-center">
-                <button type="submit" className="loginbtn">
-                  Login btn
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className={`lrContainer ${addclass}`} id="container">
-        <Grid className="lrForm-container  sign-up-container">
-          <form>
-            <h1>Create Account</h1>
-            <input type="text" placeholder="NAME" />
-            <input type="email" placeholder="EMAIL" />
-            <input type="password" placeholder="PASSWORD" />
-            <button className='lrForm-reg-btn' type="submit">REGISTER</button>
-            <h4 className='text-center'>Register</h4>
-            <h6 className='mb-0'>Personal Details</h6>
-            <Grid container justify='space-between'>
-              <Grid lg={5}>
-                <TextField
-                  fullWidth
-                  label="First Name"
-                  variant="outlined"
-                  margin='normal'
-                  placeholder='Enter First Name'
-                />
-                <TextField
-                  variant="outlined"
-                  fullWidth
-                  margin='normal'
-                  id="dateTime"
-                  label="Date of Birth"
-                  type="date"
-                  defaultValue=""
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                />
-                <FormControl component="fieldset" margin='normal'>
-                  <FormLabel component="legend">Gender</FormLabel>
-                  <RadioGroup row aria-label="position" name="position">
-                    <FormControlLabel
-                      value="male"
-                      control={<Radio color="primary" />}
-                      label="Male"
-                    labelPlacement="end"
-                    />
-                    <FormControlLabel
-                      value="female"
-                      control={<Radio color="primary" />}
-                      label="Female"
-                    />
-                    <FormControlLabel
-                      value="others"
-                      control={<Radio color="primary" />}
-                      label="Others"
-                    />
-                  </RadioGroup>
-                </FormControl>
-              </Grid>
-              <Grid lg={5}>
-                <TextField
-                  fullWidth
-                  label="Last Name"
-                  variant="outlined"
-                  margin='normal'
-                  placeholder='Enter Last Name'
-                />
-                <TextField
-                  fullWidth
-                  variant='outlined'
-                  margin='normal'
-                  label="Phone Number"
-                  placeholder='Enter Phone Number'
-                />
-                <TextField
-                  fullWidth
-                  variant='outlined'
-                  margin='normal'
-                  label="Email"
-                  placeholder='Enter Email'
-                />
-              </Grid>
-            </Grid>
-            <Grid>
-              <h6>Membership Details</h6>
-            </Grid>
-          </form>
-        </Grid>
-        <Grid className="lrForm-container sign-in-container">
-          <form>
-            <h1>Login</h1>
-            <TextField
-              fullWidth
-              variant='outlined'
-              margin='normal'
-              label="User Id"
-              placeholder='Enter User Id'
-            />
-            <TextField
-              fullWidth
-              variant='outlined'
-              margin='normal'
-              label="Password"
-              placeholder='Enter Password'
-            />
-            <button className='lrForm-lgn-btn' type="submit">LOGIN</button>
-          </form>
-        </Grid>
-        <div className="overlay-container">
-          <div className="overlay">
-            <div className="overlay-panel overlay-left">
-              <button
-                className="lrForm-gtl-btn"
-                id="signIn"
-                onClick={() => setaddclass("")}
-              >
-                GO TO LOGIN
-              </button>
-            </div>
-            <div className="overlay-panel overlay-right">
-              <button
-                className="lrForm-gtr-btn"
-                id="signUp"
-                onClick={() => setaddclass("right-panel-active")}
-              >
-                GO TO REGISTER
-              </button>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      <div className="lg-form-wrap">
-        <Grid container lg={12} justify="space-between" alignItems="center">
-          <Grid lg={5}>
-            <img
-              src={`${process.env.PUBLIC_URL}/assets/login/loginimgtwo.jpg`}
-              width="100%"
-              alt="login img"
-            />
-          </Grid>
-          <Grid lg={6}>
-            <form>
-              <h3>Log in to FEED</h3>
-              <h6 className="text-muted">
-                Welcome back! Please login to your account to continue
-              </h6>
-              <TextField
-                fullWidth
-                variant="outlined"
-                margin="normal"
-                label="User Id"
-                placeholder="Enter User Id"
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <PersonIcon />
-                    </InputAdornment>
-                  ),
-                }}
-              />
-              <FormControl variant="outlined" margin="normal" fullWidth>
-                <InputLabel htmlFor="outlined-adornment-password">
-                  Password
-                </InputLabel>
-                <OutlinedInput
-                  id="outlined-adornment-password"
-                  type={values.showPassword ? 'text' : 'password'}
-                  value={values.password}
-                  placeholder="Enter Password"
-                  onChange={handleChange('password')}
-                  startAdornment={
-                    <InputAdornment position="start">
-                      <VpnKeyIcon />
-                    </InputAdornment>
-                  }
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconButton
-                        aria-label="toggle password visibility"
-                        onClick={handleClickShowPassword}
-                        onMouseDown={handleMouseDownPassword}
-                        edge="end"
-                      >
-                        {values.showPassword ? (
-                          <Visibility />
-                        ) : (
-                          <VisibilityOff />
-                        )}
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                  labelWidth={70}
-                />
-              </FormControl>
-              <Grid container justify="space-between" className="mb-2">
-                <FormGroup>
-                  <FormControlLabel
-                    control={<Checkbox onChange={handleChange} name="gilad" />}
-                    label="Remeber me"
-                  />
-                </FormGroup>
-                <a href="">Forgot your Password?</a>
-              </Grid>
-              <Grid container justify="center">
-                <button className="lrForm-lgn-btn" type="submit">
-                  LOGIN
-                </button>
-              </Grid>
 
-              <p className="text-center mt-3">
-                Dont't have an account? <a href="">Register</a>
-              </p>
-            </form>
-          </Grid>
+  const validationSchema = yup.object({
+    email: yup
+      .string('Enter Email Address')
+      .email('Enter a valid email')
+      .required('Email Address is required'),
+    password: yup.string('Enter Password').required('Password is required'),
+  })
+
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema: validationSchema,
+    onSubmit: async (values) => {
+      const data = {
+        email: values.email,
+        password: values.password,
+      }
+      const response = await loginFpcMember(data)
+      if (!!response.data.data && !!response.data.otherdata) {
+        props.loginSuccess(response.data.data)
+        props.tokenStored(response.data.otherdata.access.token)
+        history.push('/')
+      } else {
+        setSnack(true)
+        setError(response.data.message)
+      }
+    },
+  })
+
+  return (
+    <div className="lg-form-wrap">
+      <Grid container lg={12} justify="space-between" alignItems="center">
+        <Grid lg={5}>
+          <img
+            alt=""
+            src={`${process.env.PUBLIC_URL}/assets/login/loginimg.png`}
+            width="100%"
+          />
         </Grid>
-      </div>
-    </>
+        <Grid lg={6}>
+          <form onSubmit={formik.handleSubmit}>
+            <h3>Log in to FEED</h3>
+            <h6 className="text-muted">
+              Welcome back! Please login to your account to continue
+            </h6>
+            <TextField
+              fullWidth
+              variant="outlined"
+              margin="normal"
+              label="Email"
+              name="email"
+              placeholder="Enter Email Id"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              error={formik.touched.email && Boolean(formik.errors.email)}
+              helperText={formik.touched.email && formik.errors.email}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <PersonIcon />
+                  </InputAdornment>
+                ),
+              }}
+            />
+            <FormControl variant="outlined" margin="normal" fullWidth>
+              <InputLabel htmlFor="outlined-adornment-password">
+                Password
+              </InputLabel>
+              <OutlinedInput
+                id="outlined-adornment-password"
+                type={values.showPassword ? 'text' : 'password'}
+                placeholder="Enter Password"
+                name="password"
+                value={formik.values.password}
+                onChange={formik.handleChange}
+                error={
+                  formik.touched.password && Boolean(formik.errors.password)
+                }
+                helperText={formik.touched.password && formik.errors.password}
+                startAdornment={
+                  <InputAdornment position="start">
+                    <VpnKeyIcon />
+                  </InputAdornment>
+                }
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      edge="end"
+                    >
+                      {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+                labelWidth={70}
+              />
+            </FormControl>
+            <Grid container justify="space-between" className="mb-2">
+              <FormGroup>
+                <FormControlLabel
+                  control={<Checkbox name="gilad" />}
+                  label="Remeber me"
+                />
+              </FormGroup>
+              <Link to="/login">Forgot your Password?</Link>
+            </Grid>
+            <Grid container justify="center">
+              <button className="lrForm-lgn-btn" type="submit">
+                LOGIN
+              </button>
+            </Grid>
+
+            <p className="text-center mt-3">
+              Dont't have an account? <Link to="/register">Register</Link>
+            </p>
+          </form>
+        </Grid>
+      </Grid>
+      <Snackbar
+        open={snack}
+        autoHideDuration={6000}
+        onClose={() => setSnack(false)}
+      >
+        <Alert onClose={() => setSnack(false)} severity="info">
+          {error}
+        </Alert>
+      </Snackbar>
+    </div>
   )
 }
 
-export default Login
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loginSuccess: (data) => dispatch(loginSuccess(data)),
+    tokenStored: (token) => dispatch(tokenStored(token)),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Login)

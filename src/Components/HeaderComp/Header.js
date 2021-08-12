@@ -8,8 +8,9 @@ import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Divider } from '@material-ui/core'
+import { connect } from 'react-redux'
 
-export default function Header() {
+function Header(props) {
   const { t } = useTranslation()
   const languageChange = (event) => {
     i18n.changeLanguage(event.target.value)
@@ -304,37 +305,41 @@ export default function Header() {
                           {t('exports')}{' '}
                         </Link>
                       </li>
-                      {/* <li className="nav-item">
-                        <Link className="nav-link" to="/">
-                          Media
-                        </Link>
-                      </li>
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/">
-                          Blogs
-                        </Link>
-                      </li> */}
-                      <li className="nav-item">
-                        <Link className="nav-link" to="/mydashboard">
-                          Prices
-                        </Link>
-                      </li>
+                      {!!props.token ? (
+                        <li className="nav-item">
+                          <Link className="nav-link" to="/mydashboard">
+                            Dashboard
+                          </Link>
+                        </li>
+                      ) : (
+                        ''
+                      )}
                       <li className="nav-item">
                         <Link className="nav-link" to="/contactus">
                           {t('contact_us')}{' '}
                         </Link>
                       </li>
                     </ul>
-                    <ul className="navbar-nav ml-auto">
-                      <Link to="/login" className="nav-link my-auto">
-                        <button className="login-btn">{t('login_caps')}</button>
-                      </Link>
-                      <Link to="/register" className="nav-link">
-                        <button className="register-btn">
-                          {t('register_caps')}
-                        </button>
-                      </Link>
-                    </ul>
+                    {!!props.token ? (
+                      <ul className="navbar-nav ml-auto">
+                        <a href="/" className="nav-link my-auto">
+                          <button className="login-btn">{t('logout')}</button>
+                        </a>
+                      </ul>
+                    ) : (
+                      <ul className="navbar-nav ml-auto">
+                        <Link to="/login" className="nav-link my-auto">
+                          <button className="login-btn">
+                            {t('login_caps')}
+                          </button>
+                        </Link>
+                        <Link to="/register" className="nav-link">
+                          <button className="register-btn">
+                            {t('register_caps')}
+                          </button>
+                        </Link>
+                      </ul>
+                    )}
                   </div>
                 </nav>
               </div>
@@ -345,3 +350,10 @@ export default function Header() {
     </>
   )
 }
+
+function mapStateToProps(state) {
+  const { token } = state
+  return { token: token }
+}
+
+export default connect(mapStateToProps, null)(Header)

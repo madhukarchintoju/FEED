@@ -18,4 +18,24 @@ const getAboutUs = async function (id) {
   }
 }
 
-export { getAboutUs }
+const registerFpcMember = async function (data) {
+  const url = `${process.env.FEED_BE}/fpomember/register`
+  try {
+    const response = await axios.post(url, data)
+    return response
+  } catch (error) {
+    return error
+  }
+}
+
+const loginFpcMember = async function (data) {
+  const url = `${process.env.FEED_BE}/fpomember/login`
+  try {
+    const response = await axios.post(url, data)
+    return response
+  } catch (error) {
+    return error
+  }
+}
+
+export { getAboutUs, registerFpcMember, loginFpcMember }

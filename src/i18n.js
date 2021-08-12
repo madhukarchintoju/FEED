@@ -56,6 +56,7 @@ i18n.use(LanguageDetector).init({
         and help them reach the International quality standards.`,
         about_para_eight: `All in all, FEED's vision is to provide the FPOS & MSMEs the exposure to best prices in 
         both domestic and international markets and render end - to - end support in capturing such markets.`,
+        logout: 'LOGOUT',
       },
     },
     te: {
@@ -104,6 +105,7 @@ i18n.use(LanguageDetector).init({
         about_para_eight: `FPO, MSME పరిశ్రమల ఉత్ప‌త్తుల‌కు దేశీయ మరియు అంతర్జాతీయ మార్కెట్ల‌లో ఉత్తమమైన, లాభదాయకమైన ధ‌ర‌ను 
         క‌ల్పించ‌డ‌మే FEED ప్ర‌ధాన ల‌క్ష్యం.  అదేవిధంగా ఆయా మార్కెట్ల‌కు త‌గినట్లుగా ఎగుమ‌తులు నిర్వహించేందుకు ప్రారంభ దశ నుంచి చివ‌రి 
         వ‌ర‌కూ FEED పూర్తి స‌హ‌కారం అందిస్తుంది.`,
+        logout: 'లాగ్ అవుట్',
       },
     },
 

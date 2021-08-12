@@ -1,13 +1,16 @@
-export const GET_ABOUT_US = 'GET_ABOUT_US'
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS'
+export const TOKEN_STORED = 'TOKEN_STORED'
 
-export const getAboutUs = (about) => {
-  return (dispatch) => {
-    //use axios service
-    setTimeout(() => {
-      dispatch({
-        type: GET_ABOUT_US,
-        payload: about,
-      })
-    }, 700)
+export const loginSuccess = (data) => {
+  return {
+    type: LOGIN_SUCCESS,
+    user: data,
+  }
+}
+
+export const tokenStored = (data) => {
+  return {
+    type: TOKEN_STORED,
+    token: data,
   }
 }
