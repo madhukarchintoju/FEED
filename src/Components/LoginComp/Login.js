@@ -70,7 +70,7 @@ function Login(props) {
       if (!!response.data.data && !!response.data.otherdata) {
         props.loginSuccess(response.data.data)
         props.tokenStored(response.data.otherdata.access.token)
-        history.push('/')
+        history.push('/mydashboard')
       } else {
         setSnack(true)
         setError(response.data.message)
