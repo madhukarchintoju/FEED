@@ -15,9 +15,9 @@ import ManageProducts from '../myMarketDashboard/manageProducts/manageProducts'
 
 export default function dashboardMain() {
   return (
-    <div className="row m-0 mt-3 mb-3">
-      <DashboardSideNav className="col" />
-      <div className="col">
+    <div className="row m-0 mt-3 mb-3 justify-content-around">
+      <DashboardSideNav className="col-lg-3 col-md-3" />
+      <div className="col-lg-9 col-lg-9">
         <Switch>
           <Route
             path="/dashboard/myaccount"

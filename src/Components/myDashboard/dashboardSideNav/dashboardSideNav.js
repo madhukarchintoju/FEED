@@ -4,8 +4,14 @@ import { ListItem, List, makeStyles } from '@material-ui/core'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
 import Divider from '@material-ui/core/Divider'
-import InboxIcon from '@material-ui/icons/Inbox'
-import DraftsIcon from '@material-ui/icons/Drafts'
+import StorageIcon from '@material-ui/icons/Storage'
+import ComputerIcon from '@material-ui/icons/Computer'
+import StoreIcon from '@material-ui/icons/Store'
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter'
+import LocalOfferIcon from '@material-ui/icons/LocalOffer'
+import AccountBoxIcon from '@material-ui/icons/AccountBox'
+import ReceiptIcon from '@material-ui/icons/Receipt'
+import AssessmentIcon from '@material-ui/icons/Assessment'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -97,7 +103,7 @@ export default function DashboardSideNav() {
           onClick={(event) => handleListItemClick(event, 0)}
         >
           <ListItemIcon>
-            <InboxIcon />
+            <StorageIcon />
           </ListItemIcon>
           <ListItemText primary="My subscriptions" />
         </ListItem>
@@ -110,7 +116,7 @@ export default function DashboardSideNav() {
           onClick={(event) => handleListItemClick(event, 1)}
         >
           <ListItemIcon>
-            <DraftsIcon />
+            <ComputerIcon />
           </ListItemIcon>
           <ListItemText primary="My IT & Digital Media" />
         </ListItem>
@@ -123,7 +129,7 @@ export default function DashboardSideNav() {
           onClick={(event) => handleListItemClick(event, 2)}
         >
           <ListItemIcon>
-            <InboxIcon />
+            <StoreIcon />
           </ListItemIcon>
           <ListItemText primary="My Market" />
         </ListItem>
@@ -136,7 +142,7 @@ export default function DashboardSideNav() {
           onClick={(event) => handleListItemClick(event, 3)}
         >
           <ListItemIcon>
-            <DraftsIcon />
+            <BusinessCenterIcon />
           </ListItemIcon>
           <ListItemText primary="MY Business Leads" />
         </ListItem>
@@ -149,7 +155,7 @@ export default function DashboardSideNav() {
           onClick={(event) => handleListItemClick(event, 4)}
         >
           <ListItemIcon>
-            <InboxIcon />
+            <LocalOfferIcon />
           </ListItemIcon>
           <ListItemText primary="My Offers & Coupons" />
         </ListItem>
@@ -162,7 +168,7 @@ export default function DashboardSideNav() {
           onClick={(event) => handleListItemClick(event, 5)}
         >
           <ListItemIcon>
-            <DraftsIcon />
+            <AccountBoxIcon />
           </ListItemIcon>
           <ListItemText primary="My Account" />
         </ListItem>
@@ -175,7 +181,7 @@ export default function DashboardSideNav() {
           onClick={(event) => handleListItemClick(event, 6)}
         >
           <ListItemIcon>
-            <InboxIcon />
+            <ReceiptIcon />
           </ListItemIcon>
           <ListItemText primary="My Transcations" />
         </ListItem>
@@ -188,7 +194,7 @@ export default function DashboardSideNav() {
           onClick={(event) => handleListItemClick(event, 7)}
         >
           <ListItemIcon>
-            <DraftsIcon />
+            <AssessmentIcon />
           </ListItemIcon>
           <ListItemText primary="My Reports" />
         </ListItem>
