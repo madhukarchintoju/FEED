@@ -60,7 +60,7 @@ export default function ServicesSection(props) {
                           </h5>
                           {window.innerWidth > 720 ? (
                             <small>
-                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP
                               DEVELOPMENT
                             </small>
                           ) : (
@@ -95,7 +95,7 @@ export default function ServicesSection(props) {
                           </h5>
                           {window.innerWidth > 720 ? (
                             <small>
-                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP
                               DEVELOPMENT
                             </small>
                           ) : (
@@ -129,7 +129,7 @@ export default function ServicesSection(props) {
                           </h5>
                           {window.innerWidth > 720 ? (
                             <small>
-                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP
                               DEVELOPMENT
                             </small>
                           ) : (
@@ -163,7 +163,7 @@ export default function ServicesSection(props) {
                           </h5>
                           {window.innerWidth > 720 ? (
                             <small>
-                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP
                               DEVELOPMENT
                             </small>
                           ) : (
@@ -202,7 +202,7 @@ export default function ServicesSection(props) {
                           </h5>
                           {window.innerWidth > 720 ? (
                             <small>
-                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP
                               DEVELOPMENT
                             </small>
                           ) : (
@@ -236,7 +236,7 @@ export default function ServicesSection(props) {
                           </h5>
                           {window.innerWidth > 720 ? (
                             <small>
-                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP
                               DEVELOPMENT
                             </small>
                           ) : (
@@ -270,7 +270,7 @@ export default function ServicesSection(props) {
                           </h5>
                           {window.innerWidth > 720 ? (
                             <small>
-                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP
                               DEVELOPMENT
                             </small>
                           ) : (
@@ -304,7 +304,7 @@ export default function ServicesSection(props) {
                           </h5>
                           {window.innerWidth > 720 ? (
                             <small>
-                              FARM TO FOREIGN EXPORTS ENTERPRENEURSHIP
+                              FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP
                               DEVELOPMENT
                             </small>
                           ) : (

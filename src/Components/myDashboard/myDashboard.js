@@ -126,7 +126,7 @@ export default function MyDashboard() {
               /> */}
             </div>
           </Link>
-          <Link className="nav-link">
+          <Link to="/dashboard/mysubscription" className="nav-link">
             <Grid>
               <Grid className="subscripPosition">
                 <h6>My Subscriptions</h6>
@@ -141,7 +141,7 @@ export default function MyDashboard() {
               </Grid>
             </Grid>
           </Link>
-          <Link>
+          <Link to="/dashboard/myitdm">
             <Grid>
               <Grid className="transacpPosition">
                 <h6>IT &amp; Digital Media</h6>
@@ -156,7 +156,7 @@ export default function MyDashboard() {
               </Grid>
             </Grid>
           </Link>
-          <Link>
+          <Link to="/dashboard/mymarket">
             <Grid>
               <Grid className="businessLeads">
                 <h6>My Market</h6>
@@ -171,7 +171,7 @@ export default function MyDashboard() {
               </Grid>
             </Grid>
           </Link>
-          <Link>
+          <Link to="/dashboard/mybusinessleads">
             <Grid>
               <Grid className="marketPosition">
                 <h6>My Business Leads</h6>
@@ -186,7 +186,7 @@ export default function MyDashboard() {
               </Grid>
             </Grid>
           </Link>
-          <Link>
+          <Link to="/dashboard/myofferscoupons">
             <Grid>
               <Grid className="reportsPosition">
                 <h6>Coupons &amp; Offers</h6>
@@ -201,7 +201,7 @@ export default function MyDashboard() {
               </Grid>
             </Grid>
           </Link>
-          <Link>
+          <Link to="/dashboard/myreports">
             <Grid>
               <Grid className="accountsPosition">
                 <h6>My Reports</h6>
@@ -216,7 +216,7 @@ export default function MyDashboard() {
               </Grid>
             </Grid>
           </Link>
-          <Link>
+          <Link to="/dashboard/mytransaction">
             <Grid>
               <Grid className="wishListPosition">
                 <h6>My Transactions</h6>
@@ -231,7 +231,7 @@ export default function MyDashboard() {
               </Grid>
             </Grid>
           </Link>
-          <Link>
+          <Link to="/dashboard/myaccount">
             <Grid>
               <Grid className="digitalMediaPosition">
                 <h6>My Accounts</h6>

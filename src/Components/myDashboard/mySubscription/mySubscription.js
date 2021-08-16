@@ -100,15 +100,10 @@ export default function MySubscription() {
           <Grid>
             <Grid container justifyContent="space-around">
               {existingPlans.map((item, index) => (
-                <Grid
-                  lg={2}
-                  key={index[5]}
-                  className={classes.existingPlanCard}
-                >
+                <Grid lg={2} key={index} className={classes.existingPlanCard}>
                   <Avatar
                     className={classes.avatarStyle}
                     src={`${process.env.PUBLIC_URL}/assets/my-dashboard/mysubscription/${item.icon}`}
-                    // className="feed-logo-img img-fluid"
                     alt="existing plan"
                   />
                   <h6>{item.name}</h6>

@@ -164,7 +164,7 @@ function Login(props) {
             </Grid>
 
             <p className="text-center mt-3">
-              Dont't have an account? <Link to="/register">Register</Link>
+              Don't have an account? <Link to="/register">Register</Link>
             </p>
           </form>
         </Grid>

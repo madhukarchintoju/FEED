@@ -37,10 +37,11 @@ export default function MyFpoHome(props) {
       // backgroundColor: 'red',
       // border:'1px solid red',
       padding: '2px',
-      color: 'white',
+      // color: 'white',
       // backgroundImage: `url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100')`
-      backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/home/notibgsix.jpg")`,
+      // backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/home/notibgsix.jpg")`,
       backgroundSize: 'cover',
+      color: 'black',
     },
     newsfeedsHeading: {
       height: '2em',
@@ -172,7 +173,7 @@ export default function MyFpoHome(props) {
                   <Grid key={index}>
                     <ListItem
                       alignItems="flex-start"
-                      className="notificationItem"
+                      // className="notificationItem"
                     >
                       <ListItemText
                         primary={item.primary}
