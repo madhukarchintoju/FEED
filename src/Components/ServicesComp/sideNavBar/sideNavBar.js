@@ -13,6 +13,7 @@ import {
   ListItemText,
   Icon,
 } from '@material-ui/core'
+
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
@@ -28,6 +29,7 @@ export default function SideNavBar(props) {
     drawer: {
       flexShrink: 0,
       whiteSpace: 'nowrap',
+      height: '100%',
     },
     drawerOpen: {
       transition: theme.transitions.create('width', {
@@ -72,10 +74,15 @@ export default function SideNavBar(props) {
     selectedItem: {
       // backgroundColor: '#ffdc75',
       // background: 'rgb(230,185,52)',
-      // color: "white",
+      color: props.selectedSideNavLinkColor || 'black',
       background:
         props.selectedSideNavLink ||
         'linear-gradient(90deg, rgba(255,193,7,1) 17%, rgba(255,255,255,1) 67%)',
+    },
+    hoverlink: {
+      '&:hover': {
+        color: 'white',
+      },
     },
   }))
   const classes = useStyles()
@@ -88,72 +95,75 @@ export default function SideNavBar(props) {
     setOpen(false)
   }
   return (
-    <div className="side-navbar">
-      <Drawer
-        variant="permanent"
-        className={clsx(classes.drawer, {
-          [classes.drawerOpen]: true,
-          [classes.drawerClose]: !true,
-        })}
-        classes={{
-          paper: clsx({
-            [classes.drawerOpen]: open,
-            [classes.drawerClose]: !open,
-            [classes.paper]: true,
-          }),
-        }}
-      >
-        <div container className={classes.toolbar}>
-          {open ? (
-            <h5 className="mt-2 text-bold mr-5">{props.serviceTitle}</h5>
-          ) : (
-            ''
-          )}
-          {open ? (
-            <IconButton onClick={handleDrawerClose}>
-              <ChevronLeftIcon style={{ color: props.textColor }} />
-            </IconButton>
-          ) : (
-            <IconButton onClick={handleDrawerOpen}>
-              <ChevronRightIcon style={{ color: props.textColor }} />
-            </IconButton>
-          )}
-        </div>
-        <Divider />
-        <List style={{ padding: '0em' }}>
-          {props?.data.map((item, index) => (
-            <div
-              key={index}
-              className={selected === index ? classes.selectedItem : ''}
-            >
-              <ListItem
-                button
-                component={Link}
-                to={item.path}
-                onClick={
-                  !screenWidth
-                    ? () => {
-                        setSelected(index)
-                        handleDrawerClose()
-                      }
-                    : () => {
-                        setSelected(index)
-                      }
-                }
+    <>
+      <div className="side-navbar">
+        <Drawer
+          variant="permanent"
+          className={clsx(classes.drawer, {
+            [classes.drawerOpen]: true,
+            [classes.drawerClose]: !true,
+          })}
+          classes={{
+            paper: clsx({
+              [classes.drawerOpen]: open,
+              [classes.drawerClose]: !open,
+              [classes.paper]: true,
+            }),
+          }}
+        >
+          <div container className={classes.toolbar}>
+            {open ? (
+              <h5 className="mt-2 text-bold mr-5">{props.serviceTitle}</h5>
+            ) : (
+              ''
+            )}
+            {open ? (
+              <IconButton onClick={handleDrawerClose}>
+                <ChevronLeftIcon style={{ color: props.textColor }} />
+              </IconButton>
+            ) : (
+              <IconButton onClick={handleDrawerOpen}>
+                <ChevronRightIcon style={{ color: props.textColor }} />
+              </IconButton>
+            )}
+          </div>
+          <Divider />
+          <List style={{ padding: '0em' }}>
+            {props?.data.map((item, index) => (
+              <div
+                key={index}
+                className={selected === index ? classes.selectedItem : ''}
               >
-                <ListItemIcon>
-                  <Icon
-                    className={item.icon}
-                    style={{ width: '2em', color: props.textColor }}
-                  />
-                </ListItemIcon>
-                <ListItemText primary={item.name} />
-              </ListItem>
-              <Divider />
-            </div>
-          ))}
-        </List>
-      </Drawer>
-    </div>
+                <ListItem
+                  button
+                  component={Link}
+                  to={item.path}
+                  className={classes.hoverlink}
+                  onClick={
+                    !screenWidth
+                      ? () => {
+                          setSelected(index)
+                          handleDrawerClose()
+                        }
+                      : () => {
+                          setSelected(index)
+                        }
+                  }
+                >
+                  <ListItemIcon>
+                    <Icon
+                      className={item.icon}
+                      style={{ width: '2em', color: props.textColor }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText primary={item.name} />
+                </ListItem>
+                <Divider />
+              </div>
+            ))}
+          </List>
+        </Drawer>
+      </div>
+    </>
   )
 }

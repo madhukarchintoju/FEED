@@ -1,9 +1,8 @@
 import React from 'react'
 import './ServicesNavbar.css'
 import { Link } from 'react-router-dom'
-import { Avatar } from '@material-ui/core'
+import { Avatar, Grid } from '@material-ui/core'
 import ServicesSection from '../../servicesSection/servicesSection'
-
 export default function ServicesNavbar() {
   const screenWidth = window.innerWidth > 769 ? true : false
   return (
@@ -46,7 +45,7 @@ export default function ServicesNavbar() {
                 </button>
               </Link>
               <Link className="nav-link" to="/mybusiness">
-                <button className="btn violet-btn">
+                <button className="btn business-btn">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/my-business-icon.jpg`}
                     width="30"

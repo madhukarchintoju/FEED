@@ -17,9 +17,9 @@ export default function WidgetsBar(props) {
             color="primary"
             startIcon={<Icon className="fas fa-arrow-left" />}
             onClick={() => history.goBack()}
-          >
-            Back
-          </Button>
+          />
+          {/* Back
+          </Button> */}
         </Grid>
         <Grid>
           <h4>{props.screenTitle}</h4>
