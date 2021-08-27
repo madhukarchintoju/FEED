@@ -25,6 +25,13 @@ export default function StartExport() {
         <Grid>
           <Grid style={{ textAlign: 'center' }}>
             <h3>Starting Exports</h3>
+            <p>
+              Export process is a tedious process with numerous documents to be
+              submitted to different authorities at different point of time. We
+              provide step-by-step guidance throughout the export process along
+              with the usage and importance of each and every document used in
+              the export process.
+            </p>
             <h6>What are the preliminary requirements to start exports ?</h6>
           </Grid>
           <Grid container justifyContent="space-around">

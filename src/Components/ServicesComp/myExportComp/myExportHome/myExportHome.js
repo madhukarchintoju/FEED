@@ -6,104 +6,90 @@ import { Grid, Avatar, makeStyles } from '@material-ui/core'
 
 export default function MyExportHome() {
   const useStyles = makeStyles((theme) => ({
-    feedConnect: {
-      backgroundColor: '#64c5bc',
-      '@media (max-width: 768px)': {
-        marginTop: '2em',
-      },
-    },
-    color: {
+    exportHomeCard: {
+      width: '180px',
+      height: '180px',
+      margin: '8px',
+      background: '#fff',
       color: 'black',
-      fontWeight: '500',
-    },
-    titleHeading: {
-      // margin: '1em',
-      '@media (max-width: 768px)': {
-        margin: 0,
-        marginLeft: '1em',
-      },
-    },
-    listItem: {
-      marginBottom: '2em',
-    },
-    headingAvatar: {
-      width: '18em',
-      height: '5em',
-      '@media (max-width: 768px)': {
-        width: '6em',
-        height: '3em',
-      },
-    },
-    cardsAvatar: {
-      width: '9em',
-      height: '8em',
-      margin: '0.1em',
-      '@media (max-width:768px)': {
-        width: '4em',
-        height: '4em',
+      borderRadius: '15px 15px',
+      borderBottom: '3px solid #F4A896',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      textAlign: 'center',
+      position: 'relative',
+      textDecoration: 'none',
+      boxShadow: '0 14px 20px rgba(0, 0, 0, 0.2)',
+      transition: 'all 0.3s ease-out',
+      '&:hover': {
+        textDecoration: 'none',
+        backgroundColor: 'rgb(179, 216, 231)',
+        transform: 'translateY(-5px) scale(1.005) translateZ(0)',
       },
     },
   }))
   const classes = useStyles()
-  const exportHome = [
+  const exportHomeCard = [
     {
       name: 'Why Exports',
-      icon: 'home/why-exports.png',
+      logo: 'whyexports.png',
       link: '/myexport/whyexport',
     },
     {
-      name: 'How to Start Export',
-      icon: 'home/start-export.png',
+      name: 'How to Start Exports',
+      logo: 'startexports.png',
       link: '/myexport/startexport',
     },
     {
       name: 'Product Selection',
-      icon: 'home/PRODUCT-SELECTION.png',
-      link: '/myexport/exportproductselection',
+      logo: 'productselection.png',
+      link: '/productprofile',
     },
     {
       name: 'Buyers Connection',
-      icon: 'home/BUYERS-CONNECTIONS.png',
+      logo: 'buyersconnection.png',
       link: '/myexport/exportbuyersconnection',
     },
     {
-      name: 'Exim Policy Regulations',
-      icon: 'home/POLICIES.png',
+      name: 'Export - Import Policies & Regulations',
+      logo: 'eximpolicy.png',
       link: '/myexport/eximpolicyregulation',
     },
     {
-      name: 'Finance',
-      icon: 'home/FINANCE.png',
-      link: '',
+      name: 'Export - Import Finance & Insurance',
+      logo: 'financeinsurance.png',
+      link: '/myexport/eximfinanceinsurance',
     },
     {
-      name: 'Process Export Order',
-      icon: 'home/PROCESS.png',
+      name: 'Process & Export Order',
+      logo: 'exportorder.png',
       link: '/myexport/processexportorder',
     },
     {
-      name: 'Exim Documentation',
-      icon: 'home/DOCUMENTATION.png',
+      name: 'Export - Import Documentation',
+      logo: 'eximdocumentation.png',
       link: '/myexport/eximdocumentation',
     },
     {
-      name: 'Global Trade Updates',
-      icon: 'home/globaltrade.png',
+      name: 'Global Trade Updates & Events',
+      logo: 'updatesevent.png',
       link: '/myexport/globaltradeupdates',
     },
     {
       name: 'Country Selection',
-      icon: 'home/countryselection.png',
+      logo: 'countryselectionimg.png',
       link: '/myexport/countryselection',
     },
     {
-      name: 'Tarrif',
-      icon: 'home/TARIFF.png',
+      name: 'Export - Import Tariff & Benefits',
+      logo: 'tariffbenefits.png',
       link: '/myexport/eximtarrifbenefits',
     },
     {
       name: 'Tools & Services',
-      icon: 'home/TOOLS-SERVICES.png',
+      logo: 'toolsservices.png',
       link: '/myexport/exporttoolservices',
     },
   ]
@@ -119,26 +105,16 @@ export default function MyExportHome() {
         <Grid container justifyContent="center">
           <h5>Exports Home</h5>
         </Grid>
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-around"
-          alignItems="center"
-        >
-          {exportHome.map((item, index) => (
-            <Grid item container lg={2} justifyContent="center" key={index}>
-              <Grid>
-                <Avatar
-                  to={item.link}
-                  component={Link}
-                  variant="square"
-                  className={classes.cardsAvatar}
-                  src={`${process.env.PUBLIC_URL}/assets/my-exports/${item.icon}`}
-                >
-                  {item.name}
-                </Avatar>
+        <Grid container item lg={12} justifyContent="space-around">
+          {exportHomeCard.map((item, index) => (
+            <Grid key={index} to={item.link} component={Link}>
+              <Grid className={classes.exportHomeCard}>
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/my-exports/home/${item.logo}`}
+                  alt="info logo"
+                />
+                <h6>{item.name}</h6>
               </Grid>
-              {/* <Grid className={classes.color}>{item.name}</Grid> */}
             </Grid>
           ))}
         </Grid>

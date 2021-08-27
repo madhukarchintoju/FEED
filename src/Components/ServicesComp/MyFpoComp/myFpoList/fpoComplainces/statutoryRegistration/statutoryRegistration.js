@@ -5,59 +5,59 @@ import MyFpoListItem from '../../../myFpoListItem/myFpoListItem'
 export default function StatutoryRegistration() {
   const dataList = [
     {
-      name: 'FPO Registrations',
+      name: 'FPO / FPC Registrations',
       icon: 'compliances/statutory/fpofpcregistration.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/fpofpcreg',
     },
     {
-      name: 'FPC Registrationa',
+      name: 'Company Registrationa',
       icon: 'compliances/statutory/companyregistration.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/companyreg',
     },
     {
       name: 'GST Registrations',
       icon: 'compliances/statutory/gstr.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/gstreg',
     },
     {
       name: 'IEC Registrations',
       icon: 'compliances/statutory/ieccr.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/ieccode',
     },
     {
       name: 'MSME Registrations',
       icon: 'compliances/statutory/msme.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/msmereg',
     },
     {
       name: 'PAN Registrations',
       icon: 'compliances/statutory/pan.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/panreg',
     },
     {
       name: 'FSSAI Registrations',
       icon: 'compliances/statutory/fssai.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/fssaireg',
     },
     {
       name: 'ISO Registrations',
       icon: 'compliances/statutory/iso.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/isoreg',
     },
     {
       name: 'Shops Establishments',
       icon: 'compliances/statutory/se.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/shopsestb',
     },
     {
       name: 'Trade License',
       icon: 'compliances/statutory/trade.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/tradelicence',
     },
     {
       name: 'Labour License',
       icon: 'compliances/statutory/labour.png',
-      link: '',
+      link: '/myfpo/statutoryregistration/labourlicence',
     },
     {
       name: 'Other Registrations',
