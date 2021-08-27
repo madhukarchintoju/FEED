@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './sideNavBar.css'
 import clsx from 'clsx'
 import { Link, useHistory } from 'react-router-dom'
@@ -17,7 +17,8 @@ import {
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 
-export default function SideNavBar(props) {
+export default function SideNavBar(props, { defaultActive }) {
+  const history = useHistory()
   const screenWidth = window.innerWidth > 769 ? true : false
 
   const [open, setOpen] = useState(screenWidth)
@@ -132,7 +133,11 @@ export default function SideNavBar(props) {
             {props?.data.map((item, index) => (
               <div
                 key={index}
-                className={selected === index ? classes.selectedItem : ''}
+                className={
+                  window.location.pathname === item.path
+                    ? classes.selectedItem
+                    : ''
+                }
               >
                 <ListItem
                   button

@@ -25,6 +25,8 @@ import ExportToolServices from '../myExportList/exportToolServices/exportToolSer
 import EximTarrifbenefits from '../myExportList/eximTarrifBenefits/eximTarrifBenefits'
 import EximFinanceInsurance from '../myExportList/eximFinanceInsurance/eximFinanceInsurance'
 import CountrySelection from '../myExportList/countrySelection/countrySelection'
+import CountryInformation from '../myExportList/countrySelection/countryInformation/countryInformation'
+import WidgetsBar from '../../widgetsBar/widgetsBar'
 
 export default function MyExportMainComp() {
   const navData = [
@@ -41,7 +43,7 @@ export default function MyExportMainComp() {
     {
       name: 'Product Selection',
       icon: 'far fa-hand-pointer',
-      path: '/myexport/exportproductselection',
+      path: '/productprofile',
     },
     {
       name: 'Buyers Connection',
@@ -106,15 +108,16 @@ export default function MyExportMainComp() {
           serviceTitle="MY EXPORTS"
           selectedSideNavLink="linear-gradient(90deg, rgba(100,197,188,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
-        <div className="p-0 col-lg">
+        <div className="col-lg p-0">
+          <WidgetsBar />
           <Switch>
             <Route path="/myexport/home" component={MyExportHome}></Route>
             <Route path="/myexport/whyexport" component={WhyExport}></Route>
             <Route path="/myexport/startexport" component={StartExport}></Route>
-            <Route
+            {/* <Route
               path="/myexport/exportproductselection"
               component={ExportProductSelection}
-            ></Route>
+            ></Route> */}
             <Route
               path="/myexport/exportbuyersconnection"
               component={ExportBuyersConnections}
@@ -170,6 +173,10 @@ export default function MyExportMainComp() {
             <Route
               path="/myexport/countryselection"
               component={CountrySelection}
+            ></Route>
+            <Route
+              path="/myexport/countryinformation"
+              component={CountryInformation}
             ></Route>
             {/* <Route
               path="/myexport/exportevents"

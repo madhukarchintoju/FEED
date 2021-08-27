@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './countrySelection.css'
-import { Grid, makeStyles } from '@material-ui/core'
+import { Grid, makeStyles, TextField } from '@material-ui/core'
+import Autocomplete from '@material-ui/lab/Autocomplete'
 import { Link } from 'react-router-dom'
 export default function CountrySelection() {
   const useStyles = makeStyles((theme) => ({
@@ -19,6 +20,7 @@ export default function CountrySelection() {
     },
   }))
   const classes = useStyles()
+  const [searchTerm, setSearchTerm] = useState('')
   const countryList = [
     {
       name: 'Algeria',
@@ -227,21 +229,49 @@ export default function CountrySelection() {
         <Grid container justifyContent="center">
           <h5>Country Selection</h5>
         </Grid>
+        <Grid
+          container
+          justifyContent="center"
+          item
+          lg={6}
+          className="mt-3 mx-auto mb-4"
+        >
+          <TextField
+            fullWidth
+            type="text"
+            variant="outlined"
+            label="Search Country"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </Grid>
         <Grid container item lg={12} style={{ textAlign: '-webkit-center' }}>
-          {countryList.map((item, index) => (
-            <Grid lg={3} item key={index}>
-              {/* <Link to="/dashboard/businessprofile"> */}
-              <Grid className="countryCard education">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/my-exports/flags/${item.flag}`}
-                  alt="..."
-                  className={classes.flagShadow}
-                />
-                <h5>{item.name}</h5>
+          {countryList
+            .filter((val) => {
+              if (searchTerm === '') {
+                return val
+              } else if (
+                val.name
+                  .toLocaleLowerCase()
+                  .includes(searchTerm.toLocaleLowerCase())
+              ) {
+                return val
+              }
+            })
+            .map((item, index) => (
+              <Grid lg={3} item key={index}>
+                <Link to="/myexport/countryinformation" className="nav-link">
+                  <Grid className="countryCard education">
+                    <img
+                      src={`${process.env.PUBLIC_URL}/assets/my-exports/flags/${item.flag}`}
+                      alt="Country Flags"
+                      className={classes.flagShadow}
+                    />
+                    <h5>{item.name}</h5>
+                  </Grid>
+                </Link>
               </Grid>
-              {/* </Link> */}
-            </Grid>
-          ))}
+            ))}
         </Grid>
       </div>
     </>

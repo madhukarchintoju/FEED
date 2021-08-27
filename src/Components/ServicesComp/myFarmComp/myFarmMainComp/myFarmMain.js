@@ -20,6 +20,7 @@ import Fabric from '../myFarmProducts/fabric/fabric'
 import AnimalHusbandry from '../myFarmProducts/animalhusbandry/animalhusbandry'
 import Others from '../myFarmProducts/others/others'
 import MyFarmGuideContent from '../myFarmGuideContent/myFarmGuideContent'
+import WidgetsBar from '../../widgetsBar/widgetsBar'
 
 export default function MyFarmMainComp() {
   const navData = [
@@ -112,6 +113,7 @@ export default function MyFarmMainComp() {
           selectedSideNavLink="linear-gradient(90deg, rgba(164,207,62,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="p-0 col-lg my-farm-wrap">
+          <WidgetsBar />
           <Switch>
             <Route path="/myfarm/home" component={MyFarmHome}></Route>
             <Route path="/myfarm/fruits" component={MyFarmFruits} />

@@ -41,6 +41,7 @@ import SchemesAndPolicies from './Components/ServicesComp/productProfile/schemes
 import ProcessingUnits from './Components/ServicesComp/productProfile/processing-units'
 import Trade from './Components/ServicesComp/productProfile/trade'
 import UntappedProducts from './Components/ServicesComp/productProfile/untapped-products'
+import Downloads from './Components/downloads/downloads'
 
 function App() {
   const ScrollToTop = () => {
@@ -81,6 +82,7 @@ function App() {
             exact
             component={NewsletterSection}
           />
+          <Route path="/downloads" component={Downloads}></Route>
           <Route path="/mediapage" component={MediaPage}></Route>
           <Route path="/blogspage" component={Blogs}></Route>
           <Route path="/register" component={Register} />

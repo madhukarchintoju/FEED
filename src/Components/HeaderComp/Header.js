@@ -77,7 +77,7 @@ function Header(props) {
               </form>
             </div>
             <div className="btn-group">
-              <Link to="">
+              <Link to="/downloads">
                 <button className="btn-primary mr-1">
                   <span className="download-btn-text">
                     <i className="fa fa-download" aria-hidden="true"></i>{' '}

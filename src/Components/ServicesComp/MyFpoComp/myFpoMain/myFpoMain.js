@@ -29,6 +29,17 @@ import BankRegistry from '../myFpoList/fpoAccount/bankRegistry/bankRegistry'
 import CashbookRegistry from '../myFpoList/fpoAccount/cashbookRegistry/cashbookRegistry'
 import LedgerRegistry from '../myFpoList/fpoAccount/ledgerRegistry/ledgerRegistry'
 import Reports from '../myFpoList/fpoAccount/reports/reports'
+import FpoFpcReg from '../myFpoList/fpoComplainces/statutoryRegistration/fpoFpcReg/fpoFpcReg'
+import CompanyReg from '../myFpoList/fpoComplainces/statutoryRegistration/companyReg/companyReg'
+import GstReg from '../myFpoList/fpoComplainces/statutoryRegistration/gstReg/gstReg'
+import IecCode from '../myFpoList/fpoComplainces/statutoryRegistration/iecCode/iecCode'
+import MsmeReg from '../myFpoList/fpoComplainces/statutoryRegistration/msmeReg/msmeReg'
+import PanReg from '../myFpoList/fpoComplainces/statutoryRegistration/panReg/panReg'
+import FssaiReg from '../myFpoList/fpoComplainces/statutoryRegistration/fssaiReg/fssaiReg'
+import IsoReg from '../myFpoList/fpoComplainces/statutoryRegistration/isoReg/isoReg'
+import ShopsEstb from '../myFpoList/fpoComplainces/statutoryRegistration/shopsEstb/shopsEstb'
+import TradeLice from '../myFpoList/fpoComplainces/statutoryRegistration/tradeLice/tradeLice'
+import LabourLice from '../myFpoList/fpoComplainces/statutoryRegistration/labourLice/labourLice'
 
 export default function MyFpoMain(props) {
   const background = {
@@ -126,7 +137,6 @@ export default function MyFpoMain(props) {
   }))
   const classes = useStyles()
   // const widgetsBar = <WidgetsBar />
-  let history = useHistory()
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
@@ -169,6 +179,50 @@ export default function MyFpoMain(props) {
             <Route
               path="/myfpo/fpocompliances/statutoryregistration"
               component={StatutoryRegistration}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/fpofpcreg"
+              component={FpoFpcReg}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/companyreg"
+              component={CompanyReg}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/gstreg"
+              component={GstReg}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/ieccode"
+              component={IecCode}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/msmereg"
+              component={MsmeReg}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/panreg"
+              component={PanReg}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/fssaireg"
+              component={FssaiReg}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/isoreg"
+              component={IsoReg}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/shopsestb"
+              component={ShopsEstb}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/tradelicence"
+              component={TradeLice}
+            ></Route>
+            <Route
+              path="/myfpo/statutoryregistration/labourlicence"
+              component={LabourLice}
             ></Route>
             <Route
               path="/myfpo/fpocompliances/legalcompliances"

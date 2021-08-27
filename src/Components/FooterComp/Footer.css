@@ -32,6 +32,10 @@
   border-bottom: 1px solid white;
   margin-left: -25px;
 }
+.footerTitleBtmBrd {
+  border-width: 0 0 2px;
+  border-style: solid;
+}
 
 .footer-section-links ul {
   padding: 0rem !important;
