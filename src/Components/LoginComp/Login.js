@@ -23,7 +23,7 @@ import VpnKeyIcon from '@material-ui/icons/VpnKey'
 import { Link } from 'react-router-dom'
 import MuiAlert from '@material-ui/lab/Alert'
 import { connect } from 'react-redux'
-import { loginSuccess, tokenStored } from '../../redux/actions'
+import { loginSuccess, tokenStored } from '../../redux/action'
 
 import { loginFpcMember } from '../apiServices/apiServices'
 

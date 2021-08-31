@@ -33,7 +33,9 @@ import DashboardMain from './Components/myDashboard/dashboardMain/dashboardMain'
 import MediaPage from './Components/mediaPage/mediaPage'
 import Blogs from './Components/blogs/blogs'
 import AboutList from './Components/aboutSection/aboutList/aboutList'
-
+import MyMarket from './Components/myMarket/myMarket'
+import Products from './Components/myMarket/products'
+import SingleProduct from './Components/myMarket/single-product'
 import ProductProfile from './Components/ServicesComp/productProfile/productProfile'
 import Production from './Components/ServicesComp/productProfile/production'
 import BIProducts from './Components/ServicesComp/productProfile/biproducts'
@@ -119,6 +121,17 @@ function App() {
           />
           <Route path="/mybusiness" component={MyBusinessMain} />
           <Route path="/myexport" component={MyExportMainComp} />
+          <Route path="/mymarket" exact component={MyMarket} />
+          <Route
+            path="/mymarket/products/:categoryId"
+            exact
+            component={Products}
+          />
+          <Route
+            path="/mymarket/product/:productId"
+            exact
+            component={SingleProduct}
+          />
           <Route path="/myeducation" component={MyEduMainComp} />
           <Route path="/mymarket" component={MyMarketMainComp} />
           <Route path="/mytools" component={MyToolsMainComp} />
