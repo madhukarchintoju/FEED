@@ -448,6 +448,9 @@ export default function AboutFpo(props) {
               </Grid>
             ))}
           </Grid>
+          <Grid className="m-auto">
+            <button className="btn btn-warning">View all</button>
+          </Grid>
         </Grid>
         <Grid
           container
@@ -496,7 +499,7 @@ export default function AboutFpo(props) {
                     },
                   })
                 }
-                className="mySwiper aboutFpoGallerySwiper"
+                className="aboutFpoGallerySwiper"
               >
                 {aboutGallery.map((item, index) => (
                   <SwiperSlide container key={index}>
@@ -573,7 +576,6 @@ export default function AboutFpo(props) {
                     },
                   })
                 }
-                className="mySwiper"
               >
                 <div className="testimonial-content">
                   {aboutfpotestimonial.map((item, index) => (

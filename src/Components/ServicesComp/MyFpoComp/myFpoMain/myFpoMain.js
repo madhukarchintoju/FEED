@@ -136,7 +136,18 @@ export default function MyFpoMain(props) {
     background: background[props.location.pathname],
   }))
   const classes = useStyles()
-  // const widgetsBar = <WidgetsBar />
+  const widgetsBar = <WidgetsBar />
+  // switch (props.location.pathname) {
+  //   case '/myfpo/aboutfpo':
+  //     return <WidgetsBar screenTitle="About FPC"></WidgetsBar>
+  //     break;
+  //   case '/myfpo/fpoaccount':
+  //     return <WidgetsBar screenTitle="FPO Accounts"></WidgetsBar>
+  //     break;
+
+  //   default:
+  //     break;
+  // }
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
@@ -151,8 +162,8 @@ export default function MyFpoMain(props) {
           selectedSideNavLink="linear-gradient(90deg, rgba(255,193,7,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="col-lg p-0 fpo-content-wrap">
-          <WidgetsBar></WidgetsBar>
-          {/* {widgetsBar} */}
+          {/* <WidgetsBar screenTitle="MY FPC"></WidgetsBar> */}
+          {widgetsBar}
           <Switch>
             <Route path="/myfpo/home" component={MyFpoHome}></Route>
             <Route path="/myfpo/aboutfpo" component={AboutFpo}></Route>

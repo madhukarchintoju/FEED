@@ -16,6 +16,7 @@ import {
   ListItem,
   ListItemText,
   Divider,
+  Avatar,
 } from '@material-ui/core'
 import SwiperCore, {
   Navigation,
@@ -58,7 +59,8 @@ function Home() {
       mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
     },
     newsfeeds: {
-      overflow: 'auto',
+      // overflow: 'auto',
+      // width:'70',
       height: '460px',
       backgroundColor: 'white',
       padding: 0,
@@ -298,7 +300,7 @@ function Home() {
                 />
               </Grid>
               <Grid container className="mt-1" justifyContent="space-evenly">
-                <Grid item lg={3}>
+                <Grid item lg={3} md={5} sm={12} xs={12}>
                   <Grid className={classes.eventupdatesWrap}>
                     <h6 className={classes.newsfeedsHeading}>
                       Central / State Updates
@@ -325,11 +327,11 @@ function Home() {
                                 <Grid item lg={2}>
                                   <img
                                     src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
-                                    width="100"
+                                    width="80"
                                     alt=""
                                   />
                                 </Grid>
-                                <Grid item lg={7}>
+                                <Grid item lg={5}>
                                   <ListItemText
                                     primary={item.primary}
                                     secondary={item.secondary}
@@ -344,7 +346,7 @@ function Home() {
                     </List>
                   </Grid>
                 </Grid>
-                <Grid item lg={5}>
+                <Grid item lg={5} md={5} sm={12} xs={12}>
                   <div>
                     <Gallery photos={photos} onClick={openLightbox} />
                     <ModalGateway>
@@ -363,7 +365,7 @@ function Home() {
                     </ModalGateway>
                   </div>
                 </Grid>
-                <Grid lg={3}>
+                <Grid lg={3} md={5} sm={12} xs={12}>
                   <Grid className={classes.eventupdatesWrap}>
                     <h6 className={classes.newsfeedsHeading}>FEED Updates</h6>
                     <List className={classes.newsfeeds}>

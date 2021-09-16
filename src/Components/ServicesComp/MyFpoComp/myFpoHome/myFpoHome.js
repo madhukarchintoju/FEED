@@ -71,9 +71,9 @@ export default function MyFpoHome(props) {
       link: '/myfpo/fpobusinessplan',
     },
     {
-      name: 'Loans & Schemes',
+      name: 'Capacity Building',
       icon: 'capacitybuilding.png',
-      link: '',
+      link: '/myfpo/fpocapacitybuilding',
     },
     {
       name: 'FPO Compliances',
@@ -83,12 +83,12 @@ export default function MyFpoHome(props) {
     {
       name: 'Agm & Board Meetings',
       icon: 'fpcagmboard.png',
-      link: '',
+      link: '/myfpo/fpoagmboard',
     },
     {
       name: 'Loans & Schemes',
       icon: 'fpcloans.png',
-      link: '',
+      link: '/myfpo/fpoloanschemes',
     },
 
     {

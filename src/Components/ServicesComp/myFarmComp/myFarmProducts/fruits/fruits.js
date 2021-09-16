@@ -131,8 +131,8 @@ export default function MyFarmFruits() {
     {
       name: 'Climate and Soil',
       icon: 'climateandsoil.png',
-      link: '',
-      download: 'mango.pdf',
+      link: '/myfarm/guidecontent',
+      // download: 'mango.pdf',
     },
     {
       name: 'Land Preparation',
@@ -255,6 +255,2147 @@ export default function MyFarmFruits() {
       download: 'mango.pdf',
     },
   ]
+  const mangoGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const bananaGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const grapeGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const guavaGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const papayaGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const lemonGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const appleGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const cherryGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const pineappleGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const walnutGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const watermelonGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const almondGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const orangesGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const kiwiGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const pearsGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const strawberryGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const pomegranateGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const pistaGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const figsGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+  const datesGuide = [
+    {
+      name: 'Climate and Soil',
+      icon: 'climateandsoil.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Land Preparation',
+      icon: 'landpreparation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Seeds and Plants',
+      icon: 'seedsplants.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Cultivation',
+      icon: 'cultivation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Disease and Pestisides',
+      icon: 'diseaseandpestisides.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Irrigation',
+      icon: 'irrigation.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Internal Crops',
+      icon: 'internalcrops.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Pre Harvesting',
+      icon: 'preharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Post Harvesting',
+      icon: 'postharvesting.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Production',
+      icon: 'production.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'By Products',
+      icon: 'byproducts.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Equipment',
+      icon: 'agriequipment.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Insurance',
+      icon: 'cropinsurance.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Value Addition',
+      icon: 'valueaddition.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Market Yard Prices',
+      icon: 'marketyardsprices.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Govt Links',
+      icon: 'govtlinks.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Agri Schemes',
+      icon: 'agrischemes.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Crop Expenditure Tool',
+      icon: 'cropexpendituretool.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Farmer Connect',
+      icon: 'farmerconnect.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'Connect FPC',
+      icon: 'connectfpc.png',
+      link: '/myfarm/guidecontent',
+    },
+    {
+      name: 'My Market',
+      icon: 'mymarket.png',
+      link: '/myfarm/guidecontent',
+    },
+  ]
+
   return (
     <>
       <Switch>
@@ -262,124 +2403,97 @@ export default function MyFarmFruits() {
           <MyFarmList dataList={dataList} title="MyFarm - Fruits"></MyFarmList>
         </Route>
         <Route path="/myfarm/fruits/mango">
-          <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Mango"
-          ></MyFarmGuide>
+          <MyFarmGuide dataGuide={mangoGuide} title="Mango Guide"></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/banana">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - banana"
+            dataGuide={bananaGuide}
+            title="Banana Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/grapes">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Grapes"
+            dataGuide={grapeGuide}
+            title="Grapes Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/guava">
-          <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Guava"
-          ></MyFarmGuide>
+          <MyFarmGuide dataGuide={guavaGuide} title="Guava Guide"></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/papaya">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Papaya"
+            dataGuide={papayaGuide}
+            title="Papaya Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/lemon">
-          <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Lemon"
-          ></MyFarmGuide>
+          <MyFarmGuide dataGuide={lemonGuide} title="Lemon Guide"></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/apple">
-          <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Apple"
-          ></MyFarmGuide>
+          <MyFarmGuide dataGuide={appleGuide} title="Apple Guide"></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/cherry">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Cherry"
+            dataGuide={cherryGuide}
+            title="Cherry Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/pineapple">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Pineapple"
+            dataGuide={pineappleGuide}
+            title="Pineapple Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/walnut">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Walnut"
+            dataGuide={walnutGuide}
+            title="Walnut Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/watermelon">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Watermelon"
+            dataGuide={watermelonGuide}
+            title="Watermelon Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/almond">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Almond"
+            dataGuide={almondGuide}
+            title="Almond Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/oranges">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Oranges"
+            dataGuide={orangesGuide}
+            title="Oranges Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/kiwi">
-          <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Kiwi"
-          ></MyFarmGuide>
+          <MyFarmGuide dataGuide={kiwiGuide} title="Kiwi Guide"></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/pears">
-          <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Pears"
-          ></MyFarmGuide>
+          <MyFarmGuide dataGuide={pearsGuide} title="Pears Guide"></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/strawberry">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Strawberry"
+            dataGuide={strawberryGuide}
+            title="Strawberry Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/pomegrante">
           <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Pomegrante"
+            dataGuide={pomegranateGuide}
+            title="Pomegrante Guide"
           ></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/pista">
-          <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Pista"
-          ></MyFarmGuide>
+          <MyFarmGuide dataGuide={pistaGuide} title="Pista Guide"></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/figs">
-          <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Figs"
-          ></MyFarmGuide>
+          <MyFarmGuide dataGuide={figsGuide} title="Figs Guide"></MyFarmGuide>
         </Route>
         <Route path="/myfarm/fruits/dates">
-          <MyFarmGuide
-            dataGuide={dataGuide}
-            title="Fruits - Dates"
-          ></MyFarmGuide>
+          <MyFarmGuide dataGuide={datesGuide} title="Dates Guide"></MyFarmGuide>
         </Route>
         <Redirect to="/myfarm/fruits/home" />
       </Switch>

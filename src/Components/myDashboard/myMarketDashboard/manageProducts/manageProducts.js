@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import './manageProducts.css'
 import Paper from '@material-ui/core/Paper'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -6,6 +7,7 @@ import AddIcon from '@material-ui/icons/Add'
 import VisibilityIcon from '@material-ui/icons/Visibility'
 import EditIcon from '@material-ui/icons/Edit'
 import DeleteIcon from '@material-ui/icons/Delete'
+import { DropzoneArea } from 'material-ui-dropzone'
 import {
   Grid,
   makeStyles,
@@ -65,6 +67,17 @@ const initialFieldValues = {
   gst: '',
 }
 export default function ManageProducts() {
+  const [productFiles, setProductFiles] = useState()
+  useEffect(() => {
+    console.log(productFiles)
+  })
+
+  const onDropzoneAreaChange = (productFiles) => {
+    setProductFiles(productFiles)
+    console.log(productFiles)
+    //console.log("Files:", files);
+  }
+
   const useStyles = makeStyles((theme) => ({
     dMarketInpField: {
       marginTop: '5px',
@@ -325,11 +338,14 @@ export default function ManageProducts() {
                   variant="outlined"
                   margin="normal"
                 />
-
-                <TextareaAutosize
+                <TextField
+                  fullWidth
+                  variant="outlined"
                   aria-label="minimum height"
-                  Rows={10}
-                  placeholder="Minimum 3 rows"
+                  margin="normal"
+                  multiline
+                  rows={5}
+                  placeholder="Product Description"
                 />
                 <Grid container justify="space-between">
                   <TextField
@@ -393,9 +409,30 @@ export default function ManageProducts() {
                   variant="outlined"
                 />
               </Grid>
-              <Grid lg={5} container>
-                <input type="file" onChange={imageHandlerChange} />
-                {renderPhotos(selectedImages)}
+              <Grid lg={5}>
+                {/* <Grid>
+                  <input type="file" className="btn btn-primary" onChange={imageHandlerChange} />
+                  {renderPhotos(selectedImages)}
+                </Grid> */}
+                {/* <Grid> */}
+                <DropzoneArea
+                  acceptedFiles={['image/*', 'video/*', 'application/*']}
+                  filesLimit={10}
+                  showFileNames
+                  dropzoneText="Drag or upload an image here or click"
+                  style={{ margin: '0px' }}
+                  onChange={onDropzoneAreaChange}
+                />
+                {/* <DropzoneArea
+                  acceptedFiles={["image/*"]}
+                  filesLimit={10}
+                  maxFileSize={1048576} //1 MB
+                  showFileNames={true}
+                  dropzoneText={"Drag and drop an image here or click"}
+                  onChange={onDropzoneAreaChange}
+                  style={{ margin: '0px' }}
+                /> */}
+                {/* </Grid> */}
               </Grid>
             </Grid>
             <Grid container lg={12} justify="center">
