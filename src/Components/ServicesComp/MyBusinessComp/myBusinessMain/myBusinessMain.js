@@ -15,6 +15,7 @@ import BusinessLegal from '../myBusinessList/businessComplainceReg/businessLegal
 import BusinessAnnual from '../myBusinessList/businessComplainceReg/businessAnnual/businessAnnual'
 import BusinessAgmBoard from '../myBusinessList/businessAgmBoard/businessAgmBoard'
 import BusinessReports from '../myBusinessList/businessReports/businessReports'
+import WidgetsBar from '../../widgetsBar/widgetsBar'
 
 export default function MyBusinessMain() {
   const navData = [
@@ -72,6 +73,7 @@ export default function MyBusinessMain() {
           selectedSideNavLink="linear-gradient(90deg, rgba(103,57,183,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="col">
+          <WidgetsBar />
           <Switch>
             <Route path="/mybusiness/home" component={MyBusinessHome}></Route>
             <Route

@@ -17,38 +17,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay])
 export default function TestimonialSection() {
   const useStyles = makeStyles((theme) => ({}))
   const classes = useStyles()
-  // const testimonials = [
-  //   {
-  //     message:
-  //       'We`ve experienced rapid growth with FEED, and we see a lot of interest in the market from the changes we`ve made. Thats because FEED has helped us.',
-  //     image: '',
-  //     name: 'Hari',
-  //   },
-  //   {
-  //     message:
-  //       'One of the things we like about FEED is that the interface is really clean the team are able to quickly respond to our need',
-  //     image: '',
-  //     name: 'Srikanth',
-  //   },
-  //   {
-  //     message:
-  //       'We`ve experienced rapid growth with FEED, and we see a lot of interest in the market from the changes we`ve made. Thats because FEED has helped us.',
-  //     image: '',
-  //     name: 'Suresh',
-  //   },
-  //   {
-  //     message:
-  //       'We`ve experienced rapid growth with FEED, and we see a lot of interest in the market from the changes we`ve made. Thats because FEED has helped us.',
-  //     image: '',
-  //     name: 'Hari Kishore',
-  //   },
-  //   {
-  //     message:
-  //       'We`ve experienced rapid growth with FEED, and we see a lot of interest in the market from the changes we`ve made. Thats because FEED has helped us.',
-  //     image: '',
-  //     name: 'narayana',
-  //   },
-  // ]
+
   const testimonialDetails = [
     {
       img: 'farmerone.png',
@@ -88,77 +57,6 @@ export default function TestimonialSection() {
   ]
   return (
     <>
-      {/* <Grid>
-        <div className="row m-0">
-          <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <Grid container justify="center">
-              <h3 className="section-heading text-center">Testimonials</h3>
-            </Grid>
-            <div className="row">
-              <Grid className="col-lg-10 col-md-12 col-sm-12 col-xs-12 m-auto">
-                <Swiper
-                  // spaceBetween={50}
-                  loop="true"
-                  navigation
-                  autoplay={{
-                    delay: 15000,
-                  }}
-                  breakpoints={
-                    ({
-                      320: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                      },
-                    },
-                    {
-                      480: {
-                        slidesPerView: 1,
-                        spaceBetween: 30,
-                      },
-                    },
-                    {
-                      768: {
-                        slidesPerView: 2,
-                        spaceBetween: 40,
-                      },
-                    },
-                    {
-                      868: {
-                        slidesPerView: 3,
-                        spaceBetween: 40,
-                      },
-                    })
-                  }
-                  onSlideChange={() => console.log('slide change')}
-                  onSwiper={(swiper) => console.log(swiper)}
-                >
-                  <Grid container lg={10}>
-                    <Grid>
-                      {testimonials.map((item, index) => (
-                        <SwiperSlide
-                          key="item"
-                          className={classes.testimonialSlide}
-                        >
-                          <div className="testimonialBox">
-                            <Avatar src={`${process.env.PUBLIC_URL}/assets/man-icon.png`}></Avatar>
-                            <div>
-                              <p>{item.message}</p>
-                              <Grid>
-
-                                <span>{item.name}</span>
-                              </Grid>
-                            </div>
-                          </div>
-                        </SwiperSlide>
-                      ))}
-                    </Grid>
-                  </Grid>
-                </Swiper>
-              </Grid>
-            </div>
-          </div>
-        </div>
-      </Grid> */}
       <Grid className="mt-5">
         <Grid container justifyContent="center" className="mb-3">
           <img
@@ -250,8 +148,6 @@ export default function TestimonialSection() {
               </Grid>
             </Swiper>
           </Grid>
-
-          {/* <div class="tc-pagination"></div> */}
         </div>
       </Grid>
     </>

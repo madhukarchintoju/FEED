@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import {
   Grid,
   makeStyles,
@@ -5,13 +6,17 @@ import {
   CardActionArea,
   CardContent,
 } from '@material-ui/core'
-import React from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import i18n from 'i18next'
 import './aboutSection.css'
 
 export default function AboutSection(props) {
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
   const { t } = useTranslation()
   const languageChange = (event) => {
     i18n.changeLanguage(event.target.value)
@@ -146,7 +151,14 @@ export default function AboutSection(props) {
                   alt=""
                 />
               </Grid>
-              <Grid item lg={5} md={6} sm={6} className={classes.objectiveBg}>
+              <Grid
+                item
+                lg={5}
+                md={6}
+                sm={6}
+                className={classes.objectiveBg}
+                data-aos="fade-up"
+              >
                 <Grid>
                   <h4 className={classes.textRed}>FEED Main Objective:</h4>
                   <Grid className={classes.objectiveContent}>
@@ -160,7 +172,7 @@ export default function AboutSection(props) {
               justifyContent="space-around"
               style={{ marginTop: '0.2em' }}
             >
-              <Grid item lg={5} md={5} sm={5}>
+              <Grid item lg={5} md={5} sm={5} data-aos="zoom-in-right">
                 <Card className={classes.visionCard}>
                   <CardActionArea>
                     <CardContent>
@@ -183,7 +195,7 @@ export default function AboutSection(props) {
                   </CardActionArea>
                 </Card>
               </Grid>
-              <Grid item lg={5} md={5} sm={5}>
+              <Grid item lg={5} md={5} sm={5} data-aos="zoom-in-left">
                 <Card className={classes.missionCard}>
                   <CardActionArea>
                     <CardContent>
@@ -207,7 +219,7 @@ export default function AboutSection(props) {
                 </Card>
               </Grid>
             </Grid>
-            <Grid container justifyContent="center">
+            <Grid container justifyContent="center" data-aos="zoom-in-up">
               <Grid item lg={11} md={11} sm={11} className={classes.aboutBg}>
                 {/* <h4>About us</h4> */}
                 <Grid className={classes.aboutUsContent}>

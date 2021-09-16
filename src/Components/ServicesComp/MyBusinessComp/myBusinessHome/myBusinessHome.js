@@ -27,19 +27,20 @@ export default function MyBusinessHome(props) {
         height: '4em',
       },
     },
-    existingPlanCard: {
-      width: '80%',
+    businessHomeCard: {
+      width: '90%',
       height: '8em',
-      margin: '1px',
+      // margin: '1px',
       // padding: '5px',
       textAlign: 'center',
       justifyContent: 'space-around',
-      alignItems: 'center',
-      border: '2px solid #6739b7',
-      borderRadius: '15px 15px',
-      boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-      webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-      mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      '&:hover': {
+        borderBottom: '3px solid #ffbe59',
+        borderRadius: '15px 15px',
+        boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+        webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+        mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      },
     },
     avatarStyle: {
       width: '5em',
@@ -106,7 +107,7 @@ export default function MyBusinessHome(props) {
       link: '/mybusiness/businessplan',
     },
     {
-      name: 'Loans & Schemes',
+      name: 'Capacity Building',
       icon: 'businesscapacitybuilding.png',
       link: '/mybusiness/loanschemes',
     },
@@ -174,13 +175,7 @@ export default function MyBusinessHome(props) {
             /> */}
           <h4>My Business</h4>
         </Grid>
-        <Grid
-          container
-          item
-          lg={12}
-          justifyContent="space-between"
-          className="p-1"
-        >
+        <Grid container item lg={12} justifyContent="space-between">
           <Grid container item lg={8} justifyContent="space-around">
             {businessHomeCards.map((item, index) => (
               <Grid
@@ -189,21 +184,21 @@ export default function MyBusinessHome(props) {
                 lg={3}
                 xs={6}
                 md={3}
-                justifyContent="space-between"
-                className={classes.existingPlanCard}
-                // style={{ border: '1px solid red' }}
+                className={classes.businessHomeCard}
               >
-                <Link to={item.link} className="nav-link text-dark">
-                  <Grid>
-                    <Avatar
-                      variant="square"
-                      className={classes.avatarStyle}
-                      src={`${process.env.PUBLIC_URL}/assets/my-business/home/${item.icon}`}
-                      alt="existing plan"
-                    />
-                    <h6>{item.name}</h6>
-                  </Grid>
-                </Link>
+                <Grid
+                  to={item.link}
+                  component={Link}
+                  className="nav-link text-dark"
+                >
+                  <Avatar
+                    variant="square"
+                    className={classes.avatarStyle}
+                    src={`${process.env.PUBLIC_URL}/assets/my-business/home/${item.icon}`}
+                    alt="existing plan"
+                  />
+                  <h6>{item.name}</h6>
+                </Grid>
               </Grid>
             ))}
           </Grid>
@@ -230,84 +225,6 @@ export default function MyBusinessHome(props) {
             </Grid>
           </Grid>
         </Grid>
-        {/* <Grid
-          container
-          item
-          lg={10}
-          xs={12}
-        >
-          <h4
-            style={{
-              textDecoration: 'underline',
-              fontFamily: `'STIX Two Text', serif`,
-              fontWeight: '600',
-            }}
-          >
-            Glance at the services offered to FPOs by FEED
-          </h4>
-          <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
-            <li>
-              To conduct baseline survey and analyse the social and financial
-              viability to form an FPO{' '}
-            </li>
-            <li>
-              To provide statutory registration support for registration of
-              company &amp; other formalities associated
-            </li>
-            <li>
-              To cater to the needs of FPOs by connecting them to various STATE
-              &amp; central govt. schemes &amp; orgs like Export promotional
-              councils/committees
-            </li>
-            <li>
-              To provide capacity building training to FPOs for better
-              management and Workshops on Good Agricultural Practices (GAP) to
-              producer members
-            </li>
-            <li>
-              To build awareness on judicious and timely use of chemicals{' '}
-            </li>
-            <li>
-              To provide required quality inspection certifications as per the
-              export country/region
-            </li>
-            <li>
-              To make them self-sustainable by providing domestic and
-              International market linkages along with the database of
-              International buyers from top 50 trading countries with India
-            </li>
-            <li>
-              To render end-to-end support in exporting their product in global
-              markets through latest technology software{' '}
-            </li>
-            <li>
-              To serve as a guide in raising L/Cs, taking export insurance
-              policies, Logistic support etc.
-            </li>
-            <li>
-              To provide the technical support in managing day-to-day activities
-              like preparing business plan, legal and annual compliances etc.
-            </li>
-            <li>
-              To assess the capital requirements &amp; financial viability of
-              FPO and accordingly perform the resource mobilization and credit
-              support
-            </li>
-            <li>
-              To establish processing units to do value addition to FPO products
-              to enhance their members income levels
-            </li>
-            <li>
-              To provide support in marketing their products through E-commerce
-              and in International fairs
-            </li>
-            <li>
-              To integrate agriculture marketing infrastructure support to the
-              end roots and supply the farm machinery and other inputs at low
-              costs to FPOs
-            </li>
-          </ul>
-        </Grid> */}
       </Grid>
     </>
   )

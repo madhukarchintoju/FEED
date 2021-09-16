@@ -1,5 +1,6 @@
 import React from 'react'
 import './myFarmGuide.css'
+import { Link } from 'react-router-dom'
 import { Grid, Avatar, Button, Icon, makeStyles } from '@material-ui/core'
 
 export default function MyFarmGuide(props) {
@@ -51,22 +52,22 @@ export default function MyFarmGuide(props) {
       >
         {props.dataGuide.map((item, index) => (
           <Grid key={index} xs={3} lg={4} item className={classes.guideItem}>
-            <div>
-              <a
+            <Grid component={Link} to={item.link}>
+              {/* <a
                 href={`${process.env.PUBLIC_URL}/assets/my-farm/pdf/${item.download}`}
                 target="_blank"
                 rel="noreferrer"
                 download
+              > */}
+              <Avatar
+                variant={props.variant || 'square'}
+                className={classes.guideAvatar}
+                src={`${process.env.PUBLIC_URL}/assets/my-farm/guide/${item.icon}`}
               >
-                <Avatar
-                  variant={props.variant || 'square'}
-                  className={classes.guideAvatar}
-                  src={`${process.env.PUBLIC_URL}/assets/my-farm/guide/${item.icon}`}
-                >
-                  {item.name}
-                </Avatar>
-              </a>
-            </div>
+                {item.name}
+              </Avatar>
+              {/* </a> */}
+            </Grid>
           </Grid>
         ))}
       </Grid>

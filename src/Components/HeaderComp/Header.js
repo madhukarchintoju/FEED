@@ -286,7 +286,10 @@ function Header(props) {
                         </Link>
                       </li>
                       <li className="nav-item">
-                        <Link className="nav-link" to="/myexports">
+                        <Link
+                          className="nav-link"
+                          to="/myexport/processexportorder"
+                        >
                           Export Road Map
                         </Link>
                       </li>
