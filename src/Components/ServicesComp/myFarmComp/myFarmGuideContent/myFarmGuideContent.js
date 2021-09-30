@@ -6,7 +6,7 @@ const ReadMore = ({ children }) => {
   const text = children
   const [isReadMore, setIsReadMore] = useState(true)
   return (
-    <p className="text">
+    <p>
       {isReadMore ? text.slice(0, 650) : text}
       <br />
       <button

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import CoreTeam from './coreTeam/coreTeam'
+import FounderMessage from './founderMessage/founderMessage'
 export default function AboutList() {
   return (
     <>
@@ -9,6 +10,7 @@ export default function AboutList() {
           <Switch>
             {/* <Route path='/aboutsectionlist/boarddirectors' component={}></Route> */}
             <Route path="/aboutlist/coreteam" component={CoreTeam}></Route>
+            {/* <Route path="/aboutlist/foundermessage" component={FounderMessage}></Route> */}
           </Switch>
         </div>
       </div>

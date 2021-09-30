@@ -117,7 +117,6 @@
 
 .galleryTitle {
   margin-bottom: 0.5em;
-  text-decoration: underline;
   font-family: 'STIX Two Text', serif;
   -webkit-animation: galleryTitle 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: galleryTitle 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;

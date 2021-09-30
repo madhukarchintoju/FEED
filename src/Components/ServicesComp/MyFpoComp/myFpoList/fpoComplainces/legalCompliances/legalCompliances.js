@@ -19,31 +19,31 @@ export default function LegalCompliances() {
       icon: 'compliances/legal/tdsf.png',
       link: '',
     },
-    {
-      name: 'ROC Compliances',
-      icon: 'compliances/legal/roc.png',
-      link: '',
-    },
-    {
-      name: 'Legal support Service',
-      icon: 'compliances/legal/lss.png',
-      link: '',
-    },
-    {
-      name: 'Auditor Appointment',
-      icon: 'compliances/legal/auditor.png',
-      link: '',
-    },
-    {
-      name: 'Minutes of Board Meeting',
-      icon: 'compliances/legal/mobm.png',
-      link: '',
-    },
-    {
-      name: 'Corporate Governance',
-      icon: 'compliances/legal/cg.png',
-      link: '',
-    },
+    // {
+    //   name: 'ROC Compliances',
+    //   icon: 'compliances/legal/roc.png',
+    //   link: '',
+    // },
+    // {
+    //   name: 'Legal support Service',
+    //   icon: 'compliances/legal/lss.png',
+    //   link: '',
+    // },
+    // {
+    //   name: 'Auditor Appointment',
+    //   icon: 'compliances/legal/auditor.png',
+    //   link: '',
+    // },
+    // {
+    //   name: 'Minutes of Board Meeting',
+    //   icon: 'compliances/legal/mobm.png',
+    //   link: '',
+    // },
+    // {
+    //   name: 'Corporate Governance',
+    //   icon: 'compliances/legal/cg.png',
+    //   link: '',
+    // },
     {
       name: 'Stock Checking',
       icon: 'compliances/legal/stockchecking.png',

@@ -77,9 +77,10 @@ export default function MyFpoMain(props) {
       backgroundPosition: 'center',
     },
     '/myfpo/fpoagmboard': {
-      backgroundImage: `URL("/assets/my-fpo/agmboard/agmboard.jpg")`,
+      backgroundImage: `URL("/assets/my-fpo/agmboard/agmbg.png")`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
     },
     '/myfpo/fpoloanschemes': {},
     '/myfpo/fpoconnect': {},
@@ -144,7 +145,6 @@ export default function MyFpoMain(props) {
   //   case '/myfpo/fpoaccount':
   //     return <WidgetsBar screenTitle="FPO Accounts"></WidgetsBar>
   //     break;
-
   //   default:
   //     break;
   // }

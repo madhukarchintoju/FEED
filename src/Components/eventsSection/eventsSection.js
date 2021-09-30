@@ -165,51 +165,66 @@ const feedServicesList = [
 const updatesCards = [
   {
     id: '',
-    authorTitle: '',
-    logo: 'nabardlogo.png',
-    date: '',
-    image: '',
-    content: '',
-  },
-  {
-    id: '',
-    authorTitle: '',
+    authorTitle: 'FIEO',
     logo: 'fieo.png',
-    date: '',
-    image: '',
-    content: '',
+    date: 'September 25 2021',
+    image: 'fieoup.jpeg',
+    content:
+      '"Exports should be a National priority and all stakeholders should work in tandem to achieve it. FIEO, under my leadership, would work shoulder to shoulder with the Government to meet this objective", says Dr A Sakthivel, President, FIEO. "Exports should be a National priority and all stakeholders should work in tandem to achieve it. FIEO, under my leadership, would work shoulder to shoulder with the Government to meet this objective", says Dr A Sakthivel, President, FIEO.',
   },
   {
     id: '',
-    authorTitle: '',
+    authorTitle: 'IBEF',
     logo: 'ibef.png',
-    date: '',
-    image: '',
-    content: '',
+    date: 'September 25 2021',
+    image: 'ibefup.jpeg',
+    content:
+      'The demand for electronic products will rise to US$ 400 billion by 2025 from US$ 33 billion in FY20. #RecentUpdates',
   },
   {
     id: '',
-    authorTitle: '',
-    logo: 'dgft.png',
-    date: '',
-    image: '',
-    content: '',
+    authorTitle: 'COMMERCE',
+    logo: '',
+    date: 'September 25 2021',
+    image: 'commerceup.jpeg',
+    content:
+      'Join us as we organize special events and programmes throughout next week as part of the #AzadiKaAmritMahotsav celebrations. The Department of Commerce will observe the ‘Vanijya Saptah’ (Trade & Commerce Week) during the period 20-26 September, 2021 #AmritMahotsav #IconicWeek',
   },
   {
     id: '',
-    authorTitle: '',
-    logo: 'nabardlogo.png',
-    date: '',
-    image: '',
-    content: '',
+    authorTitle: 'APEDA',
+    logo: '',
+    date: 'September 25 2021',
+    image: 'apedaup.jpeg',
+    content:
+      'To commemorate 75 years of independence being celebrated with the theme #AzadiKaAmritMahotsav, #APEDA organized ‘#VanijyaSaptah’ at an Exporters conclave titled “Reinvigorating the Exporters” at #Visakhapatnam, #AndhraPradesh. #VanijyaUtsav #AatmanirbharBharat #IndiaAt75',
   },
   {
     id: '',
-    authorTitle: '',
-    logo: 'fieo.png',
-    date: '',
-    image: '',
-    content: '',
+    authorTitle: 'MSME',
+    logo: '',
+    date: 'September 25 2021',
+    image: 'msmeup.jpeg',
+    content:
+      'Hurry! Mark your calendar as NSSHO,  Bhubaneswar & Br. MSME-DI, Rayagada is organising a One-day Camp (Awareness Programme) on NSSH Schemes through Virtual Platform on 21.09.2021, Time-  04:00 PM-05:30 PM#SCST #scsthub #NSSH #MSME',
+  },
+  {
+    id: '',
+    authorTitle: 'SKILL INDIA',
+    logo: '',
+    date: 'September 25 2021',
+    image: 'skillindianup.jpeg',
+    content:
+      'Azadi ka Amrit Mahotsav: India@75 ASCI is organizing Webinar in the series ‘Agri Skills’ on the topic ’Cotton Sustainability’Cotton is one of the most important fiber & cash crop of India & plays an important role in the industrial and agricultural economy.24Sep2021, 2:00PM',
+  },
+  {
+    id: '',
+    authorTitle: 'FOOD PROCESSING',
+    logo: '',
+    date: 'September 25 2021',
+    image: 'foodprocessing.jpeg',
+    content:
+      '#AzadiKaAmritMahotsav | Under the #PMKSY, the development of the FP sector in Assam has not only created direct & indirect employment opportunities for about 14900 people and benefitted about 65000 farmers but has also helped in creating new investment opportunities.',
   },
 ]
 
@@ -480,9 +495,9 @@ export default function EventsSection() {
             >
               <h5>Updates</h5>
             </Grid>
-            <Grid container justifyContent="space-between">
+            <Grid container justifyContent="space-evenly">
               {updatesCards.map((item, index) => (
-                <Grid item lg={3} className="mx-1 my-1" key={index}>
+                <Grid item lg={3} className=" my-1" key={index}>
                   <Card className={classes.root}>
                     <CardHeader
                       avatar={
@@ -497,14 +512,19 @@ export default function EventsSection() {
                           <MoreVertIcon />
                         </IconButton>
                       }
-                      title="FIEO"
-                      subheader="September 14, 2016"
+                      title={item.authorTitle}
+                      subheader={item.date}
                     />
                     <img
                       className={classes.media}
-                      src={`${process.env.PUBLIC_URL}/assets/blogs/cardimgone.jpg`}
+                      src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.image}`}
                       title="Paella dish"
                       alt=""
+                      style={{
+                        height: '150px',
+                        width: '100%',
+                        objectFit: 'contain',
+                      }}
                     />
                     <CardContent>
                       <Typography
@@ -512,9 +532,7 @@ export default function EventsSection() {
                         color="textSecondary"
                         component="p"
                       >
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the
-                        industry's standard dummy text ever since the 1500s,
+                        {item.content}
                       </Typography>
                     </CardContent>
                     <CardActions disableSpacing>

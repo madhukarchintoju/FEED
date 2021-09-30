@@ -30,7 +30,7 @@ export default function SideNavBar(props, { defaultActive }) {
     drawer: {
       flexShrink: 0,
       whiteSpace: 'nowrap',
-      height: '100%',
+      // height: '100%',
     },
     drawerOpen: {
       transition: theme.transitions.create('width', {

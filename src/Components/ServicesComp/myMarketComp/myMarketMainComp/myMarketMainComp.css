@@ -1,0 +1,140 @@
+.ribbon {
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  /* margin:5em; */
+  /* width: 15px; */
+  top: 5px;
+  margin-bottom: 5px;
+  /* left: -25px; */
+  z-index: 1;
+  text-align: center;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.text {
+  display: inline-block;
+  padding: 0.5em 1em;
+  min-width: 20em;
+  line-height: 1.2em;
+  background: #ffd72a;
+  position: relative;
+}
+.ribbon:after,
+.ribbon:before,
+.text:before,
+.text:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+}
+/* .ribbon:before{
+  top:0.3em; left:0.2em;
+  width:100%; height:100%;
+  border:none;
+  background:#EBECED;
+  z-index:-2;
+} */
+.text:before {
+  bottom: 100%;
+  left: 0;
+  border-width: 0.5em 0.7em 0 0;
+  border-color: transparent #fc9544 transparent transparent;
+}
+.text:after {
+  top: 100%;
+  right: 0;
+  border-width: 0.5em 2em 0 0;
+  border-color: #fc9544 transparent transparent transparent;
+}
+.ribbon:after {
+  top: 0.5em;
+  border-width: 1.1em 1em 1.1em 3em;
+  border-color: #fecc30 transparent #fecc30 #fecc30;
+  z-index: -1;
+  left: 360px;
+}
+
+.categoryCardWrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  place-items: center;
+  margin: auto;
+  justify-content: space-evenly;
+  grid-gap: 1rem;
+  padding: 1rem;
+  border-radius: 15px 15px;
+  /* background: conic-gradient(#98d6f3, #fea2b1, #f7f1fa, #f7f1fa, #98d6f3, #98d6f3); */
+  /* background: radial-gradient(circle, rgba(8,35,58,1) 0%, rgba(64,71,133,1) 35%, rgba(177,242,255,1) 100%); */
+  /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(187,164,164,1) 35%, rgba(255,255,255,1) 100%); */
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(209, 207, 207, 1) 35%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  backdrop-filter: blur(20px);
+}
+.categoryCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(20px);
+  padding: 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 250px;
+  text-align: center;
+}
+.categoryCard .categoryCardTitle {
+  color: #122b61;
+  margin: 0;
+  font-weight: 600;
+}
+/* .categoryCard .content {
+  max-width: 60ch;
+  font-weight: 200;
+  font-size: 0.85rem;
+  line-height: 1.35;
+} */
+.categoryCard .button {
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  color: #828282;
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding: 0.85rem 1rem;
+  border-color: transparent;
+  border-radius: 0.85rem;
+  margin-top: auto;
+  transition: all 200ms ease-in-out;
+}
+.categoryCard .button::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: conic-gradient(#98d6f3, #fea2b1, #f7f1fa, #98d6f3);
+  filter: blur(30px);
+  border-radius: 5px;
+  transition: all 200ms ease-in-out;
+}
+.categoryCard .button:focus {
+  outline: none;
+  border-color: #122b61;
+}
+.categoryCard .button:hover,
+.categoryCard .button:focus {
+  background: rgba(255, 255, 255, 1);
+  color: #4f4f4f;
+}
+.categoryCard .button:hover::before,
+.categoryCard .button:focus::before {
+  filter: blur(20px);
+}

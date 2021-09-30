@@ -255,6 +255,9 @@ function Header(props) {
                           <Link to="/aboutsection" className="dropdown-item">
                             About FEED
                           </Link>
+                          {/* <Link to="/aboutlist/foundermessage" className="dropdown-item">
+                            Founder Message
+                          </Link> */}
                           <Link to="/" className="dropdown-item">
                             Founder Message
                           </Link>
@@ -267,7 +270,12 @@ function Header(props) {
                           >
                             FEED Core Team
                           </Link>
-                          <Link to="/" className="dropdown-item">
+                          <Link
+                            to="feedprofilebroucher.pdf"
+                            className="dropdown-item"
+                            target="_blank"
+                            download
+                          >
                             FEED Profile
                           </Link>
                           <Link to="/" className="dropdown-item">

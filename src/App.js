@@ -133,7 +133,7 @@ function App() {
             component={SingleProduct}
           />
           <Route path="/myeducation" component={MyEduMainComp} />
-          <Route path="/mymarket" component={MyMarketMainComp} />
+          <Route path="/ecom" component={MyMarketMainComp} />
           <Route path="/mytools" component={MyToolsMainComp} />
           <Route path="/mydashboard" component={MyDashboard}></Route>
           <Route path="/dashboard" component={DashboardMain}></Route>

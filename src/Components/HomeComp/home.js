@@ -9,6 +9,7 @@ import RoadMap from '../analytics/roadMap/roadMap'
 import Gallery from 'react-photo-gallery'
 import Carousel, { Modal, ModalGateway } from 'react-images'
 import Marquee from 'react-easy-marquee'
+import Slider from 'react-slick'
 import {
   Grid,
   makeStyles,
@@ -66,8 +67,10 @@ function Home() {
       padding: 0,
     },
     newsfeedsHeading: {
+      display: 'flex',
+      justifyContent: 'center',
       height: '2em',
-      textAlign: 'center',
+      alignItems: 'center',
       backgroundColor: '#f08e16',
     },
   }))
@@ -78,7 +81,7 @@ function Home() {
       link: '',
     },
     {
-      image: 'feedstartupdefbanner.png',
+      image: 'feedstartupdefbanner.jpg',
       link: '',
     },
     {
@@ -176,33 +179,58 @@ function Home() {
       logo: 'nabardlogo.png',
       primary: 'Nabard',
       secondary:
-        'FEED is a multi-state co-operative society working for the uplift.',
+        'WRONG COVERAGE REGARDING NABARD IN JAMMU PRINT MEDIA ON 3/09/2021',
+      link: 'https://www.nabard.org/pdf/nabcons-clarification-on-himayat-project-press-note.pdf',
     },
     {
       logo: 'dgft.png',
       primary: 'DGFT',
       secondary:
-        'FEED is a multi-state co-operative society working for the uplift.',
+        'Inclusion of Ports of Import in continuation to Notification No. 20/20215-20 dated 24.08.2021 and Notification No. 23/2015-20 dated 03.09.2021.',
+      link: 'https://content.dgft.gov.in/Website/dgftprod/dff48098-1fa1-4274-868c-525dd0ed50b1/Notification%2032%20dated%2025Sep%202021%20-%20Eng.pdf',
     },
     {
       logo: 'fieo.png',
       primary: 'FIEO',
       secondary:
-        'FEED is a multi-state co-operative society working for the uplift.',
+        'FIEO MUMBAI : WEB CONFERENCE ON AWARENESS OF CYBER SECURITY ON SEPTEMBER 30, 202',
+      link: 'https://www.fieo.org/view_detail.php?id=0,22&dcd=7454&evetype=0',
     },
     {
       logo: 'apeda.png',
       primary: 'Apeda',
       secondary:
-        'FEED is a multi-state co-operative society working for the uplift.',
+        'Report on Development of suitable package & formulation of packaging specification for fresh kiwi from north eastern states.',
+      link: 'http://www.apeda.gov.in/apedawebsite/Announcements/Kiwi_Book_Final_13092021.pdf',
     },
     {
       logo: 'ibef.png',
       primary: 'IBEF',
       secondary:
-        'FEED is a multi-state co-operative society working for the uplift.',
+        'PM dedicates to the Nation 35 crop varieties with special traits.',
+      link: 'https://www.ibef.org/news/pm-dedicates-to-the-nation-35-crop-varieties-with-special-traits',
     },
   ]
+  const settings = {
+    // arrows: false,
+    // dots: false,
+    // pauseOnHover: false,
+    // infinite: true,
+    // speed: 3000,
+    // autoplay: true,
+    // fade: true,
+    // variableWidth: false,
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    speed: 200,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+  }
   return (
     <>
       <Grid className="container-fluid p-0">
@@ -299,54 +327,52 @@ function Home() {
                   alt="Event and Updates"
                 />
               </Grid>
-              <Grid container className="mt-1" justifyContent="space-evenly">
-                <Grid item lg={3} md={5} sm={12} xs={12}>
+              <Grid container className="mt-4" justifyContent="space-evenly">
+                <Grid item lg={3} md={12} sm={12} xs={12}>
                   <Grid className={classes.eventupdatesWrap}>
                     <h6 className={classes.newsfeedsHeading}>
                       Central / State Updates
                     </h6>
-                    <List className={classes.newsfeeds}>
-                      <Marquee
-                        duration={10000}
-                        height="inherit"
-                        width="100%"
-                        axis="Y"
-                        align="center"
-                        overflow="hidden"
-                        pauseOnHover={true}
-                        reverse={true}
-                      >
+                    <Grid style={{ height: '460px', overflow: 'hidden' }}>
+                      <Slider {...settings}>
                         {centralupdates.map((item, index) => (
-                          <Grid key={index}>
-                            <ListItem alignItems="flex-start">
-                              <Grid
-                                container
-                                justifyContent="flex-start"
-                                alignItems="center"
-                              >
-                                <Grid item lg={2}>
-                                  <img
-                                    src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
-                                    width="80"
-                                    alt=""
-                                  />
-                                </Grid>
-                                <Grid item lg={5}>
-                                  <ListItemText
-                                    primary={item.primary}
-                                    secondary={item.secondary}
-                                  />
-                                </Grid>
+                          <Grid
+                            key={index}
+                            container
+                            justifyContent="space-around"
+                          >
+                            <Grid container justifyContent="space-around">
+                              <Grid item lg={2}>
+                                <img
+                                  src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
+                                  width="100"
+                                  alt=""
+                                />
                               </Grid>
-                            </ListItem>
+                              <Grid item lg={9}>
+                                <ListItemText
+                                  primary={item.primary}
+                                  secondary={item.secondary}
+                                />
+                                <small>
+                                  <a
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                  >
+                                    Click Here
+                                  </a>
+                                </small>
+                              </Grid>
+                            </Grid>
                             <Divider />
                           </Grid>
                         ))}
-                      </Marquee>
-                    </List>
+                      </Slider>
+                    </Grid>
                   </Grid>
                 </Grid>
-                <Grid item lg={5} md={5} sm={12} xs={12}>
+                <Grid item lg={5} md={12} sm={12} xs={12}>
                   <div>
                     <Gallery photos={photos} onClick={openLightbox} />
                     <ModalGateway>
@@ -365,44 +391,37 @@ function Home() {
                     </ModalGateway>
                   </div>
                 </Grid>
-                <Grid lg={3} md={5} sm={12} xs={12}>
+                <Grid lg={3} md={12} sm={12} xs={12}>
                   <Grid className={classes.eventupdatesWrap}>
                     <h6 className={classes.newsfeedsHeading}>FEED Updates</h6>
-                    <List className={classes.newsfeeds}>
-                      <Marquee
-                        duration={10000}
-                        height="inherit"
-                        width="100%"
-                        axis="Y"
-                        align="center"
-                        overflow="hidden"
-                        pauseOnHover={true}
-                        reverse={true}
-                      >
+                    <Grid style={{ height: '460px', overflow: 'hidden' }}>
+                      <Slider {...settings}>
                         {feedUpdates.map((item, index) => (
-                          <Grid key={index}>
-                            <ListItem alignItems="flex-start">
-                              <Grid container justifyContent="flex-start">
-                                <Grid item lg={2}>
-                                  <img
-                                    src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
-                                    width="100"
-                                    alt=""
-                                  />
-                                </Grid>
-                                <Grid item lg={7}>
-                                  <ListItemText
-                                    primary={item.primary}
-                                    secondary={item.secondary}
-                                  />
-                                </Grid>
+                          <Grid
+                            key={index}
+                            container
+                            justifyContent="space-around"
+                          >
+                            <Grid container justifyContent="space-around">
+                              <Grid item lg={2}>
+                                <img
+                                  src={`${process.env.PUBLIC_URL}/assets/eventupdates/${item.logo}`}
+                                  width="100"
+                                  alt=""
+                                />
                               </Grid>
-                            </ListItem>
+                              <Grid item lg={9}>
+                                <ListItemText
+                                  primary={item.primary}
+                                  secondary={item.secondary}
+                                />
+                              </Grid>
+                            </Grid>
                             <Divider />
                           </Grid>
                         ))}
-                      </Marquee>
-                    </List>
+                      </Slider>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Grid>
