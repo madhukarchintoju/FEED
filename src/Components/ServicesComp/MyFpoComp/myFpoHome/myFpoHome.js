@@ -189,7 +189,7 @@ export default function MyFpoHome(props) {
         <Grid
           container
           item
-          lg={10}
+          lg={11}
           xs={12}
           style={{
             // backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/home/pointsbg.jpg")`,
@@ -200,13 +200,22 @@ export default function MyFpoHome(props) {
             // filter:'FlipV',
             // msFilter: "FlipV",
             // transform: 'rotateY(180deg)',
+            // border:'1px solid red',
+            borderRadius: '15px 15px',
+            padding: '2em',
+            boxShadow: '0px 0px 6px 0px rgba(0,0,0,0.75)',
+            webkitBoxShadow: '0px 0px 6px 0px rgba(0,0,0,0.75)',
+            mozBoxShadow: '0px 0px 6px 0px rgba(0,0,0,0.75)',
+            borderLeft: '5px solid #b9daec',
           }}
         >
           <h4
             style={{
-              textDecoration: 'underline',
+              // textDecoration: 'underline',
               fontFamily: `'STIX Two Text', serif`,
               fontWeight: '600',
+              alignItems: 'center',
+              marginBottom: '0px',
             }}
           >
             Glance at the services offered to FPOs by FEED

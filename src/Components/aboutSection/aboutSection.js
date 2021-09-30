@@ -183,7 +183,7 @@ export default function AboutSection(props) {
                       >
                         <h4 className={classes.textRed}>Vision</h4>
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/vision.png`}
+                          src={`${process.env.PUBLIC_URL}/assets/aboutsection/vision.png`}
                           alt=""
                           width="80"
                         />
@@ -206,7 +206,7 @@ export default function AboutSection(props) {
                       >
                         <h4 className={classes.textRed}>Mission</h4>
                         <img
-                          src={`${process.env.PUBLIC_URL}/assets/mission.png`}
+                          src={`${process.env.PUBLIC_URL}/assets/aboutsection/mission.png`}
                           alt=""
                           width="80"
                         />

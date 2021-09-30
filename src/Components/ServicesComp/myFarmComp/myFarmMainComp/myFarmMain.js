@@ -25,11 +25,6 @@ import WidgetsBar from '../../widgetsBar/widgetsBar'
 export default function MyFarmMainComp() {
   const navData = [
     {
-      name: 'Fruits',
-      icon: 'fas fa-apple-alt',
-      path: '/myfarm/fruits',
-    },
-    {
       name: 'Vegetables',
       icon: 'fas fa-leaf',
       path: '/myfarm/vegetables',
@@ -38,6 +33,11 @@ export default function MyFarmMainComp() {
       name: 'Spices',
       icon: 'fas fa-pepper-hot',
       path: '/myfarm/spices',
+    },
+    {
+      name: 'Fruits',
+      icon: 'fas fa-apple-alt',
+      path: '/myfarm/fruits',
     },
     {
       name: 'Cereals',

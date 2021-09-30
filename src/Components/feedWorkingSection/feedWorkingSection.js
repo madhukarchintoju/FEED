@@ -10,7 +10,7 @@ SwiperCore.use([Scrollbar, Mousewheel])
 
 const useStyles = makeStyles((theme) => ({
   FeedWorkingSectionWrap: {
-    // marginTop: '2em',
+    marginTop: '1em',
     // padding: '1em',
     // backgroundColor: '#DCD9D4',
     // backgroundImage: 'linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%)',

@@ -2,6 +2,7 @@ import React from 'react'
 import './aboutFpo.css'
 import { Grid, makeStyles, Avatar } from '@material-ui/core'
 import CountUp from 'react-countup'
+import Marquee from 'react-fast-marquee'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, {
   Pagination,
@@ -219,7 +220,8 @@ export default function AboutFpo(props) {
       border: '1px solid red',
     },
     aboutFpoGalleryWrap: {
-      marginTop: '2em',
+      marginTop: '3em',
+      marginBottom: '3em',
     },
     certificationImg: {
       width: '8em',
@@ -227,6 +229,29 @@ export default function AboutFpo(props) {
     },
   }))
   const classes = useStyles()
+  const partnersLogo = [
+    {
+      logo: 'nabardlogo.png',
+    },
+    {
+      logo: 'bharatcall.png',
+    },
+    {
+      logo: 'dgft.png',
+    },
+    {
+      logo: 'fieo.png',
+    },
+    {
+      logo: 'apeda.png',
+    },
+    {
+      logo: 'aagama.png',
+    },
+    {
+      logo: 'ibef.png',
+    },
+  ]
   return (
     <>
       <Grid className={classes.aboutFpoWrap}>
@@ -461,18 +486,18 @@ export default function AboutFpo(props) {
           <Grid lg={12} item className={classes.aboutFpoGallery}>
             <Grid container justifyContent="center">
               <Swiper
-                effect={'coverflow'}
+                // effect={'coverflow'}
                 centeredSlides={true}
                 loop={true}
                 navigation
                 autoplay={{ delay: 4000 }}
-                coverflowEffect={{
-                  rotate: 40,
-                  stretch: 0,
-                  depth: 50,
-                  modifier: 1,
-                  slideShadows: true,
-                }}
+                // coverflowEffect={{
+                //   rotate: 40,
+                //   stretch: 0,
+                //   depth: 50,
+                //   modifier: 1,
+                //   slideShadows: true,
+                // }}
                 breakpoints={
                   ({
                     320: {
@@ -494,7 +519,7 @@ export default function AboutFpo(props) {
                   },
                   {
                     868: {
-                      slidesPerView: 4,
+                      slidesPerView: 3,
                       spaceBetween: 5,
                     },
                   })
@@ -518,15 +543,22 @@ export default function AboutFpo(props) {
             </Grid>
           </Grid>
         </Grid>
-        <Grid style={{ marginTop: '2em' }}>
-          <Grid className="text-center">
+        <Grid style={{ marginTop: '3em', marginBottom: '3em' }}>
+          <Grid
+            className="text-center"
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
             <img
               src={`${process.env.PUBLIC_URL}/assets/common/certificationicon.png`}
               alt="certification icon"
             />
             <h2 className="licensesTitle">Our Licenses and Certifications</h2>
           </Grid>
-          <Grid container justifyContent="center">
+          {/* <Grid container justifyContent="center">
             {certificationPartners.map((item, index) => (
               <Grid lg={2} item key={index}>
                 <img
@@ -536,6 +568,20 @@ export default function AboutFpo(props) {
                 />
               </Grid>
             ))}
+          </Grid> */}
+          <Grid className="row justify-content-center">
+            <Marquee speed={50} gradient={false}>
+              {partnersLogo.map((item, index) => (
+                <img
+                  style={{ margin: 'auto' }}
+                  key={index}
+                  variant="square"
+                  src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/${item.logo}`}
+                  alt="FEED PARTNERS LOGO"
+                  width="100"
+                />
+              ))}
+            </Marquee>
           </Grid>
         </Grid>
         <Grid className="aboutFpoTestimonialWrap">
@@ -601,7 +647,7 @@ export default function AboutFpo(props) {
             </div>
           </Grid>
         </Grid>
-        <Grid
+        {/* <Grid
           container
           item
           style={{
@@ -614,6 +660,101 @@ export default function AboutFpo(props) {
           <Grid className="ctrWrap">
             <div className="text-left">
               <h4 className="text-danger font-italic">Contact Us</h4>
+            </div>
+            <div className="card-body">
+              <h6>
+                <i className="fas fa-home"></i> Office Address
+              </h6>
+              <address>
+                First floor, Anand Heights, Kedareswarapet Main Rd,
+                <br /> near Prabhas college, Lotus Landmark, Ayodhya Nagar,
+                <br />
+                Vijayawada Andhra Pradesh - 520003.
+              </address>
+            </div>
+            <div className="text-muted">
+              <div className="header-social-icons">
+                <a
+                  href="https://www.facebook.com/FEEDORGOFFICAL"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/facebook.svg`}
+                    width="25"
+                    alt="facebook-icon"
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/instagram.svg`}
+                    width="25"
+                    alt="instagram-icon"
+                  />
+                </a>
+                <a
+                  href="https://twitter.com/feedorg_"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/twitter.svg`}
+                    width="25"
+                    alt="twitter-icon"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/74678041/admin/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/linkedin.svg`}
+                    width="25"
+                    alt="linkedin-icon"
+                  />
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UCFE_feyAd4VsbMLDnUWIY4A"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/youtube.svg`}
+                    width="25"
+                    alt="youtube-icon"
+                  />
+                </a>
+              </div>
+            </div>
+          </Grid>
+        </Grid> */}
+        <Grid
+          container
+          lg={12}
+          item
+          style={{
+            padding: '5px 5px',
+            background:
+              'linear-gradient(130deg, rgba(255,243,254,1) 45%, rgba(238,156,167,1) 47%, rgba(255,221,225,1) 48%)',
+          }}
+        >
+          <Grid
+            lg={10}
+            style={{
+              margin: 'auto',
+              borderRadius: '15px 15px',
+              boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+              padding: '4px',
+              backdropFilter: 'blur(5px) saturate(100%)',
+            }}
+          >
+            <div className="text-left">
+              <h4 className="text-danger font-italic">Contact Information</h4>
             </div>
             <div className="card-body">
               <h6>
