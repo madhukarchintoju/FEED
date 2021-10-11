@@ -29,19 +29,19 @@ export default function PartnerSection() {
       logo: 'nabardlogo.png',
     },
     {
-      logo: 'bharatcall.png',
+      logo: 'bharatcall.jpg',
     },
     {
-      logo: 'dgft.png',
+      logo: 'dgft.jpg',
     },
     {
-      logo: 'fieo.png',
+      logo: 'fieo.jpg',
     },
     {
       logo: 'apeda.png',
     },
     {
-      logo: 'aagama.png',
+      logo: 'aagama.jpg',
     },
     {
       logo: 'ibef.png',

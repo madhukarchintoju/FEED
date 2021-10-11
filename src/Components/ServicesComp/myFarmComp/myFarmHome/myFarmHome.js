@@ -13,6 +13,7 @@ import {
   List,
   Divider,
 } from '@material-ui/core'
+import Slider from 'react-slick'
 
 export default function MyFarmHome() {
   const useStyles = makeStyles((theme) => ({
@@ -68,6 +69,20 @@ export default function MyFarmHome() {
       height: '2em',
       textAlign: 'center',
       backgroundColor: '#d2cf6e',
+    },
+    farmUpdatesWrap: {
+      boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+    },
+    farmUpdatesHeading: {
+      height: '2em',
+      paddingTop: '5px',
+      justifyContent: 'center',
+      textAlign: 'center',
+      alignItems: 'center',
+      backgroundColor: 'rgb(107 109 153)',
+      color: 'white',
     },
   }))
   const classes = useStyles()
@@ -150,33 +165,66 @@ export default function MyFarmHome() {
     },
   ]
 
-  const fpcnewsupdates = [
+  const farmnewsupdates = [
     {
-      primary: 'FEED',
-      secondary:
+      logo: 'fpo.jpg',
+      title: 'FPO',
+      description:
         'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
     {
-      primary: 'NABARD',
-      secondary:
+      logo: 'farm.jpg',
+      title: 'FARM',
+      description:
+        'NABARD helps multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      logo: 'products.jpg',
+      title: 'MY PRODUCTS',
+      description:
         'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
     {
-      primary: 'FEED',
-      secondary:
+      logo: 'business.jpg',
+      title: 'MY BUSINESS',
+      description:
+        'NABARD helps multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      logo: 'export.jpg',
+      title: 'MY EXPORT',
+      description:
         'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
     {
-      primary: 'FEED',
-      secondary:
+      logo: 'market.jpg',
+      title: 'MY MARKET',
+      description:
         'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
     {
-      primary: 'FEED',
-      secondary:
+      logo: 'education.jpg',
+      title: 'MY EDUCATION',
+      description:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      logo: 'tools.jpg',
+      title: 'MY TOOLS',
+      description:
         'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
   ]
+  const settings = {
+    arrows: false,
+    autoplay: true,
+    speed: 200,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+  }
   return (
     <>
       <Grid
@@ -224,24 +272,37 @@ export default function MyFarmHome() {
             </Grid>
           ))}
         </Grid>
-        <Grid lg={3} item>
-          <Grid className={classes.newsfeedsWrap}>
-            <Grid className={classes.newsfeedsHeading}>
-              <h6>News Updates &amp; Info</h6>
+        <Grid lg={3} md={12} sm={12} xs={12}>
+          <Grid className={classes.farmUpdatesWrap}>
+            <h6 className={classes.farmUpdatesHeading}>FEED Updates</h6>
+            <Grid style={{ height: '460px', overflow: 'hidden' }}>
+              <Slider {...settings}>
+                {farmnewsupdates.map((item, index) => (
+                  <Grid key={index} container justifyContent="space-around">
+                    <Grid
+                      container
+                      justifyContent="space-around"
+                      style={{ alignItems: 'center' }}
+                    >
+                      <Grid item lg={2}>
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/my-farm/home/${item.logo}`}
+                          width="100"
+                          alt=""
+                        />
+                      </Grid>
+                      <Grid item lg={9}>
+                        <ListItemText
+                          primary={item.title}
+                          secondary={item.description}
+                        />
+                      </Grid>
+                    </Grid>
+                    <Divider />
+                  </Grid>
+                ))}
+              </Slider>
             </Grid>
-            <List className={classes.newsfeeds}>
-              {fpcnewsupdates.map((item, index) => (
-                <Grid key={index}>
-                  <ListItem alignItems="flex-start">
-                    <ListItemText
-                      primary={item.primary}
-                      secondary={item.secondary}
-                    />
-                  </ListItem>
-                  <Divider />
-                </Grid>
-              ))}
-            </List>
           </Grid>
         </Grid>
       </Grid>

@@ -264,12 +264,12 @@ export default function ManageProducts() {
       Array.from(e.target.files).map((file) => URL.revokeObjectURL(file))
     }
   }
+
   const renderPhotos = (source) => {
     return source.map((photo) => {
       return <img src={photo} key={photo} width="150" height="150" />
     })
   }
-
   return (
     <div>
       <Paper square className={classes.root}>
@@ -410,19 +410,26 @@ export default function ManageProducts() {
                 />
               </Grid>
               <Grid lg={5}>
-                {/* <Grid>
-                  <input type="file" className="btn btn-primary" onChange={imageHandlerChange} />
-                  {renderPhotos(selectedImages)}
-                </Grid> */}
+                <Grid>
+                  <input
+                    type="file"
+                    className="btn btn-primary"
+                    onChange={imageHandlerChange}
+                  />
+                  <Grid>{renderPhotos(selectedImages)}</Grid>
+                </Grid>
                 {/* <Grid> */}
-                <DropzoneArea
-                  acceptedFiles={['image/*', 'video/*', 'application/*']}
-                  filesLimit={10}
-                  showFileNames
-                  dropzoneText="Drag or upload an image here or click"
-                  style={{ margin: '0px' }}
-                  onChange={onDropzoneAreaChange}
-                />
+                <Grid>
+                  <DropzoneArea
+                    acceptedFiles={['image/*', 'video/*', 'application/*']}
+                    filesLimit={10}
+                    showFileNames
+                    dropzoneText="Drag or upload an image here or click"
+                    style={{ margin: '0px' }}
+                    onChange={onDropzoneAreaChange}
+                  />
+                </Grid>
+
                 {/* <DropzoneArea
                   acceptedFiles={["image/*"]}
                   filesLimit={10}

@@ -40,6 +40,8 @@ import IsoReg from '../myFpoList/fpoComplainces/statutoryRegistration/isoReg/iso
 import ShopsEstb from '../myFpoList/fpoComplainces/statutoryRegistration/shopsEstb/shopsEstb'
 import TradeLice from '../myFpoList/fpoComplainces/statutoryRegistration/tradeLice/tradeLice'
 import LabourLice from '../myFpoList/fpoComplainces/statutoryRegistration/labourLice/labourLice'
+import MonthlyGst from '../myFpoList/fpoComplainces/legalCompliances/monthlyGst/monthlyGst'
+import StockChecking from '../myFpoList/fpoComplainces/legalCompliances/stockChecking/stockChecking'
 
 export default function MyFpoMain(props) {
   const background = {
@@ -77,7 +79,7 @@ export default function MyFpoMain(props) {
       backgroundPosition: 'center',
     },
     '/myfpo/fpoagmboard': {
-      backgroundImage: `URL("/assets/my-fpo/agmboard/agmbg.png")`,
+      backgroundImage: `URL("/assets/my-fpo/agmboard/agmbg.jpg")`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
@@ -272,6 +274,14 @@ export default function MyFpoMain(props) {
             <Route
               path="/myfpo/ledgerregistry"
               component={LedgerRegistry}
+            ></Route>
+            <Route
+              path="/myfpo/legalcompliances/monthlygst"
+              component={MonthlyGst}
+            ></Route>
+            <Route
+              path="/myfpo/legalcompliances/stockchecking"
+              component={StockChecking}
             ></Route>
             <Route path="/myfpo/fporeports" component={Reports}></Route>
             <Redirect to="/myfpo/home" />

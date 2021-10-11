@@ -85,7 +85,7 @@ function Home() {
       link: '',
     },
     {
-      image: 'feedstartupbnr.jpg',
+      image: 'feedstartupbanner.jpg',
       link: '',
     },
   ]
@@ -212,16 +212,6 @@ function Home() {
     },
   ]
   const settings = {
-    // arrows: false,
-    // dots: false,
-    // pauseOnHover: false,
-    // infinite: true,
-    // speed: 3000,
-    // autoplay: true,
-    // fade: true,
-    // variableWidth: false,
-    // slidesToShow: 1,
-    // slidesToScroll: 1,
     arrows: false,
     autoplay: true,
     speed: 200,

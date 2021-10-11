@@ -8,7 +8,9 @@ import {
   List,
   ListItem,
   ListItemText,
+  Divider,
 } from '@material-ui/core'
+import Slider from 'react-slick'
 
 export default function MyFpoHome(props) {
   const useStyles = makeStyles((theme) => ({
@@ -43,7 +45,12 @@ export default function MyFpoHome(props) {
       backgroundSize: 'cover',
       color: 'black',
     },
-    newsfeedsHeading: {
+    fpoUpdatesWrap: {
+      boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+    },
+    fpoUpdatesHeading: {
       height: '2em',
       paddingTop: '5px',
       justifyContent: 'center',
@@ -62,7 +69,7 @@ export default function MyFpoHome(props) {
     },
     {
       name: 'Fpo Account',
-      icon: 'fpcaccount.png',
+      icon: 'fpcaccounts.png',
       link: '/myfpo/fpoaccount',
     },
     {
@@ -87,7 +94,7 @@ export default function MyFpoHome(props) {
     },
     {
       name: 'Loans & Schemes',
-      icon: 'fpcloans.png',
+      icon: 'fpcloansschemes.png',
       link: '/myfpo/fpoloanschemes',
     },
 
@@ -99,31 +106,64 @@ export default function MyFpoHome(props) {
   ]
   const fpcnewsupdates = [
     {
-      primary: 'FEED',
-      secondary:
+      logo: 'fpo.jpg',
+      title: 'FPO',
+      description:
         'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
     {
-      primary: 'NABARD',
-      secondary:
+      logo: 'farm.jpg',
+      title: 'FARM',
+      description:
         'NABARD helps multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
     {
-      primary: 'FEED',
-      secondary:
+      logo: 'products.jpg',
+      title: 'MY PRODUCTS',
+      description:
         'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
     {
-      primary: 'NABARD',
-      secondary:
+      logo: 'business.jpg',
+      title: 'MY BUSINESS',
+      description:
         'NABARD helps multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
     {
-      primary: 'FEED',
-      secondary:
+      logo: 'export.jpg',
+      title: 'MY EXPORT',
+      description:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      logo: 'market.jpg',
+      title: 'MY MARKET',
+      description:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      logo: 'education.jpg',
+      title: 'MY EDUCATION',
+      description:
+        'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
+    },
+    {
+      logo: 'tools.jpg',
+      title: 'MY TOOLS',
+      description:
         'FEED is a multi-state co-operative society working for the uplift of exports from all corners of India, We Provide',
     },
   ]
+  const settings = {
+    arrows: false,
+    autoplay: true,
+    speed: 200,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+  }
   return (
     <>
       <Grid
@@ -163,33 +203,44 @@ export default function MyFpoHome(props) {
               </Grid>
             ))}
           </Grid>
-          <Grid item lg={3}>
-            <Grid className={classes.newsfeedsWrap}>
-              <Grid className={classes.newsfeedsHeading}>
-                <h6 className="my-auto mt-2">Updates &amp; Information</h6>
+          <Grid lg={3} md={12} sm={12} xs={12}>
+            <Grid className={classes.fpoUpdatesWrap}>
+              <h6 className={classes.fpoUpdatesHeading}>FEED Updates</h6>
+              <Grid style={{ height: '460px', overflow: 'hidden' }}>
+                <Slider {...settings}>
+                  {fpcnewsupdates.map((item, index) => (
+                    <Grid key={index} container justifyContent="space-around">
+                      <Grid
+                        container
+                        justifyContent="space-around"
+                        style={{ alignItems: 'center' }}
+                      >
+                        <Grid item lg={2}>
+                          <img
+                            src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.logo}`}
+                            width="100"
+                            alt=""
+                          />
+                        </Grid>
+                        <Grid item lg={9}>
+                          <ListItemText
+                            primary={item.title}
+                            secondary={item.description}
+                          />
+                        </Grid>
+                      </Grid>
+                      <Divider />
+                    </Grid>
+                  ))}
+                </Slider>
               </Grid>
-              <List className={classes.newsfeeds}>
-                {fpcnewsupdates.map((item, index) => (
-                  <Grid key={index}>
-                    <ListItem
-                      alignItems="flex-start"
-                      // className="notificationItem"
-                    >
-                      <ListItemText
-                        primary={item.primary}
-                        secondary={item.secondary}
-                      />
-                    </ListItem>
-                  </Grid>
-                ))}
-              </List>
             </Grid>
           </Grid>
         </Grid>
         <Grid
           container
           item
-          lg={11}
+          lg={12}
           xs={12}
           style={{
             // backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/home/pointsbg.jpg")`,
@@ -201,12 +252,9 @@ export default function MyFpoHome(props) {
             // msFilter: "FlipV",
             // transform: 'rotateY(180deg)',
             // border:'1px solid red',
+            margin: '5px',
             borderRadius: '15px 15px',
             padding: '2em',
-            boxShadow: '0px 0px 6px 0px rgba(0,0,0,0.75)',
-            webkitBoxShadow: '0px 0px 6px 0px rgba(0,0,0,0.75)',
-            mozBoxShadow: '0px 0px 6px 0px rgba(0,0,0,0.75)',
-            borderLeft: '5px solid #b9daec',
           }}
         >
           <h4

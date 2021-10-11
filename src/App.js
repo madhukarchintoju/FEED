@@ -44,6 +44,7 @@ import ProcessingUnits from './Components/ServicesComp/productProfile/processing
 import Trade from './Components/ServicesComp/productProfile/trade'
 import UntappedProducts from './Components/ServicesComp/productProfile/untapped-products'
 import Downloads from './Components/downloads/downloads'
+import MyProductsMain from './Components/ServicesComp/myProductsComp/myProductsMain/myProductsMain'
 
 function App() {
   const ScrollToTop = () => {
@@ -93,6 +94,7 @@ function App() {
           <Route path="/myfarm" component={MyFarmMainComp} />
           {/* <Route path="/myproducts" component={MyProductsMainComp} /> */}
           <Route path="/productprofile" exact component={ProductProfile} />
+          <Route path="/myproductprofile" component={MyProductsMain} />
           <Route
             path="/productprofile/production"
             exact

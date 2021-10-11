@@ -14,7 +14,7 @@ export default function MyToolsMainComp() {
   const navData = [
     {
       name: 'FPO',
-      icon: 'fa fa-address-card',
+      icon: 'fas fa-users',
       path: '/mytools/fpo',
     },
     {
@@ -24,17 +24,17 @@ export default function MyToolsMainComp() {
     },
     {
       name: 'MSME',
-      icon: 'fa fa-address-card',
+      icon: 'far fa-building',
       path: '/mytools/msme',
     },
     {
       name: 'STUDENT',
-      icon: 'fa fa-address-card',
+      icon: 'fas fa-user-graduate',
       path: '/mytools/student',
     },
     {
       name: 'EXPORTS',
-      icon: 'fa fa-address-card',
+      icon: 'fas fa-plane-departure',
       path: '/mytools/exports',
     },
   ]
@@ -48,6 +48,7 @@ export default function MyToolsMainComp() {
           bgColor="black"
           textColor="white"
           serviceTitle="MY TOOLS"
+          selectedSideNavLink="linear-gradient(90deg, rgba(129,134,139,1) 35%, rgba(255,255,255,1) 100%)"
         ></SideNavBar>
         <div className="col-lg p-0">
           <Switch>

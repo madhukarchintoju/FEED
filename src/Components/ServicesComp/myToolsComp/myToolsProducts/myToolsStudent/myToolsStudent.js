@@ -1,5 +1,6 @@
 import React from 'react'
 import './myToolsStudent.css'
+import { Grid } from '@material-ui/core'
 import MyToolsList from '../../myToolsList/myToolsList'
 
 export default function MyToolsStudent() {
@@ -32,7 +33,10 @@ export default function MyToolsStudent() {
   ]
   return (
     <>
-      <MyToolsList dataList={dataList} title="MyFarm - Aqua"></MyToolsList>
+      {/* <MyToolsList dataList={dataList} title="MyFarm - Aqua"></MyToolsList> */}
+      <Grid style={{ textAlign: 'center', color: 'red' }}>
+        <h1>Coming Soon</h1>
+      </Grid>
     </>
   )
 }
