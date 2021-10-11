@@ -24,7 +24,7 @@ export default function MyToolsList(props) {
     },
     toolsAvatar: {
       margin: '1em',
-      width: '11em',
+      width: '12em',
       height: '5em',
       '@media (max-width: 768px)': {
         width: '6em',
@@ -43,7 +43,7 @@ export default function MyToolsList(props) {
   const classes = useStyles()
 
   return (
-    <div className="my-tools-list">
+    <div>
       <Grid container justify="center" className={classes.listTitle}>
         <Avatar
           variant={props.variant || 'square'}
@@ -54,9 +54,10 @@ export default function MyToolsList(props) {
       <Grid
         container
         direction="row"
-        spacing={2}
+        // spacing={1}
         justify="flex-start"
         alignItems="center"
+        style={{ paddingBottom: '30px' }}
       >
         {props.dataList.map((item, index) => (
           <Grid
@@ -85,11 +86,11 @@ export default function MyToolsList(props) {
           </Grid>
         ))}
       </Grid>
-      <Grid container justify="center" alignItems="flex-end">
+      {/* <Grid container justify="center" alignItems="flex-end">
         <Button className={classes.feedConnect} variant="contained">
           <b>Connect To FEED </b>
         </Button>
-      </Grid>
+      </Grid> */}
     </div>
   )
 }

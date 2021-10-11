@@ -6,27 +6,27 @@ export default function MyToolsHome() {
   const dataList = [
     {
       name: 'Fish',
-      icon: 'my-fpo-card.png',
+      icon: 'home/myfpo.png',
       link: '/mytools/fpo',
     },
     {
       name: 'Prawns',
-      icon: 'farmer-card.png',
+      icon: 'home/farmer.png',
       link: '/mytools/farmer',
     },
     {
       name: 'Fish Type 2',
-      icon: 'msme-card.png',
+      icon: 'home/msme.png',
       link: '/mytools/msme',
     },
     {
       name: 'Fish Type 3',
-      icon: 'student-card.png',
+      icon: 'home/student.png',
       link: '/mytools/student',
     },
     {
       name: 'Fish Type 4',
-      icon: 'exports-card.png',
+      icon: 'home/exports.png',
       link: '/mytools/exports',
     },
   ]
@@ -42,7 +42,7 @@ export default function MyToolsHome() {
       >
         <MyToolList
           dataList={dataList}
-          title="my-tools-home-heading.png"
+          title="home/toolsserviceshead.png"
         ></MyToolList>
       </div>
     </>

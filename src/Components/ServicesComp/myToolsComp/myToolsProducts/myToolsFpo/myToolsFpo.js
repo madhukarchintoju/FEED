@@ -5,63 +5,63 @@ import MyToolsList from '../../myToolsList/myToolsList'
 export default function MyToolsFpo() {
   const dataList = [
     {
-      name: 'Fish',
-      icon: 'statutory-reg.png',
-      link: '/myfarm/aqua/fish',
-    },
-    {
-      name: 'Prawns',
-      icon: 'business-compliances.png',
-      link: '/myfarm/aqua/fish',
-    },
-    {
-      name: 'Fish Type 2',
-      icon: 'it-dm.png',
-      link: '/myfarm/aqua/fish',
-    },
-    {
-      name: 'Fish Type 3',
-      icon: 'industry-consultant.png',
+      name: 'My Fpo',
+      icon: 'fpotools/statutoryregistration.png',
       link: '',
     },
     {
-      name: 'Fish Type 4',
-      icon: 'document-formats.png',
-      link: '/myfarm/aqua/fish',
-    },
-    {
-      name: 'Fish Type 3',
-      icon: 'tools-fpo-calculators.png',
+      name: 'Business Compliances',
+      icon: 'fpotools/businesscompliances.png',
       link: '',
     },
     {
-      name: 'Fish Type 3',
-      icon: 'tools-fpo-marketing-services.png',
+      name: 'It Digital Marketing',
+      icon: 'fpotools/itanddigitalmarketing.png',
       link: '',
     },
     {
-      name: 'Fish Type 3',
-      icon: 'tools-fpo-loan-services.png',
+      name: 'Industry Consultants',
+      icon: 'fpotools/industryconsultant.png',
       link: '',
     },
     {
-      name: 'Fish Type 3',
-      icon: 'tools-fpo-insurance-services.png',
+      name: 'Document Formats',
+      icon: 'fpotools/documentformates.png',
       link: '',
     },
     {
-      name: 'Fish Type 3',
-      icon: 'tools-fpo-logistics-services.png',
+      name: 'Calculators',
+      icon: 'fpotools/calculators.png',
       link: '',
     },
     {
-      name: 'Fish Type 3',
-      icon: 'tools-fpo-legal-services.png',
+      name: 'Marketing Services',
+      icon: 'fpotools/marketingservices.png',
       link: '',
     },
     {
-      name: 'Fish Type 3',
-      icon: 'tools-fpo-exim-services.png',
+      name: 'Loans Services',
+      icon: 'fpotools/loanservices.png',
+      link: '',
+    },
+    {
+      name: 'Insurance Services',
+      icon: 'fpotools/insuranceservices.png',
+      link: '',
+    },
+    {
+      name: 'Logistic Services',
+      icon: 'fpotools/logisticservcies.png',
+      link: '',
+    },
+    {
+      name: 'legal Services',
+      icon: 'fpotools/legalservices.png',
+      link: '',
+    },
+    {
+      name: 'EXIM Services',
+      icon: 'fpotools/importandexportservices.png',
       link: '',
     },
   ]
@@ -75,7 +75,10 @@ export default function MyToolsFpo() {
           backgroundPosition: 'center',
         }}
       >
-        <MyToolsList dataList={dataList} title="fpo-heading.png"></MyToolsList>
+        <MyToolsList
+          dataList={dataList}
+          title="fpotools/fpohead.png"
+        ></MyToolsList>
       </div>
     </>
   )

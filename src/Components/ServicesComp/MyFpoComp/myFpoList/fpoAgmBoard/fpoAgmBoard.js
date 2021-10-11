@@ -8,27 +8,27 @@ export default function FpoAgmBoard() {
   const classes = useStyles()
   const agmList = [
     {
-      name: 'Mango',
+      name: 'By Laws',
       icon: 'agmboard/agm/bylaws.png',
       link: '',
     },
     {
-      name: 'Mango',
+      name: 'Member Rights',
       icon: 'agmboard/agm/memberrights.png',
       link: '',
     },
     {
-      name: 'Mango',
+      name: 'Rules and acts',
       icon: 'agmboard/agm/rulesandact.png',
       link: '',
     },
     {
-      name: 'Mango',
+      name: 'Notices',
       icon: 'agmboard/agm/noticesagm.png',
       link: '',
     },
     {
-      name: 'Mango',
+      name: 'Resolution',
       icon: 'agmboard/agm/resolution.png',
       link: '',
     },

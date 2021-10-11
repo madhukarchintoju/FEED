@@ -6,72 +6,72 @@ export default function MyToolsExports() {
   const dataList = [
     {
       name: 'HS Code Search',
-      icon: 'exports/my-tools-exports-hs-code-search.png',
+      icon: 'exporttools/hscode.png',
       link: '',
     },
     {
       name: 'CHA',
-      icon: 'exports/my-tools-exports-cha.png',
+      icon: 'exporttools/cha.png',
       link: '',
     },
     {
       name: 'Freight Foreward',
-      icon: 'exports/my-tools-exports-freight-foreward.png',
+      icon: 'exporttools/freightforeward.png',
       link: '',
     },
     {
       name: 'Logistic Services',
-      icon: 'exports/my-tools-exports-logistics-services.png',
+      icon: 'exporttools/logisticservices.png',
       link: '',
     },
     {
       name: 'Loan Services',
-      icon: 'exports/my-tools-exports-loan-services.png',
+      icon: 'exporttools/loanservices.png',
       link: '',
     },
     {
       name: 'Insurance Services',
-      icon: 'exports/my-tools-exports-insurance-services.png',
+      icon: 'exporttools/insuranceservices.png',
       link: '',
     },
     {
-      name: 'Certificate Formats',
-      icon: 'exports/my-tools-exports-certificate-format.png',
+      name: 'Document Formats',
+      icon: 'exporttools/documentformates.png',
       link: '',
     },
     {
       name: 'Calculators',
-      icon: 'exports/my-tools-exports-calculators.png',
+      icon: 'exporttools/calculators.png',
       link: '',
     },
     {
       name: 'Industry Consultant',
-      icon: 'exports/my-tools-exports-industry-consultant.png',
+      icon: 'exporttools/industryconsultant.png',
       link: '',
     },
     {
       name: 'Marketing Services',
-      icon: 'exports/my-tools-exports-marketing-services.png',
+      icon: 'exporttools/marketingservices.png',
       link: '',
     },
     {
       name: 'IT & Digital Marketing',
-      icon: 'exports/my-tools-exports-itdm.png',
+      icon: 'exporttools/itanddigital.png',
       link: '',
     },
     {
       name: 'Legal Services',
-      icon: 'exports/my-tools-exports-legal-services.png',
+      icon: 'exporttools/legalservices.png',
       link: '',
     },
     {
       name: 'Statutory Registrations',
-      icon: 'exports/my-tools-exports-statutory-reg.png',
+      icon: 'exporttools/statutoryregistrations.png',
       link: '',
     },
     {
       name: 'Business Compliances',
-      icon: 'exports/my-tools-exports-business-compliances.png',
+      icon: 'exporttools/businesscompliances.png',
       link: '',
     },
   ]
@@ -87,7 +87,7 @@ export default function MyToolsExports() {
       >
         <MyToolsList
           dataList={dataList}
-          title="/exports/my-tools-exports-heading.png"
+          title="exporttools/exportshead.png"
         ></MyToolsList>
       </div>
     </>

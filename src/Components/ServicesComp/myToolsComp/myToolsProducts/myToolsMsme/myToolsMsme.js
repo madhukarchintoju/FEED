@@ -6,62 +6,62 @@ export default function MyToolsMsme() {
   const dataList = [
     {
       name: 'Statutory Registration',
-      icon: 'msme/my-tools-msme-statutory-reg.png',
+      icon: 'msmetools/statutoryregistration.png',
       link: '',
     },
     {
       name: 'Business Compliances',
-      icon: 'msme/my-tools-msme-business-compliances.png',
+      icon: 'msmetools/businesscompliances.png',
       link: '',
     },
     {
       name: 'IT & Digital Marketing',
-      icon: 'msme/my-tools-msme-itdm.png',
+      icon: 'msmetools/itanddigital.png',
       link: '',
     },
     {
       name: 'Industry Consultant',
-      icon: 'msme/my-tools-msme-industry-consultant.png',
+      icon: 'msmetools/industryconsultant.png',
       link: '',
     },
     {
       name: 'Document Formats',
-      icon: 'msme/my-tools-msme-document-format.png',
+      icon: 'msmetools/documentformates.png',
       link: '',
     },
     {
       name: 'Calculators',
-      icon: 'msme/my-tools-msme-calculators.png',
+      icon: 'msmetools/calculators.png',
       link: '',
     },
     {
       name: 'Marketing Services',
-      icon: 'msme/my-tools-msme-marketing-services.png',
+      icon: 'msmetools/marketingservices.png',
       link: '',
     },
     {
       name: 'Loan Services',
-      icon: 'msme/my-tools-msme-loan-services.png',
+      icon: 'msmetools/loanservices.png',
       link: '',
     },
     {
       name: 'Insurance Services',
-      icon: 'msme/my-tools-msme-insurance-services.png',
+      icon: 'msmetools/insuranceservices.png',
       link: '',
     },
     {
       name: 'Logistic Services',
-      icon: 'msme/my-tools-msme-logistics-services.png',
+      icon: 'msmetools/logisticservices.png',
       link: '',
     },
     {
       name: 'Legal Services',
-      icon: 'msme/my-tools-msme-legal-services.png',
+      icon: 'msmetools/legalservices.png',
       link: '',
     },
     {
       name: 'Exim Services',
-      icon: 'msme/my-tools-msme-exim-services.png',
+      icon: 'msmetools/importandexportservices.png',
       link: '',
     },
   ]
@@ -77,7 +77,7 @@ export default function MyToolsMsme() {
       >
         <MyToolsList
           dataList={dataList}
-          title="/msme/my-tools-msme-heading.png"
+          title="msmetools/msmehead.png"
         ></MyToolsList>
       </div>
     </>

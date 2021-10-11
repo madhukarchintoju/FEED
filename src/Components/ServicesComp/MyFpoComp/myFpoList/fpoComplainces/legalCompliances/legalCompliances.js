@@ -7,7 +7,7 @@ export default function LegalCompliances() {
     {
       name: 'Monthly Returns Filling',
       icon: 'compliances/legal/mgrf.png',
-      link: '',
+      link: '/myfpo/legalcompliances/monthlygst',
     },
     {
       name: 'PF, ESI, PT Filling',
@@ -47,7 +47,7 @@ export default function LegalCompliances() {
     {
       name: 'Stock Checking',
       icon: 'compliances/legal/stockchecking.png',
-      link: '',
+      link: '/myfpo/legalcompliances/stockchecking',
     },
   ]
   const headingSize = {

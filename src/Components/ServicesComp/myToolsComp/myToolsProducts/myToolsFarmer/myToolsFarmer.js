@@ -6,52 +6,52 @@ export default function MyToolsFarmer() {
   const dataList = [
     {
       name: '',
-      icon: 'farmer/my-tools-farmer-crop-exp-tool.png',
+      icon: 'farmtools/cropexpendituretool.png',
       link: '',
     },
     {
       name: '',
-      icon: 'farmer/my-tools-farmer-crop-advisory.png',
+      icon: 'farmtools/cropadvisory.png',
       link: '',
     },
     {
       name: '',
-      icon: 'farmer/my-tools-farmer-farm-equipment.png',
+      icon: 'farmtools/farmequiptments.png',
       link: '',
     },
     {
       name: '',
-      icon: 'farmer/my-tools-farmer-find-dealers.png',
+      icon: 'farmtools/finddealers.png',
       link: '',
     },
     {
       name: '',
-      icon: 'farmer/my-tools-farmer-value-addition-units.png',
+      icon: 'farmtools/valueadditionunits.png',
       link: '',
     },
     {
       name: '',
-      icon: 'farmer/my-tools-farmer-fertilizer-calculator.png',
+      icon: 'farmtools/fertilizer.png',
       link: '',
     },
     {
       name: '',
-      icon: '/farmer/my-tools-farmer-marketing-services.png',
+      icon: 'farmtools/marketingservices.png',
       link: '',
     },
     {
       name: '',
-      icon: 'farmer/my-tools-farmer-loan-services.png',
+      icon: 'farmtools/loanservices.png',
       link: '',
     },
     {
       name: '',
-      icon: 'farmer/my-tools-farmer-insurance-services.png',
+      icon: 'farmtools/insuranceservices.png',
       link: '',
     },
     {
       name: '',
-      icon: 'farmer/my-tools-farmer-logistics-services.png',
+      icon: 'farmtools/logisticservices.png',
       link: '',
     },
   ]
@@ -67,7 +67,7 @@ export default function MyToolsFarmer() {
       >
         <MyToolsList
           dataList={dataList}
-          title="/farmer/my-tools-farmer-heading.png"
+          title="farmtools/farmerhead.png"
         ></MyToolsList>
       </div>
     </>

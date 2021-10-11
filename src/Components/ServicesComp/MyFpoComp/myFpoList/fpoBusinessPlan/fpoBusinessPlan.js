@@ -15,10 +15,10 @@ SwiperCore.use([EffectFlip, Pagination, Navigation, Autoplay])
 export default function FpoBusinessPlan() {
   const businessplanGallery = [
     {
-      img: 'businessplanone.jpeg',
+      img: 'planone.jpg',
     },
     {
-      img: 'businessplantwo.jpeg',
+      img: 'plantwo.jpg',
     },
   ]
   const solutionList = [
@@ -63,15 +63,6 @@ export default function FpoBusinessPlan() {
       textAlign: 'justify',
       textJustify: 'inter-word',
     },
-    // businessplanimg: {
-    //   boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-    //   webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-    //   mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-    //   borderRadius: '15px 15px',
-    //   '&:img': {
-    //     borderRadius: '15px 15px'
-    //   }
-    // },
   }))
   const classes = useStyles()
   return (
@@ -145,7 +136,7 @@ export default function FpoBusinessPlan() {
               pagination={true}
               navigation={true}
               loop={true}
-              autoplay={{ delay: 1500 }}
+              autoplay={{ delay: 2500 }}
             >
               {businessplanGallery.map((item, index) => (
                 <SwiperSlide key={index}>
