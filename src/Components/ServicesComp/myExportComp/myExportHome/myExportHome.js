@@ -19,7 +19,7 @@ export default function MyExportHome() {
       justifyContent: 'space-evenly',
       alignItems: 'center',
       textAlign: 'center',
-      position: 'relative',
+      // position: 'relative',
       textDecoration: 'none',
       boxShadow: '0 14px 20px rgba(0, 0, 0, 0.2)',
       transition: 'all 0.3s ease-out',
@@ -102,9 +102,9 @@ export default function MyExportHome() {
   return (
     <>
       <div>
-        <Grid container justifyContent="center">
+        {/* <Grid container justifyContent="center">
           <h5>Exports Home</h5>
-        </Grid>
+        </Grid> */}
         <Grid container item lg={12} justifyContent="space-around">
           {exportHomeCard.map((item, index) => (
             <Grid key={index} to={item.link} component={Link}>

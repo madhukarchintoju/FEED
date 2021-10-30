@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './myFpoHome.css'
 import { Link } from 'react-router-dom'
 import {
@@ -14,6 +14,33 @@ import Slider from 'react-slick'
 
 export default function MyFpoHome(props) {
   const useStyles = makeStyles((theme) => ({
+    fpoHomeCard: {
+      width: '150px',
+      height: '150px',
+      margin: '8px',
+      background: '#fff',
+      color: 'black',
+      borderRadius: '15px 15px',
+      // borderBottom: '3px solid #F4A896',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+      textAlign: 'center',
+      // position: 'relative',
+      textDecoration: 'none',
+      boxShadow: '0 10px 15px rgba(0, 0, 0, 0.2)',
+      transition: 'all 0.3s ease-out',
+      '&:hover': {
+        textDecoration: 'none',
+        backgroundColor: '#f8e4a8',
+        transform: 'translateY(-5px) scale(1.005) translateZ(0)',
+      },
+      '@media (max-width: 568px)': {
+        width: '150px',
+        height: '150px',
+      },
+    },
     homeItem: {
       width: '9em',
       height: '8em',
@@ -33,19 +60,16 @@ export default function MyFpoHome(props) {
       webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
       mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
     },
-    newsfeeds: {
-      overflow: 'auto',
-      height: '410px',
-      // backgroundColor: 'red',
-      // border:'1px solid red',
-      padding: '2px',
-      // color: 'white',
-      // backgroundImage: `url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1124&q=100')`
-      // backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/home/notibgsix.jpg")`,
-      backgroundSize: 'cover',
-      color: 'black',
-    },
+    // newsfeeds: {
+    //   overflow: 'auto',
+    //   height: '350px',
+    //   padding: '2px',
+    //   backgroundSize: 'cover',
+    //   color: 'black',
+    // },
     fpoUpdatesWrap: {
+      height: '450px',
+      overflow: 'hidden',
       boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
       webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
       mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
@@ -64,43 +88,43 @@ export default function MyFpoHome(props) {
   const fpoHomeData = [
     {
       name: 'About Fpo',
-      icon: 'aboutfpc.png',
-      link: '/myfpo/aboutfpo',
+      icon: 'aboutbusiness.png',
+      link: '/myfpo/aboutfpc',
     },
     {
       name: 'Fpo Account',
-      icon: 'fpcaccounts.png',
-      link: '/myfpo/fpoaccount',
+      icon: 'businessaccounts.png',
+      link: '/myfpo/fpcaccount',
     },
     {
       name: 'FPO Business Plan',
-      icon: 'fpcbusinessplan.png',
-      link: '/myfpo/fpobusinessplan',
+      icon: 'businessplan.png',
+      link: '/myfpo/fpcbusinessplan',
     },
     {
       name: 'Capacity Building',
-      icon: 'capacitybuilding.png',
-      link: '/myfpo/fpocapacitybuilding',
+      icon: 'businesscapacitybuilding.png',
+      link: '/myfpo/fpccapacitybuilding',
     },
     {
       name: 'FPO Compliances',
-      icon: 'fpccompliances.png',
-      link: '/myfpo/fpocomplainces',
+      icon: 'businesscompliances.png',
+      link: '/myfpo/fpccomplainces',
     },
     {
       name: 'Agm & Board Meetings',
-      icon: 'fpcagmboard.png',
-      link: '/myfpo/fpoagmboard',
+      icon: 'businessagmboard.png',
+      link: '/myfpo/fpcagmboard',
     },
     {
       name: 'Loans & Schemes',
-      icon: 'fpcloansschemes.png',
-      link: '/myfpo/fpoloanschemes',
+      icon: 'businessloans.png',
+      link: '/myfpo/fpcloanschemes',
     },
 
     {
       name: 'FPC Reports',
-      icon: 'reports.png',
+      icon: 'businessreports.png',
       link: '/myfpo/reports',
     },
   ]
@@ -159,7 +183,7 @@ export default function MyFpoHome(props) {
     autoplay: true,
     speed: 200,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
@@ -173,12 +197,12 @@ export default function MyFpoHome(props) {
         // alignItems="flex-start"
         className="myfpo-home"
       >
-        <Grid container justifyContent="center">
+        {/* <Grid container justifyContent="center">
           <img
             src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/myfpcnameplate.png`}
             alt="..."
           />
-        </Grid>
+        </Grid> */}
         <Grid
           container
           item
@@ -187,7 +211,7 @@ export default function MyFpoHome(props) {
           className="p-1"
         >
           <Grid container item lg={8} className="mx-auto">
-            {fpoHomeData.map((item, index) => (
+            {/* {fpoHomeData.map((item, index) => (
               <Grid key={index} item xs={6} md={3} lg={3}>
                 <Grid className="homeItemWrap">
                   <Avatar
@@ -199,6 +223,27 @@ export default function MyFpoHome(props) {
                   >
                     {item.name}
                   </Avatar>
+                </Grid>
+              </Grid>
+            ))} */}
+            {fpoHomeData.map((item, index) => (
+              <Grid
+                key={index}
+                to={item.link}
+                component={Link}
+                lg={3}
+                md={3}
+                sm={6}
+                xs={6}
+                item
+                className="nav-link"
+              >
+                <Grid className={classes.fpoHomeCard}>
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.icon}`}
+                    alt="info logo"
+                  />
+                  <h6>{item.name}</h6>
                 </Grid>
               </Grid>
             ))}
@@ -215,13 +260,17 @@ export default function MyFpoHome(props) {
                         justifyContent="space-around"
                         style={{ alignItems: 'center' }}
                       >
-                        <Grid item lg={2}>
-                          <img
-                            src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.logo}`}
-                            width="100"
-                            alt=""
-                          />
-                        </Grid>
+                        {window.innerWidth > 475 ? (
+                          <Grid item lg={2}>
+                            <img
+                              src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.logo}`}
+                              width="100"
+                              alt=""
+                            />
+                          </Grid>
+                        ) : (
+                          ''
+                        )}
                         <Grid item lg={9}>
                           <ListItemText
                             primary={item.title}
@@ -259,8 +308,6 @@ export default function MyFpoHome(props) {
         >
           <h4
             style={{
-              // textDecoration: 'underline',
-              fontFamily: `'STIX Two Text', serif`,
               fontWeight: '600',
               alignItems: 'center',
               marginBottom: '0px',

@@ -255,12 +255,12 @@ export default function AboutFpo(props) {
   return (
     <>
       <Grid className={classes.aboutFpoWrap}>
-        <Grid container justifyContent="center" className="mb-3">
+        {/* <Grid container justifyContent="center" className="mb-3">
           <img
             src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/aboutfpcnameplate.png`}
             alt=""
           />
-        </Grid>
+        </Grid> */}
         <Grid item lg={11} className="m-auto">
           <ul
             style={{
@@ -647,92 +647,6 @@ export default function AboutFpo(props) {
             </div>
           </Grid>
         </Grid>
-        {/* <Grid
-          container
-          item
-          style={{
-            height: 'fit-content',
-            backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-fpo/about/aboutcontactbnr.png")`,
-            backgroundSize: '60% 100%',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
-          <Grid className="ctrWrap">
-            <div className="text-left">
-              <h4 className="text-danger font-italic">Contact Us</h4>
-            </div>
-            <div className="card-body">
-              <h6>
-                <i className="fas fa-home"></i> Office Address
-              </h6>
-              <address>
-                First floor, Anand Heights, Kedareswarapet Main Rd,
-                <br /> near Prabhas college, Lotus Landmark, Ayodhya Nagar,
-                <br />
-                Vijayawada Andhra Pradesh - 520003.
-              </address>
-            </div>
-            <div className="text-muted">
-              <div className="header-social-icons">
-                <a
-                  href="https://www.facebook.com/FEEDORGOFFICAL"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/facebook.svg`}
-                    width="25"
-                    alt="facebook-icon"
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/instagram.svg`}
-                    width="25"
-                    alt="instagram-icon"
-                  />
-                </a>
-                <a
-                  href="https://twitter.com/feedorg_"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/twitter.svg`}
-                    width="25"
-                    alt="twitter-icon"
-                  />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/74678041/admin/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/linkedin.svg`}
-                    width="25"
-                    alt="linkedin-icon"
-                  />
-                </a>
-                <a
-                  href="https://www.youtube.com/channel/UCFE_feyAd4VsbMLDnUWIY4A"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/youtube.svg`}
-                    width="25"
-                    alt="youtube-icon"
-                  />
-                </a>
-              </div>
-            </div>
-          </Grid>
-        </Grid> */}
         <Grid
           container
           lg={12}

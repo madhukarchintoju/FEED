@@ -30,18 +30,26 @@ export default function MyBusinessHome(props) {
       },
     },
     businessHomeCard: {
-      width: '90%',
-      height: '8em',
-      // margin: '1px',
-      // padding: '5px',
+      width: '150px',
+      height: '150px',
+      margin: '8px',
+      background: '#fff',
+      color: 'black',
+      borderRadius: '15px 15px',
+      // borderBottom: '3px solid #F4A896',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
       textAlign: 'center',
-      justifyContent: 'space-around',
+      // position: 'relative',
+      textDecoration: 'none',
+      boxShadow: '0 14px 20px rgba(0, 0, 0, 0.2)',
+      transition: 'all 0.3s ease-out',
       '&:hover': {
-        borderBottom: '3px solid #ffbe59',
-        borderRadius: '15px 15px',
-        boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-        webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-        mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+        textDecoration: 'none',
+        backgroundColor: 'rgb(179, 216, 231)',
+        transform: 'translateY(-5px) scale(1.005) translateZ(0)',
       },
     },
     avatarStyle: {
@@ -222,29 +230,15 @@ export default function MyBusinessHome(props) {
               src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/myfpcnameplate.png`}
               alt="..."
             /> */}
-          <h4>My Business</h4>
         </Grid>
-        <Grid container item lg={12} justifyContent="space-between">
+        <Grid container item lg={12} justifyContent="space-around">
           <Grid container item lg={8} justifyContent="space-around">
             {businessHomeCards.map((item, index) => (
-              <Grid
-                item
-                key={index}
-                lg={3}
-                xs={6}
-                md={3}
-                className={classes.businessHomeCard}
-              >
-                <Grid
-                  to={item.link}
-                  component={Link}
-                  className="nav-link text-dark"
-                >
-                  <Avatar
-                    variant="square"
-                    className={classes.avatarStyle}
+              <Grid key={index} to={item.link} component={Link}>
+                <Grid className={classes.businessHomeCard}>
+                  <img
                     src={`${process.env.PUBLIC_URL}/assets/my-business/home/${item.icon}`}
-                    alt="existing plan"
+                    alt="info logo"
                   />
                   <h6>{item.name}</h6>
                 </Grid>

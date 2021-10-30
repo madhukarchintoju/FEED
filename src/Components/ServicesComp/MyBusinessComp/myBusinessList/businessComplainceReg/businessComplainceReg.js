@@ -35,8 +35,8 @@ export default function BusinessComplainceReg() {
     <>
       <MyBusinessListItem
         dataList={dataList}
-        headingSize={headingSize}
-        cardTitle="compliances/statutory/statutoryregdhead.png"
+        // headingSize={headingSize}
+        // cardTitle="compliances/statutory/statutoryregdhead.png"
         cardSize={cardSize}
         cardsJustify="space-around"
       ></MyBusinessListItem>

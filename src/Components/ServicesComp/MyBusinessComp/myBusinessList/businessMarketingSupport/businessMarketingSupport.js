@@ -3,10 +3,7 @@ import { Grid } from '@material-ui/core'
 export default function BusinessMarketingSupport() {
   return (
     <>
-      <div>
-        <Grid container justifyContent="center">
-          <h4>Marketing Support</h4>
-        </Grid>
+      <>
         <Grid>
           <p>
             The word “Marketing” by its meaning represents the action or
@@ -28,7 +25,7 @@ export default function BusinessMarketingSupport() {
             models at affordable costs.
           </p>
         </Grid>
-      </div>
+      </>
     </>
   )
 }

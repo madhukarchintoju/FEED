@@ -78,10 +78,7 @@ export default function FpoLoanSchemes() {
           src={`${process.env.PUBLIC_URL}/assets/my-fpo/fpcloansschemes/fpcloansandschemesnameplate.png`}
           alt="..."
         /> */}
-        <Grid lg={5}>
-          <h2>FPO Loans &amp; Schemes</h2>
-        </Grid>
-        <Grid lg={5}>
+        <Grid lg={5} style={{ margin: '2em auto' }}>
           <TextField
             fullWidth
             select

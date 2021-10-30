@@ -69,9 +69,6 @@ export default function BankRegistry() {
   }
   return (
     <>
-      <Grid container justifyContent="center">
-        <h5>Stock Registry</h5>
-      </Grid>
       <div className={classes.root}>
         {/* <AppBar position="static" color="default"> */}
         <Grid container justifyContent="center">

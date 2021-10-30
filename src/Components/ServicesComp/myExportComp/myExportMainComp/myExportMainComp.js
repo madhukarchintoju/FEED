@@ -28,7 +28,7 @@ import CountrySelection from '../myExportList/countrySelection/countrySelection'
 import CountryInformation from '../myExportList/countrySelection/countryInformation/countryInformation'
 import WidgetsBar from '../../widgetsBar/widgetsBar'
 
-export default function MyExportMainComp() {
+export default function MyExportMainComp(props) {
   const navData = [
     {
       name: 'Why Exports',
@@ -96,6 +96,7 @@ export default function MyExportMainComp() {
       path: '/myexport/exporttoolservices',
     },
   ]
+  const path = props.location.pathname.slice(10)
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
@@ -109,7 +110,8 @@ export default function MyExportMainComp() {
           selectedSideNavLink="linear-gradient(90deg, rgba(100,197,188,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="col-lg p-0">
-          <WidgetsBar />
+          <WidgetsBar screenTitle={path}></WidgetsBar>
+          {/* <WidgetsBar /> */}
           <Switch>
             <Route path="/myexport/home" component={MyExportHome}></Route>
             <Route path="/myexport/whyexport" component={WhyExport}></Route>

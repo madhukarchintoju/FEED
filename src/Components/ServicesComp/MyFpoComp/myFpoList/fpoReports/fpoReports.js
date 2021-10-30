@@ -5,12 +5,12 @@ import AnalyticsMain from '../../../../analytics/analyticsMain/analyticsMain'
 export default function FpoReports() {
   return (
     <>
-      <Grid container justifyContent="center">
+      {/* <Grid container justifyContent="center">
         <img
           src={`${process.env.PUBLIC_URL}/assets/my-fpo/reports/fpcconnectnameplate.png`}
           alt="..."
         />
-      </Grid>
+      </Grid> */}
       <Grid container item lg={11} className="m-auto">
         <ul>
           <li>

@@ -22,7 +22,7 @@ import Others from '../myFarmProducts/others/others'
 import MyFarmGuideContent from '../myFarmGuideContent/myFarmGuideContent'
 import WidgetsBar from '../../widgetsBar/widgetsBar'
 
-export default function MyFarmMainComp() {
+export default function MyFarmMainComp(props) {
   const navData = [
     {
       name: 'Vegetables',
@@ -100,6 +100,7 @@ export default function MyFarmMainComp() {
       path: '/myfarm/others',
     },
   ]
+  const path = props.location.pathname.slice(8)
   return (
     <div>
       <ServicesNavbar></ServicesNavbar>
@@ -113,7 +114,8 @@ export default function MyFarmMainComp() {
           selectedSideNavLink="linear-gradient(90deg, rgba(164,207,62,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="p-0 col-lg my-farm-wrap">
-          <WidgetsBar />
+          <WidgetsBar screenTitle={path}></WidgetsBar>
+          {/* <WidgetsBar /> */}
           <Switch>
             <Route path="/myfarm/home" component={MyFarmHome}></Route>
             <Route path="/myfarm/fruits" component={MyFarmFruits} />

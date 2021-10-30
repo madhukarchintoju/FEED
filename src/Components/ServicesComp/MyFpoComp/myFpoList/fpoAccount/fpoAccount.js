@@ -21,12 +21,12 @@ export default function FpoAccount() {
 
   return (
     <>
-      <Grid className="text-center">
+      {/* <Grid className="text-center">
         <img
           src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/fpcfpoaccountsnameplate.png`}
           alt=""
         />
-      </Grid>
+      </Grid> */}
       <Grid item lg={11} className="m-auto">
         <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
           <li>
