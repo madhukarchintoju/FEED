@@ -31,6 +31,7 @@ export default function SideNavBar(props, { defaultActive }) {
       flexShrink: 0,
       whiteSpace: 'nowrap',
       // height: '100%',
+      boxShadow: '-1px 0px 5px 0px rgba(0,0,0,0.75) inset',
     },
     drawerOpen: {
       transition: theme.transitions.create('width', {

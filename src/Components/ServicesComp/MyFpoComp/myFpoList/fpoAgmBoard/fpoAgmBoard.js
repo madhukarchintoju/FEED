@@ -74,12 +74,12 @@ export default function FpoAgmBoard() {
   }
   return (
     <>
-      <Grid container justifyContent="center">
+      {/* <Grid container justifyContent="center">
         <img
           src={`${process.env.PUBLIC_URL}/assets/my-fpo/agmboard/fpcagmandboardnameplate.png`}
           alt=""
         />
-      </Grid>
+      </Grid> */}
       <Grid item lg={10} className="m-auto">
         <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
           <li>

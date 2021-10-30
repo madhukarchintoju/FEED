@@ -129,7 +129,7 @@ function Header(props) {
             {window.innerWidth > 425 ? (
               <div className="my-auto header-social-icons">
                 <a
-                  href="https://www.facebook.com/FEEDORGOFFICAL"
+                  href="https://www.facebook.com/FEEDORGOFFICIALPAGE"
                   target="_blank"
                 >
                   <img
@@ -145,7 +145,7 @@ function Header(props) {
                     alt="instagram-icon"
                   />
                 </a>
-                <a href="https://twitter.com/feedorg_" target="_blank">
+                <a href="https://twitter.com/feedorgofficial" target="_blank">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/twitter.svg`}
                     width="25"

@@ -14,24 +14,12 @@ export default function BusinessAccount() {
           src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/fpcfpoaccountsnameplate.png`}
           alt=""
         /> */}
-        <h4>Business Accounts</h4>
+        {/* <h4>Business Accounts</h4> */}
       </Grid>
-      {/* <Grid item lg={11} className="m-auto">
-        <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
-          <li>
-            Enables to track the input, output, monthly and yearly expenditures
-          </li>
-          <li>
-            Provides easy access to editable &amp; downloadable documents that
-            are to be mandatorily maintained by an FPO
-          </li>
-        </ul>
-      </Grid> */}
-      {/* <MyFpoListItem dataList={dataList} cardSize={cardSize}></MyFpoListItem> */}
 
       <Grid container item lg={12} justifyContent="center">
         <Grid item lg={5} className="text-center">
-          <Link to="/myfpo/createvendor">
+          <Link to="">
             <img
               src={`${process.env.PUBLIC_URL}/assets/my-business/accounts/createvendor.png`}
               alt=""
@@ -39,7 +27,7 @@ export default function BusinessAccount() {
           </Link>
         </Grid>
         <Grid item lg={5} className="text-center">
-          <Link to="/myfpo/createProduct">
+          <Link to="">
             <img
               src={`${process.env.PUBLIC_URL}/assets/my-business/accounts/createproduct.png`}
               alt=""
@@ -49,7 +37,7 @@ export default function BusinessAccount() {
       </Grid>
       <Grid container item lg={12}>
         <Grid item lg={4} className="text-center">
-          <Link to="/myfpo/sharecapitalregistry">
+          <Link to="">
             <img
               src={`${process.env.PUBLIC_URL}/assets/my-business/accounts/sharecapitalregistry.png`}
               alt=""
@@ -57,7 +45,7 @@ export default function BusinessAccount() {
           </Link>
         </Grid>
         <Grid item lg={4} className="text-center">
-          <Link to="/myfpo/purchaseregistry">
+          <Link to="">
             <img
               src={`${process.env.PUBLIC_URL}/assets/my-business/accounts/puchaseregistry.png`}
               alt=""
@@ -65,7 +53,7 @@ export default function BusinessAccount() {
           </Link>
         </Grid>
         <Grid item lg={4} className="text-center">
-          <Link to="/myfpo/salesregister">
+          <Link to="">
             <img
               src={`${process.env.PUBLIC_URL}/assets/my-business/accounts/salesregistry.png`}
               alt=""
@@ -73,7 +61,7 @@ export default function BusinessAccount() {
           </Link>
         </Grid>
         <Grid item lg={4} className="text-center">
-          <Link to="/myfpo/stockregistry">
+          <Link to="">
             <img
               src={`${process.env.PUBLIC_URL}/assets/my-business/accounts/stockregistry.png`}
               alt=""
@@ -81,7 +69,7 @@ export default function BusinessAccount() {
           </Link>
         </Grid>
         <Grid item lg={4} className="text-center">
-          <Link to="/myfpo/bankregistry">
+          <Link to="">
             <img
               src={`${process.env.PUBLIC_URL}/assets/my-business/accounts/bankregistry.png`}
               alt=""
@@ -89,7 +77,7 @@ export default function BusinessAccount() {
           </Link>
         </Grid>
         <Grid item lg={4} className="text-center">
-          <Link to="/myfpo/cashbookregistry">
+          <Link to="">
             <img
               src={`${process.env.PUBLIC_URL}/assets/my-business/accounts/cashbookregistry.png`}
               alt=""
@@ -99,7 +87,7 @@ export default function BusinessAccount() {
       </Grid>
       <Grid container item lg={12} justifyContent="center">
         <Grid item lg={5} className="text-center">
-          <Link to="/myfpo/ledgerregistry">
+          <Link to="">
             <img
               src={`${process.env.PUBLIC_URL}/assets/my-business/accounts/ledgerregistry.png`}
               alt=""
@@ -107,7 +95,7 @@ export default function BusinessAccount() {
           </Link>
         </Grid>
         <Grid item lg={5} className="text-center">
-          <Link to="/myfpo/fporeports">
+          <Link to="">
             <img
               src={`${process.env.PUBLIC_URL}/assets/my-business/accounts/reports.png`}
               alt=""

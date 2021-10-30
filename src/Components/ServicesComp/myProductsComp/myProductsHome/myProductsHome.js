@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { render } from 'react-dom'
+import { Link } from 'react-router-dom'
 import {
   Grid,
   Button,
@@ -26,12 +27,12 @@ export default function MyProductsHome() {
     },
 
     title: {
-      text: 'World population 2013 by country',
+      text: 'Major Crops World Wide',
     },
 
-    subtitle: {
-      text: 'Demo of Highcharts map with bubbles',
-    },
+    // subtitle: {
+    //   text: 'Demo of Highcharts map with bubbles',
+    // },
 
     legend: {
       enabled: false,
@@ -52,7 +53,7 @@ export default function MyProductsHome() {
       },
       {
         type: 'mapbubble',
-        name: 'Population 2016',
+        name: 'Major Crops',
         joinBy: ['iso-a3', 'code3'],
         data: [
           {
@@ -1144,46 +1145,54 @@ export default function MyProductsHome() {
 
   const productboxes = [
     {
-      title: 'Database & Docs',
-      buyers: '',
-      sellers: '',
-      eximDocumentation: '',
-    },
-    {
       title: 'Production',
       type: '',
       area: '',
       quantity: '',
+      link: '/myproductprofile/productproduction',
     },
     {
       title: 'Trade',
       export: '',
       import: '',
       domestic: '',
+      link: '/myproductprofile/producttrade',
     },
     {
       title: 'Untapped Market',
       region: '',
       exportOpportunities: '',
+      link: '/myproductprofile/productuntappedmarket',
     },
     {
       title: 'BI Products',
       name: '',
       hscode: '',
+      link: '/myproductprofile/productbiproducts',
     },
     {
       title: 'Processing',
       valuAdditionUnits: '',
       marketYards: '',
+      link: '/myproductprofile/productprocessing',
+    },
+    {
+      title: 'Database & Docs',
+      buyers: '',
+      sellers: '',
+      eximDocumentation: '',
+      link: '/myproductprofile/productdatabase',
     },
     {
       title: 'Country Profile',
+      link: '',
     },
     {
       title: 'Schemes & Policies',
       global: '',
       central: '',
       state: '',
+      link: '/myproductprofile/productschemespolicy',
     },
     {
       title: 'Product Guide',
@@ -1200,30 +1209,50 @@ export default function MyProductsHome() {
       feedFarming: '',
     },
   ]
+
   return (
     <>
-      <Grid container style={{ padding: '5px', justifyContent: 'center' }}>
+      <Grid
+        container
+        lg={12}
+        item
+        style={{ padding: '5px', justifyContent: 'center' }}
+      >
         {productboxes.map((item, index) => (
           <Grid
             lg={2}
+            md={2}
+            sm={4}
+            xs={4}
             item
             style={{
               border: '1px solid grey',
               margin: '5px',
               borderRadius: '5px 5px',
-              padding: '0px 5px 3px 5px',
             }}
             key={index}
           >
             <Grid>
-              <h6 className="text-center">{item.title}</h6>
-              <Divider />
+              <Grid
+                style={{
+                  textAlign: 'center',
+                  borderRadius: '5px 5px 0px 0px',
+                  padding: '3px',
+                  backgroundColor: 'orange',
+                  height: '2em',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <h6 className="mb-0">{item.title}</h6>
+              </Grid>
+              {/* <Divider /> */}
               <h6 className="font-weight-normal">Type:</h6>
               <h6 className="font-weight-normal">Area:</h6>
               <h6 className="font-weight-normal">Quantity:</h6>
               <div className="text-center">
-                {/* <button className="btn btn-warning p-1">View More</button> */}
-                <a href="#">View More</a>
+                <Link to={item.link}>View More</Link>
               </div>
             </Grid>
           </Grid>

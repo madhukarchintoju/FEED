@@ -36,12 +36,12 @@ export default function FpoComplainces() {
   return (
     <>
       <Grid item lg={11} className="m-auto">
-        <Grid className="text-center">
+        {/* <Grid className="text-center">
           <img
             src={`${process.env.PUBLIC_URL}/assets/my-fpo/compliances/home/fpccompliancesnameplate.png`}
             alt="..."
           />
-        </Grid>
+        </Grid> */}
         <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
           <li>
             Create customized business plans as per the requirement of the FPO

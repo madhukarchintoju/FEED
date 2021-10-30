@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './myBusinessMain.css'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import MyBusinessHome from '../myBusinessHome/myBusinessHome'
@@ -16,8 +16,9 @@ import BusinessAnnual from '../myBusinessList/businessComplainceReg/businessAnnu
 import BusinessAgmBoard from '../myBusinessList/businessAgmBoard/businessAgmBoard'
 import BusinessReports from '../myBusinessList/businessReports/businessReports'
 import WidgetsBar from '../../widgetsBar/widgetsBar'
+import BusinessConnect from '../myBusinessList/businessConnect/businessConnect'
 
-export default function MyBusinessMain() {
+export default function MyBusinessMain(props) {
   const navData = [
     {
       name: 'Business Profile',
@@ -59,7 +60,39 @@ export default function MyBusinessMain() {
       icon: 'fa fa-address-card',
       path: '/mybusiness/reports',
     },
+    {
+      name: 'Business Connect',
+      icon: 'fa fa-address-card',
+      path: '/mybusiness/businessconnect',
+    },
   ]
+  const [name, setName] = useState('')
+  useEffect(() => {
+    if (props.location.pathname === '/mybusiness/home') {
+      setName('Business Home')
+    } else if (props.location.pathname === '/mybusiness/businessprofile') {
+      setName('Business Profile')
+    } else if (props.location.pathname === '/mybusiness/businessaccount') {
+      setName('Business Account')
+    } else if (
+      props.location.pathname === '/mybusiness/businesscomplaincereg'
+    ) {
+      setName('Business Compliances')
+    } else if (props.location.pathname === '/mybusiness/agmboard') {
+      setName('Agm Board')
+    } else if (props.location.pathname === '/mybusiness/businessplan') {
+      setName('Business Plan')
+    } else if (props.location.pathname === '/mybusiness/loanschemes') {
+      setName('Business Loan Schemes')
+    } else if (props.location.pathname === '/mybusiness/marketingsupport') {
+      setName('Marketing Support')
+    } else if (props.location.pathname === '/mybusiness/reports') {
+      setName('Reports')
+    } else if (props.location.pathname === '/mybusiness/businessconnect') {
+      setName('Business Connect')
+    }
+  }, [props.location.pathname])
+  // const path = props.location.pathname.slice(12);
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
@@ -72,8 +105,9 @@ export default function MyBusinessMain() {
           serviceTitle="MY BUSINESS"
           selectedSideNavLink="linear-gradient(90deg, rgba(103,57,183,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
-        <div className="col">
-          <WidgetsBar />
+        <div className="col p-0">
+          <WidgetsBar screenTitle={name}></WidgetsBar>
+          {/* <WidgetsBar /> */}
           <Switch>
             <Route path="/mybusiness/home" component={MyBusinessHome}></Route>
             <Route
@@ -119,6 +153,10 @@ export default function MyBusinessMain() {
             <Route
               path="/mybusiness/reports"
               component={BusinessReports}
+            ></Route>
+            <Route
+              path="/mybusiness/businessconnect"
+              component={BusinessConnect}
             ></Route>
             <Redirect to="/mybusiness/home"></Redirect>
           </Switch>

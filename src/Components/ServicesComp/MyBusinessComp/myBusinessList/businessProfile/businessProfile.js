@@ -1,6 +1,7 @@
 import React from 'react'
 import './businessProfile.css'
 import { Grid, makeStyles, Avatar } from '@material-ui/core'
+import Marquee from 'react-fast-marquee'
 import CountUp from 'react-countup'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, {
@@ -11,7 +12,7 @@ import SwiperCore, {
 } from 'swiper/core'
 SwiperCore.use([Pagination, Navigation, Autoplay, EffectCoverflow])
 export default function BusinessProfile(props) {
-  const aboutFpcStatistics = [
+  const aboutbusinessStatistics = [
     {
       statTitle: 'Registered Farmers',
       statcount: 300,
@@ -94,7 +95,7 @@ export default function BusinessProfile(props) {
       galleryImg: 'galleryimgfive.jpg',
     },
   ]
-  const aboutfpotestimonial = [
+  const aboutBusinessTestimonial = [
     {
       message:
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
@@ -126,28 +127,25 @@ export default function BusinessProfile(props) {
   ]
   const certificationPartners = [
     {
-      name: '',
-      img: 'apeda.png',
+      logo: 'nabardlogo.png',
     },
     {
-      name: '',
-      img: 'dgft.png',
+      logo: 'bharatcall.png',
     },
     {
-      name: '',
-      img: 'fieo.png',
+      logo: 'dgft.png',
     },
     {
-      name: '',
-      img: 'fssailogo.png',
+      logo: 'fieo.png',
     },
     {
-      name: '',
-      img: 'ibef.png',
+      logo: 'apeda.png',
     },
     {
-      name: '',
-      img: 'feed.png',
+      logo: 'aagama.png',
+    },
+    {
+      logo: 'ibef.png',
     },
   ]
   const useStyles = makeStyles((theme) => ({
@@ -184,7 +182,6 @@ export default function BusinessProfile(props) {
       backgroundRepeat: 'no-repeat',
     },
     productServicesWrap: {
-      // marginBottom: '0.5em',
       marginTop: '2em',
     },
     prdtCardContainer: {
@@ -238,30 +235,8 @@ export default function BusinessProfile(props) {
             src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/aboutfpcnameplate.png`}
             alt=""
           /> */}
-          <h4>Business Profile</h4>
+          {/* <h4>Business Profile</h4> */}
         </Grid>
-        {/* <Grid item lg={11} className="m-auto">
-          <ul
-            style={{
-              textAlign: 'justify',
-              textJustify: 'inter-word',
-              fontWeight: '600',
-            }}
-          >
-            <li>
-              Exclusive Single page website for FPO along with Business
-              Analytics.
-            </li>
-            <li>
-              Accessibility to CEO of FPO for maintaining accounts &amp;
-              information on board meetings.
-            </li>
-            <li>
-              Improves visibility of FPO website through “Share FPO profile
-              option” anywhere and anytime to potential buyers.
-            </li>
-          </ul>
-        </Grid> */}
         <Grid
           container
           item
@@ -269,7 +244,7 @@ export default function BusinessProfile(props) {
           className="m-auto"
           justifyContent="space-around"
         >
-          {aboutFpcStatistics.map((item, index) => (
+          {aboutbusinessStatistics.map((item, index) => (
             <Grid
               key={index}
               lg={2}
@@ -308,10 +283,7 @@ export default function BusinessProfile(props) {
             <Grid lg={11} item className="about-business-content">
               <fieldset>
                 <legend>
-                  <Grid
-                  // container
-                  // style={{ display: 'flex', justifyContent: 'center' }}
-                  >
+                  <Grid>
                     <Grid>
                       <img
                         src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/fpclogo.jpg`}
@@ -320,19 +292,16 @@ export default function BusinessProfile(props) {
                         className={classes.businessLogo}
                       />
                     </Grid>
-
-                    {/* <Grid> */}
                     <h4 className={classes.aboutbusinessTitle}>
-                      Fruits Farm Producer Ltd
+                      Big Business Private Ltd
                     </h4>
-                    {/* </Grid> */}
                   </Grid>
                 </legend>
                 <h5
                   className="ml-3"
                   style={{ fontFamily: `'STIX Two Text', serif` }}
                 >
-                  About FPC :
+                  About :
                 </h5>
                 <Grid className="about-business-descpr">
                   <p>
@@ -366,68 +335,6 @@ export default function BusinessProfile(props) {
                 </Grid>
               </fieldset>
             </Grid>
-            {/* <Grid lg={3} item>
-              <div className="about-fpo-info-card">
-                <div className="col-lg-6 p-1 about-fpo-info-card-role info-card-orange">
-                  <span className="my-auto">01</span>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/statc.svg`}
-                    width="40%"
-                    className="p-2"
-                    alt=""
-                  />
-                </div>
-                <div className="col-lg-6">Info</div>
-              </div>
-              <div className="about-fpo-info-card">
-                <div className="col-lg-6 p-1 about-fpo-info-card-role info-card-green">
-                  <span className="my-auto">02</span>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/home-icon.svg`}
-                    width="40%"
-                    className="p-2"
-                    alt=""
-                  />
-                </div>
-                <div className="col-lg-6">Info</div>
-              </div>
-              <div className="about-fpo-info-card">
-                <div className="col-lg-6 p-1 about-fpo-info-card-role info-card-teal">
-                  <span className="my-auto">03</span>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/bulb-icon.svg`}
-                    width="40%"
-                    className="p-2"
-                    alt=""
-                  />
-                </div>
-                <div className="col-lg-6">Info</div>
-              </div>
-              <div className="about-fpo-info-card">
-                <div className="col-lg-6 p-1 about-fpo-info-card-role info-card-musk">
-                  <span className="my-auto">04</span>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/settings-icon.svg`}
-                    width="40%"
-                    className="p-2"
-                    alt=""
-                  />
-                </div>
-                <div className="col-lg-6">Info</div>
-              </div>
-              <div className="about-fpo-info-card">
-                <div className="col-lg-6 p-1 about-fpo-info-card-role info-card-red">
-                  <span className="my-auto">05</span>
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/boy-icon.svg`}
-                    width="40%"
-                    className="p-2"
-                    alt=""
-                  />
-                </div>
-                <div className="col-lg-6">Info</div>
-              </div>
-            </Grid> */}
           </Grid>
         </Grid>
         <Grid container item className={classes.productServicesWrap}>
@@ -462,18 +369,10 @@ export default function BusinessProfile(props) {
           <Grid lg={12} item className={classes.aboutbusinessGallery}>
             <Grid container justifyContent="center">
               <Swiper
-                effect={'coverflow'}
                 centeredSlides={true}
                 loop={true}
                 navigation
                 autoplay={{ delay: 4000 }}
-                coverflowEffect={{
-                  rotate: 40,
-                  stretch: 0,
-                  depth: 50,
-                  modifier: 1,
-                  slideShadows: true,
-                }}
                 breakpoints={
                   ({
                     320: {
@@ -495,12 +394,12 @@ export default function BusinessProfile(props) {
                   },
                   {
                     868: {
-                      slidesPerView: 4,
+                      slidesPerView: 3,
                       spaceBetween: 5,
                     },
                   })
                 }
-                className="mySwiper aboutbusinessGallerySwiper"
+                className="aboutbusinessGallerySwiper"
               >
                 {aboutGallery.map((item, index) => (
                   <SwiperSlide container key={index}>
@@ -510,7 +409,6 @@ export default function BusinessProfile(props) {
                         src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/${item.galleryImg}`}
                         alt="Business Images"
                         width="100%"
-                        className=""
                       />
                     </Grid>
                   </SwiperSlide>
@@ -527,24 +425,27 @@ export default function BusinessProfile(props) {
             />
             <h2 className="licensesTitle">Our Licenses and Certifications</h2>
           </Grid>
-          <Grid container justifyContent="center">
-            {certificationPartners.map((item, index) => (
-              <Grid lg={2} item key={index}>
+          <Grid className="row justify-content-center">
+            <Marquee speed={50} gradient={false}>
+              {certificationPartners.map((item, index) => (
                 <img
-                  src={`${process.env.PUBLIC_URL}/assets/common/${item.img}`}
-                  className={classes.certificationImg}
-                  alt="certification icon"
+                  style={{ margin: 'auto' }}
+                  key={index}
+                  variant="square"
+                  src={`${process.env.PUBLIC_URL}/assets/my-business/about/${item.logo}`}
+                  alt="FEED PARTNERS LOGO"
+                  width="100"
                 />
-              </Grid>
-            ))}
+              ))}
+            </Marquee>
           </Grid>
         </Grid>
         <Grid className="aboutbusinessTestimonialWrap">
-          <Grid className="businessTestimonialWrap">
+          <Grid className="aboutBusinessTestimonialArea">
             <div className="container-fluid">
-              <div className="businesstestimonialHeading">
-                <h2 className="testimonialName">Testimonials</h2>
-                <p className="testimonialtag">What Client Say About Us?</p>
+              <div className="sec-title white-title">
+                <h2>Testimonials</h2>
+                <p>What Client Say About Us?</p>
               </div>
               <Swiper
                 centeredSlides={true}
@@ -577,20 +478,19 @@ export default function BusinessProfile(props) {
                     },
                   })
                 }
-                className="mySwiper"
               >
-                <div className="testimonial-content">
-                  {aboutfpotestimonial.map((item, index) => (
+                <Grid>
+                  {aboutBusinessTestimonial.map((item, index) => (
                     <SwiperSlide key={index} sm={12} xs={12}>
-                      <div className="businessTestimonialCard">
+                      <div className="aboutBusinessTestimonialCard">
                         <p>{item.message}</p>
-                        <div className="businessclientinfoWrap">
-                          <div className="businessAvatar">
+                        <div className="client-info">
+                          <div className="client-video">
                             <Avatar
                               src={`${process.env.PUBLIC_URL}/assets/common/${item.img}`}
                             />
                           </div>
-                          <div className="businessclientInfo">
+                          <div>
                             <h6 className="mb-0">{item.name}</h6>
                             <span>{item.designation}</span>
                           </div>
@@ -598,26 +498,40 @@ export default function BusinessProfile(props) {
                       </div>
                     </SwiperSlide>
                   ))}
-                </div>
+                </Grid>
               </Swiper>
             </div>
           </Grid>
         </Grid>
         <Grid
           container
-          justifyContent="space-between"
-          className={classes.businessContactWrap}
+          lg={12}
+          item
+          style={{
+            padding: '5px 5px',
+            background:
+              'linear-gradient(130deg, rgba(255,243,254,1) 45%, rgba(238,156,167,1) 47%, rgba(255,221,225,1) 48%)',
+          }}
         >
-          <Grid lg={5} className="businessContact">
+          <Grid
+            lg={10}
+            style={{
+              margin: 'auto',
+              borderRadius: '15px 15px',
+              boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+              padding: '4px',
+              backdropFilter: 'blur(5px) saturate(100%)',
+            }}
+          >
             <div className="text-left">
-              <h4 className="text-danger font-italic">Contact Us</h4>
+              <h4 className="text-danger font-italic">Contact Information</h4>
             </div>
-            <div>
+            <div className="card-body">
               <h6>
                 <i className="fas fa-home"></i> Office Address
               </h6>
               <address>
-                First floor, Anand Heights, Kedareswarapet Main Rd,
+                FEED Org, First floor, Anand Heights, Kedareswarapet Main Rd,
                 <br /> near Prabhas college, Lotus Landmark, Ayodhya Nagar,
                 <br />
                 Vijayawada Andhra Pradesh - 520003.
@@ -681,23 +595,6 @@ export default function BusinessProfile(props) {
                   />
                 </a>
               </div>
-            </div>
-          </Grid>
-          <Grid lg={5}>
-            <div className="text-left">
-              <h4>
-                <i class="fas fa-map-marked-alt"></i> Direction
-              </h4>
-            </div>
-            <div>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.0229696506594!2d80.62855171481394!3d16.524937988600758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35ef2d39bacd51%3A0x6fc2276740e8bd32!2sFEED%20ORG!5e0!3m2!1sen!2sin!4v1629109382959!5m2!1sen!2sin"
-                width="500"
-                height="250"
-                style={{ border: 'none' }}
-                allowFullScreen=""
-                loading="lazy"
-              ></iframe>
             </div>
           </Grid>
         </Grid>

@@ -68,12 +68,12 @@ export default function FpoBusinessPlan() {
   return (
     <>
       <div className={classes.businessPlanWrap}>
-        <Grid container justifyContent="center">
+        {/* <Grid container justifyContent="center">
           <img
             src={`${process.env.PUBLIC_URL}/assets/my-fpo/businessplan/fpcbusinessplannameplate.png`}
             alt=""
           />
-        </Grid>
+        </Grid> */}
         <Grid
           container
           item

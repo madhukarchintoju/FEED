@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './myFpoMain.css'
 import { useHistory } from 'react-router-dom'
 import { Grid, Button, Icon, Avatar, makeStyles } from '@material-ui/core'
@@ -48,80 +48,80 @@ export default function MyFpoMain(props) {
     '/myfpo/home': {
       // backgroundColor: '#f7f1dd',
     },
-    '/myfpo/aboutfpo': {
+    '/myfpo/aboutfpc': {
       backgroundColor: '',
     },
-    '/myfpo/fpoaccount': {
+    '/myfpo/fpcaccount': {
       backgroundImage: `URL("/assets/my-fpo/accounts/myfpoaccountsbg.png")`,
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
     },
-    '/myfpo/fpobusinessplan': {},
-    '/myfpo/fpocomplainces': {
+    '/myfpo/fpcbusinessplan': {},
+    '/myfpo/fpccomplainces': {
       backgroundImage: `URL("/assets/my-fpo/compliances/home/fpo-compliances-bg.jpg")`,
       backgroundRepeat: 'no-repeat',
     },
-    '/myfpo/fpocompliances/statutoryregistration': {
+    '/myfpo/fpccompliances/statutoryregistration': {
       backgroundImage: `URL("/assets/my-fpo/compliances/statutory/statutory-compliances-bg.jpg")`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
     },
-    '/myfpo/fpocompliances/legalcompliances': {
+    '/myfpo/fpccompliances/legalcompliances': {
       backgroundImage: `URL("/assets/my-fpo/compliances/legal/legal-compliances-bg.jpg")`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
     },
-    '/myfpo/fpocompliances/annualcompliances': {
+    '/myfpo/fpccompliances/annualcompliances': {
       backgroundImage: `URL("/assets/my-fpo/compliances/annual/annual-compliances-bg.jpg")`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
     },
-    '/myfpo/fpoagmboard': {
+    '/myfpo/fpcagmboard': {
       backgroundImage: `URL("/assets/my-fpo/agmboard/agmbg.jpg")`,
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
     },
-    '/myfpo/fpoloanschemes': {},
-    '/myfpo/fpoconnect': {},
+    '/myfpo/fpcloanschemes': {},
+    '/myfpo/fpcconnect': {},
   }
   const navData = [
     {
       name: 'About FPC',
       icon: 'fas fa-info-circle',
-      path: '/myfpo/aboutfpo',
+      path: '/myfpo/aboutfpc',
     },
     {
       name: 'FPC Account',
       icon: 'fas fa-calculator',
-      path: '/myfpo/fpoaccount',
+      path: '/myfpo/fpcaccount',
     },
     {
       name: 'FPC Business Plan',
       icon: 'fa fa-briefcase',
-      path: '/myfpo/fpobusinessplan',
+      path: '/myfpo/fpcbusinessplan',
     },
     {
       name: 'Capacity Building',
       icon: 'fas fa-handshake',
-      path: '/myfpo/fpocapacitybuilding',
+      path: '/myfpo/fpccapacitybuilding',
     },
     {
       name: 'FPC Compliances',
       icon: 'fas fa-file-invoice',
-      path: '/myfpo/fpocomplainces',
+      path: '/myfpo/fpccomplainces',
     },
     {
       name: 'FPC AGM & Board',
       icon: 'fas fa-users',
-      path: '/myfpo/fpoagmboard',
+      path: '/myfpo/fpcagmboard',
     },
     {
       name: 'FPC Loans Schemes',
       icon: 'fas fa-university',
-      path: '/myfpo/fpoloanschemes',
+      path: '/myfpo/fpcloanschemes',
     },
     {
       name: 'Reports',
@@ -131,7 +131,7 @@ export default function MyFpoMain(props) {
     {
       name: 'FPC Connect',
       icon: 'fas fa-network-wired',
-      path: '/myfpo/fpoconnect',
+      path: '/myfpo/fpcconnect',
     },
   ]
 
@@ -139,17 +139,43 @@ export default function MyFpoMain(props) {
     background: background[props.location.pathname],
   }))
   const classes = useStyles()
-  const widgetsBar = <WidgetsBar />
-  // switch (props.location.pathname) {
-  //   case '/myfpo/aboutfpo':
-  //     return <WidgetsBar screenTitle="About FPC"></WidgetsBar>
-  //     break;
-  //   case '/myfpo/fpoaccount':
-  //     return <WidgetsBar screenTitle="FPO Accounts"></WidgetsBar>
-  //     break;
-  //   default:
-  //     break;
-  // }
+
+  // const [name,setName] = useState(() => {
+  //   switch (props.location.pathname) {
+  //     case "/myfpo/home":
+  //       return "FPO Home";
+  //     case "/myfpo/aboutfpc":
+  //       return "About FPC";
+  //     default:
+  //       return "FEED"
+  //   }
+  // })
+  const [name, setName] = useState('')
+  useEffect(() => {
+    if (props.location.pathname === '/myfpo/home') {
+      setName('FPC Home')
+    } else if (props.location.pathname === '/myfpo/aboutfpc') {
+      setName('About FPC')
+    } else if (props.location.pathname === '/myfpo/fpcaccount') {
+      setName('FPC Account')
+    } else if (props.location.pathname === '/myfpo/fpcbusinessplan') {
+      setName('FPC Business Plan')
+    } else if (props.location.pathname === '/myfpo/fpccapacitybuilding') {
+      setName('FPC Capacity Building')
+    } else if (props.location.pathname === '/myfpo/fpccomplainces') {
+      setName('FPC Compliances')
+    } else if (props.location.pathname === '/myfpo/fpcagmboard') {
+      setName('FPC Agm Board')
+    } else if (props.location.pathname === '/myfpo/fpcloanschemes') {
+      setName('FPC Loan Schemes')
+    } else if (props.location.pathname === '/myfpo/reports') {
+      setName('Reports')
+    } else if (props.location.pathname === '/myfpo/fpcconnect') {
+      setName('FPC Connect')
+    }
+  }, [props.location.pathname])
+
+  // const path = props.location.pathname.slice(7);
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
@@ -164,29 +190,29 @@ export default function MyFpoMain(props) {
           selectedSideNavLink="linear-gradient(90deg, rgba(255,193,7,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="col-lg p-0 fpo-content-wrap">
-          {/* <WidgetsBar screenTitle="MY FPC"></WidgetsBar> */}
-          {widgetsBar}
+          <WidgetsBar screenTitle={name}></WidgetsBar>
           <Switch>
             <Route path="/myfpo/home" component={MyFpoHome}></Route>
-            <Route path="/myfpo/aboutfpo" component={AboutFpo}></Route>
-            <Route path="/myfpo/fpoaccount" component={FpoAccount}></Route>
-            <Route path="/myfpo/fpoagmboard" component={FpoAgmBoard}></Route>
+            <Route path="/myfpo/aboutfpc" component={AboutFpo}></Route>
+            <Route path="/myfpo/fpcaccount" component={FpoAccount}></Route>
+            <Route path="/myfpo/fpcagmboard" component={FpoAgmBoard}></Route>
             <Route
-              path="/myfpo/fpobusinessplan"
+              path="/myfpo/fpcbusinessplan"
               component={FpoBusinessPlan}
+              title={'businplan'}
             ></Route>
             <Route
-              path="/myfpo/fpocomplainces"
+              path="/myfpo/fpccomplainces"
               component={FpoComplainces}
             ></Route>
             <Route
-              path="/myfpo/fpocapacitybuilding"
+              path="/myfpo/fpccapacitybuilding"
               component={FpoCapacityBuilding}
             ></Route>
-            <Route path="/myfpo/fpoconnect" component={FpoConnect}></Route>
+            <Route path="/myfpo/fpcconnect" component={FpoConnect}></Route>
             <Route path="/myfpo/reports" component={FpoReports}></Route>
             <Route
-              path="/myfpo/fpoloanschemes"
+              path="/myfpo/fpcloanschemes"
               component={FpoLoanSchemes}
             ></Route>
             <Route

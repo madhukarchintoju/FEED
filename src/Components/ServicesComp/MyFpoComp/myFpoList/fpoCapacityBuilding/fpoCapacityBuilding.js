@@ -4,12 +4,12 @@ import { Grid } from '@material-ui/core'
 export default function FpoCapacityBuilding() {
   return (
     <>
-      <Grid container justifyContent="center">
+      {/* <Grid container justifyContent="center">
         <img
           src={`${process.env.PUBLIC_URL}/assets/my-fpo/capacitybuilding/fpccapacitybuildingnameplate.png`}
           alt=""
         />
-      </Grid>
+      </Grid> */}
       <Grid container item lg={11} className="m-auto">
         <ul>
           <li>
