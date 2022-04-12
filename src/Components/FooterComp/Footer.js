@@ -36,7 +36,7 @@ export default function Footer() {
     },
     footerPolicyWrap: {
       borderTop: '1px solid white',
-      marginTop: '1em',
+      // marginTop: '1em',
       paddingTop: '0.5em',
     },
   }))
@@ -397,9 +397,11 @@ export default function Footer() {
       link: '/',
     },
   ]
+
+  const year = new Date().getFullYear()
   return (
     <>
-      <Grid className={classes.footerWrap}>
+      {/* <Grid className={classes.footerWrap}>
         {window.innerWidth > 720 ? (
           <Grid
             container
@@ -640,7 +642,204 @@ export default function Footer() {
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
+      </Grid> */}
+
+      <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+          <div class="container">
+            <div style={{ display: 'flex' }}>
+              {/* <div class="col-lg-3 col-md-6">
+                <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style={{visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeInLeft'}}>
+                  <h3 class="f-title f_600 t_color f_size_18">Get in Touch</h3>
+                  <p>Don’t miss any updates of our new templates and extensions.!</p>
+                  <form action="#" class="f_subscribe_two mailchimp" method="post" novalidate="true" _lpchecked="1">
+                    <input type="text" name="EMAIL" class="form-control memail" placeholder="Email"/>
+                    <button class ="btn btn_get btn_get_two" type ="submit">Subscribe</button>
+                    <p class ="mchimp-errmessage" style={{display: 'none'}}></p>
+                    <p class ="mchimp-sucmessage" style={{display: 'none'}}></p>
+                  </form>
+                </div>
+              </div> */}
+              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
+                <div
+                  class="f_widget about-widget pl_70 wow fadeInLeft"
+                  data-wow-delay="0.4s"
+                  style={{
+                    visibility: 'visible',
+                    animationDelay: '0.4s',
+                    animationName: 'fadeInLeft',
+                  }}
+                >
+                  <h3 class="f-title f_600 t_color f_size_18">Quick Links</h3>
+                  <ul class="list-unstyled f_list">
+                    <li>
+                      <a href="#">Sitemap</a>
+                    </li>
+                    <li>
+                      <a href="#">Pricing</a>
+                    </li>
+                    <li>
+                      <a href="#">Join us</a>
+                    </li>
+                    <li>
+                      <a href="#">Contact us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
+                <div
+                  class="f_widget about-widget pl_70 wow fadeInLeft"
+                  data-wow-delay="0.4s"
+                  style={{
+                    visibility: 'visible',
+                    animationDelay: '0.4s',
+                    animationName: 'fadeInLeft',
+                  }}
+                >
+                  <h3 class="f-title f_600 t_color f_size_18">Services</h3>
+                  <ul class="list-unstyled f_list">
+                    <li>
+                      <a href="#">My Fpo</a>
+                    </li>
+                    <li>
+                      <a href="#">My Farm</a>
+                    </li>
+                    <li>
+                      <a href="#">My Business</a>
+                    </li>
+                    <li>
+                      <a href="#">My Products</a>
+                    </li>
+                    <li>
+                      <a href="#">My Exports</a>
+                    </li>
+                    <li>
+                      <a href="#">My Market</a>
+                    </li>
+                    <li>
+                      <a href="#">My Education</a>
+                    </li>
+                    <li>
+                      <a href="#">My Tools</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
+                <div
+                  class="f_widget about-widget pl_70 wow fadeInLeft"
+                  data-wow-delay="0.4s"
+                  style={{
+                    visibility: 'visible',
+                    animationDelay: '0.4s',
+                    animationName: 'fadeInLeft',
+                  }}
+                >
+                  <h3 class="f-title f_600 t_color f_size_18">FEED Insights</h3>
+                  <ul class="list-unstyled f_list">
+                    <li>
+                      <a href="#">Suggestions</a>
+                    </li>
+                    <li>
+                      <a href="#">Sample works</a>
+                    </li>
+                    <li>
+                      <a href="#">Queries</a>
+                    </li>
+                    <li>
+                      <a href="#">Compliants</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
+                <div
+                  class="f_widget about-widget pl_70 wow fadeInLeft"
+                  data-wow-delay="0.6s"
+                  style={{
+                    visibility: 'visible',
+                    animationDelay: '0.4s',
+                    animationName: 'fadeInLeft',
+                  }}
+                >
+                  <h3 class="f-title f_600 t_color f_size_18">Help</h3>
+                  <ul class="list-unstyled f_list">
+                    <li>
+                      <a href="#">FAQs</a>
+                    </li>
+                    <li>
+                      <a href="#">Reporting</a>
+                    </li>
+                    <li>
+                      <a href="#">Documentation</a>
+                    </li>
+                    <li>
+                      <a href="#">Support Policy</a>
+                    </li>
+                    <li>
+                      <a href="#">Terms &amp; conditions</a>
+                    </li>
+                    <li>
+                      <a href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                      <a href="#">Disclaimer</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+                <div
+                  class="f_widget social-widget pl_70 wow fadeInLeft"
+                  data-wow-delay="0.8s"
+                  style={{
+                    visibility: 'visible',
+                    animationDelay: '0.4s',
+                    animationName: 'fadeInLeft',
+                  }}
+                >
+                  <h3 class="f-title f_600 t_color f_size_18">
+                    Connect with us
+                  </h3>
+                  <div class="f_social_icon">
+                    <a href="#" class="fab fa-facebook"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="#" class="fab fa-pinterest"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {window.innerWidth > 768 ? (
+            <div class="footer_bg">
+              {/* <div class="footer_bg_one" style={{ backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-market/bullock-cart.png")`, width: '10%', backgroundRepeat: 'no-repeat', transform: 'scaleX(-1)' }}></div> */}
+              <div class="footer_bg_two"></div>
+              <div
+                class="footer_bg_three"
+                style={{
+                  backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/footer/plane.png")`,
+                  width: '80px',
+                  backgroundRepeat: 'no-repeat',
+                }}
+              ></div>
+            </div>
+          ) : (
+            ''
+          )}
+        </div>
+        <Grid
+          container
+          justifyContent="space-around"
+          className={classes.footerPolicyWrap}
+          style={{ boxShadow: '0px -11px 2px 0px rgba(0,0,0,0.75)' }}
+        >
+          <Grid lg={4} style={{ textAlign: 'center' }}>
+            <p>Copyright &copy; {year} FEED ORG. All Rights Reserved</p>
+          </Grid>
+        </Grid>
+      </footer>
     </>
   )
 }

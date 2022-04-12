@@ -1,0 +1,53 @@
+/* .productSpecificationsTable .tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+/* table{
+  width: 100%;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+td {
+  padding: '8px';
+} */
+/* .productSpecificationsTable {
+  border:'1px solid green'
+} */
+.productSpecificationsTable tr {
+  /* border: 1px solid red; */
+}
+
+.productSpecificationsTable td {
+  /* width: 50%; */
+}
+.swiper-container-vertical .swiper-button-next,
+.swiper-container-vertical .swiper-button-prev {
+  left: 50%;
+  transform: rotate(90deg);
+  transform-origin: left center;
+}
+.swiper-container-vertical .swiper-button-prev {
+  top: 0px;
+}
+.swiper-container-vertical .swiper-button-next {
+  top: auto;
+  bottom: 10px;
+}
+
+.swiper-container-vertical .swiper-button-next {
+  position: absolute;
+  z-index: 100;
+  bottom: 0px;
+}
+.swiper-container-vertical .swiper-button-next:after {
+  font-size: 24px;
+}
+
+.swiper-container-vertical .swiper-button-prev {
+  position: absolute;
+  z-index: 100;
+  top: 0px;
+}
+.swiper-container-vertical .swiper-button-prev:after {
+  font-size: 24px;
+}

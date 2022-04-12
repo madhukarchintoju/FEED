@@ -21,12 +21,6 @@ export default function FpoAccount() {
 
   return (
     <>
-      {/* <Grid className="text-center">
-        <img
-          src={`${process.env.PUBLIC_URL}/assets/my-fpo/accounts/fpcfpoaccountsnameplate.png`}
-          alt=""
-        />
-      </Grid> */}
       <Grid item lg={11} className="m-auto">
         <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
           <li>
@@ -57,6 +51,13 @@ export default function FpoAccount() {
             />
           </Link>
         </Grid>
+      </Grid>
+      <Grid lg={8} className="text-center" item style={{ margin: 'auto' }}>
+        <div>
+          <Link to="/myfpo/form">
+            <button className="btn btn-danger">Form</button>
+          </Link>
+        </div>
       </Grid>
       <Grid container item lg={12}>
         <Grid item lg={4} className="text-center">

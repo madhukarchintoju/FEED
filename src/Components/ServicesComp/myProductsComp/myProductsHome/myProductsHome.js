@@ -15,6 +15,7 @@ import Highcharts from 'highcharts/highmaps'
 import map from '@highcharts/map-collection/custom/world.geo.json'
 import HighchartsMap from 'highcharts/modules/map'
 import HighchartsReact from 'highcharts-react-official'
+import { object } from 'yup'
 
 // map(Highcharts);
 export default function MyProductsHome() {
@@ -1145,71 +1146,102 @@ export default function MyProductsHome() {
 
   const productboxes = [
     {
-      title: 'Production',
-      type: '',
-      area: '',
-      quantity: '',
-      link: '/myproductprofile/productproduction',
+      name: 'Production',
+      details: [{ type: '' }, { area: '' }, { quantity: '' }, { link: '' }],
+      // type: '',
+      // area: '',
+      // quantity: '',
+      // link: '/myproductprofile/productproduction',
     },
     {
-      title: 'Trade',
-      export: '',
-      import: '',
-      domestic: '',
-      link: '/myproductprofile/producttrade',
+      name: 'Trade',
+      details: [
+        { export: '' },
+        { import: '' },
+        { domestic: '' },
+        { link: '/myproductprofile/producttrade' },
+      ],
     },
-    {
-      title: 'Untapped Market',
-      region: '',
-      exportOpportunities: '',
-      link: '/myproductprofile/productuntappedmarket',
-    },
-    {
-      title: 'BI Products',
-      name: '',
-      hscode: '',
-      link: '/myproductprofile/productbiproducts',
-    },
-    {
-      title: 'Processing',
-      valuAdditionUnits: '',
-      marketYards: '',
-      link: '/myproductprofile/productprocessing',
-    },
-    {
-      title: 'Database & Docs',
-      buyers: '',
-      sellers: '',
-      eximDocumentation: '',
-      link: '/myproductprofile/productdatabase',
-    },
-    {
-      title: 'Country Profile',
-      link: '',
-    },
-    {
-      title: 'Schemes & Policies',
-      global: '',
-      central: '',
-      state: '',
-      link: '/myproductprofile/productschemespolicy',
-    },
-    {
-      title: 'Product Guide',
-      farming: '',
-      processing: '',
-      packing: '',
-      trading: '',
-    },
-    {
-      title: 'FEED Foot Print',
-      epmCount: '',
-      fpoCount: '',
-      feedtrade: '',
-      feedFarming: '',
-    },
+    // {
+    //   title: 'Trade',
+    //   export: '',
+    //   import: '',
+    //   domestic: '',
+    //   link: '/myproductprofile/producttrade',
+    // },
+    // {
+    //   title: 'Untapped Market',
+    //   region: '',
+    //   exportOpportunities: '',
+    //   link: '/myproductprofile/productuntappedmarket',
+    // },
+    // {
+    //   title: 'BI Products',
+    //   name: '',
+    //   hscode: '',
+    //   link: '/myproductprofile/productbiproducts',
+    // },
+    // {
+    //   title: 'Processing',
+    //   valuAdditionUnits: '',
+    //   marketYards: '',
+    //   link: '/myproductprofile/productprocessing',
+    // },
+    // {
+    //   title: 'Database & Docs',
+    //   buyers: '',
+    //   sellers: '',
+    //   eximDocumentation: '',
+    //   link: '/myproductprofile/productdatabase',
+    // },
+    // {
+    //   title: 'Country Profile',
+    //   link: '',
+    // },
+    // {
+    //   title: 'Schemes & Policies',
+    //   global: '',
+    //   central: '',
+    //   state: '',
+    //   link: '/myproductprofile/productschemespolicy',
+    // },
+    // {
+    //   title: 'Product Guide',
+    //   farming: '',
+    //   processing: '',
+    //   packing: '',
+    //   trading: '',
+    // },
+    // {
+    //   title: 'FEED Foot Print',
+    //   epmCount: '',
+    //   fpoCount: '',
+    //   feedtrade: '',
+    //   feedFarming: '',
+    // },
   ]
 
+  const show = () => {
+    // object.entries(productboxes)
+    // for (var key in productboxes) {
+    //   if (productboxes.hasOwnProperty(key)) {
+    //     console.log(productboxes.map((item, index) => {
+    //       return (
+    //         <p key={index}>{item}</p>
+    //       )
+    //     }))
+    //   }
+    // }
+
+    for (let val in productboxes) {
+      console.log(val, productboxes[val])
+    }
+  }
+  const productboxesCards = () => {
+    for (let val in productboxes) {
+      ;<p>{productboxes[val]}</p>
+    }
+  }
   return (
     <>
       <Grid
@@ -1218,7 +1250,9 @@ export default function MyProductsHome() {
         item
         style={{ padding: '5px', justifyContent: 'center' }}
       >
-        {productboxes.map((item, index) => (
+        <button onClick={() => show()}>Show results</button>
+        {productboxesCards()}
+        {/* {productboxes.map((item, index) => (
           <Grid
             lg={2}
             md={2}
@@ -1226,9 +1260,9 @@ export default function MyProductsHome() {
             xs={4}
             item
             style={{
-              border: '1px solid grey',
               margin: '5px',
               borderRadius: '5px 5px',
+              boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)'
             }}
             key={index}
           >
@@ -1238,7 +1272,7 @@ export default function MyProductsHome() {
                   textAlign: 'center',
                   borderRadius: '5px 5px 0px 0px',
                   padding: '3px',
-                  backgroundColor: 'orange',
+                  backgroundColor: '#c7d7ff',
                   height: '2em',
                   display: 'flex',
                   justifyContent: 'center',
@@ -1247,16 +1281,17 @@ export default function MyProductsHome() {
               >
                 <h6 className="mb-0">{item.title}</h6>
               </Grid>
-              {/* <Divider /> */}
-              <h6 className="font-weight-normal">Type:</h6>
-              <h6 className="font-weight-normal">Area:</h6>
-              <h6 className="font-weight-normal">Quantity:</h6>
-              <div className="text-center">
-                <Link to={item.link}>View More</Link>
+              <div style={{padding:'0px 3px'}}>
+                <h6 className="font-weight-normal">Type:</h6>
+                <h6 className="font-weight-normal">Area:</h6>
+                <h6 className="font-weight-normal">Quantity:</h6>
+                <div className="text-center">
+                  <Link to={item.link}>View More</Link>
+                </div>
               </div>
             </Grid>
           </Grid>
-        ))}
+        ))} */}
       </Grid>
       <HighchartsReact
         highcharts={Highcharts}

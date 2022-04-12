@@ -55,9 +55,12 @@ function Home() {
     //   }
     // }
     eventupdatesWrap: {
-      boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-      webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-      mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      borderRadius: '25px 25px',
+      padding: '5px',
+      // boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      // webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      // mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      boxShadow: '0px 0px 15px 0px rgba(125,125,125,0.75)',
     },
     newsfeeds: {
       // overflow: 'auto',
@@ -71,7 +74,10 @@ function Home() {
       justifyContent: 'center',
       height: '2em',
       alignItems: 'center',
-      backgroundColor: '#f08e16',
+      borderRadius: '25px 25px 0px 0px',
+      // backgroundColor: '#f08e16',
+      background: 'rgba(232, 159, 95,0.5)',
+      color: 'black',
     },
   }))
   const classes = useStyles()
@@ -276,25 +282,25 @@ function Home() {
                         href="#gentle-wave"
                         x="48"
                         y="2"
-                        fill="rgba(0,172,193,0.5)"
-                      />
-                      <use
-                        href="#gentle-wave"
-                        x="48"
-                        y="7"
-                        fill="rgba(32,156,255,0.5)"
+                        fill="rgba(0,162,193,0.5)"
                       />
                       <use
                         href="#gentle-wave"
                         x="48"
                         y="3"
-                        fill="rgba(0,122,183,0.7)"
+                        fill="rgba(0,156,255,0.5)"
                       />
                       <use
                         href="#gentle-wave"
                         x="48"
                         y="5"
-                        fill="rgba(104,224,207,0.1)"
+                        fill="rgba(0,142,203,0.7)"
+                      />
+                      <use
+                        href="#gentle-wave"
+                        x="48"
+                        y="7"
+                        fill="rgba(0,154,207,0.1)"
                       />
                     </g>
                   </svg>

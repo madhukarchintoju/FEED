@@ -47,21 +47,37 @@ function Header(props) {
               backgroundSize: 'cover',
             }}
           >
-            <div className="my-auto text-white contact-num">
-              <img
+            <div
+              className="my-auto text-white contact-num"
+              style={{ fontSize: '14px' }}
+            >
+              {/* <img
                 src={`${process.env.PUBLIC_URL}/assets/phone.svg`}
                 width="20"
                 alt="phone-icon"
-              />{' '}
-              <span>+91 9293858689</span>
+              />{' '} */}
+              <span>
+                <i
+                  class="fa fa-phone"
+                  aria-hidden="true"
+                  style={{ transform: 'scaleX(-1)' }}
+                ></i>{' '}
+                +91 9293858689
+              </span>
             </div>
-            <div className="my-auto text-white contact-mail">
-              <img
+            <div
+              className="my-auto text-white contact-mail"
+              style={{ fontSize: '14px' }}
+            >
+              {/* <img
                 src={`${process.env.PUBLIC_URL}/assets/email.svg`}
                 width="20"
                 alt="email-icon"
-              />{' '}
-              <span>info@feedorg.com</span>
+              />{' '} */}
+              <span>
+                <i class="fa fa-envelope" aria-hidden="true"></i>{' '}
+                info@feedorg.com
+              </span>
             </div>
             <div className="my-auto">
               <form>
@@ -76,24 +92,44 @@ function Header(props) {
                 </select>
               </form>
             </div>
-            <div className="btn-group">
+            <div className="btn-group my-auto">
               <Link to="/downloads">
-                <button className="btn-primary mr-1">
-                  <span className="download-btn-text">
-                    <i className="fa fa-download" aria-hidden="true"></i>{' '}
-                    Downloads
-                  </span>
+                <button
+                  style={{
+                    backgroundColor: 'transparent',
+                    border: 'none',
+                    padding: '0px 5px',
+                    color: 'white',
+                  }}
+                >
+                  {/* <i className="fa fa-download" aria-hidden="true"></i>{' '} */}
+                  Downloads
                 </button>
               </Link>
-
               <Link to="/mediapage">
-                <button className="btn-primary mr-1">
-                  <i class="fas fa-photo-video"></i> Media
+                <button
+                  style={{
+                    backgroundColor: 'transparent',
+                    border: 'none',
+                    padding: '0px 5px',
+                    color: 'white',
+                  }}
+                >
+                  {/* <i class="fas fa-photo-video"></i> */}
+                  Media
                 </button>
               </Link>
               <Link to="/blogspage">
-                <button className="btn-primary">
-                  <i class="fab fa-blogger"></i> Blogs
+                <button
+                  style={{
+                    backgroundColor: 'transparent',
+                    border: 'none',
+                    padding: '0px 5px',
+                    color: 'white',
+                  }}
+                >
+                  {/* <i class="fab fa-blogger"></i> */}
+                  Blogs
                 </button>
               </Link>
             </div>
@@ -126,7 +162,7 @@ function Header(props) {
                 </div>
               </form>
             </div> */}
-            {window.innerWidth > 425 ? (
+            {/* {window.innerWidth > 425 ? (
               <div className="my-auto header-social-icons">
                 <a
                   href="https://www.facebook.com/FEEDORGOFFICIALPAGE"
@@ -175,7 +211,7 @@ function Header(props) {
               </div>
             ) : (
               ''
-            )}
+            )} */}
           </div>
           <div className="row white-bg">
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 resp-logo-title">
@@ -187,11 +223,11 @@ function Header(props) {
                   // width="60%"
                 />
               </div>
-              <div>
-                <h5 className="m-2 title text-center">
+              <div style={{ display: 'grid', alignItems: 'center' }}>
+                <h4 className="mb-0 title text-center">
                   FARM TO FOREIGN EXPORTS ENTREPRENEURSHIP DEVELOPMENT MULTI
                   STATE COOPERATIVE SOCIETY LTD.
-                </h5>
+                </h4>
                 <p className="reg-no text-right m-0">
                   REG.No: MSCS/CR/1295/2020
                 </p>
@@ -217,7 +253,10 @@ function Header(props) {
                 <SwipeableNav open={open} navOpened={navOpened} />
               </>
             ) : (
-              <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0">
+              <div
+                className="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0"
+                style={{ display: 'grid', alignItems: 'center' }}
+              >
                 <nav className="navbar navbar-expand-lg nav-list p-0">
                   <button
                     className="navbar-toggler"

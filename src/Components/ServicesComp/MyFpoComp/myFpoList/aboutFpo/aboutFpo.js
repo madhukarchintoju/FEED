@@ -16,27 +16,27 @@ export default function AboutFpo(props) {
     {
       statTitle: 'Registered Farmers',
       statcount: 300,
-      backgroundColor: '#B9C406',
+      backgroundColor: '#d8ebd8',
     },
     {
       statTitle: 'Acres of land',
       statcount: 1000,
-      backgroundColor: '#704404',
+      backgroundColor: '#f2ede4',
     },
     {
       statTitle: 'Villages Covered',
       statcount: 10,
-      backgroundColor: '#F1931B',
+      backgroundColor: '#f0d7c2',
     },
     {
       statTitle: 'Countries Served',
       statcount: 5,
-      backgroundColor: '#f96762',
+      backgroundColor: '#cee6ed',
     },
     {
       statTitle: 'Customers Worldwide',
       statcount: 500,
-      backgroundColor: '#996aa0',
+      backgroundColor: '#e4e9f5',
     },
   ]
   const productAndServices = [
@@ -157,21 +157,25 @@ export default function AboutFpo(props) {
       // backgroundColor:'#fffcee'
       // border:'1px solid red'
     },
+    fpoStatistics: {
+      margin: '15px auto',
+    },
     aboutFpo: {
       // height:'450px',
     },
     fpcLogo: {
-      width: '5em',
-      height: '5em',
+      width: '3em',
+      height: '3em',
     },
     aboutFpoTitle: {
-      padding: '3px',
-      marginLeft: '5px',
-      marginRight: '10px',
-      border: '3px solid grey',
+      display: 'flex',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      // padding: '0px 3px',
+      border: '2px solid grey',
       borderRadius: '10px 10px',
-      backgroundColor: 'white',
-      fontFamily: `'STIX Two Text', serif`,
+      // backgroundColor: 'white',
+      // fontFamily: `'STIX Two Text', serif`,
       fontSize: '28px',
     },
     aboutFpoContentWrap: {
@@ -211,10 +215,11 @@ export default function AboutFpo(props) {
     aboutFpoGallery: {
       padding: '5px',
       // backgroundColor: '#c6e3a0',
-      borderRadius: '15px 15px',
-      boxShadow: '0px 0px 11px 0px rgba(0,0,0,0.75)',
-      webkitBoxShadow: '0px 0px 11px 0px rgba(0,0,0,0.75)',
-      mozBoxShadow: '0px 0px 11px 0px rgba(0,0,0,0.75)',
+      // borderRadius: '15px 15px',
+      // boxShadow: '0px 2px 0px 2px rgba(0,0,0,0.75)',
+      // webkitBoxShadow: '0px 0px 11px 0px rgba(0,0,0,0.75)',
+      // mozBoxShadow: '0px 0px 11px 0px rgba(0,0,0,0.75)',
+      boxShadow: '0px 0px 15px 0px rgba(125,125,125,0.75)',
     },
     aboutFpoContact: {
       border: '1px solid red',
@@ -261,12 +266,22 @@ export default function AboutFpo(props) {
             alt=""
           />
         </Grid> */}
+        <div
+          className="col-lg-12"
+          style={{ display: 'flex', justifyContent: 'space-between' }}
+        >
+          <span>
+            FPC Name: <strong>Fruits Farm Producer Ltd</strong>
+          </span>
+          <span>
+            Date of Establishment: <strong>14-1-2020</strong>
+          </span>
+        </div>
         <Grid item lg={11} className="m-auto">
-          <ul
+          {/* <ul
             style={{
               textAlign: 'justify',
               textJustify: 'inter-word',
-              fontWeight: '600',
             }}
           >
             <li>
@@ -281,30 +296,29 @@ export default function AboutFpo(props) {
               Improves visibility of FPO website through “Share FPO profile
               option” anywhere and anytime to potential buyers.
             </li>
-          </ul>
+          </ul> */}
         </Grid>
         <Grid
           container
           item
           lg={11}
-          className="m-auto"
+          className={classes.fpoStatistics}
           justifyContent="space-around"
         >
           {aboutFpcStatistics.map((item, index) => (
             <Grid
               key={index}
               lg={2}
+              sm={5}
+              xs={5}
               style={{
                 marginTop: '10px',
                 textAlign: 'center',
                 borderRadius: '10px 10px',
                 backgroundColor: item.backgroundColor,
-                boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-                webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-                mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75) ',
               }}
             >
-              <div className="text-white p-1">
+              <div className="p-1">
                 <h6>{item.statTitle}</h6>
                 <h2>
                   <CountUp
@@ -328,29 +342,24 @@ export default function AboutFpo(props) {
           >
             <Grid lg={11} item className="about-fpo-content">
               <fieldset>
-                <legend>
+                {/* <legend>
                   <Grid
-                  // container
-                  // style={{ display: 'flex', justifyContent: 'center' }}
+                    container
+                    className={classes.aboutFpoTitle}
                   >
-                    <Grid>
-                      <img
-                        src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/fpclogo.jpg`}
-                        // width='120'
-                        alt="FPO LOGO"
-                        className={classes.fpcLogo}
-                      />
-                    </Grid>
-
-                    {/* <Grid> */}
-                    <h4 className={classes.aboutFpoTitle}>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/assets/my-fpo/about/fpclogo.jpg`}
+                      width='100'
+                      alt="FPO LOGO"
+                      className={classes.fpcLogo}
+                    />
+                    <h4>
                       Fruits Farm Producer Ltd
                     </h4>
-                    {/* </Grid> */}
                   </Grid>
-                </legend>
+                </legend> */}
                 <h5
-                  className="ml-3"
+                  // className="ml-3"
                   style={{ fontFamily: `'STIX Two Text', serif` }}
                 >
                   About FPC :
@@ -383,6 +392,7 @@ export default function AboutFpo(props) {
                     remaining essentiallya type specimen book.It has survived
                     not only five centuries, but also the leap into electronic
                     typesetting, remaining essentiallya type specimen book.
+                    <a href="#"> Read More</a>
                   </p>
                 </Grid>
               </fieldset>

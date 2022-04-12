@@ -2,23 +2,13 @@ import React from 'react'
 import { Grid, makeStyles } from '@material-ui/core'
 import MyMarketFilters from '../myMarketFilters/myMarketFilters'
 import MyMarketProductCard from '../myMarketProductCard/myMarketProductCard'
-import Breadcrumbs from '@material-ui/core/Breadcrumbs'
 import Typography from '@material-ui/core/Typography'
-import Link from '@material-ui/core/Link'
-import NavigateNextIcon from '@material-ui/icons/NavigateNext'
-
-function handleClick(event) {
-  event.preventDefault()
-  console.info('You clicked a breadcrumb.')
-}
 
 const useStyles = makeStyles((theme) => ({
   productSelectionWrap: {
     display: 'flex',
     justifyContent: 'space-between',
-    borderTop: '2px solid grey',
-    marginTop: '5px',
-    // border: '1px solid red',
+    padding: '10px',
   },
 }))
 const productsList = [
@@ -93,45 +83,18 @@ const productsList = [
     area: 'Bhimavaram, West Godavari Dist.',
   },
 ]
-const breadcrumbs = [
-  <Link
-    underline="hover"
-    key="1"
-    color="inherit"
-    href="/"
-    onClick={handleClick}
-  >
-    My Market
-  </Link>,
-  <Link
-    underline="hover"
-    key="2"
-    color="inherit"
-    href="/getting-started/installation/"
-    onClick={handleClick}
-  >
-    Categories
-  </Link>,
-  <Typography key="3" color="text.primary">
-    Breadcrumb
-  </Typography>,
-]
 function MyMarketProductSelection() {
   const classes = useStyles()
   return (
     <>
       <div className={classes.productSelectionWrap}>
-        <Grid lg={2} style={{ boxShadow: '0px 0px 1px 0px rgba(0,0,0,0.75)' }}>
+        <Grid style={{ width: '18%' }}>
           <MyMarketFilters />
         </Grid>
-        <Grid lg={8} item style={{ margin: '0px 10px' }}>
-          <Breadcrumbs
-            separator={<NavigateNextIcon fontSize="small" />}
-            aria-label="breadcrumb"
-            style={{ margin: '5px' }}
-          >
-            {breadcrumbs}
-          </Breadcrumbs>
+        <Grid
+          item
+          style={{ width: '70%', backgroundColor: 'white', padding: '10px' }}
+        >
           <Grid
             container
             lg={12}
@@ -159,8 +122,25 @@ function MyMarketProductSelection() {
             ))}
           </Grid>
         </Grid>
-        <Grid lg={2} style={{ boxShadow: '0px 0px 1px 0px rgba(0,0,0,0.75)' }}>
-          three
+        <Grid
+          style={{
+            width: '10%',
+            padding: '3px',
+            textAlign: 'center',
+            backgroundColor: 'white',
+          }}
+        >
+          <h6>Search by Category</h6>
+          <hr />
+          <div style={{ display: 'grid' }}>
+            <button className="btn btn-warning">FPC</button>
+            <hr />
+            <button className="btn btn-success">FARMER</button>
+            <hr />
+            <button className="btn btn-primary">MSME</button>
+            <hr />
+            <button className="btn btn-info">EXPORTS</button>
+          </div>
         </Grid>
       </div>
     </>

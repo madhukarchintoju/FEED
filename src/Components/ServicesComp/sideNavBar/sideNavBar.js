@@ -31,7 +31,9 @@ export default function SideNavBar(props, { defaultActive }) {
       flexShrink: 0,
       whiteSpace: 'nowrap',
       // height: '100%',
-      boxShadow: '-1px 0px 5px 0px rgba(0,0,0,0.75) inset',
+      // border:'1px solid red',
+      // borderRadius:'10px 10px',
+      // backgroundColor:'#f6f4f5'
     },
     drawerOpen: {
       transition: theme.transitions.create('width', {
@@ -50,12 +52,13 @@ export default function SideNavBar(props, { defaultActive }) {
     toolbar: {
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'flex-end',
-      padding: theme.spacing(0, 1),
+      justifyContent: 'space-around',
+      // padding: theme.spacing(0, 1),
       ...theme.mixins.toolbar,
       minHeight: '0px !important',
-      background: `${props.serviceTitleBg}` || 'grey',
-      color: 'white',
+      // background: `${props.serviceTitleBg}` || 'grey',
+      // color: 'white',
+      borderRadius: '5px 5px',
       // borderBottom:'2px dotted orange'
       //       boxShadow: '0px 5px 5px 0px rgba(255,255,255,0.75)',
       // webkitBoxShadow: '0px 5px 5px 0px rgba(255,255,255,0.75)',
@@ -66,7 +69,9 @@ export default function SideNavBar(props, { defaultActive }) {
       padding: theme.spacing(3),
     },
     paper: {
-      backgroundColor: props.bgColor || 'grey',
+      // backgroundColor: props.bgColor || 'grey',
+      backgroundColor: '#f5f5f5',
+      // borderRadius:'5px 5px 0px 0px',
       border: 'none',
       color: props.textColor || 'white',
       top: 'initial',
@@ -76,14 +81,22 @@ export default function SideNavBar(props, { defaultActive }) {
     selectedItem: {
       // backgroundColor: '#ffdc75',
       // background: 'rgb(230,185,52)',
-      color: props.selectedSideNavLinkColor || 'black',
-      background:
-        props.selectedSideNavLink ||
-        'linear-gradient(90deg, rgba(255,193,7,1) 17%, rgba(255,255,255,1) 67%)',
+      borderRadius: '10px 10px',
+      // color: props.selectedSideNavLinkColor || 'black',
+      color: 'black',
+      backgroundColor: '#e0e0e0',
+      fontWeight: '800',
+      border: '3px solid white',
+      // background:
+      //   props.selectedSideNavLink ||
+      //   'linear-gradient(90deg, rgba(255,193,7,1) 17%, rgba(255,255,255,1) 67%)',
     },
     hoverlink: {
+      color: '#5c5c5c',
       '&:hover': {
-        color: 'white',
+        borderRadius: '10px 10px',
+        backgroundColor: '#e0e0e0',
+        color: 'black',
       },
     },
   }))
@@ -120,16 +133,22 @@ export default function SideNavBar(props, { defaultActive }) {
               ''
             )}
             {open ? (
-              <IconButton onClick={handleDrawerClose}>
+              <IconButton
+                onClick={handleDrawerClose}
+                style={{ padding: '0px' }}
+              >
                 <ChevronLeftIcon style={{ color: props.textColor }} />
               </IconButton>
             ) : (
-              <IconButton onClick={handleDrawerOpen}>
+              <IconButton
+                onClick={handleDrawerOpen}
+                style={{ padding: '0.3em' }}
+              >
                 <ChevronRightIcon style={{ color: props.textColor }} />
               </IconButton>
             )}
           </div>
-          <Divider />
+          {/* <Divider /> */}
           <List style={{ padding: '0em' }}>
             {props?.data.map((item, index) => (
               <div
@@ -157,14 +176,20 @@ export default function SideNavBar(props, { defaultActive }) {
                   }
                 >
                   <ListItemIcon>
-                    <Icon
-                      className={item.icon}
-                      style={{ width: '2em', color: props.textColor }}
-                    />
+                    {item.icon ? (
+                      <Icon
+                        className={item.icon}
+                        style={{ width: '2em', color: props.textColor }}
+                      />
+                    ) : (
+                      <img
+                        src={`${process.env.PUBLIC_URL}/assets/icons/${item.svgicon}.svg`}
+                      />
+                    )}
                   </ListItemIcon>
                   <ListItemText primary={item.name} />
                 </ListItem>
-                <Divider />
+                {/* <Divider /> */}
               </div>
             ))}
           </List>

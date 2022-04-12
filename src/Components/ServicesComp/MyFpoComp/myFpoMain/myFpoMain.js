@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import './myFpoMain.css'
 import { useHistory } from 'react-router-dom'
-import { Grid, Button, Icon, Avatar, makeStyles } from '@material-ui/core'
+import {
+  Grid,
+  Button,
+  Icon,
+  Avatar,
+  makeStyles,
+  Divider,
+} from '@material-ui/core'
 import ServicesNavbar from '../../ServicesNavbar/ServicesNavbar.js'
 import SideNavBar from '../../sideNavBar/sideNavBar'
 import { Route, Switch, Redirect } from 'react-router-dom'
@@ -42,101 +49,102 @@ import TradeLice from '../myFpoList/fpoComplainces/statutoryRegistration/tradeLi
 import LabourLice from '../myFpoList/fpoComplainces/statutoryRegistration/labourLice/labourLice'
 import MonthlyGst from '../myFpoList/fpoComplainces/legalCompliances/monthlyGst/monthlyGst'
 import StockChecking from '../myFpoList/fpoComplainces/legalCompliances/stockChecking/stockChecking'
+import Form from '../myFpoList/fpoAccount/oneForm/form'
 
 export default function MyFpoMain(props) {
-  const background = {
-    '/myfpo/home': {
-      // backgroundColor: '#f7f1dd',
-    },
-    '/myfpo/aboutfpc': {
-      backgroundColor: '',
-    },
-    '/myfpo/fpcaccount': {
-      backgroundImage: `URL("/assets/my-fpo/accounts/myfpoaccountsbg.png")`,
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    },
-    '/myfpo/fpcbusinessplan': {},
-    '/myfpo/fpccomplainces': {
-      backgroundImage: `URL("/assets/my-fpo/compliances/home/fpo-compliances-bg.jpg")`,
-      backgroundRepeat: 'no-repeat',
-    },
-    '/myfpo/fpccompliances/statutoryregistration': {
-      backgroundImage: `URL("/assets/my-fpo/compliances/statutory/statutory-compliances-bg.jpg")`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-    },
-    '/myfpo/fpccompliances/legalcompliances': {
-      backgroundImage: `URL("/assets/my-fpo/compliances/legal/legal-compliances-bg.jpg")`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    },
-    '/myfpo/fpccompliances/annualcompliances': {
-      backgroundImage: `URL("/assets/my-fpo/compliances/annual/annual-compliances-bg.jpg")`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    },
-    '/myfpo/fpcagmboard': {
-      backgroundImage: `URL("/assets/my-fpo/agmboard/agmbg.jpg")`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'center',
-    },
-    '/myfpo/fpcloanschemes': {},
-    '/myfpo/fpcconnect': {},
-  }
+  // const background = {
+  //   '/myfpo/home': {
+  //     backgroundColor: '#f7f1dd',
+  //   },
+  //   '/myfpo/aboutfpc': {
+  //     backgroundColor: '',
+  //   },
+  //   '/myfpo/fpcaccount': {
+  //     backgroundImage: `URL("/assets/my-fpo/accounts/myfpoaccountsbg.png")`,
+  //     backgroundRepeat: 'no-repeat',
+  //     backgroundPosition: 'center',
+  //   },
+  //   '/myfpo/fpcbusinessplan': {},
+  //   '/myfpo/fpccomplainces': {
+  //     backgroundImage: `URL("/assets/my-fpo/compliances/home/fpo-compliances-bg.jpg")`,
+  //     backgroundRepeat: 'no-repeat',
+  //   },
+  //   '/myfpo/fpccompliances/statutoryregistration': {
+  //     backgroundImage: `URL("/assets/my-fpo/compliances/statutory/statutory-compliances-bg.jpg")`,
+  //     backgroundSize: 'cover',
+  //     backgroundRepeat: 'no-repeat',
+  //   },
+  //   '/myfpo/fpccompliances/legalcompliances': {
+  //     backgroundImage: `URL("/assets/my-fpo/compliances/legal/legal-compliances-bg.jpg")`,
+  //     backgroundSize: 'cover',
+  //     backgroundRepeat: 'no-repeat',
+  //     backgroundPosition: 'center',
+  //   },
+  //   '/myfpo/fpccompliances/annualcompliances': {
+  //     backgroundImage: `URL("/assets/my-fpo/compliances/annual/annual-compliances-bg.jpg")`,
+  //     backgroundSize: 'cover',
+  //     backgroundRepeat: 'no-repeat',
+  //     backgroundPosition: 'center',
+  //   },
+  //   '/myfpo/fpcagmboard': {
+  //     backgroundImage: `URL("/assets/my-fpo/agmboard/agmbg.jpg")`,
+  //     backgroundSize: 'cover',
+  //     backgroundRepeat: 'no-repeat',
+  //     backgroundPosition: 'center',
+  //   },
+  //   '/myfpo/fpcloanschemes': {},
+  //   '/myfpo/fpcconnect': {},
+  // }
   const navData = [
     {
       name: 'About FPC',
-      icon: 'fas fa-info-circle',
+      svgicon: 'info',
       path: '/myfpo/aboutfpc',
     },
     {
       name: 'FPC Account',
-      icon: 'fas fa-calculator',
+      svgicon: 'accountfolder',
       path: '/myfpo/fpcaccount',
     },
     {
       name: 'FPC Business Plan',
-      icon: 'fa fa-briefcase',
+      svgicon: 'business',
       path: '/myfpo/fpcbusinessplan',
     },
     {
       name: 'Capacity Building',
-      icon: 'fas fa-handshake',
+      svgicon: 'foundation',
       path: '/myfpo/fpccapacitybuilding',
     },
     {
       name: 'FPC Compliances',
-      icon: 'fas fa-file-invoice',
+      svgicon: 'openbook',
       path: '/myfpo/fpccomplainces',
     },
     {
       name: 'FPC AGM & Board',
-      icon: 'fas fa-users',
+      svgicon: 'meeting',
       path: '/myfpo/fpcagmboard',
     },
     {
       name: 'FPC Loans Schemes',
-      icon: 'fas fa-university',
+      svgicon: 'bank',
       path: '/myfpo/fpcloanschemes',
     },
     {
       name: 'Reports',
-      icon: 'fas fa-file-pdf',
+      svgicon: 'reports',
       path: '/myfpo/reports',
     },
     {
       name: 'FPC Connect',
-      icon: 'fas fa-network-wired',
+      svgicon: 'connect',
       path: '/myfpo/fpcconnect',
     },
   ]
 
   const useStyles = makeStyles((theme) => ({
-    background: background[props.location.pathname],
+    // background: background[props.location.pathname],
   }))
   const classes = useStyles()
 
@@ -158,6 +166,12 @@ export default function MyFpoMain(props) {
       setName('About FPC')
     } else if (props.location.pathname === '/myfpo/fpcaccount') {
       setName('FPC Account')
+    } else if (props.location.pathname === '/myfpo/sharecapitalregistry') {
+      setName('Share Capital Registry')
+    } else if (props.location.pathname === '/myfpo/purchaseregistry') {
+      setName('Purchase Registry')
+    } else if (props.location.pathname === '/myfpo/salesregister') {
+      setName('Sales Registry')
     } else if (props.location.pathname === '/myfpo/fpcbusinessplan') {
       setName('FPC Business Plan')
     } else if (props.location.pathname === '/myfpo/fpccapacitybuilding') {
@@ -179,6 +193,7 @@ export default function MyFpoMain(props) {
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
+      <WidgetsBar screenTitle={name}></WidgetsBar>
       <div className={'row m-0 content-wrapper-services ' + classes.background}>
         <SideNavBar
           className="col-lg p-0 sidenavbar"
@@ -190,7 +205,7 @@ export default function MyFpoMain(props) {
           selectedSideNavLink="linear-gradient(90deg, rgba(255,193,7,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="col-lg p-0 fpo-content-wrap">
-          <WidgetsBar screenTitle={name}></WidgetsBar>
+          {/* <Divider/> */}
           <Switch>
             <Route path="/myfpo/home" component={MyFpoHome}></Route>
             <Route path="/myfpo/aboutfpc" component={AboutFpo}></Route>
@@ -284,6 +299,7 @@ export default function MyFpoMain(props) {
               path="/myfpo/sharecapitalregistry"
               component={ShareCapitalRegistry}
             ></Route>
+            <Route path="/myfpo/form" component={Form}></Route>
             <Route
               path="/myfpo/purchaseregistry"
               component={PurchaseRegistry}

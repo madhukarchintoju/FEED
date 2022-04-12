@@ -1,17 +1,19 @@
 import React from 'react'
 import './myFarmHome.css'
 import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 import {
+  makeStyles,
   Grid,
   Avatar,
-  Button,
-  Icon,
-  makeStyles,
+  List,
   ListItem,
   ListItemText,
-  Typography,
-  List,
   Divider,
+  Tabs,
+  Tab,
+  Box,
+  Typography,
 } from '@material-ui/core'
 import Slider from 'react-slick'
 
@@ -225,6 +227,44 @@ export default function MyFarmHome() {
     vertical: true,
     verticalSwiping: true,
   }
+
+  const [value, setValue] = React.useState(0)
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue)
+  }
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props
+
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`scrollable-auto-tabpanel-${index}`}
+        aria-labelledby={`scrollable-auto-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box p={3}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    )
+  }
+
+  TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.any.isRequired,
+    value: PropTypes.any.isRequired,
+  }
+
+  function a11yProps(index) {
+    return {
+      id: `scrollable-auto-tab-${index}`,
+      'aria-controls': `scrollable-auto-tabpanel-${index}`,
+    }
+  }
   return (
     <>
       <Grid
@@ -238,7 +278,7 @@ export default function MyFarmHome() {
           container
           direction="row"
           item
-          lg
+          lg={12}
           xs={12}
           justifyContent="flex-start"
           alignItems="center"
@@ -247,7 +287,7 @@ export default function MyFarmHome() {
             <Grid
               key={index}
               xs={6}
-              lg={3}
+              lg={2}
               item
               container
               direction="column"
@@ -272,7 +312,7 @@ export default function MyFarmHome() {
             </Grid>
           ))}
         </Grid>
-        <Grid lg={3} md={12} sm={12} xs={12}>
+        {/* <Grid lg={3} md={12} sm={12} xs={12}>
           <Grid className={classes.farmUpdatesWrap}>
             <h6 className={classes.farmUpdatesHeading}>FEED Updates</h6>
             <Grid style={{ height: '460px', overflow: 'hidden' }}>
@@ -304,14 +344,133 @@ export default function MyFarmHome() {
               </Slider>
             </Grid>
           </Grid>
-        </Grid>
+        </Grid> */}
+        <div
+          className="col-lg-10"
+          style={{
+            padding: '1em',
+            margin: '2em 2em',
+            borderRadius: '10px 10px',
+            boxShadow: '0px 0px 4px 0px rgba(0,0,0,0.75)',
+          }}
+        >
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            indicatorColor="primary"
+            textColor="primary"
+            variant="scrollable"
+            scrollButtons="auto"
+            aria-label="scrollable auto tabs example"
+          >
+            <Tab label="feed to farm" {...a11yProps(0)} />
+            <Tab label="feed updates" {...a11yProps(1)} />
+          </Tabs>
+          <TabPanel value={value} index={0}>
+            <ul style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
+              <li>
+                To conduct baseline survey and analyse the social and financial
+                viability to form an FPO{' '}
+              </li>
+              <li>
+                To provide statutory registration support for registration of
+                company &amp; other formalities associated
+              </li>
+              <li>
+                To cater to the needs of FPOs by connecting them to various
+                STATE &amp; central govt. schemes &amp; orgs like Export
+                promotional councils/committees
+              </li>
+              <li>
+                To provide capacity building training to FPOs for better
+                management and Workshops on Good Agricultural Practices (GAP) to
+                producer members
+              </li>
+              <li>
+                To build awareness on judicious and timely use of chemicals{' '}
+              </li>
+              <li>
+                To provide required quality inspection certifications as per the
+                export country/region
+              </li>
+              <li>
+                To make them self-sustainable by providing domestic and
+                International market linkages along with the database of
+                International buyers from top 50 trading countries with India
+              </li>
+              <li>
+                To render end-to-end support in exporting their product in
+                global markets through latest technology software{' '}
+              </li>
+              <li>
+                To serve as a guide in raising L/Cs, taking export insurance
+                policies, Logistic support etc.
+              </li>
+              <li>
+                To provide the technical support in managing day-to-day
+                activities like preparing business plan, legal and annual
+                compliances etc.
+              </li>
+              <li>
+                To assess the capital requirements &amp; financial viability of
+                FPO and accordingly perform the resource mobilization and credit
+                support
+              </li>
+              <li>
+                To establish processing units to do value addition to FPO
+                products to enhance their members income levels
+              </li>
+              <li>
+                To provide support in marketing their products through
+                E-commerce and in International fairs
+              </li>
+              <li>
+                To integrate agriculture marketing infrastructure support to the
+                end roots and supply the farm machinery and other inputs at low
+                costs to FPOs
+              </li>
+            </ul>
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <Grid style={{ height: '460px', overflow: 'hidden' }}>
+              {farmnewsupdates.map((item, index) => (
+                <Grid key={index} container justifyContent="space-around">
+                  <Grid
+                    container
+                    justifyContent="space-around"
+                    style={{ alignItems: 'center' }}
+                  >
+                    {window.innerWidth > 475 ? (
+                      <Grid item lg={2}>
+                        <img
+                          src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/${item.logo}`}
+                          width="100"
+                          alt=""
+                        />
+                      </Grid>
+                    ) : (
+                      ''
+                    )}
+                    <Grid item lg={9}>
+                      <ListItemText
+                        primary={item.title}
+                        secondary={item.description}
+                      />
+                    </Grid>
+                  </Grid>
+                  <Divider />
+                </Grid>
+              ))}
+            </Grid>
+          </TabPanel>
+        </div>
       </Grid>
-      <Grid container justifyContent="center">
+      {/* <Grid container justifyContent="center">
         <Button className={classes.feedConnect} variant="contained">
           <b>Connect FEED </b>
           <Icon className="fas fa-angle-double-right"></Icon>
         </Button>
-      </Grid>
+      </Grid> */}
     </>
   )
 }

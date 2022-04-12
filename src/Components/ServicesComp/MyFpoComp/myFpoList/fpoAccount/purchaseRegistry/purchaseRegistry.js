@@ -61,13 +61,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     backgroundColor: theme.palette.background.paper,
   },
-  tabCard: {
-    margin: '0.5em',
-    borderRadius: '0px 0px 20px 20px',
-    boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-    webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-    mozBoxShadow: '0px 0px 5px 0px rgba(0, 0, 0, 0.75)',
-  },
 }))
 
 export default function PurchaseRegistry() {
@@ -79,9 +72,6 @@ export default function PurchaseRegistry() {
   }
   return (
     <>
-      <Grid container justifyContent="center">
-        <h5>Purchase Registry</h5>
-      </Grid>
       <div className={classes.root}>
         {/* <AppBar position="static" color="default"> */}
         <Grid container justifyContent="center">
@@ -95,21 +85,9 @@ export default function PurchaseRegistry() {
             centered
             aria-label="scrollable auto tabs example"
           >
-            <Tab
-              label="Purchase Order"
-              {...a11yProps(0)}
-              className={classes.tabCard}
-            />
-            <Tab
-              label="Purchase Invoice"
-              {...a11yProps(1)}
-              className={classes.tabCard}
-            />
-            <Tab
-              label="Return/Debate Note"
-              {...a11yProps(2)}
-              className={classes.tabCard}
-            />
+            <Tab label="Purchase Order" {...a11yProps(0)} />
+            <Tab label="Purchase Invoice" {...a11yProps(1)} />
+            <Tab label="Return/Debate Note" {...a11yProps(2)} />
           </Tabs>
         </Grid>
 

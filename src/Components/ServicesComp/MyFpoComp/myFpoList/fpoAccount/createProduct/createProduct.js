@@ -17,9 +17,10 @@ export default function CreateProduct() {
   const useStyles = makeStyles((theme) => ({
     formRoot: {
       margin: 'auto',
-      boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-      webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-      mozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
+      boxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
+      webkitBoxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
+      mozBoxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
+      borderRadius: '10px 10px',
       marginTop: '2em',
       paddingBottom: '1em',
       '@media (max-width: 768px)': {
@@ -37,7 +38,8 @@ export default function CreateProduct() {
     },
     title: {
       textAlign: 'center',
-      backgroundColor: '#f8931d',
+      // backgroundColor: '#f8931d',
+      borderBottom: '1px solid #dedede',
       padding: '0.2em',
     },
     cancelButton: {
@@ -143,23 +145,6 @@ export default function CreateProduct() {
           <form onSubmit={formik.handleSubmit} className={classes.form}>
             <Grid container direction="row" lg={8} className="m-auto">
               <TextField
-                fullWidth
-                variant="outlined"
-                margin="normal"
-                id="productName"
-                name="productName"
-                label="Product Name"
-                value={formik.values.productName}
-                onChange={formik.handleChange}
-                error={
-                  formik.touched.productName &&
-                  Boolean(formik.errors.productName)
-                }
-                helperText={
-                  formik.touched.productName && formik.errors.productName
-                }
-              />
-              <TextField
                 select
                 fullWidth
                 margin="normal"
@@ -182,6 +167,23 @@ export default function CreateProduct() {
                 fullWidth
                 variant="outlined"
                 margin="normal"
+                id="productName"
+                name="productName"
+                label="Product Name"
+                value={formik.values.productName}
+                onChange={formik.handleChange}
+                error={
+                  formik.touched.productName &&
+                  Boolean(formik.errors.productName)
+                }
+                helperText={
+                  formik.touched.productName && formik.errors.productName
+                }
+              />
+              <TextField
+                fullWidth
+                variant="outlined"
+                margin="normal"
                 id="quantity"
                 name="quantity"
                 label="HSN CODE"
@@ -190,24 +192,6 @@ export default function CreateProduct() {
                   formik.touched.quantity && Boolean(formik.errors.quantity)
                 }
                 helperText={formik.touched.quantity && formik.errors.quantity}
-              />
-              <TextField
-                fullWidth
-                variant="outlined"
-                margin="normal"
-                id="quantity"
-                name="quantity"
-                label="Amount"
-                type="number"
-                error={
-                  formik.touched.quantity && Boolean(formik.errors.quantity)
-                }
-                helperText={formik.touched.quantity && formik.errors.quantity}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">₹</InputAdornment>
-                  ),
-                }}
               />
               <Grid
                 container

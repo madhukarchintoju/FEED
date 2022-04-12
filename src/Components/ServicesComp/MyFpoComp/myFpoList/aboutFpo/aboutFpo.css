@@ -6,11 +6,11 @@
 .about-fpo-descpr {
   width: 100%;
   height: 350px;
-  padding: 1em;
+  /* padding: 1em; */
   overflow: auto;
 }
 .about-fpo-content fieldset {
-  border: 3px solid black !important;
+  /* border: 3px solid black !important; */
   border-radius: 15px 15px;
 }
 .about-fpo-content fieldset legend {

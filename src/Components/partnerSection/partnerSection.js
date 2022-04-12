@@ -10,14 +10,15 @@ export default function PartnerSection() {
     },
     PartnerSection: {
       width: '98%',
+      padding: '5px',
       margin: '0.5em auto 2em !important',
       backgroundColor: 'white',
       borderRadius: '15px 15px 15px 15px',
-      borderLeft: '5px solid orange',
-      borderRight: '5px solid green',
-      boxShadow: '0px 0px 8px 0px rgba(242, 107, 110, 0.75)',
-      webkitBoxShadow: '0px 0px 8px 0px rgba(242, 107, 110, 0.75)',
-      mozBoxShadow: '0px 0px 8px 0px rgba(242, 107, 110, 0.75)',
+      // borderLeft: '5px solid orange',
+      // borderRight: '5px solid green',
+      // boxShadow: '0px -2px 6px 0px rgba(242, 107, 110, 0.75)',
+      // webkitBoxShadow: '0px 0px 8px 0px rgba(242, 107, 110, 0.75)',
+      // mozBoxShadow: '0px 0px 8px 0px rgba(242, 107, 110, 0.75)',
     },
     partnerSlide: {
       textAlign: '-webkit-center',
@@ -51,10 +52,11 @@ export default function PartnerSection() {
     <>
       <Grid className={classes.partnerSectionWrap}>
         <Grid container justifyContent="center" className="mb-3">
-          <img
+          {/* <img
             src={`${process.env.PUBLIC_URL}/assets/partners/partnersnameplate.png`}
             alt="Event and Updates"
-          />
+          /> */}
+          <h5 className="partnersNamePlate">Partners</h5>
         </Grid>
         <Grid container className={classes.PartnerSection}>
           <Grid className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
