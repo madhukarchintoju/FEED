@@ -225,12 +225,6 @@ export default function MyBusinessHome(props) {
         // alignItems="flex-start"
         className="myfpo-home"
       >
-        <Grid container justifyContent="center">
-          {/* <img
-              src={`${process.env.PUBLIC_URL}/assets/my-fpo/home/myfpcnameplate.png`}
-              alt="..."
-            /> */}
-        </Grid>
         <Grid container item lg={12} justifyContent="space-around">
           <Grid container item lg={8} justifyContent="space-around">
             {businessHomeCards.map((item, index) => (

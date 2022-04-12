@@ -54,13 +54,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     backgroundColor: theme.palette.background.paper,
   },
-  tabCard: {
-    margin: '0.5em',
-    borderRadius: '0px 0px 20px 20px',
-    boxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-    webkitBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.75)',
-    mozBoxShadow: '0px 0px 5px 0px rgba(0, 0, 0, 0.75)',
-  },
 }))
 
 export default function ShareCapitalRegistry() {
@@ -72,9 +65,9 @@ export default function ShareCapitalRegistry() {
   }
   return (
     <>
-      <Grid container justifyContent="center">
+      {/* <Grid container justifyContent="center">
         <h5>Share Capital Registry</h5>
-      </Grid>
+      </Grid> */}
       <div className={classes.root}>
         {/* <AppBar position="static" color="default"> */}
         <Grid container justifyContent="center">
@@ -88,21 +81,9 @@ export default function ShareCapitalRegistry() {
             centered
             aria-label="scrollable auto tabs example"
           >
-            <Tab
-              label="Member Register"
-              {...a11yProps(0)}
-              className={classes.tabCard}
-            />
-            <Tab
-              label="Share Capital Register"
-              {...a11yProps(1)}
-              className={classes.tabCard}
-            />
-            <Tab
-              label="Share transfer Register"
-              {...a11yProps(2)}
-              className={classes.tabCard}
-            />
+            <Tab label="Member Register" {...a11yProps(0)} />
+            <Tab label="Share Capital Register" {...a11yProps(1)} />
+            <Tab label="Share transfer Register" {...a11yProps(2)} />
           </Tabs>
         </Grid>
 

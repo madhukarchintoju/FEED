@@ -100,6 +100,7 @@ export default function MyExportMainComp(props) {
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
+      <WidgetsBar screenTitle={path}></WidgetsBar>
       <div className="row m-0">
         <SideNavBar
           className="col"
@@ -110,7 +111,6 @@ export default function MyExportMainComp(props) {
           selectedSideNavLink="linear-gradient(90deg, rgba(100,197,188,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="col-lg p-0">
-          <WidgetsBar screenTitle={path}></WidgetsBar>
           {/* <WidgetsBar /> */}
           <Switch>
             <Route path="/myexport/home" component={MyExportHome}></Route>

@@ -96,17 +96,18 @@ export default function MyBusinessMain(props) {
   return (
     <>
       <ServicesNavbar></ServicesNavbar>
+      <WidgetsBar screenTitle={name}></WidgetsBar>
       <div className="row m-0">
         <SideNavBar
-          className="col"
+          className="col-lg p-0 sidenavbar"
           data={navData}
-          bgColor="#6739b7"
-          textColor="white"
+          bgColor="#ffc107"
+          textColor="black"
+          serviceTitleBg="#d6a920"
           serviceTitle="MY BUSINESS"
-          selectedSideNavLink="linear-gradient(90deg, rgba(103,57,183,1) 17%, rgba(255,255,255,1) 67%)"
+          selectedSideNavLink="linear-gradient(90deg, rgba(255,193,7,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
         <div className="col p-0">
-          <WidgetsBar screenTitle={name}></WidgetsBar>
           {/* <WidgetsBar /> */}
           <Switch>
             <Route path="/mybusiness/home" component={MyBusinessHome}></Route>

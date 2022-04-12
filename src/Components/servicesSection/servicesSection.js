@@ -159,7 +159,7 @@ export default function ServicesSection(props) {
                     className="col-lg-3 col-md-3 col-sm-3 col-xs-3 col item-flx p-0"
                     data-aos="fade-down"
                   >
-                    <Link className="nav-link" to="/mymarket">
+                    <Link className="nav-link" to="/ecom">
                       <div className="text-center services-card m-2">
                         <div
                           className="services-card-header"

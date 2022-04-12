@@ -498,66 +498,7 @@ export default function MyMarketHome() {
           </Grid>
           <Grid container justifyContent="space-between">
             {featuredProductsList.map((item, index) => (
-              <Grid
-                item
-                lg={2}
-                sm={12}
-                xs={12}
-                key={index}
-                // className={classes.featuredProductListCard}
-              >
-                {/* <Grid
-                  style={{
-                    borderRadius: '15px 15px 0px 0px',
-                    height: '50%',
-                  }}
-                >
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/my-market/${item.img}`}
-                    alt="..."
-                    style={{
-                      borderRadius: '15px 15px 0px 0px',
-                      minHeight: '100%',
-                      objectFit: 'cover',
-                    }}
-                  />
-                </Grid> */}
-                {/* <Grid
-                  style={{ padding: '5px 5px', height: '45%' }}
-                  className={classes.featuredProductListCardDetails}
-                >
-                  <Grid container justifyContent="space-between">
-                    <h5>{item.name}</h5>
-                    <IconButton aria-label="delete" style={{ padding: '0px' }}>
-                      <FavoriteBorderIcon />
-                    </IconButton>
-                  </Grid>
-                  <h6>
-                    Price :{' '}
-                    <span style={{ color: 'red', fontWeight: '700' }}>
-                      Rs {item.price}/-
-                    </span>{' '}
-                    Kg
-                  </h6>
-                  <Divider />
-                  <h6 style={{ color: '#39698f' }}>{item.traderName}</h6>
-                  <h6 className="m-0">{item.area}</h6>
-                </Grid> */}
-                {/* <Grid
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-around',
-                    alignItems: 'center',
-                  }}
-                >
-                  <button className={classes.tradeNowBtn}>Trade Now</button>
-                  <Rating
-                    name="size-small"
-                    defaultValue={4}
-                    size="small"
-                    precision={0.5}
-                  />
-                </Grid> */}
+              <Grid item lg={2} sm={12} xs={12} key={index}>
                 <MyMarketProductCard
                   name={item.name}
                   image={item.img}
@@ -604,60 +545,6 @@ export default function MyMarketHome() {
           </Grid>
           <Grid container justifyContent="space-between">
             {mostTradeProducts.map((item, index) => (
-              // <Grid
-              //   item
-              //   lg={2}
-              //   md={3}
-              //   sm={6}
-              //   xs={6}
-              //   key={index}
-              //   className={classes.featuredProductListCard}
-              // >
-              //   <img
-              //     src={`${process.env.PUBLIC_URL}/assets/my-market/${item.img}`}
-              //     alt="..."
-              //     width="100%"
-              //     style={{
-              //       borderRadius: '15px 15px 0px 0px',
-              //       height: '45%',
-              //       objectFit: 'cover',
-              //     }}
-              //   />
-              //   <div style={{ padding: '5px 5px' }}>
-              //     <Grid container justifyContent="space-between">
-              //       <h5>{item.name}</h5>
-              //       <IconButton aria-label="delete" style={{ padding: '0px' }}>
-              //         <FavoriteBorderIcon />
-              //       </IconButton>
-              //     </Grid>
-              //     <h6>
-              //       Price :{' '}
-              //       <span style={{ color: 'red', fontWeight: '700' }}>
-              //         Rs {item.price}/-
-              //       </span>{' '}
-              //       Kg
-              //     </h6>
-
-              //     <Divider />
-              //     <h6 style={{ color: '#39698f' }}>{item.traderName}</h6>
-              //     <h6 style={{fontSize:'14px'}}>{item.area}</h6>
-              //   </div>
-              //   <Grid
-              //     style={{
-              //       display: 'flex',
-              //       justifyContent: 'space-around',
-              //       alignItems: 'center',
-              //     }}
-              //   >
-              //     <button className={classes.tradeNowBtn}>Trade Now</button>
-              //     <Rating
-              //       name="size-small"
-              //       defaultValue={4}
-              //       size="small"
-              //       precision={0.5}
-              //     />
-              //   </Grid>
-              // </Grid>
               <Grid item lg={2} sm={12} xs={12} key={index}>
                 <MyMarketProductCard
                   name={item.name}
@@ -681,57 +568,6 @@ export default function MyMarketHome() {
           </Grid>
           <Grid container justifyContent="space-between">
             {mostTradeProducts.map((item, index) => (
-              // <Grid
-              //   item
-              //   lg={2}
-              //   key={index}
-              //   className={classes.featuredProductListCard}
-              // >
-              //   <img
-              //     src={`${process.env.PUBLIC_URL}/assets/my-market/${item.img}`}
-              //     alt="..."
-              //     width="100%"
-              //     style={{
-              //       borderRadius: '15px 15px 0px 0px',
-              //       height: '45%',
-              //       objectFit: 'cover',
-              //     }}
-              //   />
-              //   <div style={{ padding: '5px 5px' }}>
-              //     <Grid container justifyContent="space-between">
-              //       <h5>{item.name}</h5>
-              //       <IconButton aria-label="delete" style={{ padding: '0px' }}>
-              //         <FavoriteBorderIcon />
-              //       </IconButton>
-              //     </Grid>
-              //     <h6>
-              //       Price :{' '}
-              //       <span style={{ color: 'red', fontWeight: '700' }}>
-              //         Rs {item.price}/-
-              //       </span>{' '}
-              //       Kg
-              //     </h6>
-              //     {/* <Rating name="size-small" defaultValue={4} size="small" precision={0.5} /> */}
-              //     <Divider />
-              //     <h6 style={{ color: '#39698f' }}>{item.traderName}</h6>
-              //     <h6>{item.area}</h6>
-              //   </div>
-              //   <Grid
-              //     style={{
-              //       display: 'flex',
-              //       justifyContent: 'space-around',
-              //       alignItems: 'center',
-              //     }}
-              //   >
-              //     <button className={classes.tradeNowBtn}>Trade Now</button>
-              //     <Rating
-              //       name="size-small"
-              //       defaultValue={4}
-              //       size="small"
-              //       precision={0.5}
-              //     />
-              //   </Grid>
-              // </Grid>
               <Grid item lg={2} sm={12} xs={12} key={index}>
                 <MyMarketProductCard
                   name={item.name}
@@ -744,9 +580,6 @@ export default function MyMarketHome() {
             ))}
           </Grid>
         </Grid>
-        {/* <Grid container lg={11} item className="m-auto">
-          <img src={`${process.env.PUBLIC_URL}/assets/my-market/categorybanner.png`} alt="..." width="100%" />
-        </Grid> */}
         <Grid lg={11} style={{ margin: '20px auto', padding: '10px' }}>
           <Grid
             container

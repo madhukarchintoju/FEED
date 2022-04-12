@@ -1,0 +1,225 @@
+.mainOl {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  --hue: 1;
+  --unit: 1rem;
+}
+.event-date {
+  margin: 0 0 0.25rem;
+  font-weight: bold;
+}
+.event-description {
+  margin: 0;
+}
+.timelineCard {
+  --height: 7rem;
+  position: relative;
+  display: block;
+  background-color: hsl(calc(var(--hue) * 360 / 20), 90%, 65%);
+  border-color: hsl(calc(var(--hue) * 360 / 20), 90%, 65%);
+  padding: 1rem;
+  margin: 2rem 0;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px 25px;
+}
+.timelineCard::before {
+  content: '';
+  background-color: inherit;
+  position: absolute;
+  display: block;
+  width: var(--unit);
+  height: var(--unit);
+  top: 100%;
+  left: calc(50% - (var(--unit) / 2));
+}
+.timelineCard::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: calc(100% + var(--unit));
+  left: calc(50% - (var(--unit)));
+  border: var(--unit) solid transparent;
+  border-top-color: inherit;
+}
+.timelineCard:last-child::before,
+.timelineCard:last-child::after {
+  content: none;
+}
+.timelineCard:nth-child(20n + 1) {
+  --hue: 1;
+}
+.timelineCard:nth-child(20n + 2) {
+  --hue: 2;
+}
+.timelineCard:nth-child(20n + 3) {
+  --hue: 3;
+}
+.timelineCard:nth-child(20n + 4) {
+  --hue: 4;
+}
+.timelineCard:nth-child(20n + 5) {
+  --hue: 5;
+}
+.timelineCard:nth-child(20n + 6) {
+  --hue: 6;
+}
+.timelineCard:nth-child(20n + 7) {
+  --hue: 7;
+}
+.timelineCard:nth-child(20n + 8) {
+  --hue: 8;
+}
+.timelineCard:nth-child(20n + 9) {
+  --hue: 9;
+}
+.timelineCard:nth-child(20n + 10) {
+  --hue: 10;
+}
+.timelineCard:nth-child(20n + 11) {
+  --hue: 11;
+}
+.timelineCard:nth-child(20n + 12) {
+  --hue: 12;
+}
+.timelineCard:nth-child(20n + 13) {
+  --hue: 13;
+}
+.timelineCard:nth-child(20n + 14) {
+  --hue: 14;
+}
+.timelineCard:nth-child(20n + 15) {
+  --hue: 15;
+}
+.timelineCard:nth-child(20n + 16) {
+  --hue: 16;
+}
+.timelineCard:nth-child(20n + 17) {
+  --hue: 17;
+}
+.timelineCard:nth-child(20n + 18) {
+  --hue: 18;
+}
+.timelineCard:nth-child(20n + 19) {
+  --hue: 19;
+}
+.timelineCard:nth-child(20n + 20) {
+  --hue: 20;
+}
+@media (min-width: 550px) and (max-width: 899px) {
+  .timelineCard {
+    margin: 1rem;
+    width: calc(50% - 4rem);
+    float: left;
+    min-height: var(--height);
+  }
+  .timelineCard:nth-child(4n + 3),
+  .timelineCard:nth-child(4n + 4) {
+    float: right;
+  }
+  .timelineCard:nth-child(4n + 1)::before {
+    top: calc(var(--height) / 2 + var(--unit) / 2);
+    left: 100%;
+  }
+  .timelineCard:nth-child(4n + 1)::after {
+    top: calc(var(--height) / 2);
+    left: calc(100% + (var(--unit)));
+    border: var(--unit) solid transparent;
+    border-left-color: inherit;
+  }
+  .timelineCard:nth-child(4n + 3)::before {
+    top: calc(var(--height) / 2 + var(--unit) / 2);
+    left: -1rem;
+  }
+  .timelineCard:nth-child(4n + 3)::after {
+    top: calc(var(--height) / 2);
+    left: -3rem;
+    border: var(--unit) solid transparent;
+    border-right-color: inherit;
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .timelineCard {
+    margin: 1rem;
+    width: calc(33.33% - 4rem);
+    float: left;
+    min-height: 7rem;
+  }
+  .timelineCard:nth-child(6n + 4),
+  .timelineCard:nth-child(6n + 5),
+  .timelineCard:nth-child(6n + 6) {
+    float: right;
+  }
+  .timelineCard:nth-child(6n + 1)::before,
+  .timelineCard:nth-child(6n + 2)::before {
+    top: calc(var(--height) / 2 + var(--unit) / 2);
+    left: 100%;
+  }
+  .timelineCard:nth-child(6n + 1)::after,
+  .timelineCard:nth-child(6n + 2)::after {
+    top: 3.5rem;
+    left: calc(100% + (var(--unit)));
+    border: var(--unit) solid transparent;
+    border-left-color: inherit;
+  }
+  .timelineCard:nth-child(6n + 4)::before,
+  .timelineCard:nth-child(6n + 5)::before {
+    top: calc(var(--height) / 2 + var(--unit) / 2);
+    left: -1rem;
+  }
+  .timelineCard:nth-child(6n + 4)::after,
+  .timelineCard:nth-child(6n + 5)::after {
+    top: calc(var(--height) / 2);
+    left: -3rem;
+    border: var(--unit) solid transparent;
+    border-right-color: inherit;
+  }
+}
+@media (min-width: 1200px) {
+  .mainOl {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .timelineCard {
+    margin: 1rem;
+    width: calc(25% - 4rem);
+    float: left;
+    min-height: 7rem;
+  }
+  .timelineCard:nth-child(8n + 5),
+  .timelineCard:nth-child(8n + 6),
+  .timelineCard:nth-child(8n + 7),
+  .timelineCard:nth-child(8n + 8) {
+    float: right;
+  }
+  .timelineCard:nth-child(8n + 1)::before,
+  .timelineCard:nth-child(8n + 2)::before,
+  .timelineCard:nth-child(8n + 3)::before {
+    top: calc(var(--height) / 2 + var(--unit) / 2);
+    left: 100%;
+  }
+  .timelineCard:nth-child(8n + 1)::after,
+  .timelineCard:nth-child(8n + 2)::after,
+  .timelineCard:nth-child(8n + 3)::after {
+    top: calc(var(--height) / 2);
+    left: calc(100% + (var(--unit)));
+    border: var(--unit) solid transparent;
+    border-left-color: inherit;
+  }
+  .timelineCard:nth-child(8n + 5)::before,
+  .timelineCard:nth-child(8n + 6)::before,
+  .timelineCard:nth-child(8n + 7)::before {
+    top: calc(var(--height) / 2 + var(--unit) / 2);
+    left: -1rem;
+  }
+  .timelineCard:nth-child(8n + 5)::after,
+  .timelineCard:nth-child(8n + 6)::after,
+  .timelineCard:nth-child(8n + 7)::after {
+    top: calc(var(--height) / 2);
+    left: -3rem;
+    border: var(--unit) solid transparent;
+    border-right-color: inherit;
+  }
+}

@@ -3,6 +3,8 @@ import TreeView from '@material-ui/lab/TreeView'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import TreeItem from '@material-ui/lab/TreeItem'
+import Rating from '@material-ui/lab/Rating'
+import Autocomplete from '@material-ui/lab/Autocomplete'
 import {
   Grid,
   makeStyles,
@@ -15,12 +17,13 @@ import SearchIcon from '@material-ui/icons/Search'
 
 const useStyles = makeStyles((theme) => ({
   filterHeading: {
-    display: 'flex',
-    justifyContent: 'center',
-    backgroundColor: 'Grey',
-    color: 'white',
-    padding: '5px',
-    borderRadius: '10px 10px',
+    // display: 'flex',
+    // justifyContent: 'center',
+    // backgroundColor: '#d1d6d1',
+    color: 'black',
+    // padding: '5px',
+    // marginTop:'25px',
+    // borderRadius: '10px 10px',
   },
 }))
 
@@ -54,14 +57,36 @@ const PrettoSlider = withStyles({
   },
 })(Slider)
 
+const products = [
+  {
+    name: 'Apple',
+    hscode: '0123',
+  },
+  {
+    name: 'Banana',
+    hscode: '0124',
+  },
+  {
+    name: 'Grapes',
+    hscode: '0125',
+  },
+  {
+    name: 'Papaya',
+    hscode: '0126',
+  },
+]
 function MyMarketFilters() {
   const classes = useStyles()
   return (
     <>
-      <div style={{ margin: '10px' }}>
-        <Grid>
+      <div style={{ backgroundColor: 'white', height: '100%' }}>
+        <div>
+          <h4 style={{ padding: '15px 10px 0px', margin: '0px' }}>Filters</h4>
+        </div>
+        <hr />
+        <Grid style={{ padding: '0px 15px 0px 15px' }}>
           <Grid className={classes.filterHeading}>
-            <h6 className="mb-0">Categories</h6>
+            <h6>Categories</h6>
           </Grid>
           <TreeView
             className={classes.root}
@@ -101,11 +126,12 @@ function MyMarketFilters() {
             </TreeItem>
           </TreeView>
         </Grid>
-        <Grid>
+        <hr />
+        <Grid style={{ padding: '0px 15px 0px 15px' }}>
           <Grid className={classes.filterHeading}>
             <h6 className="mb-0">Variants</h6>
           </Grid>
-          <TextField
+          {/* <TextField
             variant="outlined"
             label="Search Items"
             size="small"
@@ -117,9 +143,23 @@ function MyMarketFilters() {
                 </InputAdornment>
               ),
             }}
+          /> */}
+          <Autocomplete
+            id="combo-box-demo"
+            options={products}
+            getOptionLabel={(option) => option.name}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Select Products"
+                variant="outlined"
+                margin="normal"
+              />
+            )}
           />
         </Grid>
-        <Grid>
+        <hr />
+        <Grid style={{ padding: '0px 15px 0px 15px' }}>
           <Grid className={classes.filterHeading}>
             <h6 className="mb-0">Prices</h6>
           </Grid>
@@ -131,7 +171,8 @@ function MyMarketFilters() {
             />
           </Grid>
         </Grid>
-        <Grid>
+        <hr />
+        <Grid style={{ padding: '0px 15px 0px 15px' }}>
           <Grid className={classes.filterHeading}>
             <h6 className="mb-0">Quantity</h6>
           </Grid>
@@ -154,9 +195,42 @@ function MyMarketFilters() {
             />
           </Grid>
         </Grid>
-        <Grid>
+        <hr />
+        <Grid style={{ padding: '0px 15px 0px 15px' }}>
           <Grid className={classes.filterHeading}>
-            <h6 className="mb-0">Rating &amp; Reviews</h6>
+            <h6 className="mb-0">Customer Ratings</h6>
+          </Grid>
+          <Grid>
+            <Grid>
+              <Rating
+                name="size-small"
+                defaultValue={4}
+                size="small"
+                precision={0.5}
+              />
+              <br />
+              <Rating
+                name="size-small"
+                defaultValue={3}
+                size="small"
+                precision={0.5}
+              />
+              <br />
+              <Rating
+                name="size-small"
+                defaultValue={2}
+                size="small"
+                precision={0.5}
+              />
+              <br />
+              <Rating
+                name="size-small"
+                defaultValue={1}
+                size="small"
+                precision={0.5}
+              />
+              {/* <small>4 <i class="fa fa-star" aria-hidden="true"></i> &amp; above</small> */}
+            </Grid>
           </Grid>
         </Grid>
       </div>

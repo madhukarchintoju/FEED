@@ -21,6 +21,9 @@ import AnimalHusbandry from '../myFarmProducts/animalhusbandry/animalhusbandry'
 import Others from '../myFarmProducts/others/others'
 import MyFarmGuideContent from '../myFarmGuideContent/myFarmGuideContent'
 import WidgetsBar from '../../widgetsBar/widgetsBar'
+import GovtLinks from '../myFarmGuide/govtLinks/govtLinks'
+import SchemesLoans from '../myFarmGuide/schemesLoans/schemesLoans'
+import Cultivation from '../myFarmGuide/cultivation/cultivation'
 
 export default function MyFarmMainComp(props) {
   const navData = [
@@ -104,17 +107,18 @@ export default function MyFarmMainComp(props) {
   return (
     <div>
       <ServicesNavbar></ServicesNavbar>
-      <div className="row m-0 myfarmmain">
+      <WidgetsBar screenTitle={path}></WidgetsBar>
+      <div className="row m-0">
         <SideNavBar
-          className="col-lg"
+          className="col-lg p-0 sidenavbar"
           data={navData}
-          bgColor="#a4cf3e"
+          bgColor="#ffc107"
           textColor="black"
-          serviceTitle="MY FARM"
-          selectedSideNavLink="linear-gradient(90deg, rgba(164,207,62,1) 17%, rgba(255,255,255,1) 67%)"
+          serviceTitleBg="#d6a920"
+          serviceTitle="MY FPC"
+          selectedSideNavLink="linear-gradient(90deg, rgba(255,193,7,1) 17%, rgba(255,255,255,1) 67%)"
         ></SideNavBar>
-        <div className="p-0 col-lg my-farm-wrap">
-          <WidgetsBar screenTitle={path}></WidgetsBar>
+        <div className=" col-lg p-0 my-farm-wrap">
           {/* <WidgetsBar /> */}
           <Switch>
             <Route path="/myfarm/home" component={MyFarmHome}></Route>
@@ -133,6 +137,9 @@ export default function MyFarmMainComp(props) {
             <Route path="/myfarm/plantationcrop" component={PlantationCrop} />
             <Route path="/myfarm/animalhusbandry" component={AnimalHusbandry} />
             <Route path="/myfarm/fabric" component={Fabric} />
+            <Route path="/myfarm/govtlinks" component={GovtLinks} />
+            <Route path="/myfarm/schemesloans" component={SchemesLoans} />
+            <Route path="/myfarm/cultivation" component={Cultivation} />
             <Route path="/myfarm/others" component={Others} />
             <Route
               path="/myfarm/guidecontent"

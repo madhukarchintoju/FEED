@@ -27,9 +27,9 @@ export default function MyFarmList(props) {
 
   return (
     <div className="my-farm-list">
-      <Grid container justifyContent="center" className={classes.listTitle}>
+      {/* <Grid container justifyContent="center" className={classes.listTitle}>
         <h4>{props.title}</h4>
-      </Grid>
+      </Grid> */}
       <Grid
         container
         direction="row"

@@ -274,7 +274,7 @@ export default function MyFarmFruits() {
     {
       name: 'Cultivation',
       icon: 'cultivation.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/cultivation',
     },
     {
       name: 'Disease and Pestisides',
@@ -334,12 +334,12 @@ export default function MyFarmFruits() {
     {
       name: 'Govt Links',
       icon: 'govtlinks.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/govtlinks',
     },
     {
       name: 'Agri Schemes',
       icon: 'agrischemes.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/schemesloans',
     },
     {
       name: 'Crop Expenditure Tool',
@@ -441,12 +441,12 @@ export default function MyFarmFruits() {
     {
       name: 'Govt Links',
       icon: 'govtlinks.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/govtlinks',
     },
     {
       name: 'Agri Schemes',
       icon: 'agrischemes.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/schemesloans',
     },
     {
       name: 'Crop Expenditure Tool',
@@ -548,12 +548,12 @@ export default function MyFarmFruits() {
     {
       name: 'Govt Links',
       icon: 'govtlinks.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/govtlinks',
     },
     {
       name: 'Agri Schemes',
       icon: 'agrischemes.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/schemesloans',
     },
     {
       name: 'Crop Expenditure Tool',
@@ -655,12 +655,12 @@ export default function MyFarmFruits() {
     {
       name: 'Govt Links',
       icon: 'govtlinks.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/govtlinks',
     },
     {
       name: 'Agri Schemes',
       icon: 'agrischemes.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/schemesloans',
     },
     {
       name: 'Crop Expenditure Tool',
@@ -767,7 +767,7 @@ export default function MyFarmFruits() {
     {
       name: 'Agri Schemes',
       icon: 'agrischemes.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/schemesloans',
     },
     {
       name: 'Crop Expenditure Tool',
@@ -2367,7 +2367,7 @@ export default function MyFarmFruits() {
     {
       name: 'Govt Links',
       icon: 'govtlinks.png',
-      link: '/myfarm/guidecontent',
+      link: '/myfarm/govtlinks',
     },
     {
       name: 'Agri Schemes',

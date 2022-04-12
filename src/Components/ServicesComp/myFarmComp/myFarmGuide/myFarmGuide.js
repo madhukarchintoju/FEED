@@ -41,9 +41,9 @@ export default function MyFarmGuide(props) {
   const classes = useStyles()
   return (
     <div className="my-farm-guide">
-      <Grid container justify="center" className={classes.guideTitle}>
+      {/* <Grid container justify="center" className={classes.guideTitle}>
         <h4>{props.title}</h4>
-      </Grid>
+      </Grid> */}
       <Grid
         container
         direction="row"
