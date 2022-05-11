@@ -19,12 +19,19 @@ const vendorList = [
   { title: 'Arjun' },
   { title: 'Narayana' },
 ]
+const taxList = [
+  { slab: 5 },
+  { slab: 12 },
+  { slab: 18 },
+  { slab: 28 },
+]
 
 function PurchaseInvoice() {
-  const [selected, setSelected] = useState('')
-  const changeHandler = (e) => {
-    setSelected(e.target.value)
+  const handleChange = (event, newValue) => {
+    setValue(newValue)
   }
+
+
   const [value, setValue] = React.useState(0)
 
   const [inputList, setInputList] = useState([
@@ -47,7 +54,9 @@ function PurchaseInvoice() {
       invoiceWords: '',
 
     },
-  ])    // handle input change
+  ])
+
+  // handle input change
   const handleInputChange = (e, i) => {
     const { name, value } = e.target
     const list = [...inputList]
@@ -103,9 +112,9 @@ function PurchaseInvoice() {
               variant="outlined"
               margin="normal"
               placeholder="Enter Invoice Number"
-              name="invoiceNumber"
-              value={inputList.invoiceNumber}
-              onChange={(e) => { handleInputChange(e) }}
+              // name="invoiceNumber"
+              // value={setInputList.invoiceNumber}
+              // onChange={(e) => { handleInputChange(e) }}
             />
           </Grid>
           <Grid item lg={3}>
@@ -115,10 +124,10 @@ function PurchaseInvoice() {
               size='small'
               variant="outlined"
               margin="normal"
-              name="invoiceDate"
-              label="Invoice Date"
-              value={inputList.invoiceDate}
-              onChange={(e) => { handleInputChange(e) }}
+              // name="invoiceDate"
+              // label="Invoice Date"
+              // value={setInputList.invoiceDate}
+              // onChange={(e) => { handleInputChange(e) }}
               InputLabelProps={{
                 shrink: true,
               }}
@@ -138,9 +147,9 @@ function PurchaseInvoice() {
                   margin="normal"
                   label="Vendor / Company List"
                   variant="outlined"
-                  name='vendorName'
-                  value={inputList.vendorName}
-                  onChange={(e) => { handleInputChange(e) }}
+                  // name='vendorName'
+                  // value={setInputList.vendorName}
+                  // onChange={(e) => { handleInputChange(e) }}
                 />
               )}
             />
@@ -155,9 +164,9 @@ function PurchaseInvoice() {
               multiline
               rows={3}
               variant="outlined"
-              name="address"
-              value={inputList.address}
-              onChange={(e) => { handleInputChange(e) }}
+              // name="address"
+              // value={setInputList.address}
+              // onChange={(e) => { handleInputChange(e) }}
             />
           </Grid>
 
@@ -216,7 +225,6 @@ function PurchaseInvoice() {
                         renderInput={(params) => (
                           <TextField
                             {...params}
-                            // margin="normal"
                             label="Product Category"
                             variant="outlined"
                             name="productCategory"
@@ -331,7 +339,7 @@ function PurchaseInvoice() {
                       </FormControl> */}
                     </td>
                     <td>
-                      <Grid container lg={12} justifyContent="space-between">
+                      <Grid container item lg={12} justifyContent="space-between">
                         <TextField
                           lg={6}
                           item

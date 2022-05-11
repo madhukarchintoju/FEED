@@ -58,7 +58,7 @@ function Header(props) {
               />{' '} */}
               <span>
                 <i
-                  class="fa fa-phone"
+                  className="fa fa-phone"
                   aria-hidden="true"
                   style={{ transform: 'scaleX(-1)' }}
                 ></i>{' '}
@@ -75,7 +75,7 @@ function Header(props) {
                 alt="email-icon"
               />{' '} */}
               <span>
-                <i class="fa fa-envelope" aria-hidden="true"></i>{' '}
+                <i className="fa fa-envelope" aria-hidden="true"></i>{' '}
                 info@feedorg.com
               </span>
             </div>
@@ -220,7 +220,7 @@ function Header(props) {
                   src={`${process.env.PUBLIC_URL}/assets/home/feedlogonewtitle.png`}
                   className="feed-logo-img img-fluid"
                   alt="feed-logo"
-                  // width="60%"
+                // width="60%"
                 />
               </div>
               <div style={{ display: 'grid', alignItems: 'center' }}>
@@ -278,6 +278,7 @@ function Header(props) {
                       </li>
                       <li className="nav-item dropdown">
                         <Link
+                          to=''
                           className="nav-link dropdown-toggle"
                           id="navbarDropdown"
                           role="button"

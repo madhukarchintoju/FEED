@@ -644,9 +644,9 @@ export default function Footer() {
         </Grid>
       </Grid> */}
 
-      <footer class="new_footer_area bg_color">
-        <div class="new_footer_top">
-          <div class="container">
+      <footer className="new_footer_area bg_color">
+        <div className="new_footer_top">
+          <div className="container">
             <div style={{ display: 'flex' }}>
               {/* <div class="col-lg-3 col-md-6">
                 <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style={{visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeInLeft'}}>
@@ -660,9 +660,9 @@ export default function Footer() {
                   </form>
                 </div>
               </div> */}
-              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
+              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6">
                 <div
-                  class="f_widget about-widget pl_70 wow fadeInLeft"
+                  className="f_widget about-widget pl_70 wow fadeInLeft"
                   data-wow-delay="0.4s"
                   style={{
                     visibility: 'visible',
@@ -670,8 +670,8 @@ export default function Footer() {
                     animationName: 'fadeInLeft',
                   }}
                 >
-                  <h3 class="f-title f_600 t_color f_size_18">Quick Links</h3>
-                  <ul class="list-unstyled f_list">
+                  <h3 className="f-title f_600 t_color f_size_18">Quick Links</h3>
+                  <ul className="list-unstyled f_list">
                     <li>
                       <a href="#">Sitemap</a>
                     </li>
@@ -687,9 +687,9 @@ export default function Footer() {
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
+              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6">
                 <div
-                  class="f_widget about-widget pl_70 wow fadeInLeft"
+                  className="f_widget about-widget pl_70 wow fadeInLeft"
                   data-wow-delay="0.4s"
                   style={{
                     visibility: 'visible',
@@ -697,8 +697,8 @@ export default function Footer() {
                     animationName: 'fadeInLeft',
                   }}
                 >
-                  <h3 class="f-title f_600 t_color f_size_18">Services</h3>
-                  <ul class="list-unstyled f_list">
+                  <h3 className="f-title f_600 t_color f_size_18">Services</h3>
+                  <ul className="list-unstyled f_list">
                     <li>
                       <a href="#">My Fpo</a>
                     </li>
@@ -726,9 +726,9 @@ export default function Footer() {
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
+              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6">
                 <div
-                  class="f_widget about-widget pl_70 wow fadeInLeft"
+                  className="f_widget about-widget pl_70 wow fadeInLeft"
                   data-wow-delay="0.4s"
                   style={{
                     visibility: 'visible',
@@ -736,8 +736,8 @@ export default function Footer() {
                     animationName: 'fadeInLeft',
                   }}
                 >
-                  <h3 class="f-title f_600 t_color f_size_18">FEED Insights</h3>
-                  <ul class="list-unstyled f_list">
+                  <h3 className="f-title f_600 t_color f_size_18">FEED Insights</h3>
+                  <ul className="list-unstyled f_list">
                     <li>
                       <a href="#">Suggestions</a>
                     </li>
@@ -753,9 +753,9 @@ export default function Footer() {
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6">
+              <div className="col-lg-2 col-md-6 col-sm-6 col-xs-6">
                 <div
-                  class="f_widget about-widget pl_70 wow fadeInLeft"
+                  className="f_widget about-widget pl_70 wow fadeInLeft"
                   data-wow-delay="0.6s"
                   style={{
                     visibility: 'visible',
@@ -763,8 +763,8 @@ export default function Footer() {
                     animationName: 'fadeInLeft',
                   }}
                 >
-                  <h3 class="f-title f_600 t_color f_size_18">Help</h3>
-                  <ul class="list-unstyled f_list">
+                  <h3 className="f-title f_600 t_color f_size_18">Help</h3>
+                  <ul className="list-unstyled f_list">
                     <li>
                       <a href="#">FAQs</a>
                     </li>
@@ -789,9 +789,9 @@ export default function Footer() {
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+              <div className="col-lg-3 col-md-6 col-sm-6 col-xs-6">
                 <div
-                  class="f_widget social-widget pl_70 wow fadeInLeft"
+                  className="f_widget social-widget pl_70 wow fadeInLeft"
                   data-wow-delay="0.8s"
                   style={{
                     visibility: 'visible',
@@ -799,25 +799,25 @@ export default function Footer() {
                     animationName: 'fadeInLeft',
                   }}
                 >
-                  <h3 class="f-title f_600 t_color f_size_18">
+                  <h3 className="f-title f_600 t_color f_size_18">
                     Connect with us
                   </h3>
-                  <div class="f_social_icon">
-                    <a href="#" class="fab fa-facebook"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-linkedin"></a>
-                    <a href="#" class="fab fa-pinterest"></a>
+                  <div className="f_social_icon">
+                    <a href="#" className="fab fa-facebook"></a>
+                    <a href="#" className="fab fa-twitter"></a>
+                    <a href="#" className="fab fa-linkedin"></a>
+                    <a href="#" className="fab fa-pinterest"></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           {window.innerWidth > 768 ? (
-            <div class="footer_bg">
-              {/* <div class="footer_bg_one" style={{ backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-market/bullock-cart.png")`, width: '10%', backgroundRepeat: 'no-repeat', transform: 'scaleX(-1)' }}></div> */}
-              <div class="footer_bg_two"></div>
+            <div className="footer_bg">
+              {/* <div className="footer_bg_one" style={{ backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/my-market/bullock-cart.png")`, width: '10%', backgroundRepeat: 'no-repeat', transform: 'scaleX(-1)' }}></div> */}
+              <div className="footer_bg_two"></div>
               <div
-                class="footer_bg_three"
+                className="footer_bg_three"
                 style={{
                   backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/footer/plane.png")`,
                   width: '80px',
@@ -835,7 +835,7 @@ export default function Footer() {
           className={classes.footerPolicyWrap}
           style={{ boxShadow: '0px -11px 2px 0px rgba(0,0,0,0.75)' }}
         >
-          <Grid lg={4} style={{ textAlign: 'center' }}>
+          <Grid item lg={4} style={{ textAlign: 'center' }}>
             <p>Copyright &copy; {year} FEED ORG. All Rights Reserved</p>
           </Grid>
         </Grid>

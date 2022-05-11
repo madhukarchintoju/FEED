@@ -64,7 +64,7 @@ export default function WidgetsBar(props) {
   return (
     <>
       <Grid
-        // container
+        container
         justifyContent="space-between"
         style={{
           width: '100%',
