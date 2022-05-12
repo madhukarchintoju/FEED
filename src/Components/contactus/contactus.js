@@ -68,7 +68,7 @@ export default function ContactUs() {
                 <h5 className="fas fa-building"> Head Office</h5>
                 <h5>New Delhi</h5>
                 <address>
-                  First floor, Anand Heights, Kedareswarapet Main Rd,
+                  Lotus  Landmark
                   <br /> near Prabhas college, Lotus Landmark, Ayodhya Nagar,
                   <br />
                   Vijayawada Andhra Pradesh - 520003.
@@ -103,8 +103,8 @@ export default function ContactUs() {
                 <h5 className="fas fa-home"> Branch Office</h5>
                 <h5>Vijayawada</h5>
                 <address>
-                  First floor, Anand Heights, Kedareswarapet Main Rd,
-                  <br /> near Prabhas college, Lotus Landmark, Ayodhya Nagar,
+                  Lotus Landmark, Sector 5, KamalaNilayam
+                  <br /> Lotus Landmark, Ayodhya Nagar,
                   <br />
                   Vijayawada Andhra Pradesh - 520003.
                 </address>
