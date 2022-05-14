@@ -16,6 +16,9 @@ export default function ContactUs() {
     contactUsWrap: {
       margin: '1em auto 1em',
       // border: '1px solid red'
+      // backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/contactus/worldmap.png")`,
+      // backgroundRepeat:'no-repeat',
+      // backgroundSize:'100% 100%'
     },
     fpoGittextField: {
       marginBottom: '0.5em',
@@ -31,38 +34,18 @@ export default function ContactUs() {
       marginBottom: '0.5em',
     },
     contactGitWrap: {
-      backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/contactus/worldmap.png")`,
+      // backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/contactus/worldmap.png")`,
       // backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
+      
     },
   }))
   const classes = useStyles()
   return (
     <>
       <Grid container justify="space-around" className={classes.contactUsWrap}>
-        <Grid lg={11} container item justify="space-between">
-          <Grid>
-            <h4>Contact Us</h4>
-          </Grid>
-          <Grid
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              flexWrap: 'wrap',
-            }}
-          >
-            <Grid>
-              <Avatar />
-            </Grid>
-            <span>
-              Help Line Number
-              <br /> +91 9293858689
-            </span>
-          </Grid>
-        </Grid>
         <Grid lg={12} container item justifyContent="space-around">
           <Grid lg={7} item>
-            <h4 className="text-center">FEED Offices</h4>
             <Grid container justifyContent="space-between" className="mt-4">
               {/* <Grid>
                 <h5 className="fas fa-building"> Head Office</h5>
@@ -103,20 +86,22 @@ export default function ContactUs() {
                 <h5 className="fas fa-home"> Branch Office</h5>
                 <h5>Vijayawada</h5>
                 <address>
-                  Lotus Landmark, Sector 5, KamalaNilayam
-                  <br /> Lotus Landmark, Ayodhya Nagar,
+                  Sector 5, Kamala Nilayam,
+                  <br /> Cement Factory Road, Ayodhya Nagar,
                   <br />
-                  Vijayawada Andhra Pradesh - 520003.
+                  Vijayawada, Andhra Pradesh - 520003.
                 </address>
                 <Grid>
                   <h6>
                     <i className="fas fa-map-marker-alt"></i> Location Map
                   </h6>
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.022969650659!2d80.62855171469059!3d16.524937988600765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35ef2d39bacd51%3A0x6fc2276740e8bd32!2sFEED%20ORG!5e0!3m2!1sen!2sin!4v1624625259164!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1912.4770969719768!2d80.6321046580015!3d16.5284099971497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x14d1ada0d6b2b161!2zMTbCsDMxJzQyLjMiTiA4MMKwMzcnNTkuNSJF!5e0!3m2!1sen!2sin!4v1652530989580!5m2!1sen!2sin"
+                    referrerpolicy="no-referrer-when-downgrade"
                     width="400"
                     height="200"
                     style={{ border: '0px' }}
+                    title='FEED Office Location'
                     className={classes.mapBorder}
                     allowFullScreen
                   ></iframe>
