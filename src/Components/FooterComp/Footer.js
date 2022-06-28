@@ -670,7 +670,9 @@ export default function Footer() {
                     animationName: 'fadeInLeft',
                   }}
                 >
-                  <h3 className="f-title f_600 t_color f_size_18">Quick Links</h3>
+                  <h3 className="f-title f_600 t_color f_size_18">
+                    Quick Links
+                  </h3>
                   <ul className="list-unstyled f_list">
                     <li>
                       <a href="#">Sitemap</a>
@@ -736,7 +738,9 @@ export default function Footer() {
                     animationName: 'fadeInLeft',
                   }}
                 >
-                  <h3 className="f-title f_600 t_color f_size_18">FEED Insights</h3>
+                  <h3 className="f-title f_600 t_color f_size_18">
+                    FEED Insights
+                  </h3>
                   <ul className="list-unstyled f_list">
                     <li>
                       <a href="#">Suggestions</a>

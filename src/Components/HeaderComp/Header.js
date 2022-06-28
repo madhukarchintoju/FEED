@@ -220,7 +220,7 @@ function Header(props) {
                   src={`${process.env.PUBLIC_URL}/assets/home/feedlogonewtitle.png`}
                   className="feed-logo-img img-fluid"
                   alt="feed-logo"
-                // width="60%"
+                  // width="60%"
                 />
               </div>
               <div style={{ display: 'grid', alignItems: 'center' }}>
@@ -278,7 +278,7 @@ function Header(props) {
                       </li>
                       <li className="nav-item dropdown">
                         <Link
-                          to=''
+                          to=""
                           className="nav-link dropdown-toggle"
                           id="navbarDropdown"
                           role="button"

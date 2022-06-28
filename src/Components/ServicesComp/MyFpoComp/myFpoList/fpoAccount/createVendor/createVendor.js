@@ -14,9 +14,9 @@ export default function CreateVendor() {
     formRoot: {
       width: '95%',
       borderRadius: '10px 10px',
-      boxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
-      webkitBoxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
-      mozBoxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
+      // boxShadow: '0px 0px 1px 0px rgba(0,0,0,0.75)',
+      webkitBoxShadow: '0px 0px 1px 0px rgba(0,0,0,0.75)',
+      mozBoxShadow: '0px 0px 1px 0px rgba(0,0,0,0.75)',
       marginTop: '1em',
       paddingBottom: '1em',
       '@media (max-width: 768px)': {
@@ -37,7 +37,7 @@ export default function CreateVendor() {
       textAlign: 'center',
       // backgroundColor: '#f8931d',
       padding: '0.2em',
-      borderBottom: '1px solid #dedede',
+      // borderBottom: '1px solid #dedede',
     },
     cancelButton: {
       '@media (max-width: 768px)': {
@@ -91,15 +91,15 @@ export default function CreateVendor() {
               lg={11}
               style={{ margin: 'auto', borderBottom: '1px dashed #dedede' }}
             >
-              <h6>Account Details:</h6>
+              <h6>Contact Details:</h6>
               <Grid
                 container
                 item
                 lg={12}
-                justifyContent="space-between"
+                justifyContent="space-around"
                 spacing={1}
               >
-                <Grid lg={4} sm={12} xs={12} item>
+                <Grid lg={5} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
@@ -115,8 +115,6 @@ export default function CreateVendor() {
                     }
                     helperText={formik.touched.cmpName && formik.errors.cmpName}
                   />
-                </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
@@ -134,8 +132,6 @@ export default function CreateVendor() {
                       formik.touched.custName && formik.errors.custName
                     }
                   />
-                </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
@@ -151,53 +147,13 @@ export default function CreateVendor() {
                     }
                     helperText={formik.touched.emailId && formik.errors.emailId}
                   />
-                </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
                     margin="normal"
                     size="small"
-                    label="Flat / House No:"
+                    label="Mobile Number"
                   />
-                </Grid>
-                <Grid lg={8} sm={12} xs={12} item>
-                  <TextField
-                    fullWidth
-                    variant="outlined"
-                    margin="normal"
-                    size="small"
-                    label="Area"
-                  />
-                </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
-                  <TextField
-                    fullWidth
-                    variant="outlined"
-                    margin="normal"
-                    size="small"
-                    label="City"
-                  />
-                </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
-                  <TextField
-                    fullWidth
-                    variant="outlined"
-                    margin="normal"
-                    size="small"
-                    label="State"
-                  />
-                </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
-                  <TextField
-                    fullWidth
-                    variant="outlined"
-                    margin="normal"
-                    size="small"
-                    label="Pincode"
-                  />
-                </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
@@ -205,7 +161,7 @@ export default function CreateVendor() {
                     size="small"
                     id="custName"
                     name="custName"
-                    label="Landline Phone"
+                    label="Landline Number"
                     value={formik.values.custName}
                     onChange={formik.handleChange}
                     error={
@@ -216,30 +172,56 @@ export default function CreateVendor() {
                     }
                   />
                 </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
+                <Grid lg={5} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
                     margin="normal"
                     size="small"
-                    label="Mobile Number"
+                    label="City / Village"
+                  />
+                  <TextField
+                    fullWidth
+                    variant="outlined"
+                    margin="normal"
+                    size="small"
+                    label="State"
+                  />
+                  <TextField
+                    fullWidth
+                    variant="outlined"
+                    margin="normal"
+                    size="small"
+                    label="Address"
+                    multiline
+                    rows={4}
+                  />
+                  <TextField
+                    fullWidth
+                    variant="outlined"
+                    margin="normal"
+                    size="small"
+                    label="Pin code"
                   />
                 </Grid>
               </Grid>
             </Grid>
             <Grid
               lg={11}
-              style={{ margin: 'auto', borderBottom: '1px dashed #dedede' }}
+              style={{
+                margin: '15px auto',
+                borderBottom: '1px dashed #dedede',
+              }}
             >
-              <h6>GST Details</h6>
+              <h6 style={{ marginBottom: '0px' }}>GST Details</h6>
               <Grid
                 container
                 item
                 lg={12}
-                justifyContent="space-between"
+                justifyContent="space-around"
                 spacing={1}
               >
-                <Grid lg={4} sm={12} xs={12} item>
+                <Grid lg={5} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
@@ -256,7 +238,7 @@ export default function CreateVendor() {
                     helperText={formik.touched.gstNum && formik.errors.gstNum}
                   />
                 </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
+                <Grid lg={5} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
@@ -273,10 +255,10 @@ export default function CreateVendor() {
                 container
                 item
                 lg={12}
-                justifyContent="space-between"
+                justifyContent="space-around"
                 spacing={1}
               >
-                <Grid lg={4} sm={12} xs={12} item>
+                <Grid lg={5} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
@@ -284,8 +266,6 @@ export default function CreateVendor() {
                     size="small"
                     label="Bank Name"
                   />
-                </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
@@ -293,8 +273,6 @@ export default function CreateVendor() {
                     size="small"
                     label="Payee / Account Holder Name "
                   />
-                </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
@@ -303,7 +281,7 @@ export default function CreateVendor() {
                     label="Account Number"
                   />
                 </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
+                <Grid lg={5} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"
@@ -311,8 +289,6 @@ export default function CreateVendor() {
                     size="small"
                     label="IFSC Code"
                   />
-                </Grid>
-                <Grid lg={4} sm={12} xs={12} item>
                   <TextField
                     fullWidth
                     variant="outlined"

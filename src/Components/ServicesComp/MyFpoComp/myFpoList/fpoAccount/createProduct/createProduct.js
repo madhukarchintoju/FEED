@@ -17,9 +17,9 @@ export default function CreateProduct() {
   const useStyles = makeStyles((theme) => ({
     formRoot: {
       margin: 'auto',
-      boxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
-      webkitBoxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
-      mozBoxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
+      // boxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
+      // webkitBoxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
+      // mozBoxShadow: '0px 0px 3px 0px rgba(0,0,0,0.75)',
       borderRadius: '10px 10px',
       marginTop: '2em',
       paddingBottom: '1em',
@@ -39,7 +39,7 @@ export default function CreateProduct() {
     title: {
       textAlign: 'center',
       // backgroundColor: '#f8931d',
-      borderBottom: '1px solid #dedede',
+      // borderBottom: '1px solid #dedede',
       padding: '0.2em',
     },
     cancelButton: {

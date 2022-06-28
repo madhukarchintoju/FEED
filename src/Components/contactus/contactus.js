@@ -37,7 +37,6 @@ export default function ContactUs() {
       // backgroundImage: `URL("${process.env.PUBLIC_URL}/assets/contactus/worldmap.png")`,
       // backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
-      
     },
   }))
   const classes = useStyles()
@@ -101,7 +100,7 @@ export default function ContactUs() {
                     width="400"
                     height="200"
                     style={{ border: '0px' }}
-                    title='FEED Office Location'
+                    title="FEED Office Location"
                     className={classes.mapBorder}
                     allowFullScreen
                   ></iframe>

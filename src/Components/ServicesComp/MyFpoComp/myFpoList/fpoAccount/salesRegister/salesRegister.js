@@ -81,24 +81,6 @@ export default function SalesRegister() {
     <>
       <Grid className={classes.root}>
         <AppBar position="static" color="default" style={{ boxShadow: 'none' }}>
-          <Grid container justifyContent="center">
-            <Tabs
-              value={value}
-              onChange={handleChange}
-              indicatorColor="primary"
-              textColor="primary"
-              variant="scrollable"
-              scrollButtons="auto"
-              centered
-              aria-label="scrollable auto tabs example"
-            >
-              <Tab label="Purchase Order" {...a11yProps(0)} />
-              <Tab label="Purchase Invoice" {...a11yProps(1)} />
-              <Tab label="Return/Debate Note" {...a11yProps(2)} />
-            </Tabs>
-          </Grid>
-        </AppBar>
-        <AppBar position="static" color="default" style={{ boxShadow: 'none' }}>
           {/* <Grid position="static"> */}
           <Tabs
             value={value}

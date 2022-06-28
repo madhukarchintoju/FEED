@@ -1,13 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  makeStyles,
-  Grid,
-  Tabs,
-  Tab,
-  Box,
-  Typography,
-} from '@material-ui/core'
+import { makeStyles, Grid, Tabs, Tab, Box, Typography } from '@material-ui/core'
 import PurchaseOrder from './purchaseOrder'
 import PurchaseInvoice from './purchaseInvoice'
 import ReturnNote from './returnNote'

@@ -11,7 +11,7 @@ import {
 } from '@material-ui/core'
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined'
 import Autocomplete from '@material-ui/lab/Autocomplete'
-import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline'
 const vendorList = [
   { title: 'Ramudu' },
   { title: 'Lakshman' },
@@ -45,9 +45,8 @@ function PurchaseInvoice() {
       freightCharges: '',
       taxableValue: '',
       invoiceWords: '',
-
     },
-  ])    // handle input change
+  ]) // handle input change
   const handleInputChange = (e, i) => {
     const { name, value } = e.target
     const list = [...inputList]
@@ -93,11 +92,11 @@ function PurchaseInvoice() {
   return (
     <>
       <Grid container item lg={12}>
-        <Grid item lg={12} className='d-flex justify-content-between'>
+        <Grid item lg={12} className="d-flex justify-content-between">
           <Grid item lg={3}>
             <TextField
               fullWidth
-              size='small'
+              size="small"
               type="number"
               label="Invoice Number"
               variant="outlined"
@@ -105,31 +104,35 @@ function PurchaseInvoice() {
               placeholder="Enter Invoice Number"
               name="invoiceNumber"
               value={inputList.invoiceNumber}
-              onChange={(e) => { handleInputChange(e) }}
+              onChange={(e) => {
+                handleInputChange(e)
+              }}
             />
           </Grid>
           <Grid item lg={3}>
             <TextField
               fullWidth
               type="date"
-              size='small'
+              size="small"
               variant="outlined"
               margin="normal"
               name="invoiceDate"
               label="Invoice Date"
               value={inputList.invoiceDate}
-              onChange={(e) => { handleInputChange(e) }}
+              onChange={(e) => {
+                handleInputChange(e)
+              }}
               InputLabelProps={{
                 shrink: true,
               }}
             />
           </Grid>
         </Grid>
-        <Grid item lg={12} className='d-flex justify-content-between'>
+        <Grid item lg={12} className="d-flex justify-content-between">
           <Grid item lg={5}>
             <Autocomplete
               fullWidth
-              size='small'
+              size="small"
               options={vendorList}
               getOptionLabel={(option) => option.title}
               renderInput={(params) => (
@@ -138,9 +141,11 @@ function PurchaseInvoice() {
                   margin="normal"
                   label="Vendor / Company List"
                   variant="outlined"
-                  name='vendorName'
+                  name="vendorName"
                   value={inputList.vendorName}
-                  onChange={(e) => { handleInputChange(e) }}
+                  onChange={(e) => {
+                    handleInputChange(e)
+                  }}
                 />
               )}
             />
@@ -148,7 +153,7 @@ function PurchaseInvoice() {
           <Grid item lg={5}>
             <TextField
               fullWidth
-              size='small'
+              size="small"
               margin="normal"
               label="Address"
               placeholder="Enter Address"
@@ -157,10 +162,11 @@ function PurchaseInvoice() {
               variant="outlined"
               name="address"
               value={inputList.address}
-              onChange={(e) => { handleInputChange(e) }}
+              onChange={(e) => {
+                handleInputChange(e)
+              }}
             />
           </Grid>
-
         </Grid>
         {/* <Grid item lg={12} style={{ border: '1px solid grey' }}> */}
         <h5>Add Product Details</h5>
@@ -175,16 +181,15 @@ function PurchaseInvoice() {
             MozBoxShadow: '0px 0px 5px 0px rgba(0,0,0,0.2)',
           }}
         >
-          <table
-            className="table table-bordered purchaseTable"
-            id="tab_logic"
-          >
-            <thead style={{
-              position: 'sticky',
-              top: '0px',
-              zIndex: '2',
-              backgroundColor: '#f0f2f5',
-            }}>
+          <table className="table table-bordered purchaseTable" id="tab_logic">
+            <thead
+              style={{
+                position: 'sticky',
+                top: '0px',
+                zIndex: '2',
+                backgroundColor: '#f0f2f5',
+              }}
+            >
               <tr>
                 <th>S.No </th>
                 <th>Product Category</th>
@@ -209,8 +214,7 @@ function PurchaseInvoice() {
                     <td>
                       <Autocomplete
                         style={{ width: 200 }}
-                        size='small'
-
+                        size="small"
                         options={vendorList}
                         getOptionLabel={(option) => option.title}
                         renderInput={(params) => (
@@ -229,7 +233,7 @@ function PurchaseInvoice() {
                     <td>
                       <Autocomplete
                         style={{ width: 200 }}
-                        size='small'
+                        size="small"
                         options={vendorList}
                         getOptionLabel={(option) => option.title}
                         renderInput={(params) => (
@@ -247,7 +251,7 @@ function PurchaseInvoice() {
                     <td>
                       <TextField
                         fullWidth
-                        size='small'
+                        size="small"
                         type="number"
                         label="HSN Code"
                         variant="outlined"
@@ -260,7 +264,7 @@ function PurchaseInvoice() {
                     <td>
                       <TextField
                         fullWidth
-                        size='small'
+                        size="small"
                         type="number"
                         label="Product Cost"
                         variant="outlined"
@@ -290,7 +294,7 @@ function PurchaseInvoice() {
                     <td>
                       <TextField
                         select
-                        size='small'
+                        size="small"
                         label="Tax Percentage"
                         variant="outlined"
                         name="taxPercent"
@@ -298,10 +302,10 @@ function PurchaseInvoice() {
                         onChange={(e) => handleInputChange(e, i)}
                         style={{ width: 200 }}
                       >
-                        <MenuItem value='5'>5</MenuItem>
-                        <MenuItem value='8'>8</MenuItem>
-                        <MenuItem value='12'>12</MenuItem>
-                        <MenuItem value='24'>24</MenuItem>
+                        <MenuItem value="5">5</MenuItem>
+                        <MenuItem value="8">8</MenuItem>
+                        <MenuItem value="12">12</MenuItem>
+                        <MenuItem value="24">24</MenuItem>
                       </TextField>
                       {/* <FormControl component="fieldset" margin="normal">
                         <FormLabel component="legend">Tax Percentage</FormLabel>
@@ -336,17 +340,16 @@ function PurchaseInvoice() {
                           lg={6}
                           item
                           variant="outlined"
-                          size='small'
+                          size="small"
                           label="IGST"
-                          name='igst'
+                          name="igst"
                           value={x.igst}
                           onChange={(e) => handleInputChange(e, i)}
-
                         />
                         <TextField
                           lg={6}
                           item
-                          size='small'
+                          size="small"
                           label="CGST + SGST"
                           variant="outlined"
                           margin="normal"
@@ -359,7 +362,7 @@ function PurchaseInvoice() {
                     <td>
                       <TextField
                         fullWidth
-                        size='small'
+                        size="small"
                         type="number"
                         label="Discount"
                         variant="outlined"
@@ -372,7 +375,7 @@ function PurchaseInvoice() {
                     <td>
                       <TextField
                         fullWidth
-                        size='small'
+                        size="small"
                         type="number"
                         label="Freight charge"
                         variant="outlined"
@@ -385,7 +388,7 @@ function PurchaseInvoice() {
                     <td>
                       <TextField
                         fullWidth
-                        size='small'
+                        size="small"
                         type="number"
                         label="Total Invoice Value"
                         variant="outlined"
@@ -398,7 +401,7 @@ function PurchaseInvoice() {
                     <td>
                       <TextField
                         fullWidth
-                        size='small'
+                        size="small"
                         label="Total Invoice Value in Words"
                         variant="outlined"
                         placeholder="Enter Total Invoice Value in Words"
